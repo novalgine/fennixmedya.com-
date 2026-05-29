@@ -93,7 +93,7 @@ export default function RootLayout({
           ],
         }} />
       </head>
-      <body className="font-body antialiased">
+      <body className="font-body antialiased overflow-x-hidden">
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
