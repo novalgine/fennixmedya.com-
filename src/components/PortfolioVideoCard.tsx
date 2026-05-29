@@ -48,7 +48,7 @@ export default function PortfolioVideoCard({ project, isVertical }: { project: P
       <div className={`relative bg-black flex-1 ${isVertical ? 'aspect-[9/16]' : 'aspect-video'}`}>
         <video
           ref={videoRef}
-          src={isVisible ? project.videoSrc : ""}
+          src={isVisible ? project.videoSrc : undefined}
           title={project.title}
           className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-300"
           controls
