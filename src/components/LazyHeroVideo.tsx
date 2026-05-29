@@ -11,17 +11,17 @@ interface LazyHeroVideoProps {
 
 export default function LazyHeroVideo({ src, poster, title, className = "w-full h-full object-cover" }: LazyHeroVideoProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
-  const [inView, setInView] = useState(false);
+  const [shouldPlay, setShouldPlay] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setInView(true);
+          setShouldPlay(true);
           observer.disconnect();
         }
       },
-      { rootMargin: "200px" } // trigger right before it comes into viewport
+      { rootMargin: "200px" }
     );
 
     if (videoRef.current) {
@@ -34,23 +34,24 @@ export default function LazyHeroVideo({ src, poster, title, className = "w-full 
   }, []);
 
   useEffect(() => {
-    if (inView && videoRef.current) {
+    if (shouldPlay && videoRef.current) {
       videoRef.current.play().catch(e => console.log("Autoplay prevented:", e));
     }
-  }, [inView]);
+  }, [shouldPlay]);
 
   return (
     <video
       ref={videoRef}
-      src={inView ? src : ""}
+      src={src}
       className={className}
       controls
       muted
       loop
       playsInline
-      preload="none"
+      preload="metadata"
       poster={poster}
       title={title}
     />
   );
 }
+
