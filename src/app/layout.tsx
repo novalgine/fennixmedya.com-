@@ -62,7 +62,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="tr" suppressHydrationWarning>
+    <html lang="tr" className="overflow-x-hidden" suppressHydrationWarning>
       <head>
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <link rel="icon" href="/favicon.ico" sizes="32x32" />
@@ -93,16 +93,18 @@ export default function RootLayout({
           ],
         }} />
       </head>
-      <body className="font-body antialiased overflow-x-hidden">
+      <body className="font-body antialiased overflow-x-hidden relative w-full">
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
           enableSystem
           disableTransitionOnChange
         >
-          <SiteHeader />
-          <main>{children}</main>
-          <CookieBanner />
+          <div className="relative flex flex-col min-h-screen overflow-x-clip w-full">
+            <SiteHeader />
+            <main className="flex-1 w-full">{children}</main>
+            <CookieBanner />
+          </div>
         </ThemeProvider>
       </body>
     </html>
