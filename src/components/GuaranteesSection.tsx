@@ -1,0 +1,167 @@
+"use client";
+import { useEffect, useRef, useState } from "react";
+import { ShieldCheck, Clock, RefreshCw, Unlock, type LucideIcon } from "lucide-react";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+import { wpClient } from "@/lib/wp";
+import { gql } from "graphql-request";
+import { cleanWPContent, decodeHtmlEntities } from "@/lib/utils";
+
+gsap.registerPlugin(ScrollTrigger);
+
+const fallbackGuarantees = [
+  {
+    icon: Unlock,
+    title: "Sıfır Risk İade Garantisi",
+    desc: "Eğer onay sürecindeki ilk taslak videomuz sizi tatmin etmezse, hiçbir koşul sunmadan ücret iadesi yapıyoruz. Vaktinizi almadan ayrılıyoruz.",
+    accent: "text-primary",
+    accentBg: "bg-primary/10",
+    accentBorder: "hover:border-gold/40",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Hollywood Standartlarında Görsel Kalite",
+    desc: "Tüm içerikleriniz sinema standartlarında aydınlatma, renk yönetimi ve kristal netliğinde ses tasarımı ile teslim edilir. Görsel algı standartlarımızın altında kalan her çekim ücretsiz tekrarlanır.",
+    accent: "text-emerald-400",
+    accentBg: "bg-emerald-400/10",
+    accentBorder: "hover:border-emerald-400/40",
+  },
+  {
+    icon: RefreshCw,
+    title: "Revize Hakkı",
+    desc: "Aramızdaki ritmi yakalamak için; ilk videonun tarzında ve kurgusunda tam içinize sinene kadar sınırsız revize yapıyoruz. Sonraki içeriklerimiz bu kalite çizgisini koruyarak üretilir.",
+    accent: "text-sky-400",
+    accentBg: "bg-sky-400/10",
+    accentBorder: "hover:border-sky-400/40",
+  },
+  {
+    icon: Clock,
+    title: "Zamanında Teslimat",
+    desc: "Çekim gününden sonraki 7 iş günü içinde teslimat garantisi. Gecikme durumunda bir sonraki ay %10 indirim.",
+    accent: "text-amber-400",
+    accentBg: "bg-amber-400/10",
+    accentBorder: "hover:border-amber-400/40",
+  },
+];
+
+const iconsMap: Record<string, LucideIcon> = { ShieldCheck, RefreshCw, Unlock, Clock };
+
+const GuaranteesSection = () => {
+  const containerRef = useRef<HTMLElement>(null);
+  const [guarantees, setGuarantees] = useState(fallbackGuarantees);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchGuaranteeData = async () => {
+      try {
+        const query = gql`
+            query GetGuaranteeSection {
+                posts(where: {categoryName: "guarantee"}, first: 4, orderby: {field: DATE, order: ASC}) {
+                    nodes {
+                        title
+                        excerpt
+                        content
+                    }
+                }
+            }
+        `;
+        const response = await wpClient.request<{
+          posts?: { nodes?: { title?: string; excerpt?: string; content?: string }[] }
+        }>(query);
+
+        if ((response?.posts?.nodes?.length ?? 0) > 0) {
+          const newGuarantees = response!.posts!.nodes!.map((node, index: number) => {
+            const fallbackG = fallbackGuarantees[index % fallbackGuarantees.length];
+            let iconComponent = fallbackG.icon;
+            if (node.excerpt) {
+              const cleanExcerpt = cleanWPContent(node.excerpt);
+              if (iconsMap[cleanExcerpt]) iconComponent = iconsMap[cleanExcerpt];
+            }
+            return {
+              title: decodeHtmlEntities(node.title || ""),
+              desc: cleanWPContent(node.content || ""),
+              icon: iconComponent,
+              accent: fallbackG.accent,
+              accentBg: fallbackG.accentBg,
+              accentBorder: fallbackG.accentBorder,
+            };
+          });
+          setGuarantees(newGuarantees);
+        }
+      } catch (err) {
+        console.log("Using static Guarantee data (WordPress API not reachable yet).");
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    fetchGuaranteeData();
+  }, []);
+
+  useEffect(() => {
+    const isMobile = window.innerWidth < 768;
+    const ctx = gsap.context(() => {
+      const items = gsap.utils.toArray(".guarantee-row") as HTMLElement[];
+      items.forEach((item, i) => {
+        gsap.fromTo(item,
+          { opacity: 0, y: isMobile ? 20 : 0, x: isMobile ? 0 : (i % 2 === 0 ? -40 : 40) },
+          {
+            opacity: 1, y: 0, x: 0,
+            duration: isMobile ? 0.4 : 0.6,
+            ease: "power2.out",
+            scrollTrigger: {
+              trigger: item,
+              start: "top 90%",
+              toggleActions: "play none none none",
+            }
+          }
+        );
+      });
+    }, containerRef);
+    return () => ctx.revert();
+  }, [guarantees]);
+
+  return (
+    <section ref={containerRef} className="section-spacing bg-surface relative z-10 w-full">
+      <div className="max-w-5xl mx-auto px-6">
+        <div className="text-center mb-16">
+          <h2 className="font-heading text-4xl md:text-6xl font-black tracking-tight mb-4">
+            <span className="text-gradient-gold">Risksiz</span> İş Birliği
+          </h2>
+          <p className="text-xl md:text-2xl text-muted-foreground max-w-xl mx-auto">
+            Kalitemize güveniyoruz, siz rahat edin.
+          </p>
+        </div>
+
+        <div className="space-y-5">
+          {guarantees.map((g, i) => (
+            <div
+              key={i}
+              className={`guarantee-row flex flex-col md:flex-row items-start md:items-center gap-5 md:gap-8 bg-card/60 backdrop-blur-sm border border-border/50 rounded-2xl p-6 md:p-8 ${g.accentBorder} transition-all duration-500 group hover:bg-card`}
+            >
+              {/* Icon */}
+              <div className={`w-14 h-14 rounded-xl ${g.accentBg} flex items-center justify-center shrink-0 transition-transform duration-500 group-hover:scale-110`}>
+                <g.icon className={`w-7 h-7 ${g.accent}`} />
+              </div>
+
+              {/* Title */}
+              <h3 className="font-heading text-xl md:text-2xl font-black text-foreground shrink-0 md:w-56">
+                {g.title}
+              </h3>
+
+              {/* Divider - desktop only */}
+              <div className="hidden md:block w-px h-12 bg-border/50 shrink-0" />
+
+              {/* Description */}
+              <p className="text-foreground/75 text-base md:text-lg leading-relaxed font-medium flex-1">
+                {g.desc}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default GuaranteesSection;

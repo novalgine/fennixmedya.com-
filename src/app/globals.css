@@ -1,1 +1,276 @@
-@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 60 9% 98%;
+    --foreground: 24 14% 4%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 24 14% 4%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 24 14% 4%;
+
+    --primary: 38 85% 55%;
+    --primary-foreground: 24 14% 4%;
+
+    --secondary: 60 5% 90%;
+    --secondary-foreground: 24 14% 4%;
+
+    --muted: 60 5% 90%;
+    --muted-foreground: 24 5% 45%;
+
+    --accent: 38 85% 55%;
+    --accent-foreground: 24 14% 4%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 60 9% 98%;
+
+    --border: 60 5% 85%;
+    --input: 60 5% 85%;
+    --ring: 38 85% 55%;
+
+    --radius: 0.5rem;
+
+    --gold: 38 85% 55%;
+    --gold-light: 38 90% 70%;
+    --gold-dark: 38 80% 40%;
+
+    --surface: 0 0% 100%;
+    --surface-elevated: 60 9% 98%;
+    --success: 142 70% 45%;
+    --danger: 0 72% 50%;
+  }
+
+  .dark {
+    --background: 0 0% 4%;
+    --foreground: 0 0% 92%;
+
+    --card: 0 0% 7%;
+    --card-foreground: 0 0% 92%;
+
+    --popover: 0 0% 7%;
+    --popover-foreground: 0 0% 92%;
+
+    --primary: 38 85% 55%;
+    --primary-foreground: 0 0% 0%;
+
+    --secondary: 0 0% 12%;
+    --secondary-foreground: 0 0% 85%;
+
+    --muted: 0 0% 14%;
+    --muted-foreground: 0 0% 75%;
+
+    --accent: 38 45% 58%;
+    --accent-foreground: 0 0% 4%;
+
+    --destructive: 0 72% 50%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 38 85% 55%;
+
+    --radius: 0.5rem;
+
+    --gold: 38 85% 55%;
+    --gold-light: 38 90% 70%;
+    --gold-dark: 38 80% 40%;
+    --surface: 0 0% 7%;
+    --surface-elevated: 0 0% 10%;
+    --success: 142 70% 45%;
+    --danger: 0 72% 50%;
+
+    --background-elevated: 0 0% 7%;
+  }
+
+  .light {
+    --background: 0 0% 98%;
+    --foreground: 0 0% 4%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 4%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 4%;
+    --primary: 38 85% 55%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 0% 94%;
+    --secondary-foreground: 0 0% 15%;
+    --muted: 0 0% 90%;
+    --muted-foreground: 0 0% 40%;
+    --accent: 38 45% 58%;
+    --accent-foreground: 0 0% 4%;
+    --border: 0 0% 85%;
+    --input: 0 0% 85%;
+    --ring: 38 85% 55%;
+
+    --surface: 0 0% 96%;
+    --surface-elevated: 0 0% 92%;
+    --background-elevated: 0 0% 94%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: 'Manrope', sans-serif;
+  }
+
+  /* Custom Premium Scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--background));
+    border-left: 1px solid hsl(var(--border) / 0.2);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--gold) / 0.5);
+    border-radius: 10px;
+    border: 2px solid hsl(var(--background));
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--gold));
+  }
+}
+
+@layer utilities {
+  .text-gradient-gold {
+    background: linear-gradient(135deg, hsl(38 50% 70%), hsl(38 45% 58%), hsl(38 40% 42%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .bg-gradient-gold {
+    background: linear-gradient(135deg, hsl(38 50% 70%), hsl(38 45% 58%));
+  }
+
+  .bg-gradient-dark {
+    background: linear-gradient(180deg, hsl(var(--background)) 0%, hsl(var(--surface-elevated)) 100%);
+  }
+
+  .bg-surface {
+    background-color: hsl(var(--surface));
+  }
+
+  .bg-surface-elevated {
+    background-color: hsl(var(--surface-elevated));
+  }
+
+  .border-gold {
+    border-color: hsl(38 45% 58% / 0.3);
+  }
+
+  .glow-gold {
+    box-shadow: 0 0 40px hsl(var(--gold) / 0.25), 0 0 80px hsl(var(--gold) / 0.1);
+  }
+
+  .cinematic-overlay {
+    background: linear-gradient(180deg, hsl(var(--background) / 0.6) 0%, hsl(var(--background) / 0.9) 100%);
+  }
+
+  .section-spacing {
+    @apply py-12 md:py-20;
+  }
+
+  /* Performance: Skip rendering for off-screen sections 
+     NOTE: Disabled temporarily as it causes layout thrashing with GSAP ScrollTrigger calculations */
+  .lazy-section {
+    /* content-visibility: auto; */
+    /* contain-intrinsic-size: auto 600px; */
+  }
+
+  /* WP HTML Content Styling */
+  .wp-content-list ul {
+    @apply space-y-2.5 relative z-10;
+  }
+
+  .wp-content-list li {
+    @apply flex items-start gap-2.5 text-foreground/75 text-sm md:text-base font-medium leading-relaxed;
+  }
+
+  .wp-content-list li::before {
+    content: '';
+    @apply w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0;
+  }
+
+  .film-grain {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    pointer-events: none;
+    opacity: 0.035;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+    background-size: 256px 256px;
+    will-change: transform;
+    transform: translateZ(0);
+    contain: strict;
+  }
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   NATIVE FULLSCREEN FIX:
+   Prevents object-cover videos from stretching or cropping aggressively when 
+   the user clicks the native browser fullscreen button.
+───────────────────────────────────────────────────────────────────────────── */
+video:fullscreen {
+  object-fit: contain !important;
+}
+video:-webkit-full-screen {
+  object-fit: contain !important;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   ACCESSIBILITY: Reduced Motion
+   Disables GSAP animations, parallax, and transitions for users who prefer it.
+   Required by WCAG 2.1 AA (Success Criterion 2.3.3).
+   Also prevents motion sickness on mobile Instagram browsers.
+───────────────────────────────────────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  /* Override GSAP initial opacity:0 states so content is always visible */
+  .opacity-0 {
+    opacity: 1 !important;
+  }
+
+  /* Disable parallax transforms */
+  .will-change-transform {
+    transform: none !important;
+    will-change: auto !important;
+  }
+}
