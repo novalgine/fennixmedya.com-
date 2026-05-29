@@ -16,7 +16,7 @@ export const testimonialsData: Testimonial[] = [
     quote: "Kamera karşısına geçtiğimde doğru açıyı bulmak ve doğru ışığı ayarlamak bana çok zaman kaybettiriyordu. Fennix ile çalışmaya başladıktan sonra tamamen mesleğime odaklanabildim.",
     videoSrc: "/videos/referans/esranur.mp4",
     poster: "/videos/referans/esranur.jpg",
-    avatar: "https://i.pravatar.cc/150?u=esranur",
+    avatar: "/avatars/female.png",
   },
   {
     id: "orhan",
@@ -25,7 +25,7 @@ export const testimonialsData: Testimonial[] = [
     quote: "İçeriklerin kalitesi doğrudan markamızın algısını yukarı taşıdı. Sadece çekim değil, içerik stratejisi konusunda da büyük bir yükü omuzlarımızdan aldılar.",
     videoSrc: "/videos/referans/orhan.mp4",
     poster: "/videos/referans/orhan.jpg",
-    avatar: "https://i.pravatar.cc/150?u=orhan",
+    avatar: "/avatars/male.png",
   },
   {
     id: "mukaddes",
@@ -34,7 +34,7 @@ export const testimonialsData: Testimonial[] = [
     quote: "Her şey çok profesyonel, pürüzsüz ve planlı işliyor. Aklımdaki fikri tam olarak ekrana yansıtmamı sağlayan harika bir vizyonları var. Ortaya çıkan işten son derece memnunum.",
     videoSrc: "/videos/referans/mukaddes.mp4",
     poster: "/videos/referans/mukaddes.jpg",
-    avatar: "https://i.pravatar.cc/150?u=mukaddes",
+    avatar: "/avatars/female.png",
   },
   {
     id: "ahmet",
@@ -43,7 +43,7 @@ export const testimonialsData: Testimonial[] = [
     quote: "Sosyal medyada hasta güvenini kazanmak için profesyonel içerikler şarttı. Fennix ekibi sayesinde kliniğimin kalitesini dijitale çok iyi yansıttık.",
     videoSrc: "",
     poster: "",
-    avatar: "https://i.pravatar.cc/150?u=ahmet",
+    avatar: "/avatars/male.png",
   },
   {
     id: "zeynep",
@@ -52,7 +52,7 @@ export const testimonialsData: Testimonial[] = [
     quote: "Portföy videolarımın sinematik kalitesi sayesinde lüks konut satışlarımda inanılmaz bir ivme yakaladım. Anahtar teslim sistemleri gerçekten hayat kurtarıyor.",
     videoSrc: "",
     poster: "",
-    avatar: "https://i.pravatar.cc/150?u=zeynep",
+    avatar: "/avatars/female.png",
   },
   {
     id: "mert",
@@ -61,6 +61,6 @@ export const testimonialsData: Testimonial[] = [
     quote: "Fennix Medya ile çalışmak işimizi bir üst seviyeye taşıdı. Video içeriklerimiz artık hem premium hissettiriyor hem de doğrudan satışa dönüyor. Harika bir iş çıkardılar.",
     videoSrc: "",
     poster: "",
-    avatar: "https://i.pravatar.cc/150?u=mert",
+    avatar: "/avatars/male.png",
   }
 ];
