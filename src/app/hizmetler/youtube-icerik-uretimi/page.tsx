@@ -3,6 +3,7 @@ import Image from "next/image";
 import { ArrowRight, Play } from "lucide-react";
 import WizardCta from "@/components/WizardCta";
 import OtherServices from "@/components/OtherServices";
+import LazyHeroVideo from "@/components/LazyHeroVideo";
 
 export const metadata: Metadata = {
   title: "YouTube İçerik Üretimi İstanbul",
@@ -36,15 +37,8 @@ export default function YouTubeIcerikUretimiPage() {
             <WizardCta text="Ücretsiz Strateji Görüşmesi Al" />
           </div>
           <div className="relative w-full aspect-video flex items-center justify-center group rounded-3xl overflow-hidden border border-border/50 shadow-2xl bg-black">
-            <video
+            <LazyHeroVideo
               src="/videos/portfolyo/youtube.mp4"
-              className="w-full h-full object-cover"
-              controls
-              autoPlay
-              muted
-              loop
-              playsInline
-              preload="metadata"
               poster="/videos/portfolyo/youtube.jpg"
               title="YouTube Video Örneği"
             />

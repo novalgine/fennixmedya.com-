@@ -88,6 +88,7 @@ const OffCanvasMenu = ({ isOpen, onClose, onOpenWizard }: OffCanvasMenuProps) =>
                       className="w-full h-full border-0 absolute inset-0 opacity-80 group-hover:opacity-100 transition-opacity"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                       allowFullScreen
+                      loading="lazy"
                     ></iframe>
                   </div>
                 </div>

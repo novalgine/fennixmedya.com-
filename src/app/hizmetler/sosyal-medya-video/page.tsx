@@ -3,6 +3,7 @@ import { CheckCircle2, Play, TrendingUp, Users } from "lucide-react";
 import WizardCta from "@/components/WizardCta";
 import OtherServices from "@/components/OtherServices";
 import JsonLd from "@/components/JsonLd";
+import LazyHeroVideo from "@/components/LazyHeroVideo";
 
 export const metadata: Metadata = {
   title: "Sosyal Medya Görsel Algı ve Otorite Yönetimi",
@@ -52,15 +53,8 @@ export default function SosyalMedyaVideoPage() {
             <WizardCta text="Ücretsiz Strateji Görüşmesi Al" />
           </div>
           <div className="relative w-full aspect-[9/16] md:aspect-[4/5] flex items-center justify-center group rounded-[2.5rem] overflow-hidden border border-border/50 shadow-2xl bg-black rotate-[-2deg] hover:rotate-0 transition-transform duration-700">
-            <video
+            <LazyHeroVideo
               src="/videos/portfolyo/umay.mp4"
-              className="w-full h-full object-cover"
-              controls
-              autoPlay
-              muted
-              loop
-              playsInline
-              preload="metadata"
               poster="/videos/portfolyo/umay.jpg"
               title="Sosyal Medya Video Örneği"
             />

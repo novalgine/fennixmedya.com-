@@ -3,6 +3,7 @@ import { MapPin, ClipboardList, Wrench, Clapperboard, ShieldCheck, Lock, Scissor
 import StudioWizardCta from "@/components/StudioWizardCta";
 import PdfDownloadCta from "@/components/PdfDownloadCta";
 import OtherServices from "@/components/OtherServices";
+import LazyHeroVideo from "@/components/LazyHeroVideo";
 
 export const metadata: Metadata = {
   title: "Anahtar Teslim Stüdyo Kurulumu | Evinize veya Ofisinize Profesyonel Set — Fennix Medya",
@@ -110,15 +111,8 @@ export default function AnahtarTeslimStudyoPage() {
           </div>
 
           <div className="relative w-full aspect-[9/16] md:aspect-[4/5] flex items-center justify-center group rounded-[2.5rem] overflow-hidden border border-border/50 shadow-2xl bg-black rotate-[-2deg] hover:rotate-0 transition-transform duration-700">
-            <video
+            <LazyHeroVideo
               src="/videos/portfolyo/studyo.mp4"
-              className="w-full h-full object-cover"
-              controls
-              autoPlay
-              muted
-              loop
-              playsInline
-              preload="metadata"
               poster="/videos/portfolyo/studyo.jpg"
               title="Stüdyo Kurulumu Video Örneği"
             />

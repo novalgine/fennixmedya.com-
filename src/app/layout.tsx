@@ -71,35 +71,25 @@ export default function RootLayout({
           "@graph": [
             {
               "@type": "ProfessionalService",
+              "@id": "https://fennixmedya.com/#organization",
               name: "Fennix Medya",
               image: "https://fennixmedya.com/og-image.jpg",
-              description:
-                "İstanbul merkezli profesyonel video prodüksiyon ajansı. Sosyal medya videoları, kurumsal tanıtım filmleri ve YouTube içerik üretimi.",
+              logo: "https://fennixmedya.com/logo.png",
+              description: "İstanbul merkezli profesyonel video prodüksiyon ajansı. Sosyal medya yönetimi, kurumsal tanıtım filmi, YouTube içerik üretimi.",
               url: "https://fennixmedya.com",
+              telephone: "+905000000000",
               areaServed: { "@type": "City", name: "İstanbul" },
-              address: {
-                "@type": "PostalAddress",
-                addressLocality: "İstanbul",
-                addressCountry: "TR"
-              },
-              serviceType: [
-                "Video Prodüksiyon",
-                "Kurumsal Tanıtım Filmi",
-                "Sosyal Medya İçerik Üretimi",
-                "YouTube İçerik Üretimi",
-              ],
-              founder: {
-                "@type": "Person",
-                name: "Semih Hasanoğlu",
-                jobTitle: "Video Prodüktör & Kreatif Direktör",
-              },
-              priceRange: "$$",
+              address: { "@type": "PostalAddress", addressLocality: "İstanbul", addressCountry: "TR" },
+              serviceType: ["Video Prodüksiyon", "Kurumsal Tanıtım Filmi", "Sosyal Medya İçerik Üretimi", "YouTube İçerik Üretimi"],
+              founder: { "@type": "Person", name: "Semih Hasanoğlu", jobTitle: "Video Prodüktör & Kreatif Direktör" },
+              priceRange: "$$$",
+              sameAs: [
+                "https://www.instagram.com/fennixmedya",
+                "https://www.youtube.com/@fennixmedya",
+                "https://www.linkedin.com/company/fennixmedya"
+              ]
             },
-            {
-              "@type": "WebSite",
-              name: "Fennix Medya",
-              url: "https://fennixmedya.com",
-            },
+            { "@type": "WebSite", "@id": "https://fennixmedya.com/#website", name: "Fennix Medya", url: "https://fennixmedya.com", publisher: { "@id": "https://fennixmedya.com/#organization" } },
           ],
         }} />
       </head>

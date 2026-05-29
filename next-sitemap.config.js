@@ -1,18 +1,7 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
   siteUrl: 'https://fennixmedya.com',
-  generateRobotsTxt: true,
-  robotsTxtOptions: {
-    policies: [
-      { userAgent: '*', allow: '/' },
-      { userAgent: 'GPTBot', allow: '/' },
-      { userAgent: 'ChatGPT-User', allow: '/' },
-      { userAgent: 'Claude-Web', allow: '/' },
-      { userAgent: 'PerplexityBot', allow: '/' },
-      { userAgent: 'Google-Extended', allow: '/' },
-    ],
-    additionalSitemaps: [],
-  },
+  generateRobotsTxt: false,
   exclude: [],
   changefreq: 'weekly',
   priority: 0.7,

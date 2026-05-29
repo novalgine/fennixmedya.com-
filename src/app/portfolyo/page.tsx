@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import WizardCta from "@/components/WizardCta";
 import { portfolioData } from "@/data/portfolio";
+import PortfolioVideoCard from "@/components/PortfolioVideoCard";
 
 export const metadata: Metadata = {
   title: "Portfolyo — Teslim Edilen İşler",
@@ -30,32 +31,7 @@ export default function PortfolioPage() {
           {portfolioData.map((project, i) => {
             const isVertical = project.format === "Dikey";
             return (
-              <div
-                key={i}
-                className={`group bg-card/60 backdrop-blur-sm border border-border/40 rounded-3xl overflow-hidden hover:border-primary/30 transition-all duration-500 shadow-xl flex flex-col ${isVertical ? 'md:row-span-2' : 'md:col-span-2 lg:col-span-2'}`}
-              >
-                <div className={`relative bg-black flex-1 ${isVertical ? 'aspect-[9/16]' : 'aspect-video'}`}>
-                  <video
-                    src={project.videoSrc}
-                    title={project.title}
-                    className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-300"
-                    controls
-                    autoPlay
-                    muted
-                    loop
-                    playsInline
-                    preload="metadata"
-                    poster={project.thumbnailSrc}
-                  />
-                </div>
-                <div className="p-6 bg-card">
-                  <div className="flex items-center gap-2 mb-3">
-                    <span className="text-xs px-3 py-1 bg-primary/10 text-primary rounded-full font-bold uppercase tracking-wider">{project.category}</span>
-                    <span className="text-xs font-medium text-muted-foreground">{project.format}</span>
-                  </div>
-                  <h3 className="font-heading text-xl font-black text-foreground">{project.title}</h3>
-                </div>
-              </div>
+              <PortfolioVideoCard key={i} project={project} isVertical={isVertical} />
             );
           })}
         </div>
