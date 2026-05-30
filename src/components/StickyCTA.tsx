@@ -7,11 +7,10 @@ const WHATSAPP_NUMBER = "905467407084";
 const WHATSAPP_MESSAGE = encodeURIComponent("Merhaba, web sitenizden ulaşıyorum. Ücretsiz strateji görüşmesi hakkında bilgi almak istiyorum.");
 const PHONE_NUMBER = "+905467407084";
 
-interface StickyCTAProps {
-  onOpenWizard: () => void;
-}
+import { useWizard } from "@/components/WizardContext";
 
-const StickyCTA = ({ onOpenWizard }: StickyCTAProps) => {
+const StickyCTA = () => {
+  const { openWizard } = useWizard();
   const [visible, setVisible] = useState(false);
   const [formInView, setFormInView] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
@@ -45,7 +44,7 @@ const StickyCTA = ({ onOpenWizard }: StickyCTAProps) => {
   }, []);
 
   const handleMainCTA = () => {
-    onOpenWizard();
+    openWizard();
     if (typeof window.trackEvent === "function") {
       window.trackEvent("sticky_cta_click", { section: "sticky" });
     }

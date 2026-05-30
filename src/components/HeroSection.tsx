@@ -16,11 +16,10 @@ if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
 }
 
-interface HeroSectionProps {
-  onOpenWizard: () => void;
-}
+import { useWizard } from "@/components/WizardContext";
 
-const HeroSection = ({ onOpenWizard }: HeroSectionProps) => {
+const HeroSection = () => {
+  const { openWizard } = useWizard();
   const containerRef = useRef<HTMLElement>(null);
   const bgRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
@@ -125,11 +124,11 @@ const HeroSection = ({ onOpenWizard }: HeroSectionProps) => {
   }, []);
 
   const handleCTAClick = useCallback(() => {
-    onOpenWizard();
+    openWizard();
     if (typeof window.trackEvent === "function") {
       window.trackEvent("hero_cta_click", { section: "hero" });
     }
-  }, [onOpenWizard]);
+  }, [openWizard]);
 
   const handleVideoClick = () => {
     setShowVideo(true);

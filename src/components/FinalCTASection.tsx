@@ -7,11 +7,10 @@ import { CAPACITY_CONFIG } from "@/config/capacity";
 
 gsap.registerPlugin(ScrollTrigger);
 
-interface FinalCTASectionProps {
-  onOpenWizard: () => void;
-}
+import { useWizard } from "@/components/WizardContext";
 
-const FinalCTASection = ({ onOpenWizard }: FinalCTASectionProps) => {
+const FinalCTASection = () => {
+  const { openWizard } = useWizard();
   const containerRef = useRef<HTMLElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
   const { TOTAL_SLOTS, OCCUPIED_SLOTS } = CAPACITY_CONFIG;
@@ -57,7 +56,7 @@ const FinalCTASection = ({ onOpenWizard }: FinalCTASectionProps) => {
 
         <MagneticWrapper strength={0.3}>
           <button
-            onClick={onOpenWizard}
+            onClick={openWizard}
             className="bg-gradient-gold text-primary-foreground font-heading font-black text-2xl md:text-3xl px-12 py-6 rounded-2xl hover:scale-[1.02] active:scale-[0.98] transition-all shadow-[0_0_40px_rgba(212,164,74,0.3)] cursor-pointer relative overflow-hidden group inline-flex"
           >
             <span className="relative z-10 transition-transform group-hover:translate-x-2 inline-block">

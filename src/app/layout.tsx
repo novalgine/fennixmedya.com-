@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Manrope } from "next/font/google";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import SiteHeader from "@/components/SiteHeader";
+import { WizardProvider } from "@/components/WizardContext";
 import "./globals.css";
 
 const inter = Inter({
@@ -114,11 +115,13 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <div className="relative flex flex-col min-h-screen overflow-x-clip w-full">
-            <SiteHeader />
-            <main className="flex-1 w-full">{children}</main>
-            <CookieBanner />
-          </div>
+          <WizardProvider>
+            <div className="relative flex flex-col min-h-screen overflow-x-clip w-full">
+              <SiteHeader />
+              <main className="flex-1 w-full">{children}</main>
+              <CookieBanner />
+            </div>
+          </WizardProvider>
         </ThemeProvider>
       </body>
     </html>
