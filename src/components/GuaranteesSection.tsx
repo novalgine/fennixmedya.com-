@@ -125,7 +125,7 @@ const GuaranteesSection = () => {
     <section ref={containerRef} className="section-spacing bg-surface relative z-10 w-full">
       <div className="max-w-5xl mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="font-heading text-4xl md:text-6xl font-black tracking-tight mb-4">
+          <h2 className="font-heading text-4xl md:text-6xl font-bold tracking-tight mb-4">
             <span className="text-gradient-gold">Risksiz</span> İş Birliği
           </h2>
           <p className="text-xl md:text-2xl text-muted-foreground max-w-xl mx-auto">
@@ -145,7 +145,7 @@ const GuaranteesSection = () => {
               </div>
 
               {/* Title */}
-              <h3 className="font-heading text-xl md:text-2xl font-black text-foreground shrink-0 md:w-56">
+              <h3 className="font-heading text-xl md:text-2xl font-bold text-foreground shrink-0 md:w-56">
                 {g.title}
               </h3>
 

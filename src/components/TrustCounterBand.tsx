@@ -25,7 +25,7 @@ const StatItem = ({ stat, index, isVisible }: { stat: { icon: React.ElementType,
             }}
         >
             <stat.icon className="w-6 h-6 text-primary mx-auto mb-3 opacity-60" />
-            <p className="font-heading text-3xl md:text-4xl lg:text-5xl font-black text-foreground mb-1">
+            <p className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-1">
                 <span ref={countRef}>0</span>
                 <span className="text-gradient-gold">{stat.suffix}</span>
             </p>

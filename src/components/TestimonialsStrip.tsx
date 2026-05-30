@@ -75,7 +75,7 @@ const TestimonialsStrip = () => {
         <>
             <section className="section-spacing bg-background">
                 <div className="max-w-6xl mx-auto px-4 sm:px-6">
-                    <h2 className="font-heading text-3xl md:text-5xl font-black text-center mb-4 tracking-tight">
+                    <h2 className="font-heading text-3xl md:text-5xl font-bold text-center mb-4 tracking-tight">
                         Müşterilerimiz <span className="text-gradient-gold">Ne Diyor?</span>
                     </h2>
                     <p className="text-center text-muted-foreground text-base md:text-lg mb-12 max-w-2xl mx-auto">
@@ -101,7 +101,7 @@ const TestimonialsStrip = () => {
                                     <div className="flex items-center gap-3">
                                         <img src={t.avatar} alt={t.name} className="w-10 h-10 rounded-full border border-border/50 object-cover shrink-0" />
                                         <div>
-                                            <p className="font-heading font-black text-base text-foreground">{t.name}</p>
+                                            <p className="font-heading font-bold text-base text-foreground">{t.name}</p>
                                             <p className="text-muted-foreground text-xs font-medium italic mt-1">{t.title}</p>
                                         </div>
                                     </div>

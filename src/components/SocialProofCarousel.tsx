@@ -233,8 +233,7 @@ export default function SocialProofCarousel() {
           aria-roledescription="carousel"
           aria-label="Müşteri vaka analizleri"
         >
-          {/* Vaka Analizi Badge */}
-          <div className="absolute top-0 right-0 bg-gradient-gold text-black font-black text-xs px-4 py-1 rounded-bl-xl z-20 shadow-lg">
+          <div className="absolute top-0 right-0 bg-gradient-gold text-black font-bold text-xs px-4 py-1 rounded-bl-xl z-20 shadow-lg">
             VAKA ANALİZİ · {active + 1}/{total}
           </div>
 
@@ -295,7 +294,7 @@ export default function SocialProofCarousel() {
 
                 <div className="relative z-10">
                   <Star className="w-8 h-8 text-primary mb-3 fill-primary/20" />
-                  <h3 className="font-heading text-2xl md:text-3xl font-black text-gradient-gold mb-1">
+                  <h3 className="font-heading text-2xl md:text-3xl font-bold text-gradient-gold mb-1">
                     {study.name}
                   </h3>
                   <p className="text-muted-foreground text-sm font-bold uppercase tracking-widest mb-5">
@@ -319,11 +318,11 @@ export default function SocialProofCarousel() {
 
                   <div className="grid grid-cols-2 gap-4 pt-5 border-t border-border/50 relative">
                     <div>
-                      <p className="text-4xl font-heading font-black text-white mb-1"><AnimatedStat value={study.stat1.value} /></p>
+                      <p className="text-4xl font-heading font-bold text-white mb-1"><AnimatedStat value={study.stat1.value} /></p>
                       <p className="text-muted-foreground text-sm font-medium">{study.stat1.label}</p>
                     </div>
                     <div>
-                      <p className="text-4xl font-heading font-black text-primary mb-1"><AnimatedStat value={study.stat2.value} /></p>
+                      <p className="text-4xl font-heading font-bold text-primary mb-1"><AnimatedStat value={study.stat2.value} /></p>
                       <p className="text-muted-foreground text-sm font-medium">{study.stat2.label}</p>
                     </div>
                   </div>

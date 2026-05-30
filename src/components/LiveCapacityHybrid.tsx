@@ -22,7 +22,7 @@ const LiveCapacityHybrid = () => {
             <div className="flex items-center gap-3 pr-2">
                 <div className="flex flex-col items-end">
                     <span className={cn(
-                        "text-[10px] sm:text-xs font-black uppercase tracking-tighter transition-colors duration-500",
+                        "text-[10px] sm:text-xs font-bold uppercase tracking-tighter transition-colors duration-500",
                         remainingSlots === 0 ? "text-red-500" : isLowCapacity ? "text-orange-500" : "text-primary"
                     )}>
                         {remainingSlots === 0 ? FULL_TEXT : `${CAPACITY_TEXT} ${remainingSlots}`}

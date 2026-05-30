@@ -65,7 +65,7 @@ export default function PortfolioVideoCard({ project, isVertical }: { project: P
           <span className="text-xs px-3 py-1 bg-primary/10 text-primary rounded-full font-bold uppercase tracking-wider">{project.category}</span>
           <span className="text-xs font-medium text-muted-foreground">{project.format}</span>
         </div>
-        <h3 className="font-heading text-xl font-black text-foreground">{project.title}</h3>
+        <h3 className="font-heading text-xl font-bold text-foreground">{project.title}</h3>
       </div>
     </div>
   );

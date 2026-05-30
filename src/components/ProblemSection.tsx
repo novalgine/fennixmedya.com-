@@ -34,7 +34,7 @@ const fallbackData = {
       icon: "ZapOff"
     }
   ],
-  blockquoteText: `"Hizmet bedeli oldukça yüksek, ama <br class="hidden md:block" />kendini ifade ediş biçimi çok <span class="text-primary font-black not-italic underline underline-offset-8 decoration-primary/40">amatör</span> duruyor. Bu fiyata değer mi?"`,
+  blockquoteText: `"Hizmet bedeli oldukça yüksek, ama <br class="hidden md:block" />kendini ifade ediş biçimi çok <span class="text-primary font-bold not-italic underline underline-offset-8 decoration-primary/40">amatör</span> duruyor. Bu fiyata değer mi?"`,
   blockquoteAuthor: "- Sizi İzleyen Müşterinin İç Sesi"
 };
 
@@ -157,7 +157,7 @@ const ProblemSection = () => {
             {/* Dark Red Warning Glow in Background using Radial Gradient instead of blur for Performance! */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150%] h-[150%] pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(127, 29, 29, 0.1) 0%, transparent 50%)' }} />
 
-            <h3 className="font-heading text-2xl font-black mb-6 text-foreground relative z-10">Algı Gerçektir</h3>
+            <h3 className="font-heading text-2xl font-bold mb-6 text-foreground relative z-10">Algı Gerçektir</h3>
             <div className="relative z-10 flex-1 flex flex-col justify-center">
               <div className="rounded-2xl overflow-hidden ring-1 ring-white/10 relative">
                 {/* Labels overlay — only on desktop */}
@@ -206,7 +206,7 @@ const ProblemSection = () => {
                     {point.icon === "TrendingDown" && <TrendingDown className="w-5 h-5 text-red-500" />}
                     {point.icon === "ZapOff" && <ZapOff className="w-5 h-5 text-red-500" />}
                   </div>
-                  <h4 className="font-heading font-black text-xl text-foreground">{point.title}</h4>
+                  <h4 className="font-heading font-bold text-xl text-foreground">{point.title}</h4>
                 </div>
                 <p className="text-muted-foreground font-medium text-sm leading-relaxed relative z-10">
                   {point.desc}

@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10 md:gap-8 items-start">
           {/* Brand */}
           <div className="md:col-span-1">
-            <h3 className="font-heading text-xl font-black text-gradient-gold uppercase tracking-widest mb-2">
+            <h3 className="font-heading text-xl font-bold text-gradient-gold uppercase tracking-widest mb-2">
               Fennix Medya
             </h3>
             <p className="text-base text-muted-foreground font-medium">
@@ -22,7 +22,7 @@ const Footer = () => {
 
           {/* Menü & Hizmetler */}
           <div className="space-y-3">
-            <h4 className="font-heading text-sm font-black uppercase tracking-widest text-foreground/50 mb-1">Hizmetlerimiz</h4>
+            <h4 className="font-heading text-sm font-bold uppercase tracking-widest text-foreground/50 mb-1">Hizmetlerimiz</h4>
             <div className="flex flex-col gap-2">
               <Link href="/hizmetler/sosyal-medya-video" className="text-muted-foreground hover:text-primary transition-colors text-sm font-medium">Sosyal Medya Videosu</Link>
               <Link href="/hizmetler/kurumsal-tanitim-filmi" className="text-muted-foreground hover:text-primary transition-colors text-sm font-medium">Kurumsal Tanıtım Filmi</Link>
@@ -36,7 +36,7 @@ const Footer = () => {
 
           {/* Contact */}
           <div className="space-y-3">
-            <h4 className="font-heading text-sm font-black uppercase tracking-widest text-foreground/50 mb-1">İletişim</h4>
+            <h4 className="font-heading text-sm font-bold uppercase tracking-widest text-foreground/50 mb-1">İletişim</h4>
             <a href="mailto:info@fennixmedya.com" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors text-sm font-medium">
               <Mail className="w-4 h-4 text-primary shrink-0" />
               info@fennixmedya.com
@@ -49,7 +49,7 @@ const Footer = () => {
 
           {/* Social */}
           <div className="space-y-3">
-            <h4 className="font-heading text-sm font-black uppercase tracking-widest text-foreground/50 mb-1">Takip Edin</h4>
+            <h4 className="font-heading text-sm font-bold uppercase tracking-widest text-foreground/50 mb-1">Takip Edin</h4>
             <div className="flex items-center gap-4">
               <a
                 href="https://instagram.com/fennixmedya"

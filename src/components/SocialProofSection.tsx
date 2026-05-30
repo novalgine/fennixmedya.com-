@@ -12,7 +12,7 @@ export default function SocialProofSection() {
   return (
     <section className="section-spacing bg-surface">
       <div className="max-w-5xl mx-auto px-6">
-        <h2 className="font-heading text-4xl md:text-6xl font-black text-center mb-16 tracking-tight">
+        <h2 className="font-heading text-4xl md:text-6xl font-bold text-center mb-16 tracking-tight">
           Fennix Medya ile <span className="text-gradient-gold">Otoritesini İnşa Eden Markalar</span>
         </h2>
 
@@ -21,7 +21,7 @@ export default function SocialProofSection() {
 
         {/* Target Audience Profiles (Server-Rendered Static Content) */}
         <div className="bg-card/40 border border-border/50 rounded-2xl p-10">
-          <h3 className="font-heading text-2xl font-black mb-8 flex items-center gap-3">
+          <h3 className="font-heading text-2xl font-bold mb-8 flex items-center gap-3">
             <Users className="w-7 h-7 text-primary" />
             Kimlerle Çalışıyoruz?
           </h3>
@@ -35,7 +35,7 @@ export default function SocialProofSection() {
           </ul>
         </div>
 
-        <p className="text-center mt-12 text-primary font-black text-xl flex items-center justify-center gap-2 text-balance">
+        <p className="text-center mt-12 text-primary font-bold text-xl flex items-center justify-center gap-2 text-balance">
           <Zap className="w-6 h-6 fill-primary shrink-0" />
           Ortak Nokta: Tüm referanslarımız pazarında fiyatla değil, otoritesiyle rekabet eden liderlerdir.
         </p>

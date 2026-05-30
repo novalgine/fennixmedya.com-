@@ -107,7 +107,7 @@ const OffCanvasMenu = ({ isOpen, onClose, onOpenWizard }: OffCanvasMenuProps) =>
               onClose();
               setTimeout(() => onOpenWizard(), 300); // Wait for menu to close before opening wizard
             }}
-            className="w-full bg-gradient-gold text-primary-foreground font-heading font-black text-lg py-4 rounded-xl hover:scale-[1.02] active:scale-[0.98] transition-all shadow-[0_0_20px_rgba(212,164,74,0.2)]"
+            className="w-full bg-gradient-gold text-primary-foreground font-heading font-bold text-lg py-4 rounded-xl hover:scale-[1.02] active:scale-[0.98] transition-all shadow-[0_0_20px_rgba(212,164,74,0.2)]"
           >
             Ücretsiz Strateji Görüşmesi Al →
           </button>

@@ -55,7 +55,7 @@ export default function OtherServices({ currentServiceId }: OtherServicesProps) 
       
       <div className="max-w-6xl mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="font-heading text-3xl md:text-5xl font-black mb-4">
+          <h2 className="font-heading text-3xl md:text-5xl font-bold mb-4">
             Diğer <span className="text-gradient-gold">Hizmetlerimiz</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">

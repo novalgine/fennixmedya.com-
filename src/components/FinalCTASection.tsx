@@ -42,10 +42,10 @@ const FinalCTASection = () => {
     <section id="basvuru" ref={containerRef} className="section-spacing bg-surface overflow-hidden py-24">
       <div ref={contentRef} className="max-w-4xl mx-auto px-6 will-change-transform text-center">
         <p className="text-center text-primary font-bold text-sm md:text-base uppercase tracking-widest mb-6">
-          Sürdürülebilir Kalite İçin Ayda En Fazla {TOTAL_SLOTS} Marka: <span className="font-black text-gradient-gold">(Bu Ay İçin Son {remainingSlots} Yer)</span>
+          Sürdürülebilir Kalite İçin Ayda En Fazla {TOTAL_SLOTS} Marka: <span className="font-bold text-gradient-gold">(Bu Ay İçin Son {remainingSlots} Yer)</span>
         </p>
         
-        <h2 className="font-heading text-3xl md:text-5xl lg:text-6xl font-black text-center mb-8 tracking-tight leading-[1.1]">
+        <h2 className="font-heading text-3xl md:text-5xl lg:text-6xl font-bold text-center mb-8 tracking-tight leading-[1.1]">
           Rakipleriniz Sıradan İçerik Havuzunda Boğulurken,<br/>
           <span className="text-gradient-gold">Siz Sinematik  İçeriklerle Fark Yaratın</span>
         </h2>
@@ -57,7 +57,7 @@ const FinalCTASection = () => {
         <MagneticWrapper strength={0.3}>
           <button
             onClick={openWizard}
-            className="bg-gradient-gold text-primary-foreground font-heading font-black text-2xl md:text-3xl px-12 py-6 rounded-2xl hover:scale-[1.02] active:scale-[0.98] transition-all shadow-[0_0_40px_rgba(212,164,74,0.3)] cursor-pointer relative overflow-hidden group inline-flex"
+            className="bg-gradient-gold text-primary-foreground font-heading font-bold text-2xl md:text-3xl px-12 py-6 rounded-2xl hover:scale-[1.02] active:scale-[0.98] transition-all shadow-[0_0_40px_rgba(212,164,74,0.3)] cursor-pointer relative overflow-hidden group inline-flex"
           >
             <span className="relative z-10 transition-transform group-hover:translate-x-2 inline-block">
               Hemen Planlamaya Başlayın →

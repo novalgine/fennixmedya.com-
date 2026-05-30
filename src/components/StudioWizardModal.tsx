@@ -350,7 +350,7 @@ const StudioWizardModal: React.FC<StudioWizardModalProps> = ({ isOpen, onClose }
                 <button 
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full bg-gradient-gold text-primary-foreground font-black text-lg py-4 rounded-xl hover:scale-[1.02] active:scale-[0.98] transition-all shadow-[0_0_20px_rgba(212,164,74,0.3)] mt-4 disabled:opacity-70 disabled:cursor-not-allowed"
+                  className="w-full bg-gradient-gold text-primary-foreground font-bold text-lg py-4 rounded-xl hover:scale-[1.02] active:scale-[0.98] transition-all shadow-[0_0_20px_rgba(212,164,74,0.3)] mt-4 disabled:opacity-70 disabled:cursor-not-allowed"
                 >
                   {isSubmitting ? "Gönderiliyor..." : "Randevu Oluştur →"}
                 </button>

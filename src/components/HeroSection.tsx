@@ -162,7 +162,7 @@ const HeroSection = () => {
           )}
         </div>
 
-        <h1 className="font-heading text-4xl md:text-6xl lg:text-7xl font-black leading-[1.1] mb-6 tracking-tight text-left md:text-center w-full">
+        <h1 className="font-heading text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.1] mb-6 tracking-tight text-left md:text-center w-full">
           <span
             className="text-foreground inline-block transition-all duration-500 ease-out"
             style={{ opacity: mounted ? 1 : 0, transform: mounted ? "translateY(0)" : "translateY(15px)" }}
@@ -229,7 +229,7 @@ const HeroSection = () => {
                 </div>
               </div>
               <div className="text-center">
-                <p className="text-white font-black tracking-[0.2em] uppercase text-sm md:text-base drop-shadow-2xl">VİZYONUMUZU İZLEYİN</p>
+                <p className="text-white font-bold tracking-[0.2em] uppercase text-sm md:text-base drop-shadow-2xl">VİZYONUMUZU İZLEYİN</p>
                 <p className="text-white/60 text-xs mt-2 font-medium tracking-wide">3 dakikada süreci keşfedin</p>
               </div>
             </div>
@@ -254,7 +254,7 @@ const HeroSection = () => {
             <MagneticWrapper strength={0.25}>
               <button
                 onClick={handleCTAClick}
-                className="w-full sm:w-auto bg-gradient-gold text-primary-foreground font-heading font-black text-lg md:text-xl px-8 py-5 rounded-xl transition-all shadow-lg shadow-gold/20 cursor-pointer inline-flex justify-center items-center group relative overflow-hidden"
+                className="w-full sm:w-auto bg-gradient-gold text-primary-foreground font-heading font-bold text-lg md:text-xl px-8 py-5 rounded-xl transition-all shadow-lg shadow-gold/20 cursor-pointer inline-flex justify-center items-center group relative overflow-hidden"
               >
                 <span className="hidden sm:inline">Ücretsiz Strateji Görüşmesi Al →</span>
                 <span className="sm:hidden">Ücretsiz Görüşme Al →</span>

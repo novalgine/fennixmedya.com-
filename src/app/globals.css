@@ -14,7 +14,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 24 14% 4%;
 
-    --primary: 38 85% 55%;
+    --primary: 43 45% 65%;
     --primary-foreground: 24 14% 4%;
 
     --secondary: 60 5% 90%;
@@ -23,7 +23,7 @@
     --muted: 60 5% 90%;
     --muted-foreground: 24 5% 45%;
 
-    --accent: 38 85% 55%;
+    --accent: 43 45% 65%;
     --accent-foreground: 24 14% 4%;
 
     --destructive: 0 84.2% 60.2%;
@@ -35,9 +35,9 @@
 
     --radius: 0.5rem;
 
-    --gold: 38 85% 55%;
-    --gold-light: 38 90% 70%;
-    --gold-dark: 38 80% 40%;
+    --gold: 43 45% 65%;
+    --gold-light: 43 50% 80%;
+    --gold-dark: 43 40% 45%;
 
     --surface: 0 0% 100%;
     --surface-elevated: 60 9% 98%;
@@ -55,7 +55,7 @@
     --popover: 0 0% 7%;
     --popover-foreground: 0 0% 92%;
 
-    --primary: 38 85% 55%;
+    --primary: 43 45% 65%;
     --primary-foreground: 0 0% 0%;
 
     --secondary: 0 0% 12%;
@@ -64,7 +64,7 @@
     --muted: 0 0% 14%;
     --muted-foreground: 0 0% 75%;
 
-    --accent: 38 45% 58%;
+    --accent: 43 45% 65%;
     --accent-foreground: 0 0% 4%;
 
     --destructive: 0 72% 50%;
@@ -76,9 +76,9 @@
 
     --radius: 0.5rem;
 
-    --gold: 38 85% 55%;
-    --gold-light: 38 90% 70%;
-    --gold-dark: 38 80% 40%;
+    --gold: 43 45% 65%;
+    --gold-light: 43 50% 80%;
+    --gold-dark: 43 40% 45%;
     --surface: 0 0% 7%;
     --surface-elevated: 0 0% 10%;
     --success: 142 70% 45%;
@@ -94,13 +94,13 @@
     --card-foreground: 0 0% 4%;
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 4%;
-    --primary: 38 85% 55%;
+    --primary: 43 45% 65%;
     --primary-foreground: 0 0% 100%;
     --secondary: 0 0% 94%;
     --secondary-foreground: 0 0% 15%;
     --muted: 0 0% 90%;
     --muted-foreground: 0 0% 40%;
-    --accent: 38 45% 58%;
+    --accent: 43 45% 65%;
     --accent-foreground: 0 0% 4%;
     --border: 0 0% 85%;
     --input: 0 0% 85%;
@@ -158,14 +158,14 @@
 
 @layer utilities {
   .text-gradient-gold {
-    background: linear-gradient(135deg, hsl(38 50% 70%), hsl(38 45% 58%), hsl(38 40% 42%));
+    background: linear-gradient(135deg, hsl(var(--gold-light)), hsl(var(--gold)), hsl(var(--gold-dark)));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
 
   .bg-gradient-gold {
-    background: linear-gradient(135deg, hsl(38 50% 70%), hsl(38 45% 58%));
+    background: linear-gradient(135deg, hsl(var(--gold-light)), hsl(var(--gold)));
   }
 
   .bg-gradient-dark {
@@ -181,11 +181,11 @@
   }
 
   .border-gold {
-    border-color: hsl(38 45% 58% / 0.3);
+    border-color: hsl(var(--gold) / 0.3);
   }
 
   .glow-gold {
-    box-shadow: 0 0 40px hsl(var(--gold) / 0.25), 0 0 80px hsl(var(--gold) / 0.1);
+    box-shadow: 0 0 25px hsl(var(--gold) / 0.15), 0 0 50px hsl(var(--gold) / 0.05);
   }
 
   .cinematic-overlay {

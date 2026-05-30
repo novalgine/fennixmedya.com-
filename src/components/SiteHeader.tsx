@@ -154,7 +154,7 @@ export default function SiteHeader() {
                   setIsMobileMenuOpen(false);
                   setIsWizardOpen(true);
                 }}
-                className="mx-4 mt-2 bg-gradient-gold text-primary-foreground font-heading font-black text-sm py-3 rounded-xl hover:scale-[1.02] active:scale-[0.98] transition-all shadow-lg shadow-gold/20"
+                className="mx-4 mt-2 bg-gradient-gold text-primary-foreground font-heading font-bold text-sm py-3 rounded-xl hover:scale-[1.02] active:scale-[0.98] transition-all shadow-lg shadow-gold/20"
               >
                 Ücretsiz Strateji Görüşmesi Al →
               </button>

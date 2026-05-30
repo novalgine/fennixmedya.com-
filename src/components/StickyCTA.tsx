@@ -92,7 +92,7 @@ const StickyCTA = () => {
       {isMobile ? (
         <button
           onClick={handleMainCTA}
-          className="bg-gradient-gold text-primary-foreground font-heading font-black px-6 sm:px-8 py-3 sm:py-4 rounded-full shadow-2xl hover:scale-105 active:scale-95 transition-all animate-pulse-gold text-sm sm:text-base cursor-pointer border border-white/10"
+          className="bg-gradient-gold text-primary-foreground font-heading font-bold px-6 sm:px-8 py-3 sm:py-4 rounded-full shadow-2xl hover:scale-105 active:scale-95 transition-all animate-pulse-gold text-sm sm:text-base cursor-pointer border border-white/10"
         >
           <span className="sm:hidden">Ücretsiz Görüşme Al →</span>
         </button>
@@ -100,7 +100,7 @@ const StickyCTA = () => {
         <MagneticWrapper strength={0.3}>
           <button
             onClick={handleMainCTA}
-            className="bg-gradient-gold text-primary-foreground font-heading font-black px-6 sm:px-8 py-3 sm:py-4 rounded-full shadow-2xl hover:scale-105 active:scale-95 transition-all animate-pulse-gold text-sm sm:text-base cursor-pointer border border-white/10"
+            className="bg-gradient-gold text-primary-foreground font-heading font-bold px-6 sm:px-8 py-3 sm:py-4 rounded-full shadow-2xl hover:scale-105 active:scale-95 transition-all animate-pulse-gold text-sm sm:text-base cursor-pointer border border-white/10"
           >
             <span className="hidden sm:inline">Ücretsiz Strateji Görüşmesi Al →</span>
           </button>
