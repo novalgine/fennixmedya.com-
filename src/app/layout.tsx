@@ -1,7 +1,21 @@
 import type { Metadata } from "next";
+import { Inter, Manrope } from "next/font/google";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import SiteHeader from "@/components/SiteHeader";
 import "./globals.css";
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
+});
+
+const manrope = Manrope({
+  subsets: ["latin"],
+  variable: "--font-manrope",
+  weight: ["700", "800"],
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://fennixmedya.com"),
@@ -93,7 +107,7 @@ export default function RootLayout({
           ],
         }} />
       </head>
-      <body className="font-body antialiased overflow-x-hidden relative w-full">
+      <body className={`${inter.variable} ${manrope.variable} font-body antialiased overflow-x-hidden relative w-full`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"

@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { BookOpen, X, Download, CheckCircle, Loader2 } from "lucide-react";
 import Link from "next/link";
 import { createPortal } from "react-dom";
+import { submitWeb3Form } from "@/actions/submitForm";
 
 interface PdfLeadModalProps {
   isOpen: boolean;
@@ -54,21 +55,14 @@ export default function PdfLeadModal({ isOpen, onClose }: PdfLeadModalProps) {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          access_key: "b2890264-5337-4e27-9cba-7b64c7e6aa09",
-          subject: `PDF Rehber İndirme Talebi: ${name}`,
-          name,
-          email,
-          message: `${name} kişisi PDF rehber indirmek istiyor. E-posta: ${email}`,
-        }),
+      const response = await submitWeb3Form({
+        subject: `PDF Rehber İndirme Talebi: ${name}`,
+        name,
+        email,
+        message: `${name} kişisi PDF rehber indirmek istiyor. E-posta: ${email}`,
       });
 
-      const data = await response.json();
-
-      if (data.success) {
+      if (response.success) {
         setIsSuccess(true);
       } else {
         setError("Bir hata oluştu. Lütfen tekrar deneyin.");

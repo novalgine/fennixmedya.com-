@@ -4,6 +4,7 @@ import { X, ArrowLeft, ChevronRight, CheckCircle2 } from "lucide-react";
 import dynamic from "next/dynamic";
 const Cal = dynamic(() => import("@calcom/embed-react"), { ssr: false });
 import Link from "next/link";
+import { submitWeb3Form } from "@/actions/submitForm";
 
 type FunnelWizardModalProps = {
   isOpen: boolean;
@@ -19,7 +20,6 @@ type Answers = {
   phone: string;
 };
 
-const WEB3FORMS_ACCESS_KEY = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY || "";
 
 const FunnelWizardModal: React.FC<FunnelWizardModalProps> = ({ isOpen, onClose }) => {
   const [step, setStep] = useState(1);
@@ -72,23 +72,15 @@ const FunnelWizardModal: React.FC<FunnelWizardModalProps> = ({ isOpen, onClose }
 
     try {
       // 1. Web3Forms ile E-posta Gönderimi
-      const response = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        body: JSON.stringify({
-          access_key: WEB3FORMS_ACCESS_KEY,
-          subject: `Yeni Form Başvurusu (Sihirbaz): ${answers.name}`,
-          from_name: "Fennix Medya Wizard",
-          "Ad Soyad": answers.name,
-          "E-posta": answers.email,
-          "Telefon": answers.phone,
-          "Format": answers.format,
-          "Model": answers.model,
-          "İçerik/Senaryo Türü": answers.content,
-        }),
+      const response = await submitWeb3Form({
+        subject: `Yeni Form Başvurusu (Sihirbaz): ${answers.name}`,
+        from_name: "Fennix Medya Wizard",
+        "Ad Soyad": answers.name,
+        "E-posta": answers.email,
+        "Telefon": answers.phone,
+        "Format": answers.format,
+        "Model": answers.model,
+        "İçerik/Senaryo Türü": answers.content,
       });
 
       // 2. Takvim Adımına Geçiş (Cal.com Inline Embed)
