@@ -10,7 +10,7 @@ const profiles = [
 
 export default function SocialProofSection() {
   return (
-    <section className="section-spacing bg-surface">
+    <section id="portfolyo" className="section-spacing bg-surface">
       <div className="max-w-5xl mx-auto px-6">
         <h2 className="font-heading text-4xl md:text-6xl font-bold text-center mb-16 tracking-tight">
           Fennix Medya ile <span className="text-gradient-gold">Otoritesini İnşa Eden Markalar</span>

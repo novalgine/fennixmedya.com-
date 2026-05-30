@@ -34,7 +34,7 @@ const HeroSection = () => {
 
   const [wpData, setWpData] = useState({
     title: "Siz Hala Telefonla Mı Çekiyorsunuz?",
-    content: `Aylık kontenjan: <span class="text-primary font-semibold">Maksimum ${TOTAL_SLOTS} marka</span> ile çalışıyoruz`
+    content: `Kaliteyi korumak için ayda <span class="text-primary font-semibold">sadece ${TOTAL_SLOTS} marka</span> ile çalışıyoruz`
   });
 
   useEffect(() => {
@@ -254,6 +254,7 @@ const HeroSection = () => {
             <MagneticWrapper strength={0.25}>
               <button
                 onClick={handleCTAClick}
+                aria-label="Ücretsiz Strateji Görüşmesi Al"
                 className="w-full sm:w-auto bg-gradient-gold text-primary-foreground font-heading font-bold text-lg md:text-xl px-8 py-5 rounded-xl transition-all shadow-lg shadow-gold/20 cursor-pointer inline-flex justify-center items-center group relative overflow-hidden"
               >
                 <span className="hidden sm:inline">Ücretsiz Strateji Görüşmesi Al →</span>
@@ -263,12 +264,12 @@ const HeroSection = () => {
             </MagneticWrapper>
             
             <MagneticWrapper strength={0.15}>
-              <Link
-                href="/portfolyo"
+              <a
+                href="#portfolyo"
                 className="w-full sm:w-auto bg-transparent border-2 border-white/20 text-foreground font-heading font-bold text-lg md:text-xl px-8 py-4 rounded-xl transition-all hover:bg-white/5 hover:border-white/40 cursor-pointer inline-flex justify-center items-center"
               >
                 Portfolyomuzu İncele
-              </Link>
+              </a>
             </MagneticWrapper>
           </div>
           
@@ -317,7 +318,8 @@ const HeroSection = () => {
             <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-[0_0_100px_rgba(232,106,31,0.2)] border border-white/10 mb-6">
               <button
                 onClick={() => setShowVideo(false)}
-                className="absolute top-4 right-4 z-10 w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center backdrop-blur-md transition-colors border border-white/20"
+                aria-label="Videoyu Kapat"
+                className="absolute top-4 right-4 z-[60] w-12 h-12 rounded-full bg-black/50 backdrop-blur-md border border-white/10 flex items-center justify-center text-white hover:bg-white/20 transition-all cursor-pointer"
               >
                 <X className="w-6 h-6 text-white" />
               </button>

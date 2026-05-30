@@ -55,6 +55,7 @@ const Footer = () => {
                 href="https://instagram.com/fennixmedya"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Instagram sayfamızı ziyaret edin"
                 className="w-10 h-10 rounded-xl bg-card border border-border/50 flex items-center justify-center hover:border-primary/50 hover:bg-primary/5 transition-all group"
               >
                 <svg className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
@@ -67,6 +68,7 @@ const Footer = () => {
                 href="https://youtube.com/@fennixmedya"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="YouTube kanalımızı ziyaret edin"
                 className="w-10 h-10 rounded-xl bg-card border border-border/50 flex items-center justify-center hover:border-primary/50 hover:bg-primary/5 transition-all group"
               >
                 <svg className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" fill="currentColor" viewBox="0 0 24 24">
