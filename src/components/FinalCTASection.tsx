@@ -39,8 +39,10 @@ const FinalCTASection = () => {
   }, []);
 
   return (
-    <section id="basvuru" ref={containerRef} className="section-spacing bg-emerald-surface overflow-hidden py-24">
-      <div ref={contentRef} className="max-w-4xl mx-auto px-6 will-change-transform text-center">
+    <section id="basvuru" ref={containerRef} className="section-spacing bg-surface overflow-hidden py-24 relative">
+      {/* Emerald Spotlight behind CTA */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,var(--tw-gradient-stops))] from-emerald-900/10 via-transparent to-transparent pointer-events-none" />
+      <div ref={contentRef} className="max-w-4xl mx-auto px-6 will-change-transform text-center relative z-10">
         <p className="text-center text-primary font-bold text-sm md:text-base uppercase tracking-widest mb-6">
           Sürdürülebilir Kalite İçin Ayda En Fazla {TOTAL_SLOTS} Marka: <span className="font-bold text-gradient-gold">(Bu Ay İçin Son {remainingSlots} Yer)</span>
         </p>

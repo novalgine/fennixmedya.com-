@@ -239,7 +239,7 @@ export default function SocialProofCarousel() {
 
           {/* ── Animasyonlu Card Wrapper ── */}
           <div
-            className="bg-emerald-surface/40 backdrop-blur-md border border-emerald/10 rounded-3xl overflow-hidden shadow-2xl relative transition-all duration-700 hover:bg-emerald-surface/60 hover:shadow-[0_0_60px_hsla(var(--emerald),0.15)] hover:border-emerald/30 group/card min-h-[500px] md:h-[500px] lg:h-[600px]"
+            className="bg-card/50 backdrop-blur-md border border-border/50 rounded-3xl overflow-hidden shadow-2xl relative transition-all duration-700 hover:bg-card/70 hover:shadow-[0_0_60px_rgba(16,185,129,0.15)] hover:border-emerald-500/30 group/card min-h-[500px] md:h-[500px] lg:h-[600px]"
             onTouchStart={handleTouchStart}
             onTouchEnd={handleTouchEnd}
             role="group"

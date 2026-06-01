@@ -135,7 +135,7 @@ const ProblemSection = () => {
   }, []);
 
   return (
-    <section ref={containerRef} className="section-spacing bg-emerald-surface relative z-10 w-full">
+    <section ref={containerRef} className="section-spacing bg-surface relative z-10 w-full">
       <div className="max-w-7xl mx-auto px-6">
 
         {/* Header */}
@@ -194,8 +194,8 @@ const ProblemSection = () => {
           <div className="lg:col-span-5 grid grid-rows-3 gap-6">
 
             {data.painPoints.map((point) => (
-              <div key={point.id} className="bento-card row-span-1 bg-card border border-border/50 hover:border-gold/30 hover:bg-muted/30 transition-all duration-500 rounded-3xl p-6 flex flex-col justify-center relative overflow-hidden group">
-                <div className="absolute -right-4 -top-4 opacity-[0.03] dark:opacity-5 group-hover:scale-110 group-hover:opacity-10 transition-all duration-500 text-foreground">
+              <div key={point.id} className="bento-card row-span-1 bg-card border border-border/50 hover:border-emerald-500/40 hover:shadow-[0_0_20px_rgba(16,185,129,0.08)] hover:bg-emerald-950/20 transition-all duration-500 rounded-3xl p-6 flex flex-col justify-center relative overflow-hidden group">
+                <div className="absolute -right-4 -top-4 opacity-[0.03] dark:opacity-5 group-hover:scale-110 group-hover:opacity-10 transition-all duration-500 text-foreground group-hover:text-emerald-500">
                   {point.icon === "Clock" && <Clock className="w-32 h-32" />}
                   {point.icon === "TrendingDown" && <TrendingDown className="w-32 h-32" />}
                   {point.icon === "ZapOff" && <ZapOff className="w-32 h-32" />}
@@ -218,7 +218,7 @@ const ProblemSection = () => {
 
           {/* Bottom Wide Box (Punchline) */}
           <div className="bento-card lg:col-span-12 bg-card border border-border/50 rounded-3xl p-8 md:p-12 relative overflow-hidden group">
-            <div className="absolute left-0 top-0 bottom-0 w-2 bg-gradient-gold" />
+            <div className="absolute left-0 top-0 bottom-0 w-2 bg-emerald-500/80 shadow-[0_0_15px_rgba(16,185,129,0.4)]" />
             <blockquote className="max-w-4xl mx-auto text-center relative z-10">
               <p
                 className="text-2xl md:text-3xl font-heading italic text-foreground/80 leading-relaxed font-bold"
