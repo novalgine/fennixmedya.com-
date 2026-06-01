@@ -215,6 +215,8 @@ const HeroSection = () => {
               style={{ contain: "strict" }}
               poster={heroBg.src}
               ref={heroVideoRef}
+              title="Fennix Medya Tanıtım Videosu Arka Planı"
+              aria-label="Fennix Medya Tanıtım Videosu Arka Planı"
             >
             </video>
 

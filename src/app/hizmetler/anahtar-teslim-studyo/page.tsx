@@ -6,7 +6,7 @@ import OtherServices from "@/components/OtherServices";
 import LazyHeroVideo from "@/components/LazyHeroVideo";
 
 export const metadata: Metadata = {
-  title: "Anahtar Teslim Stüdyo Kurulumu | Evinize veya Ofisinize Profesyonel Set — Fennix Medya",
+  title: "Anahtar Teslim Stüdyo Kurulumu | Fennix Medya",
   description:
     "Ofisinizde veya evinizde, tek tuşla sinematik yayın yapabileceğiniz kişisel içerik üssünüzü kuruyoruz. Akustik analiz, ışık kalibrasyonu ve kamera önü performansı dahildir.",
   alternates: { canonical: "https://fennixmedya.com/hizmetler/anahtar-teslim-studyo" },

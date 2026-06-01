@@ -6,7 +6,7 @@ import JsonLd from "@/components/JsonLd";
 import LazyHeroVideo from "@/components/LazyHeroVideo";
 
 export const metadata: Metadata = {
-  title: "Sosyal Medya Görsel Algı ve Otorite Yönetimi",
+  title: "Sosyal Medya Video Çekimi | Fennix Medya",
   description:
     "İstanbul'da yüksek dönüşümlü sosyal medya video stratejisi. Reels, TikTok ve Shorts için native kurgulanmış dikey format içerik ağları. Ayda 6 saat ayırarak otoritenizi inşa edin.",
   alternates: { canonical: "https://fennixmedya.com/hizmetler/sosyal-medya-video" },

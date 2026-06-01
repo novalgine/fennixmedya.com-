@@ -58,6 +58,7 @@ export default function PortfolioVideoCard({ project, isVertical }: { project: P
           playsInline
           preload="none"
           poster={posterSrc}
+          aria-label={project.title}
         />
       </div>
       <div className="p-6 bg-card">

@@ -51,6 +51,7 @@ export default function LazyHeroVideo({ src, poster, title, className = "w-full 
       preload="metadata"
       poster={poster}
       title={title}
+      aria-label={title}
     />
   );
 }

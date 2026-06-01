@@ -3,7 +3,7 @@ import Link from "next/link";
 import { ArrowRight, Calendar, User, Clock } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Blog — Video Prodüksiyon Rehberleri",
+  title: "Blog | Fennix Medya - Video Prodüksiyon Rehberleri",
   description:
     "Sosyal medya videoları, kurumsal filmler ve YouTube içerik üretimi hakkında profesyonel rehberler ve ipuçları.",
   alternates: { canonical: "https://fennixmedya.com/blog" },

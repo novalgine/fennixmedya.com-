@@ -6,7 +6,7 @@ import OtherServices from "@/components/OtherServices";
 import LazyHeroVideo from "@/components/LazyHeroVideo";
 
 export const metadata: Metadata = {
-  title: "YouTube İçerik Üretimi İstanbul",
+  title: "YouTube İçerik Üretimi | Fennix Medya",
   description:
     "YouTube kanalınız için algoritma uyumlu içerik mimarisi. Tıklanma (CTR) ve dikkat yönetimi (retention) optimize edilmiş YouTube büyüme paketi.",
   alternates: { canonical: "https://fennixmedya.com/hizmetler/youtube-icerik-uretimi" },

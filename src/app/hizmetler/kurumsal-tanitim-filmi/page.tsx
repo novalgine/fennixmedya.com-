@@ -6,7 +6,7 @@ import OtherServices from "@/components/OtherServices";
 import LazyHeroVideo from "@/components/LazyHeroVideo";
 
 export const metadata: Metadata = {
-  title: "Kurumsal Tanıtım Filmi Çekimi İstanbul",
+  title: "Kurumsal Tanıtım Filmi Çekimi | Fennix Medya",
   description:
     "Markanızın vizyonunu ve değerini kurumsal prestijinizi en üst seviyeye taşıyan stratejik marka filmleriyle anlatıyoruz.",
   alternates: { canonical: "https://fennixmedya.com/hizmetler/kurumsal-tanitim-filmi" },

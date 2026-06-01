@@ -266,6 +266,8 @@ export default function SocialProofCarousel() {
                   loop 
                   playsInline 
                   preload="metadata"
+                  title={`${study.name} arka plan videosu`}
+                  aria-label={`${study.name} arka plan videosu`}
                 />
                 {/* Gradient overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-black/20 z-0" />
