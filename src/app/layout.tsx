@@ -79,8 +79,7 @@ export default function RootLayout({
   return (
     <html lang="tr" className="overflow-x-hidden" suppressHydrationWarning>
       <head>
-        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-        <link rel="icon" href="/favicon.ico" sizes="32x32" />
+        {/* Favicon is handled by Next.js icon.tsx automatically */}
         <JsonLd data={{
           "@context": "https://schema.org",
           "@graph": [
