@@ -39,7 +39,7 @@ const FinalCTASection = () => {
   }, []);
 
   return (
-    <section id="basvuru" ref={containerRef} className="section-spacing bg-surface overflow-hidden py-24">
+    <section id="basvuru" ref={containerRef} className="section-spacing bg-emerald-surface overflow-hidden py-24">
       <div ref={contentRef} className="max-w-4xl mx-auto px-6 will-change-transform text-center">
         <p className="text-center text-primary font-bold text-sm md:text-base uppercase tracking-widest mb-6">
           Sürdürülebilir Kalite İçin Ayda En Fazla {TOTAL_SLOTS} Marka: <span className="font-bold text-gradient-gold">(Bu Ay İçin Son {remainingSlots} Yer)</span>

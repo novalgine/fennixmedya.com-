@@ -135,7 +135,7 @@ const ProblemSection = () => {
   }, []);
 
   return (
-    <section ref={containerRef} className="section-spacing bg-surface relative z-10 w-full">
+    <section ref={containerRef} className="section-spacing bg-emerald-surface relative z-10 w-full">
       <div className="max-w-7xl mx-auto px-6">
 
         {/* Header */}

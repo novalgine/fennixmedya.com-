@@ -39,6 +39,11 @@
     --gold-light: 43 50% 80%;
     --gold-dark: 43 40% 45%;
 
+    --emerald: 164 50% 30%;
+    --emerald-light: 164 50% 40%;
+    --emerald-dark: 164 70% 10%;
+    --emerald-surface: 164 20% 96%;
+
     --surface: 0 0% 100%;
     --surface-elevated: 60 9% 98%;
     --success: 142 70% 45%;
@@ -79,6 +84,11 @@
     --gold: 43 45% 65%;
     --gold-light: 43 50% 80%;
     --gold-dark: 43 40% 45%;
+
+    --emerald: 164 50% 30%;
+    --emerald-light: 164 50% 40%;
+    --emerald-dark: 164 70% 10%;
+    --emerald-surface: 164 60% 6%;
     --surface: 0 0% 7%;
     --surface-elevated: 0 0% 10%;
     --success: 142 70% 45%;
