@@ -8,8 +8,20 @@ Disallow: /api/
 User-agent: GPTBot
 Allow: /
 
+# OAI-SearchBot (ChatGPT Arama Sonuçları)
+User-agent: OAI-SearchBot
+Allow: /
+
 # ChatGPT-User
 User-agent: ChatGPT-User
+Allow: /
+
+# Bingbot
+User-agent: Bingbot
+Allow: /
+
+# Googlebot
+User-agent: Googlebot
 Allow: /
 
 # Claude-Web
