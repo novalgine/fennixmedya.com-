@@ -4,7 +4,8 @@ import { X, ArrowLeft, ChevronRight, CheckCircle2 } from "lucide-react";
 import dynamic from "next/dynamic";
 const Cal = dynamic(() => import("@calcom/embed-react"), { ssr: false });
 import Link from "next/link";
-import { submitWeb3Form } from "@/actions/submitForm";
+
+const WEB3FORMS_KEY = "b2890264-5337-4e27-9cba-7b64c7e6aa09";
 
 type StudioWizardModalProps = {
   isOpen: boolean;
@@ -80,17 +81,22 @@ const StudioWizardModal: React.FC<StudioWizardModalProps> = ({ isOpen, onClose }
     setError("");
 
     try {
-      await submitWeb3Form({
-        subject: `Yeni Stüdyo Kurulum Talebi: ${answers.name}`,
-        from_name: "Fennix Medya Stüdyo Wizard",
-        "Ad Soyad": answers.name,
-        "E-posta": answers.email,
-        "Telefon": answers.phone,
-        "Mekan": answers.location,
-        "Kullanım Amacı": answers.purpose,
-        "Bütçe Aralığı": answers.budget,
-        "Deneyim": answers.experience,
-        "Kurgu İhtiyacı": answers.editing,
+      await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          access_key: WEB3FORMS_KEY,
+          subject: `Yeni Stüdyo Kurulum Talebi: ${answers.name}`,
+          from_name: "Fennix Medya Stüdyo Wizard",
+          "Ad Soyad": answers.name,
+          "E-posta": answers.email,
+          "Telefon": answers.phone,
+          "Mekan": answers.location,
+          "Kullanım Amacı": answers.purpose,
+          "Bütçe Aralığı": answers.budget,
+          "Deneyim": answers.experience,
+          "Kurgu İhtiyacı": answers.editing,
+        }),
       });
 
       setStep(7);
