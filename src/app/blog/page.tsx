@@ -12,6 +12,46 @@ export const metadata: Metadata = {
 // Blog post metadata — in a real setup this would come from MDX/CMS
 const blogPosts = [
   {
+    slug: 'video-produksiyon-maliyetleri-2026',
+    title: 'Video Prodüksiyon Maliyetleri 2026: Ne Kadar Bütçe Ayırmalısınız?',
+    excerpt: '2026 yılında profesyonel video prodüksiyon maliyetleri ne kadar? Kurumsal film, sosyal medya videosu ve reklam filmi fiyatlarını karşılaştırmalı olarak inceliyoruz.',
+    date: '2026-06-15',
+    readTime: '8-10 dk',
+    category: 'Maliyet',
+  },
+  {
+    slug: 'yapay-zeka-ile-video-uretimi',
+    title: 'Yapay Zeka ile Video Üretimi: AI Araçları mı Profesyonel Ekip mi?',
+    excerpt: '2026\'da yapay zeka video araçları profesyonel prodüksiyon ekiplerinin yerini alabilir mi? Sora, Runway ve Kling gibi AI araçlarını gerçek prodüksiyonla karşılaştırıyoruz.',
+    date: '2026-06-12',
+    readTime: '9-10 dk',
+    category: 'Yapay Zeka',
+  },
+  {
+    slug: 'linkedin-video-stratejisi-b2b',
+    title: 'LinkedIn Video Stratejisi: B2B Markalar İçin 2026 Rehberi',
+    excerpt: 'B2B markalar için LinkedIn video stratejisi nasıl kurulur? Düşünce liderliği videoları, algoritma ipuçları ve dönüşüm odaklı içerik formatları.',
+    date: '2026-06-10',
+    readTime: '7-8 dk',
+    category: 'B2B',
+  },
+  {
+    slug: 'e-ticaret-urun-videolari',
+    title: 'E-Ticaret Ürün Videoları: Satışları Artıran Teknikler (2026)',
+    excerpt: 'E-ticaret sitelerinde ürün videoları satışları nasıl artırır? Dönüşüm oranını yükselten video türleri, çekim teknikleri ve platform stratejileri.',
+    date: '2026-06-08',
+    readTime: '8-9 dk',
+    category: 'E-Ticaret',
+  },
+  {
+    slug: 'podcast-ten-video-icerigi-uretmek',
+    title: 'Podcast\'ten Video İçeriğe: Tek Çekimle 30 Günlük İçerik Üretme',
+    excerpt: 'Tek bir podcast veya röportaj çekiminden 30 günlük çoklu platform video içeriği nasıl çıkarılır? İçerik yeniden kullanım (repurposing) stratejileri.',
+    date: '2026-06-05',
+    readTime: '7-8 dk',
+    category: 'Strateji',
+  },
+  {
     slug: "sosyal-medya-videosu-nasil-planlanir",
     title: "Sosyal Medya Videosu Nasıl Planlanır? (2026 Rehberi)",
     excerpt:
