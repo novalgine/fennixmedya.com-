@@ -70,6 +70,8 @@ export const metadata: Metadata = {
 
 import CookieBanner from "@/components/CookieBanner";
 import JsonLd from "@/components/JsonLd";
+import FacebookPixel from "@/components/FacebookPixel";
+
 
 export default function RootLayout({
   children,
@@ -119,6 +121,8 @@ export default function RootLayout({
               <SiteHeader />
               <main className="flex-1 w-full">{children}</main>
               <CookieBanner />
+              <FacebookPixel />
+
             </div>
           </WizardProvider>
         </ThemeProvider>
