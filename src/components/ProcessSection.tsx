@@ -114,7 +114,7 @@ const ProcessSection = () => {
                       {/* Items List */}
                       {step.htmlContent ? (
                         <div
-                          className="space-y-2 text-muted-foreground text-sm font-medium leading-relaxed wp-content-list"
+                          className="space-y-2 text-muted-foreground text-sm font-medium leading-relaxed"
                           dangerouslySetInnerHTML={{ __html: step.htmlContent }}
                         />
                       ) : (
