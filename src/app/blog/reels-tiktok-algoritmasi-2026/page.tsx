@@ -37,7 +37,7 @@ export default function BlogPost() {
           ]}
         />
 
-        <div className="prose prose-invert prose-lg max-w-none prose-headings:font-heading prose-headings:font-bold prose-a:text-primary hover:prose-a:text-primary/80 prose-img:rounded-2xl prose-img:border prose-img:border-white/10 prose-p:text-muted-foreground prose-li:text-muted-foreground">
+        <div className="prose prose-invert prose-lg max-w-none prose-headings:font-body prose-headings:font-bold prose-a:text-primary hover:prose-a:text-primary/80 prose-img:rounded-2xl prose-img:border prose-img:border-white/10 prose-p:text-muted-foreground prose-li:text-muted-foreground">
           <p className="lead font-medium text-foreground">
             Hatırlıyor musunuz? Bir zamanlar rastgele bir dans videosu çekip popüler bir müzik eklediğinizde yüz binlerce izlenmeye ulaşmak mümkündü. O günler artık çok geride kaldı. 2026 yılında TikTok, Instagram Reels ve YouTube Shorts algoritmaları yapay zekâ destekli derin analiz motorlarına dönüştü ve her bir videonuzu onlarca farklı metrikle değerlendiriyorlar.
           </p>

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Manrope } from "next/font/google";
+import { Inter, Big_Shoulders } from "next/font/google";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import SiteHeader from "@/components/SiteHeader";
 import { WizardProvider } from "@/components/WizardContext";
@@ -11,10 +11,9 @@ const inter = Inter({
   display: "swap",
 });
 
-const manrope = Manrope({
+const bigShoulders = Big_Shoulders({
   subsets: ["latin", "latin-ext"],
-  variable: "--font-manrope",
-  weight: ["700", "800"],
+  variable: "--font-display",
   display: "swap",
 });
 
@@ -110,7 +109,7 @@ export default function RootLayout({
           ],
         }} />
       </head>
-      <body className={`${inter.variable} ${manrope.variable} font-body antialiased overflow-x-hidden relative w-full`}>
+      <body className={`${inter.variable} ${bigShoulders.variable} font-body antialiased overflow-x-hidden relative w-full`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"

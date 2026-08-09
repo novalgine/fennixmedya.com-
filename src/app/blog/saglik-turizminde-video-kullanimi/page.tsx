@@ -37,7 +37,7 @@ export default function BlogPost() {
           ]}
         />
 
-        <div className="prose prose-invert prose-lg max-w-none prose-headings:font-heading prose-headings:font-bold prose-a:text-primary hover:prose-a:text-primary/80 prose-img:rounded-2xl prose-img:border prose-img:border-white/10 prose-p:text-muted-foreground prose-li:text-muted-foreground">
+        <div className="prose prose-invert prose-lg max-w-none prose-headings:font-body prose-headings:font-bold prose-a:text-primary hover:prose-a:text-primary/80 prose-img:rounded-2xl prose-img:border prose-img:border-white/10 prose-p:text-muted-foreground prose-li:text-muted-foreground">
           <p className="lead font-medium text-foreground">
             Türkiye, sağlık turizminde dünyanın tartışmasız en önde gelen destinasyonlarından biri. Estetik cerrahiden diş tedavilerine, saç ekiminden obezite cerrahisine kadar her ay on binlerce turist şifa bulmak için ülkemizi tercih ediyor. Ancak pazar ne kadar büyükse, rekabet de o kadar acımasız.
           </p>

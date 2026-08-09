@@ -37,7 +37,7 @@ export default function BlogPost() {
           ]}
         />
 
-        <div className="prose prose-invert prose-lg max-w-none prose-headings:font-heading prose-headings:font-bold prose-a:text-primary hover:prose-a:text-primary/80 prose-img:rounded-2xl prose-img:border prose-img:border-white/10 prose-p:text-muted-foreground prose-li:text-muted-foreground">
+        <div className="prose prose-invert prose-lg max-w-none prose-headings:font-body prose-headings:font-bold prose-a:text-primary hover:prose-a:text-primary/80 prose-img:rounded-2xl prose-img:border prose-img:border-white/10 prose-p:text-muted-foreground prose-li:text-muted-foreground">
           <p className="lead font-medium text-foreground">
             &quot;Video çektirmek istiyorum ama fiyatlar hakkında hiçbir fikrim yok&quot; — bu cümleyi hemen hemen her müşterimizden duyuyoruz. Video prodüksiyon sektörü, fiyatlandırma konusunda şeffaf olmayan bir pazar olarak bilinir. Aynı işi bir ajans 10.000 TL&apos;ye yaparken, bir diğeri 200.000 TL talep edebilir. Peki bu fark nereden geliyor ve siz ne kadar bütçe ayırmalısınız?
           </p>

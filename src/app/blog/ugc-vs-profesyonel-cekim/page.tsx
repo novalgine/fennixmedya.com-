@@ -38,7 +38,7 @@ export default function BlogPost() {
           ]}
         />
 
-        <div className="prose prose-invert prose-lg max-w-none prose-headings:font-heading prose-headings:font-bold prose-a:text-primary hover:prose-a:text-primary/80 prose-img:rounded-2xl prose-img:border prose-img:border-white/10 prose-p:text-muted-foreground prose-li:text-muted-foreground">
+        <div className="prose prose-invert prose-lg max-w-none prose-headings:font-body prose-headings:font-bold prose-a:text-primary hover:prose-a:text-primary/80 prose-img:rounded-2xl prose-img:border prose-img:border-white/10 prose-p:text-muted-foreground prose-li:text-muted-foreground">
           <p className="lead font-medium text-foreground">
             Video pazarlama dünyasında son yılların en büyük tartışması şu: İçeriklerimiz bir reklam ajansının elinden çıkmış gibi kusursuz mu görünmeli, yoksa sıradan bir insanın cep telefonuyla çekmiş gibi doğal ve filtresiz mi olmalı?
           </p>

@@ -37,7 +37,7 @@ export default function BlogPost() {
           ]}
         />
 
-        <div className="prose prose-invert prose-lg max-w-none prose-headings:font-heading prose-headings:font-bold prose-a:text-primary hover:prose-a:text-primary/80 prose-img:rounded-2xl prose-img:border prose-img:border-white/10 prose-p:text-muted-foreground prose-li:text-muted-foreground">
+        <div className="prose prose-invert prose-lg max-w-none prose-headings:font-body prose-headings:font-bold prose-a:text-primary hover:prose-a:text-primary/80 prose-img:rounded-2xl prose-img:border prose-img:border-white/10 prose-p:text-muted-foreground prose-li:text-muted-foreground">
           <p className="lead font-medium text-foreground">
             Her gün yeni bir video çekmek, her platform için ayrı içerik üretmek... Bu düşünce bile iş insanlarının içerik üretiminden kaçmasına yetiyor. Ama ya size tek bir çekim gününde 30 günlük tüm içeriğinizi çıkarabileceğinizi söylesek? Bu, bir hayal değil — <strong>Content Repurposing (içerik yeniden kullanımı)</strong> stratejisinin gücü.
           </p>
