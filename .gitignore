@@ -42,3 +42,5 @@ next-env.d.ts
 
 # Claude Code session data
 .claude/
+.agents/
+skills-lock.json
