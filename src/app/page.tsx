@@ -1,6 +1,7 @@
 import HeroSection from "@/components/HeroSection";
 import ScrollProgress from "@/components/ScrollProgress";
 import TrustCounterBand from "@/components/TrustCounterBand";
+import ClientMarquee from "@/components/ClientMarquee";
 import Reveal from "@/components/Reveal";
 import SocialProofSection from "@/components/SocialProofSection";
 import dynamic from "next/dynamic";
@@ -24,6 +25,7 @@ export default function HomePage() {
       <HeroSection />
 
       {/* Page sections */}
+      <ClientMarquee />
       <TrustCounterBand />
       <Reveal><SocialProofSection /></Reveal>
 
