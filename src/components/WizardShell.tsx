@@ -153,7 +153,7 @@ export default function WizardShell<A extends ContactFields>({
         </div>
 
         {/* Content */}
-        <div className="p-6 md:p-8 flex-grow overflow-y-auto relative z-10">
+        <div data-lenis-prevent className="p-6 md:p-8 flex-grow overflow-y-auto relative z-10">
           {currentChoice && (
             <div key={stepIdx} className="animate-in slide-in-from-right-4 fade-in duration-300">
               <DialogTitle className="text-2xl font-heading font-bold text-foreground mb-2">

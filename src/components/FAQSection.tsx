@@ -5,7 +5,7 @@ import {
     AccordionItem,
     AccordionTrigger,
 } from "@/components/ui/accordion";
-import { useScrollFadeIn } from "@/hooks/useScrollFadeIn";
+import Reveal from "@/components/Reveal";
 import { CAPACITY_CONFIG } from "@/config/capacity";
 import JsonLd from "@/components/JsonLd";
 
@@ -41,11 +41,10 @@ const fallbackFaqs = [
 ];
 
 const FAQSection = () => {
-    const { ref, isVisible } = useScrollFadeIn(0.1);
     const faqs = fallbackFaqs;
 
     return (
-        <section className="section-spacing bg-background relative z-10 w-full" ref={ref}>
+        <section className="section-spacing bg-background relative z-10 w-full">
             {/* FAQ Schema for SEO/GEO */}
             <JsonLd
                 data={{
@@ -64,13 +63,7 @@ const FAQSection = () => {
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gold/5 blur-[120px] rounded-full pointer-events-none" />
 
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                <div
-                    className="text-center mb-16 transition-all duration-700 ease-out"
-                    style={{
-                        opacity: isVisible ? 1 : 0,
-                        transform: isVisible ? "translateY(0)" : "translateY(30px)"
-                    }}
-                >
+                <Reveal className="text-center mb-16">
                     <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-foreground tracking-tight mb-6">
                         Sıkça Sorulan <span className="text-gradient-gold">Sorular</span>
                     </h2>
@@ -78,15 +71,9 @@ const FAQSection = () => {
                         Aklınıza takılan soruların cevaplarını burada bulabilirsiniz.
                         Farklı bir sorunuz varsa bizimle iletişime geçmekten çekinmeyin.
                     </p>
-                </div>
+                </Reveal>
 
-                <div
-                    className="bg-card/50 backdrop-blur-md border border-border/50 rounded-2xl p-6 md:p-10 shadow-2xl transition-all duration-700 ease-out delay-150"
-                    style={{
-                        opacity: isVisible ? 1 : 0,
-                        transform: isVisible ? "translateY(0)" : "translateY(30px)"
-                    }}
-                >
+                <Reveal delay={120} className="bg-card/50 backdrop-blur-md border border-border/50 rounded-2xl p-6 md:p-10 shadow-2xl">
                     <Accordion type="single" collapsible className="w-full space-y-4">
                             {faqs.map((faq, index) => (
                                 <AccordionItem
@@ -103,7 +90,7 @@ const FAQSection = () => {
                                 </AccordionItem>
                             ))}
                     </Accordion>
-                </div>
+                </Reveal>
             </div>
         </section>
     );

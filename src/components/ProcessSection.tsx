@@ -1,10 +1,6 @@
 "use client";
-import { useEffect, useRef } from "react";
-import { Calendar, Video, Scissors, Package } from "lucide-react";
-import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
-
-gsap.registerPlugin(ScrollTrigger);
+import { Calendar, Video, Package } from "lucide-react";
+import Reveal from "@/components/Reveal";
 
 const fallbackSteps = [
   {
@@ -31,50 +27,20 @@ const fallbackSteps = [
 ];
 
 const ProcessSection = () => {
-  const containerRef = useRef<HTMLElement>(null);
   const steps = fallbackSteps;
 
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      // Header animation
-      gsap.fromTo(".process-header",
-        { opacity: 0, y: 15 },
-        {
-          opacity: 1, y: 0, duration: 0.4, ease: "power3.out",
-          scrollTrigger: { trigger: containerRef.current, start: "top 90%", toggleActions: "play none none none" },
-        }
-      );
-
-      // Stagger card animations
-      const cards = gsap.utils.toArray(".process-card") as HTMLElement[];
-      cards.forEach((card, i) => {
-        gsap.fromTo(card,
-          { opacity: 0, y: 15 },
-          {
-            opacity: 1, y: 0,
-            duration: 0.3, ease: "power3.out",
-            delay: i * 0.05,
-            scrollTrigger: { trigger: card, start: "top 95%", toggleActions: "play none none none" },
-          }
-        );
-      });
-    }, containerRef);
-
-    return () => ctx.revert();
-  }, []);
-
   return (
-    <section ref={containerRef} className="section-spacing bg-background relative z-10">
+    <section className="section-spacing bg-background relative z-10">
       <div className="max-w-6xl mx-auto px-6">
         {/* Header */}
-        <div className="process-header text-left md:text-center mb-16 w-full">
+        <Reveal><div className="process-header text-left md:text-center mb-16 w-full">
           <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-4">
             Ayda Sadece <span className="text-gradient-gold">6 Saatinizi</span> Ayırın
           </h2>
           <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto">
             30 Günlük İçeriğiniz Hazır Olsun
           </p>
-        </div>
+        </div></Reveal>
 
         {/* Vertical Split / Timeline Layout */}
         <div className="relative max-w-4xl mx-auto pt-6">
@@ -87,9 +53,9 @@ const ProcessSection = () => {
               const isEven = i % 2 === 0;
 
               return (
+                <Reveal key={i} delay={i * 80}>
                 <div
-                  key={i}
-                  className={`process-card will-change-transform relative flex flex-col md:flex-row items-start md:items-center w-full group ${isEven ? "md:flex-row-reverse" : ""
+                  className={`process-card relative flex flex-col md:flex-row items-start md:items-center w-full group ${isEven ? "md:flex-row-reverse" : ""
                     }`}
                 >
                   {/* Node / Checkpoint */}
@@ -133,6 +99,7 @@ const ProcessSection = () => {
                   {/* Empty Spacer */}
                   <div className="hidden md:block w-1/2"></div>
                 </div>
+                </Reveal>
               );
             })}
           </div>

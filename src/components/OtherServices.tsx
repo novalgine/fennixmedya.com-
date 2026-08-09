@@ -1,7 +1,6 @@
 "use client";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import MagneticWrapper from "./MagneticWrapper";
 import { services } from "@/data/services";
 
 interface OtherServicesProps {
@@ -27,8 +26,8 @@ export default function OtherServices({ currentServiceId }: OtherServicesProps) 
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {filteredServices.map((service) => (
-            <MagneticWrapper key={service.id} strength={0.05}>
-              <Link 
+              <Link
+                key={service.id}
                 href={service.href}
                 className={`group block h-full bg-card/50 backdrop-blur-sm border border-border/50 rounded-2xl p-8 transition-all duration-300 hover:shadow-2xl hover:shadow-primary/5 hover:-translate-y-1 ${service.border}`}
               >
@@ -48,7 +47,6 @@ export default function OtherServices({ currentServiceId }: OtherServicesProps) 
                   İncele <ArrowRight className="w-4 h-4 ml-1.5" />
                 </div>
               </Link>
-            </MagneticWrapper>
           ))}
         </div>
       </div>

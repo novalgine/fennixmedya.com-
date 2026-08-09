@@ -1,10 +1,6 @@
 "use client";
-import { useEffect, useRef } from "react";
 import { ShieldCheck, Clock, RefreshCw, Unlock } from "lucide-react";
-import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
-
-gsap.registerPlugin(ScrollTrigger);
+import Reveal from "@/components/Reveal";
 
 const fallbackGuarantees = [
   {
@@ -42,48 +38,24 @@ const fallbackGuarantees = [
 ];
 
 const GuaranteesSection = () => {
-  const containerRef = useRef<HTMLElement>(null);
   const guarantees = fallbackGuarantees;
 
-  useEffect(() => {
-    const isMobile = window.innerWidth < 768;
-    const ctx = gsap.context(() => {
-      const items = gsap.utils.toArray(".guarantee-row") as HTMLElement[];
-      items.forEach((item, i) => {
-        gsap.fromTo(item,
-          { opacity: 0, y: isMobile ? 20 : 0, x: isMobile ? 0 : (i % 2 === 0 ? -40 : 40) },
-          {
-            opacity: 1, y: 0, x: 0,
-            duration: isMobile ? 0.4 : 0.6,
-            ease: "power2.out",
-            scrollTrigger: {
-              trigger: item,
-              start: "top 90%",
-              toggleActions: "play none none none",
-            }
-          }
-        );
-      });
-    }, containerRef);
-    return () => ctx.revert();
-  }, [guarantees]);
-
   return (
-    <section ref={containerRef} className="section-spacing bg-surface relative z-10 w-full">
+    <section className="section-spacing bg-surface relative z-10 w-full">
       <div className="max-w-5xl mx-auto px-6">
-        <div className="text-center mb-16">
+        <Reveal><div className="text-center mb-16">
           <h2 className="font-heading text-4xl md:text-6xl font-bold tracking-tight mb-4">
             <span className="text-gradient-gold">Risksiz</span> İş Birliği
           </h2>
           <p className="text-xl md:text-2xl text-muted-foreground max-w-xl mx-auto">
             Kalitemize güveniyoruz, siz rahat edin.
           </p>
-        </div>
+        </div></Reveal>
 
         <div className="space-y-5">
           {guarantees.map((g, i) => (
+            <Reveal key={i} delay={i * 80}>
             <div
-              key={i}
               className={`guarantee-row flex flex-col md:flex-row items-start md:items-center gap-5 md:gap-8 bg-card/60 backdrop-blur-sm border border-border/50 rounded-2xl p-6 md:p-8 ${g.accentBorder} transition-all duration-500 group hover:bg-card`}
             >
               {/* Icon */}
@@ -104,6 +76,7 @@ const GuaranteesSection = () => {
                 {g.desc}
               </p>
             </div>
+            </Reveal>
           ))}
         </div>
       </div>

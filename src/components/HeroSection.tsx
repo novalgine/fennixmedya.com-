@@ -161,7 +161,7 @@ const HeroSection = () => {
             <div className="relative z-10 flex flex-col items-center justify-center gap-6 transition-all duration-500 group-hover:scale-110">
               {/* Animated Play Button */}
               <div className="relative w-24 h-24 flex items-center justify-center">
-                <div className="absolute inset-0 rounded-full bg-primary/30 animate-ping group-hover:bg-primary/50" />
+                <div className="absolute inset-0 rounded-full bg-primary/20 transition-all duration-500 group-hover:bg-primary/30 group-hover:scale-110" />
                 <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-gradient-gold flex items-center justify-center border border-white/20 shadow-xl z-10">
                   <Play className="w-8 h-8 text-black fill-black ml-1" />
                 </div>
@@ -190,7 +190,7 @@ const HeroSection = () => {
         {/* Action Buttons & Micro-assurance */}
         <div className="flex flex-col items-center w-full transition-all duration-500 ease-out">
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">
-            <MagneticWrapper strength={0.25}>
+            <MagneticWrapper>
               <button
                 onClick={handleCTAClick}
                 aria-label="Ücretsiz Strateji Görüşmesi Al"
@@ -202,7 +202,7 @@ const HeroSection = () => {
               </button>
             </MagneticWrapper>
             
-            <MagneticWrapper strength={0.15}>
+            <MagneticWrapper>
               <a
                 href="#portfolyo"
                 className="w-full sm:w-auto bg-transparent border-2 border-white/20 text-foreground font-heading font-bold text-lg md:text-xl px-8 py-4 rounded-xl transition-all hover:bg-white/5 hover:border-white/40 cursor-pointer inline-flex justify-center items-center"
@@ -238,7 +238,7 @@ const HeroSection = () => {
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-4 md:bottom-8 inset-x-0 w-full flex flex-col items-center justify-center animate-bounce opacity-70 hover:opacity-100 transition-opacity z-10 pointer-events-none">
+      <div className="absolute bottom-4 md:bottom-8 inset-x-0 w-full flex flex-col items-center justify-center animate-scroll-cue hover:opacity-100 transition-opacity z-10 pointer-events-none">
         <span className="text-[10px] md:text-xs uppercase tracking-widest text-muted-foreground mb-1 md:mb-2 font-medium pl-[0.1em]">Aşağı Kaydırın</span>
         <ChevronDown className="w-5 h-5 text-muted-foreground" />
       </div>

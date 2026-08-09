@@ -96,15 +96,15 @@ const StickyCTA = () => {
       {isMobile ? (
         <button
           onClick={handleMainCTA}
-          className="bg-gradient-gold text-primary-foreground font-heading font-bold px-6 py-3 rounded-full shadow-2xl hover:scale-105 active:scale-95 transition-all animate-pulse-gold text-sm cursor-pointer border border-white/10"
+          className="bg-gradient-gold text-primary-foreground font-heading font-bold px-6 py-3 rounded-full shadow-2xl hover:scale-105 active:scale-95 transition-all text-sm cursor-pointer border border-white/10"
         >
           Ücretsiz Görüşme Al →
         </button>
       ) : (
-        <MagneticWrapper strength={0.3}>
+        <MagneticWrapper>
           <button
             onClick={handleMainCTA}
-            className="bg-gradient-gold text-primary-foreground font-heading font-bold px-8 py-4 rounded-full shadow-2xl hover:scale-105 active:scale-95 transition-all animate-pulse-gold text-base cursor-pointer border border-white/10"
+            className="bg-gradient-gold text-primary-foreground font-heading font-bold px-8 py-4 rounded-full shadow-2xl hover:scale-105 active:scale-95 transition-all text-base cursor-pointer border border-white/10"
           >
             Ücretsiz Strateji Görüşmesi Al →
           </button>

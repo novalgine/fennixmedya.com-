@@ -1,12 +1,8 @@
 "use client";
-import { useEffect, useRef } from "react";
 import Image from "next/image";
 import staticComparisonImg from "@/assets/ornekgorsel.webp";
 import { Clock, ZapOff, TrendingDown } from "lucide-react";
-import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
-
-gsap.registerPlugin(ScrollTrigger);
+import Reveal from "@/components/Reveal";
 
 const fallbackData = {
   headerTitle: `Neden Telefonla Çekmek <span class="text-gradient-gold">Artık Yetmiyor?</span>`,
@@ -36,40 +32,14 @@ const fallbackData = {
 };
 
 const ProblemSection = () => {
-  const containerRef = useRef<HTMLElement>(null);
   const data = fallbackData;
 
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      // Header
-      gsap.fromTo(".problem-header",
-        { opacity: 0, y: 30 },
-        {
-          opacity: 1, y: 0, duration: 0.6, ease: "power3.out",
-          scrollTrigger: { trigger: containerRef.current, start: "top 90%", toggleActions: "play none none none" },
-        }
-      );
-
-      // Bento Cards Stagger
-      gsap.fromTo(".bento-card",
-        { opacity: 0, y: 30 },
-        {
-          opacity: 1, y: 0,
-          duration: 0.6, ease: "power3.out",
-          stagger: 0.12,
-          scrollTrigger: { trigger: ".bento-grid", start: "top 92%", toggleActions: "play none none none" },
-        }
-      );
-    }, containerRef);
-    return () => ctx.revert();
-  }, []);
-
   return (
-    <section ref={containerRef} className="section-spacing bg-surface relative z-10 w-full">
+    <section className="section-spacing bg-surface relative z-10 w-full">
       <div className="max-w-7xl mx-auto px-6">
 
         {/* Header */}
-        <div className="problem-header text-center mb-16">
+        <Reveal><div className="problem-header text-center mb-16">
           <h2
             className="font-heading text-4xl md:text-5xl lg:text-5xl font-black tracking-tight mb-4"
             dangerouslySetInnerHTML={{ __html: data.headerTitle }}
@@ -77,13 +47,13 @@ const ProblemSection = () => {
           <p className="text-lg md:text-xl text-foreground/60 max-w-2xl mx-auto font-medium">
             {data.headerDesc}
           </p>
-        </div>
+        </div></Reveal>
 
         {/* Bento Grid */}
         <div className="bento-grid grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
 
           {/* Main Visual Card (Left) */}
-          <div className="bento-card lg:col-span-7 bg-card border border-border/50 rounded-3xl p-6 md:p-8 flex flex-col relative overflow-hidden group">
+          <Reveal className="lg:col-span-7 flex"><div className="bento-card flex-1 bg-card border border-border/50 rounded-3xl p-6 md:p-8 flex flex-col relative overflow-hidden group">
             {/* Dark Red Warning Glow in Background using Radial Gradient instead of blur for Performance! */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150%] h-[150%] pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(127, 29, 29, 0.1) 0%, transparent 50%)' }} />
 
@@ -118,13 +88,13 @@ const ProblemSection = () => {
               </div>
               <p className="text-center text-[11px] uppercase tracking-widest text-muted-foreground/60 mt-4 font-bold">Gerçek Kalite Farkını İnceleyin</p>
             </div>
-          </div>
+          </div></Reveal>
 
           {/* Pain Points Stack (Right) */}
           <div className="lg:col-span-5 grid grid-rows-3 gap-6">
 
-            {data.painPoints.map((point) => (
-              <div key={point.id} className="bento-card row-span-1 bg-card border border-border/50 hover:border-emerald-500/40 hover:shadow-[0_0_20px_rgba(16,185,129,0.08)] hover:bg-emerald-950/20 transition-all duration-500 rounded-3xl p-6 flex flex-col justify-center relative overflow-hidden group">
+            {data.painPoints.map((point, i) => (
+              <Reveal key={point.id} delay={i * 80} className="row-span-1 flex"><div className="bento-card flex-1 bg-card border border-border/50 hover:border-emerald-500/40 hover:shadow-[0_0_20px_rgba(16,185,129,0.08)] hover:bg-emerald-950/20 transition-all duration-500 rounded-3xl p-6 flex flex-col justify-center relative overflow-hidden group">
                 <div className="absolute -right-4 -top-4 opacity-[0.03] dark:opacity-5 group-hover:scale-110 group-hover:opacity-10 transition-all duration-500 text-foreground group-hover:text-emerald-500">
                   {point.icon === "Clock" && <Clock className="w-32 h-32" />}
                   {point.icon === "TrendingDown" && <TrendingDown className="w-32 h-32" />}
@@ -141,13 +111,13 @@ const ProblemSection = () => {
                 <p className="text-muted-foreground font-medium text-sm leading-relaxed relative z-10">
                   {point.desc}
                 </p>
-              </div>
+              </div></Reveal>
             ))}
 
           </div>
 
           {/* Bottom Wide Box (Punchline) */}
-          <div className="bento-card lg:col-span-12 bg-card border border-border/50 rounded-3xl p-8 md:p-12 relative overflow-hidden group">
+          <Reveal className="lg:col-span-12"><div className="bento-card bg-card border border-border/50 rounded-3xl p-8 md:p-12 relative overflow-hidden group">
             <div className="absolute left-0 top-0 bottom-0 w-2 bg-emerald-500/80 shadow-[0_0_15px_rgba(16,185,129,0.4)]" />
             <blockquote className="max-w-4xl mx-auto text-center relative z-10">
               <p
@@ -156,7 +126,7 @@ const ProblemSection = () => {
               />
               <footer className="mt-4 text-muted-foreground text-sm tracking-widest uppercase font-bold">{data.blockquoteAuthor}</footer>
             </blockquote>
-          </div>
+          </div></Reveal>
 
         </div>
 

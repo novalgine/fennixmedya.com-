@@ -103,9 +103,9 @@ export default {
           from: { opacity: "0", transform: "translateY(30px)" },
           to: { opacity: "1", transform: "translateY(0)" },
         },
-        "pulse-gold": {
-          "0%, 100%": { boxShadow: "0 0 20px hsl(38 45% 58% / 0.2)" },
-          "50%": { boxShadow: "0 0 40px hsl(38 45% 58% / 0.4)" },
+        "scroll-cue": {
+          "0%, 100%": { transform: "translateY(0)", opacity: "0.6" },
+          "50%": { transform: "translateY(6px)", opacity: "1" },
         },
         "fadeSlideIn": {
           from: { opacity: "0", transform: "translateX(16px)" },
@@ -120,7 +120,7 @@ export default {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "fade-in-up": "fade-in-up 0.8s ease-out forwards",
-        "pulse-gold": "pulse-gold 3s ease-in-out infinite",
+        "scroll-cue": "scroll-cue 2.8s ease-in-out infinite",
         "progress-bar": "progressBar 8s linear forwards",
       },
     },

@@ -71,6 +71,7 @@ import CookieBanner from "@/components/CookieBanner";
 import JsonLd from "@/components/JsonLd";
 import FacebookPixel from "@/components/FacebookPixel";
 import Footer from "@/components/Footer";
+import SmoothScroll from "@/components/SmoothScroll";
 
 
 export default function RootLayout({
@@ -117,6 +118,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <WizardProvider>
+            <SmoothScroll>
             <div className="relative flex flex-col min-h-screen overflow-x-clip w-full">
               <SiteHeader />
               <main className="flex-1 w-full">{children}</main>
@@ -125,6 +127,7 @@ export default function RootLayout({
               <FacebookPixel />
 
             </div>
+            </SmoothScroll>
           </WizardProvider>
         </ThemeProvider>
       </body>

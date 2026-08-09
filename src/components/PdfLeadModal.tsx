@@ -51,7 +51,7 @@ export default function PdfLeadModal({ isOpen, onClose }: PdfLeadModalProps) {
   return (
     <Dialog open={isOpen} onOpenChange={(o) => !o && onClose()}>
       <DialogContent className="max-w-md bg-card/95 backdrop-blur-xl rounded-3xl">
-        <div className="p-8 overflow-y-auto">
+        <div data-lenis-prevent className="p-8 overflow-y-auto">
           {!isSuccess ? (
             <>
               {/* Header */}
