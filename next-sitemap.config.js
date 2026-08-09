@@ -24,7 +24,7 @@ module.exports = {
     if (path === '/') {
       priority = 1.0;
       changefreq = 'daily';
-    } else if (path.startsWith('/hizmetler/')) {
+    } else if (path === '/hizmetler' || path.startsWith('/hizmetler/')) {
       priority = 0.9;
     } else if (path === '/portfolyo') {
       priority = 0.8;

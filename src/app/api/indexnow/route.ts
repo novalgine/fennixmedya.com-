@@ -8,6 +8,7 @@ const STATIC_PATHS = [
   '/hakkimizda',
   '/portfolyo',
   '/blog',
+  '/hizmetler',
   '/hizmetler/sosyal-medya-video',
   '/hizmetler/kurumsal-tanitim-filmi',
   '/hizmetler/youtube-icerik-uretimi',
