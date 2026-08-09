@@ -1,3 +1,14 @@
+const blogPosts = require('./src/data/blog-posts.json');
+
+// Blog yazıları için gerçek tarihler; diğer sayfalarda lastmod hiç yazılmaz
+// (her build'de "bugün" damgalamak, arama motorlarının lastmod'u yok saymasına yol açar)
+const lastmodByPath = Object.fromEntries(
+  blogPosts.map((p) => [
+    `/blog/${p.slug}`,
+    `${p.dateModified || p.date}T00:00:00+03:00`,
+  ])
+);
+
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
   siteUrl: 'https://fennixmedya.com',
@@ -26,7 +37,7 @@ module.exports = {
       loc: path,
       changefreq,
       priority,
-      lastmod: new Date().toISOString(),
+      lastmod: lastmodByPath[path],
     };
   },
 };
