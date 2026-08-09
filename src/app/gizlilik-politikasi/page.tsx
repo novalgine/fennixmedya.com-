@@ -1,9 +1,18 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Gizlilik Politikası | Fennix Medya",
-  description: "Fennix Medya Gizlilik Politikası ve veri güvenliği şartları.",
+  title: "Gizlilik Politikası",
+  description:
+    "Fennix Medya Gizlilik Politikası ve veri güvenliği şartları.",
   alternates: { canonical: "https://fennixmedya.com/gizlilik-politikasi" },
+  openGraph: {
+    type: "website",
+    url: "https://fennixmedya.com/gizlilik-politikasi",
+    title: "Gizlilik Politikası",
+    description: "Fennix Medya Gizlilik Politikası ve veri güvenliği şartları.",
+    siteName: "Fennix Medya",
+    locale: "tr_TR",
+  },
 };
 
 export default function GizlilikPolitikasiPage() {

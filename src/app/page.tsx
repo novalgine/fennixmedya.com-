@@ -4,7 +4,6 @@ import ScrollProgress from "@/components/ScrollProgress";
 import TrustCounterBand from "@/components/TrustCounterBand";
 import FadeInSection from "@/components/FadeInSection";
 import SocialProofSection from "@/components/SocialProofSection";
-import Footer from "@/components/Footer";
 import dynamic from "next/dynamic";
 
 const ProblemSection = dynamic(() => import("@/components/ProblemSection"));
@@ -60,7 +59,6 @@ export default function HomePage() {
       <div className="w-full bg-background py-8 flex flex-col items-center justify-center relative">
         <div className="w-32 h-[1px] bg-gradient-to-r from-transparent via-primary/30 to-transparent relative z-10" />
       </div>
-      <Footer />
       <StickyCTA />
     </div>
   );

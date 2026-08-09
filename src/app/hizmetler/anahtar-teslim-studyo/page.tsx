@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import JsonLd from "@/components/JsonLd";
 import { MapPin, ClipboardList, Wrench, Clapperboard, ShieldCheck, Lock, Scissors, ChevronDown } from "lucide-react";
 import StudioWizardCta from "@/components/StudioWizardCta";
 import PdfDownloadCta from "@/components/PdfDownloadCta";
@@ -6,10 +7,18 @@ import OtherServices from "@/components/OtherServices";
 import LazyHeroVideo from "@/components/LazyHeroVideo";
 
 export const metadata: Metadata = {
-  title: "Anahtar Teslim Stüdyo Kurulumu | Fennix Medya",
+  title: "Anahtar Teslim Stüdyo Kurulumu",
   description:
     "Ofisinizde veya evinizde, tek tuşla sinematik yayın yapabileceğiniz kişisel içerik üssünüzü kuruyoruz. Akustik analiz, ışık kalibrasyonu ve kamera önü performansı dahildir.",
   alternates: { canonical: "https://fennixmedya.com/hizmetler/anahtar-teslim-studyo" },
+  openGraph: {
+    type: "website",
+    url: "https://fennixmedya.com/hizmetler/anahtar-teslim-studyo",
+    title: "Anahtar Teslim Stüdyo Kurulumu",
+    description: "Ofisinizde veya evinizde, tek tuşla sinematik yayın yapabileceğiniz kişisel içerik üssünüzü kuruyoruz. Akustik analiz, ışık kalibrasyonu ve kamera önü performansı dahildir.",
+    siteName: "Fennix Medya",
+    locale: "tr_TR",
+  },
 };
 
 const steps = [
@@ -68,6 +77,18 @@ const faqs = [
 export default function AnahtarTeslimStudyoPage() {
   return (
     <div className="min-h-screen bg-background pt-16">
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "Anahtar Teslim Stüdyo Kurulumu",
+          serviceType: "Video Prodüksiyon",
+          description: "Ofis veya ev için tek tuşla sinematik yayın yapılabilen kişisel stüdyo kurulumu; akustik analiz, ışık kalibrasyonu ve ekipman seçimi dahil.",
+          url: "https://fennixmedya.com/hizmetler/anahtar-teslim-studyo",
+          areaServed: { "@type": "City", name: "İstanbul" },
+          provider: { "@id": "https://fennixmedya.com/#organization" },
+        }}
+      />
       {/* Schema Markup for FAQ */}
       <script
         type="application/ld+json"

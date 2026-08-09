@@ -6,10 +6,18 @@ import JsonLd from "@/components/JsonLd";
 import LazyHeroVideo from "@/components/LazyHeroVideo";
 
 export const metadata: Metadata = {
-  title: "Sosyal Medya Video Çekimi | Fennix Medya",
+  title: "Sosyal Medya Video Çekimi",
   description:
     "İstanbul'da yüksek dönüşümlü sosyal medya video stratejisi. Reels, TikTok ve Shorts için native kurgulanmış dikey format içerik ağları. Ayda 6 saat ayırarak otoritenizi inşa edin.",
   alternates: { canonical: "https://fennixmedya.com/hizmetler/sosyal-medya-video" },
+  openGraph: {
+    type: "website",
+    url: "https://fennixmedya.com/hizmetler/sosyal-medya-video",
+    title: "Sosyal Medya Video Çekimi",
+    description: "İstanbul'da yüksek dönüşümlü sosyal medya video stratejisi. Reels, TikTok ve Shorts için native kurgulanmış dikey format içerik ağları. Ayda 6 saat ayırarak otoritenizi inşa edin.",
+    siteName: "Fennix Medya",
+    locale: "tr_TR",
+  },
 };
 
 const faqs = [
@@ -25,12 +33,12 @@ export default function SosyalMedyaVideoPage() {
         data={{
           "@context": "https://schema.org",
           "@type": "Service",
-          "name": "Sosyal Medya Video Prodüksiyon",
-          "provider": {
-            "@type": "LocalBusiness",
-            "name": "Fennix Medya"
-          },
-          "description": "Instagram Reels, TikTok ve YouTube Shorts için profesyonel video çekimi ve kurgusu."
+          name: "Sosyal Medya Video Prodüksiyon",
+          serviceType: "Video Prodüksiyon",
+          description: "Instagram Reels, TikTok ve YouTube Shorts için profesyonel video çekimi ve kurgusu.",
+          url: "https://fennixmedya.com/hizmetler/sosyal-medya-video",
+          areaServed: { "@type": "City", name: "İstanbul" },
+          provider: { "@id": "https://fennixmedya.com/#organization" },
         }}
       />
       

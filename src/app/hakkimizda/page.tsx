@@ -3,10 +3,18 @@ import WizardCta from "@/components/WizardCta";
 import { ArrowRight, Camera, Film, Sparkles } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Hakkımızda — Fennix Medya",
+  title: "Hakkımızda",
   description:
     "Fennix Medya ve kurucusu Semih Hasanoğlu hakkında. Sektör liderleri ve high-ticket uzmanlar için algı yönetimi ve stratejik görsel iletişim danışmanlığı.",
   alternates: { canonical: "https://fennixmedya.com/hakkimizda" },
+  openGraph: {
+    type: "website",
+    url: "https://fennixmedya.com/hakkimizda",
+    title: "Hakkımızda",
+    description: "Fennix Medya ve kurucusu Semih Hasanoğlu hakkında. Sektör liderleri ve high-ticket uzmanlar için algı yönetimi ve stratejik görsel iletişim danışmanlığı.",
+    siteName: "Fennix Medya",
+    locale: "tr_TR",
+  },
 };
 
 export default function HakkimizdaPage() {

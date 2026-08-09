@@ -4,10 +4,18 @@ import { portfolioData } from "@/data/portfolio";
 import PortfolioVideoCard from "@/components/PortfolioVideoCard";
 
 export const metadata: Metadata = {
-  title: "Portfolyo | Fennix Medya - Video Prodüksiyon İşlerimiz",
+  title: "Portfolyo: Video Prodüksiyon İşlerimiz",
   description:
     "Fennix Medya'nın teslim ettiği profesyonel video prodüksiyon projeleri. Kurumsal tanıtım filmleri, sosyal medya videoları ve YouTube içerikleri.",
   alternates: { canonical: "https://fennixmedya.com/portfolyo" },
+  openGraph: {
+    type: "website",
+    url: "https://fennixmedya.com/portfolyo",
+    title: "Portfolyo: Video Prodüksiyon İşlerimiz",
+    description: "Fennix Medya'nın teslim ettiği profesyonel video prodüksiyon projeleri. Kurumsal tanıtım filmleri, sosyal medya videoları ve YouTube içerikleri.",
+    siteName: "Fennix Medya",
+    locale: "tr_TR",
+  },
 };
 
 export default function PortfolioPage() {

@@ -1,9 +1,18 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Çerez Politikası | Fennix Medya",
-  description: "Fennix Medya web sitesi çerez kullanım politikası.",
+  title: "Çerez Politikası",
+  description:
+    "Fennix Medya web sitesi çerez kullanım politikası.",
   alternates: { canonical: "https://fennixmedya.com/cerez-politikasi" },
+  openGraph: {
+    type: "website",
+    url: "https://fennixmedya.com/cerez-politikasi",
+    title: "Çerez Politikası",
+    description: "Fennix Medya web sitesi çerez kullanım politikası.",
+    siteName: "Fennix Medya",
+    locale: "tr_TR",
+  },
 };
 
 export default function CerezPolitikasiPage() {

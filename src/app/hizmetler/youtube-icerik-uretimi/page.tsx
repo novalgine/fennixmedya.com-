@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import JsonLd from "@/components/JsonLd";
 import Image from "next/image";
 import { ArrowRight, Play } from "lucide-react";
 import WizardCta from "@/components/WizardCta";
@@ -6,10 +7,18 @@ import OtherServices from "@/components/OtherServices";
 import LazyHeroVideo from "@/components/LazyHeroVideo";
 
 export const metadata: Metadata = {
-  title: "YouTube İçerik Üretimi | Fennix Medya",
+  title: "YouTube İçerik Üretimi",
   description:
     "YouTube kanalınız için algoritma uyumlu içerik mimarisi. Tıklanma (CTR) ve dikkat yönetimi (retention) optimize edilmiş YouTube büyüme paketi.",
   alternates: { canonical: "https://fennixmedya.com/hizmetler/youtube-icerik-uretimi" },
+  openGraph: {
+    type: "website",
+    url: "https://fennixmedya.com/hizmetler/youtube-icerik-uretimi",
+    title: "YouTube İçerik Üretimi",
+    description: "YouTube kanalınız için algoritma uyumlu içerik mimarisi. Tıklanma (CTR) ve dikkat yönetimi (retention) optimize edilmiş YouTube büyüme paketi.",
+    siteName: "Fennix Medya",
+    locale: "tr_TR",
+  },
 };
 
 const faqs = [
@@ -21,6 +30,18 @@ const faqs = [
 export default function YouTubeIcerikUretimiPage() {
   return (
     <div className="min-h-screen bg-background pt-16">
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "YouTube İçerik Üretimi",
+          serviceType: "Video Prodüksiyon",
+          description: "YouTube kanalları için algoritma uyumlu içerik mimarisi; CTR ve izlenme süresi optimize edilmiş video üretimi.",
+          url: "https://fennixmedya.com/hizmetler/youtube-icerik-uretimi",
+          areaServed: { "@type": "City", name: "İstanbul" },
+          provider: { "@id": "https://fennixmedya.com/#organization" },
+        }}
+      />
       <section className="max-w-6xl mx-auto px-6 py-16 md:py-24">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="text-left">

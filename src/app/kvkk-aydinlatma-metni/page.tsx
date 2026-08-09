@@ -1,9 +1,18 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "KVKK Aydınlatma Metni | Fennix Medya",
-  description: "Fennix Medya Kişisel Verilerin Korunması Kanunu (KVKK) Aydınlatma Metni.",
+  title: "KVKK Aydınlatma Metni",
+  description:
+    "Fennix Medya Kişisel Verilerin Korunması Kanunu (KVKK) Aydınlatma Metni.",
   alternates: { canonical: "https://fennixmedya.com/kvkk-aydinlatma-metni" },
+  openGraph: {
+    type: "website",
+    url: "https://fennixmedya.com/kvkk-aydinlatma-metni",
+    title: "KVKK Aydınlatma Metni",
+    description: "Fennix Medya Kişisel Verilerin Korunması Kanunu (KVKK) Aydınlatma Metni.",
+    siteName: "Fennix Medya",
+    locale: "tr_TR",
+  },
 };
 
 export default function KvkkPage() {

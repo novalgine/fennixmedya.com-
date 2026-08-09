@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import JsonLd from "@/components/JsonLd";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import WizardCta from "@/components/WizardCta";
@@ -6,10 +7,18 @@ import OtherServices from "@/components/OtherServices";
 import LazyHeroVideo from "@/components/LazyHeroVideo";
 
 export const metadata: Metadata = {
-  title: "Kurumsal Tanıtım Filmi Çekimi | Fennix Medya",
+  title: "Kurumsal Tanıtım Filmi Çekimi",
   description:
     "Markanızın vizyonunu ve değerini kurumsal prestijinizi en üst seviyeye taşıyan stratejik marka filmleriyle anlatıyoruz.",
   alternates: { canonical: "https://fennixmedya.com/hizmetler/kurumsal-tanitim-filmi" },
+  openGraph: {
+    type: "website",
+    url: "https://fennixmedya.com/hizmetler/kurumsal-tanitim-filmi",
+    title: "Kurumsal Tanıtım Filmi Çekimi",
+    description: "Markanızın vizyonunu ve değerini kurumsal prestijinizi en üst seviyeye taşıyan stratejik marka filmleriyle anlatıyoruz.",
+    siteName: "Fennix Medya",
+    locale: "tr_TR",
+  },
 };
 
 const faqs = [
@@ -21,6 +30,18 @@ const faqs = [
 export default function KurumsalTanitimFilmiPage() {
   return (
     <div className="min-h-screen bg-background pt-16">
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "Kurumsal Tanıtım Filmi Prodüksiyonu",
+          serviceType: "Video Prodüksiyon",
+          description: "Markanızın vizyonunu ve değerini anlatan stratejik kurumsal tanıtım filmleri; senaryo, çekim ve post-prodüksiyon dahil uçtan uca hizmet.",
+          url: "https://fennixmedya.com/hizmetler/kurumsal-tanitim-filmi",
+          areaServed: { "@type": "City", name: "İstanbul" },
+          provider: { "@id": "https://fennixmedya.com/#organization" },
+        }}
+      />
       <section className="max-w-6xl mx-auto px-6 py-16 md:py-24">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="text-left">
