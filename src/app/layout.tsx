@@ -6,13 +6,13 @@ import { WizardProvider } from "@/components/WizardContext";
 import "./globals.css";
 
 const inter = Inter({
-  subsets: ["latin"],
+  subsets: ["latin", "latin-ext"],
   variable: "--font-inter",
   display: "swap",
 });
 
 const manrope = Manrope({
-  subsets: ["latin"],
+  subsets: ["latin", "latin-ext"],
   variable: "--font-manrope",
   weight: ["700", "800"],
   display: "swap",
@@ -44,13 +44,12 @@ export const metadata: Metadata = {
     title: "Fennix Medya | Premium Video Prodüksiyon İstanbul",
     description:
       "Ayda sadece 6 saat ayırarak 30 günlük yüksek kaliteli video içeriğe sahip olun. Profesyonel çekim, kurgu ve metin yazarlığı hizmeti.",
-    images: [{ url: "/og-image.jpg", width: 1200, height: 630 }],
+    // og:image, app/opengraph-image.tsx dosya konvansiyonundan otomatik gelir
   },
   twitter: {
     card: "summary_large_image",
     title: "Fennix Medya | Premium Video Prodüksiyon",
     description: "İstanbul'da profesyonel video prodüksiyon hizmeti.",
-    images: ["/og-image.jpg"],
   },
   robots: {
     index: true,
@@ -71,6 +70,7 @@ export const metadata: Metadata = {
 import CookieBanner from "@/components/CookieBanner";
 import JsonLd from "@/components/JsonLd";
 import FacebookPixel from "@/components/FacebookPixel";
+import Footer from "@/components/Footer";
 
 
 export default function RootLayout({
@@ -89,11 +89,11 @@ export default function RootLayout({
               "@type": "ProfessionalService",
               "@id": "https://fennixmedya.com/#organization",
               name: "Fennix Medya",
-              image: "https://fennixmedya.com/og-image.jpg",
-              logo: "https://fennixmedya.com/logo.png",
+              image: "https://fennixmedya.com/opengraph-image",
+              logo: "https://fennixmedya.com/apple-icon",
               description: "İstanbul merkezli profesyonel video prodüksiyon ajansı. Sosyal medya yönetimi, kurumsal tanıtım filmi, YouTube içerik üretimi.",
               url: "https://fennixmedya.com",
-              telephone: "+905000000000",
+              telephone: "+905467407084",
               areaServed: { "@type": "City", name: "İstanbul" },
               address: { "@type": "PostalAddress", addressLocality: "İstanbul", addressCountry: "TR" },
               serviceType: ["Video Prodüksiyon", "Kurumsal Tanıtım Filmi", "Sosyal Medya İçerik Üretimi", "YouTube İçerik Üretimi"],
@@ -113,13 +113,14 @@ export default function RootLayout({
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
-          enableSystem
+          forcedTheme="dark"
           disableTransitionOnChange
         >
           <WizardProvider>
             <div className="relative flex flex-col min-h-screen overflow-x-clip w-full">
               <SiteHeader />
               <main className="flex-1 w-full">{children}</main>
+              <Footer />
               <CookieBanner />
               <FacebookPixel />
 
