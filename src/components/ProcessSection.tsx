@@ -1,6 +1,7 @@
 "use client";
 import { Calendar, Video, Package } from "lucide-react";
 import Reveal from "@/components/Reveal";
+import SectionHeading from "@/components/SectionHeading";
 
 const fallbackSteps = [
   {
@@ -33,14 +34,13 @@ const ProcessSection = () => {
     <section className="section-spacing bg-background relative z-10">
       <div className="max-w-6xl mx-auto px-6">
         {/* Header */}
-        <Reveal><div className="process-header text-left md:text-center mb-16 w-full">
-          <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-4">
-            Ayda Sadece <span className="text-gradient-gold">6 Saatinizi</span> Ayırın
-          </h2>
-          <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto">
-            30 Günlük İçeriğiniz Hazır Olsun
-          </p>
-        </div></Reveal>
+        <Reveal>
+          <SectionHeading
+            eyebrow="Süreç"
+            title="Ayda Sadece 6 Saatinizi Ayırın"
+            sub="30 Günlük İçeriğiniz Hazır Olsun"
+          />
+        </Reveal>
 
         {/* Vertical Split / Timeline Layout */}
         <div className="relative max-w-4xl mx-auto pt-6">
@@ -59,13 +59,13 @@ const ProcessSection = () => {
                     }`}
                 >
                   {/* Node / Checkpoint */}
-                  <div className="absolute left-0 md:left-1/2 md:-translate-x-1/2 top-0 md:top-1/2 md:-translate-y-1/2 w-14 h-14 rounded-full bg-background border border-white/10 shadow-[0_4px_20px_rgba(0,0,0,0.5)] flex items-center justify-center shrink-0 group-hover:border-primary/80 group-hover:shadow-[0_0_20px_rgba(232,106,31,0.5)] transition-all duration-500 z-20">
+                  <div className="absolute left-0 md:left-1/2 md:-translate-x-1/2 top-0 md:top-1/2 md:-translate-y-1/2 w-14 h-14 rounded-full bg-background border border-white/10 shadow-[0_4px_20px_rgba(0,0,0,0.5)] flex items-center justify-center shrink-0 group-hover:border-primary/80 transition-all duration-500 z-20">
                     <span className="font-heading text-lg font-bold text-primary/80 group-hover:text-primary transition-colors">0{i + 1}</span>
                   </div>
 
                   {/* Content Box */}
                   <div className={`w-full md:w-1/2 pl-20 md:pl-0 ${isEven ? "md:pr-20 text-left" : "md:pl-20 text-left"}`}>
-                    <div className={`bg-card/40 backdrop-blur-md border border-white/5 rounded-2xl p-6 lg:p-8 hover:border-primary/40 hover:bg-card/60 transition-all duration-500 w-full max-w-lg mx-auto ${isEven ? "md:mr-0" : "md:ml-0"} -mt-2 md:mt-0`}>
+                    <div className={`card-surface p-6 lg:p-8 hover:border-primary/40 hover:bg-card/60 transition-all duration-500 w-full max-w-lg mx-auto ${isEven ? "md:mr-0" : "md:ml-0"} -mt-2 md:mt-0`}>
                       {/* Icon + Day */}
                       <div className="flex items-center gap-4 mb-5">
                         <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:bg-primary/20 transition-all duration-500">

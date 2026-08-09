@@ -166,6 +166,13 @@
   }
 }
 
+@layer components {
+  /* Tek kart reçetesi — cam efekt (backdrop-blur) yalnız header ve dialoglarda */
+  .card-surface {
+    @apply bg-card border border-border/40 rounded-2xl;
+  }
+}
+
 @layer utilities {
   .text-gradient-gold {
     background: linear-gradient(135deg, hsl(var(--gold-light)), hsl(var(--gold)), hsl(var(--gold-dark)));
@@ -192,10 +199,6 @@
 
   .border-gold {
     border-color: hsl(var(--gold) / 0.3);
-  }
-
-  .glow-gold {
-    box-shadow: 0 0 25px hsl(var(--gold) / 0.15), 0 0 50px hsl(var(--gold) / 0.05);
   }
 
   .cinematic-overlay {

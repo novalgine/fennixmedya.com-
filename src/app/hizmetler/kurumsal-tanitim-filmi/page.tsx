@@ -29,7 +29,7 @@ const faqs = [
 
 export default function KurumsalTanitimFilmiPage() {
   return (
-    <div className="min-h-screen bg-background pt-16">
+    <div className="min-h-screen bg-background pt-header">
       <JsonLd
         data={{
           "@context": "https://schema.org",
@@ -55,9 +55,9 @@ export default function KurumsalTanitimFilmiPage() {
               Markanızın hikayesini, değerlerini ve vizyonunu sinematik kalitede anlatan profesyonel tanıtım filmleri. 
               Web siteniz, fuarlar, yatırımcı sunumları ve sosyal medya için kullanılabilir.
             </p>
-            <WizardCta text="Ücretsiz Strateji Görüşmesi Al" />
+            <WizardCta />
           </div>
-          <div className="relative w-full aspect-video flex items-center justify-center group rounded-3xl overflow-hidden border border-border/50 shadow-2xl bg-black">
+          <div className="relative w-full aspect-video flex items-center justify-center group rounded-2xl overflow-hidden border border-border/50 shadow-2xl bg-black">
             <LazyHeroVideo
               src="/videos/portfolyo/petadress.mp4"
               poster="/videos/portfolyo/petadress.jpg"
@@ -103,7 +103,7 @@ export default function KurumsalTanitimFilmiPage() {
 
       <section className="max-w-3xl mx-auto px-6 py-16 text-center">
         <p className="text-muted-foreground text-lg mb-6">Markanızın hikayesini profesyonelce anlatmaya hazır mısınız?</p>
-        <WizardCta text="Hemen Başlayalım" />
+        <WizardCta />
       </section>
     </div>
   );

@@ -3,6 +3,7 @@ import { useState, useCallback } from "react";
 import Image from "next/image";
 import VideoLightbox from "@/components/VideoLightbox";
 import { Quote, Play } from "lucide-react";
+import SectionHeading from "./SectionHeading";
 import { testimonialsData, Testimonial } from "@/data/testimonials";
 
 /* ── Video Modal ── */
@@ -21,18 +22,17 @@ const TestimonialsStrip = () => {
         <>
             <section className="section-spacing bg-background">
                 <div className="max-w-6xl mx-auto px-4 sm:px-6">
-                    <h2 className="font-heading text-3xl md:text-5xl font-bold text-center mb-4 tracking-tight">
-                        Müşterilerimiz <span className="text-gradient-gold">Ne Diyor?</span>
-                    </h2>
-                    <p className="text-center text-muted-foreground text-base md:text-lg mb-12 max-w-2xl mx-auto">
-                        Gerçek müşterilerimizden, kendi ağızlarından referans videoları.
-                    </p>
+                    <SectionHeading
+                        eyebrow="Referanslar"
+                        title="Müşterilerimiz Ne Diyor?"
+                        sub="Gerçek müşterilerimizden, kendi ağızlarından referans videoları."
+                    />
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                         {testimonialsData.map((t, i) => (
                             <div
                                 key={i}
-                                className="group bg-card/60 backdrop-blur-sm border border-border/40 rounded-3xl p-6 sm:p-8 flex flex-col justify-between gap-5 hover:border-primary/30 hover:shadow-[0_0_40px_rgba(232,106,31,0.1)] transition-all duration-500"
+                                className="group card-surface p-6 sm:p-8 flex flex-col justify-between gap-5 hover:border-primary/30 transition-all duration-500"
                             >
                                 {/* Quote */}
                                 <div className="flex items-start gap-3">

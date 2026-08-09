@@ -28,7 +28,7 @@ const faqs = [
 
 export default function SosyalMedyaVideoPage() {
   return (
-    <div className="min-h-screen bg-background pt-16">
+    <div className="min-h-screen bg-background pt-header">
       <JsonLd
         data={{
           "@context": "https://schema.org",
@@ -58,7 +58,7 @@ export default function SosyalMedyaVideoPage() {
               Ayda sadece <strong className="text-foreground">6 saat</strong> ayırarak pazarın zirvesine yerleşin.
             </p>
 
-            <WizardCta text="Ücretsiz Strateji Görüşmesi Al" />
+            <WizardCta />
           </div>
           <div className="relative w-full aspect-[9/16] md:aspect-[4/5] flex items-center justify-center group rounded-[2.5rem] overflow-hidden border border-border/50 shadow-2xl bg-black rotate-[-2deg] hover:rotate-0 transition-transform duration-700">
             <LazyHeroVideo
@@ -122,7 +122,7 @@ export default function SosyalMedyaVideoPage() {
         <p className="text-muted-foreground text-lg mb-6">
           Sosyal medyanız için profesyonel video içerik üretmeye hazır mısınız?
         </p>
-        <WizardCta text="Hemen Başlayalım" />
+        <WizardCta />
       </section>
     </div>
   );

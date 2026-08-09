@@ -9,7 +9,7 @@ export const metadata = createBlogMetadata("sosyal-medya-videosu-nasil-planlanir
 
 export default function BlogPost1() {
   return (
-    <article className="min-h-screen bg-background pt-16">
+    <article className="min-h-screen bg-background pt-header">
       <div className="max-w-3xl mx-auto px-6 py-16">
         {/* Breadcrumb */}
         <Breadcrumbs items={[{ name: "Blog", href: "/blog" }, { name: "Sosyal Medya Videosu Nasıl Planlanır? (2026 Rehberi)" }]} />

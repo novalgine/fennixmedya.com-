@@ -33,7 +33,7 @@ export default function CookieBanner() {
 
   return (
     <div className="fixed bottom-0 left-0 right-0 z-[70] p-4 md:p-6 animate-in slide-in-from-bottom-10 fade-in duration-500 pointer-events-none">
-      <div className="max-w-5xl mx-auto bg-card/95 backdrop-blur-xl border border-white/10 rounded-2xl shadow-[0_10px_40px_rgba(0,0,0,0.5)] p-5 md:p-6 pointer-events-auto flex flex-col md:flex-row items-center gap-6">
+      <div className="max-w-5xl mx-auto card-surface shadow-[0_10px_40px_rgba(0,0,0,0.5)] p-5 md:p-6 pointer-events-auto flex flex-col md:flex-row items-center gap-6">
         
         {/* Icon & Text */}
         <div className="flex-1 flex items-start md:items-center gap-4">

@@ -21,7 +21,7 @@ export default function PortfolioVideoCard({ project, isVertical }: { project: P
   };
 
   return (
-    <div className={`group bg-card/60 backdrop-blur-sm border border-border/40 rounded-3xl overflow-hidden hover:border-primary/30 transition-all duration-500 shadow-xl flex flex-col ${isVertical ? 'md:row-span-2' : 'md:col-span-2 lg:col-span-2'}`}>
+    <div className={`group card-surface overflow-hidden hover:border-primary/30 transition-all duration-500 shadow-xl flex flex-col ${isVertical ? 'md:row-span-2' : 'md:col-span-2 lg:col-span-2'}`}>
       <VideoSchema
         name={project.title}
         description={project.description}

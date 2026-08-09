@@ -24,7 +24,7 @@ export const metadata: Metadata = {
 
 export default function HizmetlerPage() {
   return (
-    <div className="min-h-screen bg-background pt-16">
+    <div className="min-h-screen bg-background pt-header">
       <JsonLd
         data={{
           "@context": "https://schema.org",
@@ -80,7 +80,7 @@ export default function HizmetlerPage() {
           ))}
         </div>
 
-        <div className="mt-16 text-center bg-card border border-white/5 p-8 md:p-12 rounded-3xl shadow-2xl">
+        <div className="mt-16 text-center bg-card border border-white/5 p-8 md:p-12 rounded-2xl shadow-2xl">
           <h2 className="font-heading text-2xl md:text-3xl font-bold mb-4">
             Hangisinin size uygun olduğundan emin değil misiniz?
           </h2>

@@ -16,7 +16,7 @@ export default function Error({
   }, [error]);
 
   return (
-    <div className="min-h-[100dvh] bg-background pt-16 flex items-center justify-center relative overflow-hidden">
+    <div className="min-h-[100dvh] bg-background pt-header flex items-center justify-center relative overflow-hidden">
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150%] h-[150%] pointer-events-none"
         style={{ background: "radial-gradient(circle, hsl(43 45% 65% / 0.06) 0%, transparent 50%)" }}
       />

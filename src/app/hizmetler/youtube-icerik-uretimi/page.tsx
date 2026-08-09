@@ -29,7 +29,7 @@ const faqs = [
 
 export default function YouTubeIcerikUretimiPage() {
   return (
-    <div className="min-h-screen bg-background pt-16">
+    <div className="min-h-screen bg-background pt-header">
       <JsonLd
         data={{
           "@context": "https://schema.org",
@@ -55,9 +55,9 @@ export default function YouTubeIcerikUretimiPage() {
               YouTube kanalınızı büyütmek için anahtar teslim video prodüksiyon. 
               Senaryo, çekim, kurgu, renk düzeltme, ses tasarımı ve thumbnail — hepsi dahil.
             </p>
-            <WizardCta text="Ücretsiz Strateji Görüşmesi Al" />
+            <WizardCta />
           </div>
-          <div className="relative w-full aspect-video flex items-center justify-center group rounded-3xl overflow-hidden border border-border/50 shadow-2xl bg-black">
+          <div className="relative w-full aspect-video flex items-center justify-center group rounded-2xl overflow-hidden border border-border/50 shadow-2xl bg-black">
             <LazyHeroVideo
               src="/videos/portfolyo/youtube.mp4"
               poster="/videos/portfolyo/youtube.jpg"
@@ -101,7 +101,7 @@ export default function YouTubeIcerikUretimiPage() {
 
       <section className="max-w-3xl mx-auto px-6 py-16 text-center">
         <p className="text-muted-foreground text-lg mb-6">YouTube kanalınızı profesyonelce büyütmeye hazır mısınız?</p>
-        <WizardCta text="Hemen Başlayalım" />
+        <WizardCta />
       </section>
     </div>
   );

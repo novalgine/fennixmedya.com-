@@ -11,7 +11,7 @@ export const metadata = createBlogMetadata("video-produksiyon-maliyetleri-2026")
 
 export default function BlogPost() {
   return (
-    <div className="min-h-screen bg-background pt-16 pb-20">
+    <div className="min-h-screen bg-background pt-header pb-20">
       <div className="max-w-3xl mx-auto px-6">
         <Breadcrumbs items={[{ name: "Blog", href: "/blog" }, { name: "Video Prodüksiyon Maliyetleri 2026: Ne Kadar Bütçe Ayırmalısınız?" }]} />
 
@@ -125,12 +125,12 @@ export default function BlogPost() {
         <RelatedPosts slug="video-produksiyon-maliyetleri-2026" />
 
         <div className="mt-16 pt-10 border-t border-border">
-          <div className="bg-card border border-white/5 p-8 rounded-3xl text-center shadow-2xl">
+          <div className="bg-card border border-white/5 p-8 rounded-2xl text-center shadow-2xl">
             <h3 className="font-heading text-2xl font-bold mb-4">Projeniz için ücretsiz maliyet analizi ister misiniz?</h3>
             <p className="text-muted-foreground mb-8">
               Bütçenize ve hedeflerinize uygun kişiselleştirilmiş video prodüksiyon teklifi alın.
             </p>
-            <WizardCta text="Hemen Ücretsiz Teklif Al" />
+            <WizardCta />
           </div>
         </div>
       </div>

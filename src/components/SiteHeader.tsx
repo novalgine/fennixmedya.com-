@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Menu, X, ChevronDown } from "lucide-react";
 import LiveCapacityHybrid from "@/components/LiveCapacityHybrid";
 import { useWizard } from "@/components/WizardContext";
+import CtaButton from "@/components/CtaButton";
 
 const navLinks = [
   { label: "Anasayfa", href: "/" },
@@ -195,15 +196,16 @@ export default function SiteHeader() {
                 </Link>
               )
             )}
-            <button
+            <CtaButton
+              size="md"
               onClick={() => {
                 setIsMobileMenuOpen(false);
                 openWizard("funnel");
               }}
-              className="mx-4 mt-2 bg-gradient-gold text-primary-foreground font-heading font-bold text-sm py-3 rounded-xl hover:scale-[1.02] active:scale-[0.98] transition-all shadow-lg shadow-gold/20"
+              className="mx-4 mt-2 text-sm"
             >
               Ücretsiz Strateji Görüşmesi Al →
-            </button>
+            </CtaButton>
           </nav>
         </div>
       )}

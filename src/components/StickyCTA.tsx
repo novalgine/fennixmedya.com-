@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import { Phone, MessageCircle } from "lucide-react";
 import MagneticWrapper from "./MagneticWrapper";
+import CtaButton from "@/components/CtaButton";
 
 const WHATSAPP_NUMBER = "905467407084";
 const WHATSAPP_MESSAGE = encodeURIComponent("Merhaba, web sitenizden ulaşıyorum. Ücretsiz strateji görüşmesi hakkında bilgi almak istiyorum.");
@@ -94,20 +95,14 @@ const StickyCTA = () => {
 
       {/* Main CTA Button — metin JS branch'inden gelir, CSS'le gizleme yok */}
       {isMobile ? (
-        <button
-          onClick={handleMainCTA}
-          className="bg-gradient-gold text-primary-foreground font-heading font-bold px-6 py-3 rounded-full shadow-2xl hover:scale-105 active:scale-95 transition-all text-sm cursor-pointer border border-white/10"
-        >
+        <CtaButton size="md" onClick={handleMainCTA} className="rounded-full text-sm">
           Ücretsiz Görüşme Al →
-        </button>
+        </CtaButton>
       ) : (
         <MagneticWrapper>
-          <button
-            onClick={handleMainCTA}
-            className="bg-gradient-gold text-primary-foreground font-heading font-bold px-8 py-4 rounded-full shadow-2xl hover:scale-105 active:scale-95 transition-all text-base cursor-pointer border border-white/10"
-          >
+          <CtaButton size="md" onClick={handleMainCTA} className="rounded-full">
             Ücretsiz Strateji Görüşmesi Al →
-          </button>
+          </CtaButton>
         </MagneticWrapper>
       )}
     </div>

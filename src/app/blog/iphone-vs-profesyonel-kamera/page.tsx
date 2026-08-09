@@ -8,7 +8,7 @@ export const metadata = createBlogMetadata("iphone-vs-profesyonel-kamera");
 
 export default function BlogPost2() {
   return (
-    <article className="min-h-screen bg-background pt-16">
+    <article className="min-h-screen bg-background pt-header">
       <div className="max-w-3xl mx-auto px-6 py-16">
         <Breadcrumbs items={[{ name: "Blog", href: "/blog" }, { name: "iPhone ile mi Profesyonel Kamera ile mi Çekilmeli?" }]} />
 

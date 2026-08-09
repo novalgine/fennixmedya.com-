@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import CtaButton from "@/components/CtaButton";
 import { useWizard } from "@/components/WizardContext";
 
 export default function MidPageCTA() {
@@ -10,12 +10,7 @@ export default function MidPageCTA() {
       <p className="text-foreground/80 text-lg md:text-xl font-medium text-center max-w-2xl mb-5">
         Hâlâ emin değil misiniz? <span className="text-primary font-bold">15 dakikalık ücretsiz görüşmede</span> tüm sorularınızı yanıtlayalım.
       </p>
-      <button
-        onClick={() => openWizard()}
-        className="bg-gradient-gold text-primary-foreground font-heading font-bold text-lg px-8 py-4 rounded-xl hover:scale-105 active:scale-95 transition-all shadow-lg shadow-gold/20 cursor-pointer"
-      >
-        Hemen Planlamaya Başlayın →
-      </button>
+      <CtaButton onClick={() => openWizard()}>Ücretsiz Strateji Görüşmesi Al →</CtaButton>
     </div>
   );
 }

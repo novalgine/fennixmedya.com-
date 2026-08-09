@@ -11,7 +11,7 @@ export const metadata = createBlogMetadata("linkedin-video-stratejisi-b2b");
 
 export default function BlogPost() {
   return (
-    <div className="min-h-screen bg-background pt-16 pb-20">
+    <div className="min-h-screen bg-background pt-header pb-20">
       <div className="max-w-3xl mx-auto px-6">
         <Breadcrumbs items={[{ name: "Blog", href: "/blog" }, { name: "LinkedIn Video Stratejisi: B2B Markalar İçin 2026 Rehberi" }]} />
 
@@ -126,12 +126,12 @@ export default function BlogPost() {
         <RelatedPosts slug="linkedin-video-stratejisi-b2b" />
 
         <div className="mt-16 pt-10 border-t border-border">
-          <div className="bg-card border border-white/5 p-8 rounded-3xl text-center shadow-2xl">
+          <div className="bg-card border border-white/5 p-8 rounded-2xl text-center shadow-2xl">
             <h3 className="font-heading text-2xl font-bold mb-4">LinkedIn video stratejinizi birlikte oluşturalım</h3>
             <p className="text-muted-foreground mb-8">
               CEO videoları, müşteri hikayeleri ve düşünce liderliği içerikleriyle LinkedIn&apos;de fark yaratın.
             </p>
-            <WizardCta text="Hemen Ücretsiz Strateji Görüşmesi Al" />
+            <WizardCta />
           </div>
         </div>
       </div>

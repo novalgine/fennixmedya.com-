@@ -8,7 +8,7 @@ export const metadata = createBlogMetadata("doktorlar-icin-video-icerik-rehberi"
 
 export default function BlogPost3() {
   return (
-    <article className="min-h-screen bg-background pt-16">
+    <article className="min-h-screen bg-background pt-header">
       <div className="max-w-3xl mx-auto px-6 py-16">
         <Breadcrumbs items={[{ name: "Blog", href: "/blog" }, { name: "Doktorlar İçin Sosyal Medya Video İçerik Rehberi" }]} />
 

@@ -33,7 +33,7 @@ const LiveCapacityHybrid = () => {
                         <div
                             className={cn(
                                 "h-full rounded-full transition-all duration-1000 ease-out",
-                                remainingSlots === 0 ? "bg-red-600" : isLowCapacity ? "bg-gradient-to-r from-orange-500 to-red-500" : "bg-gradient-gold shadow-[0_0_8px_rgba(212,164,74,0.4)]"
+                                remainingSlots === 0 ? "bg-red-600" : isLowCapacity ? "bg-gradient-to-r from-orange-500 to-red-500" : "bg-gradient-gold"
                             )}
                             style={{ width: `${fillPercentage}%` }}
                         />

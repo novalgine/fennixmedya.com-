@@ -1,6 +1,7 @@
 "use client";
 import { ShieldCheck, Clock, RefreshCw, Unlock } from "lucide-react";
 import Reveal from "@/components/Reveal";
+import SectionHeading from "@/components/SectionHeading";
 
 const fallbackGuarantees = [
   {
@@ -43,20 +44,19 @@ const GuaranteesSection = () => {
   return (
     <section className="section-spacing bg-surface relative z-10 w-full">
       <div className="max-w-5xl mx-auto px-6">
-        <Reveal><div className="text-center mb-16">
-          <h2 className="font-heading text-4xl md:text-6xl font-bold tracking-tight mb-4">
-            <span className="text-gradient-gold">Risksiz</span> İş Birliği
-          </h2>
-          <p className="text-xl md:text-2xl text-muted-foreground max-w-xl mx-auto">
-            Kalitemize güveniyoruz, siz rahat edin.
-          </p>
-        </div></Reveal>
+        <Reveal>
+          <SectionHeading
+            eyebrow="Garantiler"
+            title="Risksiz İş Birliği"
+            sub="Kalitemize güveniyoruz, siz rahat edin."
+          />
+        </Reveal>
 
         <div className="space-y-5">
           {guarantees.map((g, i) => (
             <Reveal key={i} delay={i * 80}>
             <div
-              className={`guarantee-row flex flex-col md:flex-row items-start md:items-center gap-5 md:gap-8 bg-card/60 backdrop-blur-sm border border-border/50 rounded-2xl p-6 md:p-8 ${g.accentBorder} transition-all duration-500 group hover:bg-card`}
+              className={`guarantee-row flex flex-col md:flex-row items-start md:items-center gap-5 md:gap-8 card-surface p-6 md:p-8 ${g.accentBorder} transition-all duration-500 group hover:bg-card`}
             >
               {/* Icon */}
               <div className={`w-14 h-14 rounded-xl ${g.accentBg} flex items-center justify-center shrink-0 transition-transform duration-500 group-hover:scale-110`}>

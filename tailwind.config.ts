@@ -16,6 +16,10 @@ export default {
       },
     },
     extend: {
+      spacing: {
+        // Sabit header yüksekliği — sayfa üstü offset'i için tek isim
+        header: "4rem",
+      },
       fontFamily: {
         heading: ["var(--font-manrope)", "sans-serif"],
         body: ["var(--font-inter)", "sans-serif"],

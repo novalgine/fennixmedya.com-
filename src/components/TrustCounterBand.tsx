@@ -22,7 +22,7 @@ const StatItem = ({ stat, index, phase }: { stat: { icon: React.ElementType, val
             <stat.icon className="w-6 h-6 text-primary mx-auto mb-3 opacity-60" />
             <p className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-1">
                 <span ref={countRef}>0</span>
-                <span className="text-gradient-gold">{stat.suffix}</span>
+                <span className="text-primary">{stat.suffix}</span>
             </p>
             <p className="text-muted-foreground text-sm md:text-base font-medium uppercase tracking-widest">
                 {stat.label}

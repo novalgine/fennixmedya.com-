@@ -11,7 +11,7 @@ export const metadata = createBlogMetadata("podcast-ten-video-icerigi-uretmek");
 
 export default function BlogPost() {
   return (
-    <div className="min-h-screen bg-background pt-16 pb-20">
+    <div className="min-h-screen bg-background pt-header pb-20">
       <div className="max-w-3xl mx-auto px-6">
         <Breadcrumbs items={[{ name: "Blog", href: "/blog" }, { name: "Podcast'ten Video İçeriğe: Tek Çekimle 30 Günlük İçerik Üretme" }]} />
 
@@ -133,12 +133,12 @@ export default function BlogPost() {
         <RelatedPosts slug="podcast-ten-video-icerigi-uretmek" />
 
         <div className="mt-16 pt-10 border-t border-border">
-          <div className="bg-card border border-white/5 p-8 rounded-3xl text-center shadow-2xl">
+          <div className="bg-card border border-white/5 p-8 rounded-2xl text-center shadow-2xl">
             <h3 className="font-heading text-2xl font-bold mb-4">Ayda sadece 6 saat ayırarak 30 günlük içerik üretin</h3>
             <p className="text-muted-foreground mb-8">
               Content Repurposing modelimizle tüm platformlarınızı profesyonel içerikle dolduralım.
             </p>
-            <WizardCta text="Hemen Ücretsiz Strateji Görüşmesi Al" />
+            <WizardCta />
           </div>
         </div>
       </div>

@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10 md:gap-8 items-start">
           {/* Brand */}
           <div className="md:col-span-1">
-            <h3 className="font-heading text-xl font-bold text-gradient-gold uppercase tracking-widest mb-2">
+            <h3 className="font-heading text-xl font-bold text-foreground uppercase tracking-widest mb-2">
               Fennix Medya
             </h3>
             <p className="text-base text-muted-foreground font-medium">

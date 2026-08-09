@@ -171,7 +171,7 @@ export default function WizardShell<A extends ContactFields>({
                       key={option.value}
                       onClick={() => handleSelect(currentChoice.key, option.value)}
                       className={`w-full text-left p-4 rounded-xl border transition-all duration-300 flex items-center justify-between group relative overflow-hidden
-                        ${selected ? "bg-white/10 border-primary shadow-[0_0_20px_rgba(212,164,74,0.2)]" : "bg-black/20 border-white/5 hover:border-white/20 hover:bg-white/5"}`}
+                        ${selected ? "bg-white/10 border-primary" : "bg-black/20 border-white/5 hover:border-white/20 hover:bg-white/5"}`}
                     >
                       {option.badge && (
                         <div className="absolute top-0 right-0 bg-primary/20 text-primary text-[10px] font-bold px-2 py-0.5 rounded-bl-lg">
@@ -296,7 +296,7 @@ export default function WizardShell<A extends ContactFields>({
                   type="submit"
                   disabled={isSubmitting}
                   aria-busy={isSubmitting}
-                  className="w-full bg-gradient-gold text-primary-foreground font-bold text-lg py-4 rounded-xl hover:scale-[1.02] active:scale-[0.98] transition-all shadow-[0_0_20px_rgba(212,164,74,0.3)] mt-4 disabled:opacity-70 disabled:cursor-not-allowed"
+                  className="w-full bg-gradient-gold text-primary-foreground font-bold text-lg py-4 rounded-xl hover:scale-[1.02] active:scale-[0.98] transition-all mt-4 disabled:opacity-70 disabled:cursor-not-allowed"
                 >
                   {isSubmitting ? "Gönderiliyor..." : config.contact.submitLabel}
                 </button>
@@ -317,9 +317,6 @@ export default function WizardShell<A extends ContactFields>({
             </div>
           )}
         </div>
-
-        {/* Subtle background glow */}
-        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[80%] h-[100px] bg-primary/20 blur-[100px] pointer-events-none" />
       </DialogContent>
     </Dialog>
   );

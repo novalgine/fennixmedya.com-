@@ -186,7 +186,7 @@ export default function SocialProofCarousel() {
 
           {/* ── Animasyonlu Card Wrapper ── */}
           <div
-            className="bg-card/50 backdrop-blur-md border border-border/50 rounded-3xl overflow-hidden shadow-2xl relative transition-all duration-700 hover:bg-card/70 hover:shadow-[0_0_60px_rgba(16,185,129,0.15)] hover:border-emerald-500/30 group/card min-h-[500px] md:h-[500px] lg:h-[600px]"
+            className="card-surface overflow-hidden shadow-2xl relative transition-all duration-700 hover:bg-card/70 hover:border-emerald-500/30 group/card min-h-[500px] md:h-[500px] lg:h-[600px]"
             onTouchStart={handleTouchStart}
             onTouchEnd={handleTouchEnd}
             role="group"
@@ -224,7 +224,7 @@ export default function SocialProofCarousel() {
                   <div className="relative z-10 flex flex-col items-center gap-5">
                     <button
                       onClick={() => activateEmbed(active)}
-                      className="w-20 h-20 rounded-full bg-primary/20 backdrop-blur-md flex items-center justify-center border border-primary/50 shadow-[0_0_30px_rgba(232,106,31,0.5)] hover:scale-110 hover:bg-primary/30 transition-all duration-300 cursor-pointer group"
+                      className="w-20 h-20 rounded-full bg-primary/20 backdrop-blur-md flex items-center justify-center border border-primary/50 hover:scale-110 hover:bg-primary/30 transition-all duration-300 cursor-pointer group"
                       aria-label={`${study.name} videosunu oynat`}
                     >
                       <Play className="w-8 h-8 text-white fill-white ml-1 group-hover:scale-110 transition-transform" />
@@ -239,11 +239,10 @@ export default function SocialProofCarousel() {
               {/* Sağ: Bilgi Paneli */}
               <div className="p-6 md:p-8 flex flex-col justify-center bg-gradient-to-br from-card to-background relative overflow-hidden h-full">
                 {/* İnce arkaplan ışıltısı */}
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-primary/10 rounded-full blur-[100px] opacity-0 group-hover/card:opacity-100 transition-opacity duration-1000 pointer-events-none" />
 
                 <div className="relative z-10">
                   <Star className="w-8 h-8 text-primary mb-3 fill-primary/20" />
-                  <h3 className="font-heading text-2xl md:text-3xl font-bold text-gradient-gold mb-1">
+                  <h3 className="font-heading text-2xl md:text-3xl font-bold text-foreground mb-1">
                     {study.name}
                   </h3>
                   <p className="text-muted-foreground text-sm font-bold uppercase tracking-widest mb-5">
@@ -256,7 +255,7 @@ export default function SocialProofCarousel() {
                       <p className="text-foreground/70 font-medium">{study.before}</p>
                     </div>
 
-                    <div className="bg-emerald-500/5 border border-emerald-500/20 rounded-xl p-4 shadow-[0_0_15px_rgba(16,185,129,0.02)] transition-colors group-hover/card:bg-emerald-500/10 group-hover/card:border-emerald-500/30">
+                    <div className="bg-emerald-500/5 border border-emerald-500/20 rounded-xl p-4 transition-colors group-hover/card:bg-emerald-500/10 group-hover/card:border-emerald-500/30">
                       <p className="text-emerald-400 text-sm font-bold uppercase mb-1 flex items-center gap-2">
                         <Zap className="w-4 h-4 fill-emerald-400" />
                         Sonuç (Fennix Medya İle)

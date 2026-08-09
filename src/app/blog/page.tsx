@@ -22,7 +22,7 @@ import { blogPosts } from "@/data/blog-posts";
 
 export default function BlogPage() {
   return (
-    <div className="min-h-screen bg-background pt-16">
+    <div className="min-h-screen bg-background pt-header">
       <section className="max-w-4xl mx-auto px-6 py-16 md:py-24">
         <div className="text-center mb-16">
           <span className="text-primary font-medium text-sm tracking-widest uppercase mb-4 block">Blog</span>

@@ -12,7 +12,7 @@ export const metadata = createBlogMetadata("videolarda-ilk-3-saniye-kurali-hook"
 
 export default function BlogPost() {
   return (
-    <div className="min-h-screen bg-background pt-16 pb-20">
+    <div className="min-h-screen bg-background pt-header pb-20">
       <div className="max-w-3xl mx-auto px-6">
         <Breadcrumbs items={[{ name: "Blog", href: "/blog" }, { name: "Videolarda İlk 3 Saniye Kuralı (Hook Stratejileri)" }]} />
 
@@ -107,12 +107,12 @@ export default function BlogPost() {
         <RelatedPosts slug="videolarda-ilk-3-saniye-kurali-hook" />
 
         <div className="mt-16 pt-10 border-t border-border">
-          <div className="bg-card border border-white/5 p-8 rounded-3xl text-center shadow-2xl">
+          <div className="bg-card border border-white/5 p-8 rounded-2xl text-center shadow-2xl">
             <h3 className="font-heading text-2xl font-bold mb-4">Markanızın hikayesini anlatmaya hazır mısınız?</h3>
             <p className="text-muted-foreground mb-8">
               Stratejik içerik üretimi ve <Link href="/hizmetler/sosyal-medya-video">profesyonel video prodüksiyon</Link>u ile rakiplerinizin bir adım önüne geçin.
             </p>
-            <WizardCta text="Hemen Ücretsiz Strateji Görüşmesi Al" />
+            <WizardCta />
           </div>
         </div>
       </div>

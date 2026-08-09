@@ -8,6 +8,7 @@ import {
 import Reveal from "@/components/Reveal";
 import { CAPACITY_CONFIG } from "@/config/capacity";
 import JsonLd from "@/components/JsonLd";
+import SectionHeading from "@/components/SectionHeading";
 
 const fallbackFaqs = [
     {
@@ -60,20 +61,17 @@ const FAQSection = () => {
                     })),
                 }}
             />
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gold/5 blur-[120px] rounded-full pointer-events-none" />
 
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                <Reveal className="text-center mb-16">
-                    <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-foreground tracking-tight mb-6">
-                        Sıkça Sorulan <span className="text-gradient-gold">Sorular</span>
-                    </h2>
-                    <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-                        Aklınıza takılan soruların cevaplarını burada bulabilirsiniz.
-                        Farklı bir sorunuz varsa bizimle iletişime geçmekten çekinmeyin.
-                    </p>
+                <Reveal>
+                    <SectionHeading
+                        eyebrow="Merak Edilenler"
+                        title="Sıkça Sorulan Sorular"
+                        sub="Aklınıza takılan soruların cevaplarını burada bulabilirsiniz. Farklı bir sorunuz varsa bizimle iletişime geçmekten çekinmeyin."
+                    />
                 </Reveal>
 
-                <Reveal delay={120} className="bg-card/50 backdrop-blur-md border border-border/50 rounded-2xl p-6 md:p-10 shadow-2xl">
+                <Reveal delay={120} className="card-surface p-6 md:p-10 shadow-2xl">
                     <Accordion type="single" collapsible className="w-full space-y-4">
                             {faqs.map((faq, index) => (
                                 <AccordionItem
@@ -81,7 +79,7 @@ const FAQSection = () => {
                                     value={`item-${index}`}
                                     className="border border-border/40 bg-card rounded-xl px-6 data-[state=open]:border-gold/40 data-[state=open]:shadow-lg data-[state=open]:shadow-gold/5 transition-all duration-300"
                                 >
-                                    <AccordionTrigger className="font-heading font-bold text-lg md:text-xl text-left hover:text-primary transition-colors py-5 [&[data-state=open]]:text-gradient-gold">
+                                    <AccordionTrigger className="font-heading font-bold text-lg md:text-xl text-left hover:text-primary transition-colors py-5 [&[data-state=open]]:text-primary">
                                         {faq.question}
                                     </AccordionTrigger>
                                     <AccordionContent className="text-muted-foreground text-base md:text-lg leading-relaxed pb-6">

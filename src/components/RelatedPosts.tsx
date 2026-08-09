@@ -9,7 +9,7 @@ export default function RelatedPosts({ slug }: { slug: string }) {
   return (
     <aside className="mt-16 border-t border-border/50 pt-10">
       <h2 className="font-heading text-2xl font-bold mb-6 text-foreground">
-        İlgili <span className="text-gradient-gold">Yazılar</span>
+        İlgili Yazılar
       </h2>
       <div className="grid gap-4 md:grid-cols-3">
         {posts.map((p) => (

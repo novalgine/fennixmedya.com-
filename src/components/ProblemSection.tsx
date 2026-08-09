@@ -3,9 +3,9 @@ import Image from "next/image";
 import staticComparisonImg from "@/assets/ornekgorsel.webp";
 import { Clock, ZapOff, TrendingDown } from "lucide-react";
 import Reveal from "@/components/Reveal";
+import SectionHeading from "@/components/SectionHeading";
 
 const fallbackData = {
-  headerTitle: `Neden Telefonla Çekmek <span class="text-gradient-gold">Artık Yetmiyor?</span>`,
   headerDesc: "Sektörünüzde en iyi olabilirsiniz. Ancak sosyal medyadaki görsel algınız gerçek değerinizi yansıtmıyorsa, pazar sizi ucuz algılar ve fiyatınıza itiraz eder.",
   painPoints: [
     {
@@ -39,25 +39,23 @@ const ProblemSection = () => {
       <div className="max-w-7xl mx-auto px-6">
 
         {/* Header */}
-        <Reveal><div className="problem-header text-center mb-16">
-          <h2
-            className="font-heading text-4xl md:text-5xl lg:text-5xl font-black tracking-tight mb-4"
-            dangerouslySetInnerHTML={{ __html: data.headerTitle }}
+        <Reveal>
+          <SectionHeading
+            eyebrow="Algı Gerçektir"
+            title="Neden Telefonla Çekmek Artık Yetmiyor?"
+            sub={data.headerDesc}
           />
-          <p className="text-lg md:text-xl text-foreground/60 max-w-2xl mx-auto font-medium">
-            {data.headerDesc}
-          </p>
-        </div></Reveal>
+        </Reveal>
 
         {/* Bento Grid */}
         <div className="bento-grid grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
 
           {/* Main Visual Card (Left) */}
-          <Reveal className="lg:col-span-7 flex"><div className="bento-card flex-1 bg-card border border-border/50 rounded-3xl p-6 md:p-8 flex flex-col relative overflow-hidden group">
+          <Reveal className="lg:col-span-7 flex"><div className="bento-card flex-1 card-surface p-6 md:p-8 flex flex-col relative overflow-hidden group">
             {/* Dark Red Warning Glow in Background using Radial Gradient instead of blur for Performance! */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150%] h-[150%] pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(127, 29, 29, 0.1) 0%, transparent 50%)' }} />
 
-            <h3 className="font-heading text-2xl font-bold mb-6 text-foreground relative z-10">Algı Gerçektir</h3>
+            <h3 className="font-heading text-2xl font-bold mb-6 text-foreground relative z-10">Farkı Kendiniz Görün</h3>
             <div className="relative z-10 flex-1 flex flex-col justify-center">
               <div className="rounded-2xl overflow-hidden ring-1 ring-white/10 relative">
                 {/* Labels overlay — only on desktop */}
@@ -94,7 +92,7 @@ const ProblemSection = () => {
           <div className="lg:col-span-5 grid grid-rows-3 gap-6">
 
             {data.painPoints.map((point, i) => (
-              <Reveal key={point.id} delay={i * 80} className="row-span-1 flex"><div className="bento-card flex-1 bg-card border border-border/50 hover:border-emerald-500/40 hover:shadow-[0_0_20px_rgba(16,185,129,0.08)] hover:bg-emerald-950/20 transition-all duration-500 rounded-3xl p-6 flex flex-col justify-center relative overflow-hidden group">
+              <Reveal key={point.id} delay={i * 80} className="row-span-1 flex"><div className="bento-card flex-1 bg-card border border-border/50 hover:border-emerald-500/40 hover:bg-emerald-950/20 transition-all duration-500 rounded-2xl p-6 flex flex-col justify-center relative overflow-hidden group">
                 <div className="absolute -right-4 -top-4 opacity-[0.03] dark:opacity-5 group-hover:scale-110 group-hover:opacity-10 transition-all duration-500 text-foreground group-hover:text-emerald-500">
                   {point.icon === "Clock" && <Clock className="w-32 h-32" />}
                   {point.icon === "TrendingDown" && <TrendingDown className="w-32 h-32" />}
@@ -117,8 +115,8 @@ const ProblemSection = () => {
           </div>
 
           {/* Bottom Wide Box (Punchline) */}
-          <Reveal className="lg:col-span-12"><div className="bento-card bg-card border border-border/50 rounded-3xl p-8 md:p-12 relative overflow-hidden group">
-            <div className="absolute left-0 top-0 bottom-0 w-2 bg-emerald-500/80 shadow-[0_0_15px_rgba(16,185,129,0.4)]" />
+          <Reveal className="lg:col-span-12"><div className="bento-card card-surface p-8 md:p-12 relative overflow-hidden group">
+            <div className="absolute left-0 top-0 bottom-0 w-2 bg-emerald-500/80" />
             <blockquote className="max-w-4xl mx-auto text-center relative z-10">
               <p
                 className="text-2xl md:text-3xl font-heading italic text-foreground/80 leading-relaxed font-bold"

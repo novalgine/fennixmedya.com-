@@ -76,7 +76,7 @@ const faqs = [
 
 export default function AnahtarTeslimStudyoPage() {
   return (
-    <div className="min-h-screen bg-background pt-16">
+    <div className="min-h-screen bg-background pt-header">
       <JsonLd
         data={{
           "@context": "https://schema.org",
@@ -167,7 +167,7 @@ export default function AnahtarTeslimStudyoPage() {
                   className={`relative flex flex-col md:flex-row items-start md:items-center w-full group ${isEven ? "md:flex-row-reverse" : ""}`}
                 >
                   {/* Node */}
-                  <div className="absolute left-0 md:left-1/2 md:-translate-x-1/2 top-0 md:top-1/2 md:-translate-y-1/2 w-14 h-14 rounded-full bg-background border border-white/10 shadow-[0_4px_20px_rgba(0,0,0,0.5)] flex items-center justify-center shrink-0 group-hover:border-primary/80 group-hover:shadow-[0_0_20px_rgba(232,106,31,0.5)] transition-all duration-500 z-20">
+                  <div className="absolute left-0 md:left-1/2 md:-translate-x-1/2 top-0 md:top-1/2 md:-translate-y-1/2 w-14 h-14 rounded-full bg-background border border-white/10 shadow-[0_4px_20px_rgba(0,0,0,0.5)] flex items-center justify-center shrink-0 group-hover:border-primary/80 transition-all duration-500 z-20">
                     <span className="font-heading text-lg font-black text-primary/80 group-hover:text-primary transition-colors">{step.num}</span>
                   </div>
 
@@ -222,8 +222,7 @@ export default function AnahtarTeslimStudyoPage() {
 
       {/* PDF Lead Magnet CTA Section */}
       <section className="max-w-5xl mx-auto px-6 py-16">
-        <div className="bg-gradient-to-br from-card to-background border border-primary/20 rounded-3xl p-8 md:p-12 text-center relative overflow-hidden">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-primary/10 rounded-full blur-[120px] pointer-events-none" />
+        <div className="bg-gradient-to-br from-card to-background border border-primary/20 rounded-2xl p-8 md:p-12 text-center relative overflow-hidden">
           <div className="relative z-10">
             <span className="text-primary font-medium text-sm tracking-widest uppercase mb-4 block">Ücretsiz Rehber</span>
             <h2 className="font-heading text-2xl md:text-4xl font-black mb-4">
@@ -265,7 +264,7 @@ export default function AnahtarTeslimStudyoPage() {
 
       {/* Final CTA */}
       <section className="max-w-4xl mx-auto px-6 py-16 md:py-24">
-        <div className="bg-card border border-white/5 p-8 md:p-12 rounded-3xl text-center shadow-2xl relative overflow-hidden">
+        <div className="bg-card border border-white/5 p-8 md:p-12 rounded-2xl text-center shadow-2xl relative overflow-hidden">
           <div className="absolute top-0 left-0 w-full h-1 bg-gradient-gold" />
           <h2 className="font-heading text-3xl md:text-4xl font-black mb-4">
             Markanızı Amatör Çekimlerden <span className="text-gradient-gold">Kurtarın</span>

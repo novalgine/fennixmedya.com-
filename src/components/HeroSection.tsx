@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useRef, useState, useCallback } from "react";
 import MagneticWrapper from "@/components/MagneticWrapper";
+import CtaButton from "@/components/CtaButton";
 import heroBg from "@/assets/hero-bg.webp";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
@@ -191,24 +192,16 @@ const HeroSection = () => {
         <div className="flex flex-col items-center w-full transition-all duration-500 ease-out">
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">
             <MagneticWrapper>
-              <button
-                onClick={handleCTAClick}
-                aria-label="Ücretsiz Strateji Görüşmesi Al"
-                className="w-full sm:w-auto bg-gradient-gold text-primary-foreground font-heading font-bold text-lg md:text-xl px-8 py-5 rounded-xl transition-all shadow-lg shadow-gold/20 cursor-pointer inline-flex justify-center items-center group relative overflow-hidden"
-              >
+              <CtaButton onClick={handleCTAClick} aria-label="Ücretsiz Strateji Görüşmesi Al" className="w-full sm:w-auto">
                 <span className="hidden sm:inline">Ücretsiz Strateji Görüşmesi Al →</span>
                 <span className="sm:hidden">Ücretsiz Görüşme Al →</span>
-                <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out" />
-              </button>
+              </CtaButton>
             </MagneticWrapper>
             
             <MagneticWrapper>
-              <a
-                href="#portfolyo"
-                className="w-full sm:w-auto bg-transparent border-2 border-white/20 text-foreground font-heading font-bold text-lg md:text-xl px-8 py-4 rounded-xl transition-all hover:bg-white/5 hover:border-white/40 cursor-pointer inline-flex justify-center items-center"
-              >
+              <CtaButton variant="secondary" href="#portfolyo" className="w-full sm:w-auto">
                 Portfolyomuzu İncele
-              </a>
+              </CtaButton>
             </MagneticWrapper>
           </div>
           
@@ -247,7 +240,7 @@ const HeroSection = () => {
       <Dialog open={showVideo} onOpenChange={setShowVideo}>
         <DialogContent className="max-w-6xl bg-transparent border-0 shadow-none p-0">
           <DialogTitle className="sr-only">Fennix Medya - Vizyonumuz</DialogTitle>
-          <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-[0_0_100px_rgba(232,106,31,0.2)] border border-white/10 mb-6">
+          <div className="relative w-full aspect-video rounded-2xl overflow-hidden border border-white/10 mb-6">
             <iframe
               src="https://www.youtube.com/embed/t1edyqgT1UQ?autoplay=1&mute=0&rel=0&start=1&modestbranding=1"
               title="Fennix Medya - Vizyonumuz"
@@ -256,15 +249,15 @@ const HeroSection = () => {
               allowFullScreen
             ></iframe>
           </div>
-          <button
+          <CtaButton
+            className="mx-auto"
             onClick={() => {
               setShowVideo(false);
               handleCTAClick();
             }}
-            className="mx-auto bg-gradient-gold text-primary-foreground font-heading font-bold text-lg px-8 py-4 rounded-xl transition-all shadow-lg shadow-gold/20 hover:scale-105 cursor-pointer flex items-center gap-2"
           >
-            Şimdi Randevu Al →
-          </button>
+            Ücretsiz Strateji Görüşmesi Al →
+          </CtaButton>
         </DialogContent>
       </Dialog>
     </section>

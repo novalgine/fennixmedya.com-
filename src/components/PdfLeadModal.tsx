@@ -50,7 +50,7 @@ export default function PdfLeadModal({ isOpen, onClose }: PdfLeadModalProps) {
 
   return (
     <Dialog open={isOpen} onOpenChange={(o) => !o && onClose()}>
-      <DialogContent className="max-w-md bg-card/95 backdrop-blur-xl rounded-3xl">
+      <DialogContent className="max-w-md bg-card/95 backdrop-blur-xl rounded-2xl">
         <div data-lenis-prevent className="p-8 overflow-y-auto">
           {!isSuccess ? (
             <>
@@ -62,7 +62,7 @@ export default function PdfLeadModal({ isOpen, onClose }: PdfLeadModalProps) {
                 <DialogTitle className="font-heading text-2xl font-bold text-foreground mb-2">
                   Ücretsiz Rehberinizi İndirin
                 </DialogTitle>
-                <p className="text-gradient-gold font-heading font-semibold text-base mb-3">
+                <p className="text-primary font-heading font-semibold text-base mb-3">
                   Sıfırdan Profesyonel Stüdyo Kurma Rehberi
                 </p>
                 <DialogDescription className="text-muted-foreground text-sm leading-relaxed">

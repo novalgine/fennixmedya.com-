@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 
 export default function PortfolioPage() {
   return (
-    <div className="min-h-screen bg-background pt-16">
+    <div className="min-h-screen bg-background pt-header">
       <section className="max-w-6xl mx-auto px-6 py-16 md:py-24">
         <div className="text-center mb-16">
           <span className="text-primary font-medium text-sm tracking-widest uppercase mb-4 block">
@@ -50,7 +50,7 @@ export default function PortfolioPage() {
           Sıradaki proje <span className="text-gradient-gold">sizinki</span> olsun.
         </h2>
         <p className="text-muted-foreground mb-8 text-lg">15 dakikalık ücretsiz görüşmede projenizi birlikte planlayalım.</p>
-        <WizardCta text="Ücretsiz Strateji Görüşmesi Al" />
+        <WizardCta />
       </section>
     </div>
   );
