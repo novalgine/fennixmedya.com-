@@ -90,7 +90,7 @@ const HeroSection = () => {
           {/* Sol: mesaj */}
           <div className="text-left">
             <p className="font-heading font-semibold text-sm uppercase tracking-[0.25em] text-primary mb-6">
-              Sahne 01 — Otorite
+              Video Prodüksiyon · İstanbul
             </p>
 
             <h1 className="text-poster mb-8">

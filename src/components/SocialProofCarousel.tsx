@@ -1,60 +1,17 @@
 "use client";
 import { useState, useRef, useCallback, useEffect } from "react";
 import VideoLightbox from "@/components/VideoLightbox";
+import { caseStudies as caseItems } from "@/data/portfolio";
 import { Trophy, Zap, LayoutList, ChevronLeft, ChevronRight, Play, ExternalLink, Users, Star } from "lucide-react";
 
-/* ── Müşteri Verileri ── */
-const caseStudies = [
-  {
-    name: "BOOGOLD Kuyumculuk",
-    sector: "Kişiye Özel Altın Takı",
-    videoSrc: "/videos/portfolyo/boogold.mp4",
-    before: "Bütçesi kısıtlı bir marka algısı yaratan sıradan içerikler.",
-    after: "Premium müşteri kitlesinin dikkatini çeken ve marka otoritesini anında dönüştüren içerikler.",
-  },
-  {
-    name: "Mukaddes Gün",
-    sector: "Storytelling Uzmanı",
-    videoSrc: "/videos/referans/mukaddes.mp4",
-    before: "Düzensiz ve amatör hissettiren kişisel marka içerikleri.",
-    after: "Sinematik içerik kalitesi ve hikâye anlatımıyla güçlü bir kişisel marka konumlandırması.",
-  },
-  {
-    name: "Melis Ulaş",
-    sector: "Duygusal Beslenme Uzmanı · Wellness",
-    videoSrc: "/videos/portfolyo/melis.mp4",
-    before: "Telefonla çekilmiş amatör içerikler.",
-    after: "Görsel hikaye anlatıcılığı ve otoriteyi birleştiren otantik içerikler.",
-  },
-  {
-    name: "Ayzıt Umay",
-    sector: "Diş Hekimi ve Ressam",
-    videoSrc: "/videos/portfolyo/umay.mp4",
-    before: "Sıradan klinik görselleri ve düşük etkileşim.",
-    after: "Sanatsal ve güvenilir bir kişisel marka oluşumu.",
-  },
-  {
-    name: "Afife",
-    sector: "Tiyatro Oyunu",
-    videoSrc: "/videos/portfolyo/afife.mp4",
-    before: "Standart afiş ve düz tanıtım paylaşımları.",
-    after: "Sinematik ve otantik içeriklerle yüksek bilet dönüşümü.",
-  },
-  {
-    name: "Vaveyla Home",
-    sector: "Ev Tekstili",
-    videoSrc: "/videos/portfolyo/vaveyla.mp4",
-    before: "Sıradan ürün çekimleri ve amatör içerikler.",
-    after: "Kaliteli reklam içerikleriyle artan satışlar ve premium marka algısı.",
-  },
-  {
-    name: "Vet House",
-    sector: "Veteriner Kliniği",
-    videoSrc: "/videos/portfolyo/vethouse.mp4",
-    before: "Klasik klinik paylaşımları.",
-    after: "Güven veren uzman videolarıyla yüksek hasta dönüşümü.",
-  },
-];
+const caseStudies = caseItems.map((item) => ({
+  name: item.title,
+  sector: item.caseStudy!.sector,
+  videoSrc: item.videoSrc,
+  poster: item.thumbnailSrc,
+  before: item.caseStudy!.before,
+  after: item.caseStudy!.after,
+}));
 
 export default function SocialProofCarousel() {
   const [active, setActive] = useState(0);
@@ -152,14 +109,15 @@ export default function SocialProofCarousel() {
               
               {/* Sol: Dikey Video Alanı (Sabit Alan) */}
               <div className="relative bg-[#0A0A0A] flex items-center justify-center overflow-hidden h-[450px] md:h-full">
-                <video 
-                  src={study.videoSrc} 
+                <video
+                  src={study.videoSrc}
+                  poster={study.poster}
                   className="absolute inset-0 w-full h-full object-cover opacity-60"
-                  autoPlay 
-                  muted 
-                  loop 
-                  playsInline 
-                  preload="metadata"
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  preload="none"
                   title={`${study.name} arka plan videosu`}
                   aria-label={`${study.name} arka plan videosu`}
                 />

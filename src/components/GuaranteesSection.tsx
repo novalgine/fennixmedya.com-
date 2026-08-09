@@ -24,25 +24,25 @@ const guarantees = [
     icon: RefreshCw,
     title: "Revize Hakkı",
     desc: "Aramızdaki ritmi yakalamak için; ilk videonun tarzında ve kurgusunda tam içinize sinene kadar revize yapıyoruz. Sonraki içeriklerimiz bu kalite çizgisini koruyarak üretilir.",
-    accent: "text-sky-400",
-    accentBg: "bg-sky-400/10",
-    accentBorder: "hover:border-sky-400/40",
+    accent: "text-primary",
+    accentBg: "bg-primary/10",
+    accentBorder: "hover:border-gold/40",
   },
   {
     icon: Clock,
     title: "Zamanında Teslimat",
     desc: "Çekim gününden sonraki 7 iş günü içinde teslimat garantisi. Gecikme durumunda bir sonraki ay %10 indirim.",
-    accent: "text-amber-400",
-    accentBg: "bg-amber-400/10",
-    accentBorder: "hover:border-amber-400/40",
+    accent: "text-emerald-400",
+    accentBg: "bg-emerald-400/10",
+    accentBorder: "hover:border-emerald-400/40",
   },
 ];
 
 const GuaranteesSection = () => {
 
   return (
-    <section className="section-spacing bg-surface relative z-10 w-full">
-      <div className="max-w-5xl mx-auto px-6">
+    <section className="section-spacing bg-background relative z-10 w-full">
+      <div className="container-page">
         <Reveal>
           <SectionHeading
             eyebrow="Garantiler"

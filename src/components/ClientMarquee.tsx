@@ -23,7 +23,7 @@ function Row({ hidden = false }: { hidden?: boolean }) {
       {CLIENTS.map((name) => (
         <li
           key={name}
-          className="font-heading text-lg md:text-xl font-bold uppercase tracking-widest text-foreground/35 whitespace-nowrap"
+          className="font-heading text-xl md:text-2xl font-bold uppercase tracking-[0.08em] text-foreground/35 whitespace-nowrap"
         >
           {name}
         </li>

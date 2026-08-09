@@ -7,6 +7,7 @@ import SocialProofSection from "@/components/SocialProofSection";
 import dynamic from "next/dynamic";
 
 const ProblemSection = dynamic(() => import("@/components/ProblemSection"));
+const FilmStripWorkRow = dynamic(() => import("@/components/FilmStripWorkRow"));
 const ProcessSection = dynamic(() => import("@/components/ProcessSection"));
 const GuaranteesSection = dynamic(() => import("@/components/GuaranteesSection"));
 const FAQSection = dynamic(() => import("@/components/FAQSection"));
@@ -21,29 +22,29 @@ export default function HomePage() {
       <div className="film-grain" />
       <ScrollProgress />
 
-      {/* Hero loads immediately — above the fold */}
+      {/* 01 Açılış — mesaj + kanıt */}
       <HeroSection />
-
-      {/* Page sections */}
       <ClientMarquee />
+
+      {/* Sahne 01 — Sorun */}
+      <ProblemSection />
+
+      {/* Sahne 02 — Kanıt */}
+      <FilmStripWorkRow />
       <TrustCounterBand />
       <Reveal><SocialProofSection /></Reveal>
 
-      <ProblemSection />
-
+      {/* Sahne 03 — Süreç */}
       <ProcessSection />
-
-      {/* Mid-page CTA */}
       <MidPageCTA />
 
-      {/* Testimonials */}
+      {/* İnsan kanıtı + itirazlar */}
       <Reveal><TestimonialsStrip /></Reveal>
-
-      {/* Final CTA with Wizard Trigger */}
-      <FinalCTASection />
-
       <GuaranteesSection />
       <FAQSection />
+
+      {/* Kapanış */}
+      <FinalCTASection />
       <StickyCTA />
     </div>
   );

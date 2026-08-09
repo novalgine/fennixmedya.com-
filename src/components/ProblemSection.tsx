@@ -37,12 +37,12 @@ const ProblemSection = () => {
 
   return (
     <section className="section-spacing bg-surface relative z-10 w-full">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="container-page">
 
         {/* Header */}
         <Reveal>
           <SectionHeading
-            eyebrow="Algı Gerçektir"
+            eyebrow="Sahne 01 — Sorun"
             title="Neden Telefonla Çekmek Artık Yetmiyor?"
             animateTitle
             sub={data.headerDesc}

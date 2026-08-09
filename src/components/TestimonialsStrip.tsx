@@ -20,8 +20,8 @@ const TestimonialsStrip = () => {
 
     return (
         <>
-            <section id="referanslar" className="section-spacing bg-background">
-                <div className="max-w-6xl mx-auto px-4 sm:px-6">
+            <section id="referanslar" className="section-spacing bg-surface">
+                <div className="container-page">
                     <SectionHeading
                         eyebrow="Referanslar"
                         title="Müşterilerimiz Ne Diyor?"

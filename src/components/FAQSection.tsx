@@ -43,7 +43,7 @@ const faqs = [
 const FAQSection = () => {
 
     return (
-        <section className="section-spacing bg-background relative z-10 w-full">
+        <section className="section-spacing bg-surface relative z-10 w-full">
             {/* FAQ Schema for SEO/GEO */}
             <JsonLd
                 data={{
@@ -60,7 +60,7 @@ const FAQSection = () => {
                 }}
             />
 
-            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div className="container-page relative z-10"><div className="max-w-4xl mx-auto">
                 <Reveal>
                     <SectionHeading
                         eyebrow="Merak Edilenler"
@@ -87,7 +87,7 @@ const FAQSection = () => {
                             ))}
                     </Accordion>
                 </Reveal>
-            </div>
+            </div></div>
         </section>
     );
 };

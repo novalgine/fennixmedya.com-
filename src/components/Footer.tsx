@@ -12,9 +12,12 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-5 gap-10 md:gap-8 items-start">
           {/* Brand */}
           <div className="md:col-span-2">
-            <h3 className="font-heading text-xl font-bold text-foreground uppercase tracking-widest mb-2">
+            <h3 className="font-heading text-3xl md:text-4xl font-bold text-foreground uppercase tracking-[0.08em] mb-1">
               Fennix Medya
             </h3>
+            <p className="font-heading text-[11px] font-semibold uppercase tracking-[0.3em] text-muted-foreground/60 mb-3">
+              Yapım — Fennix Medya · İstanbul · {new Date().getFullYear()}
+            </p>
             <p className="text-base text-muted-foreground font-medium">
               İstanbul Video Prodüksiyon & Reels Ajansı
             </p>

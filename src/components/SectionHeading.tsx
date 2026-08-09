@@ -25,11 +25,11 @@ export default function SectionHeading({
   return (
     <div className={cn("mb-14", align === "center" ? "text-center" : "text-left", className)}>
       {eyebrow && (
-        <p className="text-xs md:text-sm font-bold uppercase tracking-widest text-primary mb-3">
+        <p className="font-heading font-semibold text-sm uppercase tracking-[0.25em] text-primary mb-3">
           {eyebrow}
         </p>
       )}
-      <h2 className="font-heading text-3xl md:text-5xl font-bold tracking-tight text-foreground mb-4">
+      <h2 className="text-display-2 text-foreground mb-4">
         {animateTitle && typeof title === "string" ? <WordReveal text={title} /> : title}
       </h2>
       {sub && (

@@ -11,8 +11,8 @@ const profiles = [
 
 export default function SocialProofSection() {
   return (
-    <section id="portfolyo" className="section-spacing bg-surface">
-      <div className="max-w-5xl mx-auto px-6">
+    <section className="section-spacing bg-background">
+      <div className="container-page">
         <SectionHeading
           eyebrow="Vaka Analizleri"
           title="Fennix Medya ile Otoritesini İnşa Eden Markalar"
