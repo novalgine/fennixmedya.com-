@@ -1,11 +1,8 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
-import { ShieldCheck, Clock, RefreshCw, Unlock, type LucideIcon } from "lucide-react";
+import { useEffect, useRef } from "react";
+import { ShieldCheck, Clock, RefreshCw, Unlock } from "lucide-react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import { wpClient } from "@/lib/wp";
-import { gql } from "graphql-request";
-import { cleanWPContent, decodeHtmlEntities } from "@/lib/utils";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -44,59 +41,9 @@ const fallbackGuarantees = [
   },
 ];
 
-const iconsMap: Record<string, LucideIcon> = { ShieldCheck, RefreshCw, Unlock, Clock };
-
 const GuaranteesSection = () => {
   const containerRef = useRef<HTMLElement>(null);
-  const [guarantees, setGuarantees] = useState(fallbackGuarantees);
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    const fetchGuaranteeData = async () => {
-      try {
-        const query = gql`
-            query GetGuaranteeSection {
-                posts(where: {categoryName: "guarantee"}, first: 4, orderby: {field: DATE, order: ASC}) {
-                    nodes {
-                        title
-                        excerpt
-                        content
-                    }
-                }
-            }
-        `;
-        const response = await wpClient.request<{
-          posts?: { nodes?: { title?: string; excerpt?: string; content?: string }[] }
-        }>(query);
-
-        if ((response?.posts?.nodes?.length ?? 0) > 0) {
-          const newGuarantees = response!.posts!.nodes!.map((node, index: number) => {
-            const fallbackG = fallbackGuarantees[index % fallbackGuarantees.length];
-            let iconComponent = fallbackG.icon;
-            if (node.excerpt) {
-              const cleanExcerpt = cleanWPContent(node.excerpt);
-              if (iconsMap[cleanExcerpt]) iconComponent = iconsMap[cleanExcerpt];
-            }
-            return {
-              title: decodeHtmlEntities(node.title || ""),
-              desc: cleanWPContent(node.content || ""),
-              icon: iconComponent,
-              accent: fallbackG.accent,
-              accentBg: fallbackG.accentBg,
-              accentBorder: fallbackG.accentBorder,
-            };
-          });
-          setGuarantees(newGuarantees);
-        }
-      } catch (err) {
-        console.log("Using static Guarantee data (WordPress API not reachable yet).");
-      } finally {
-        setIsLoading(false);
-      }
-    };
-
-    fetchGuaranteeData();
-  }, []);
+  const guarantees = fallbackGuarantees;
 
   useEffect(() => {
     const isMobile = window.innerWidth < 768;

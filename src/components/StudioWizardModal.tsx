@@ -81,7 +81,7 @@ const StudioWizardModal: React.FC<StudioWizardModalProps> = ({ isOpen, onClose }
     setError("");
 
     try {
-      await fetch("https://api.web3forms.com/submit", {
+      const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -98,6 +98,12 @@ const StudioWizardModal: React.FC<StudioWizardModalProps> = ({ isOpen, onClose }
           "Kurgu İhtiyacı": answers.editing,
         }),
       });
+      const data = await response.json();
+
+      if (!data.success) {
+        setError("Bir hata oluştu. Lütfen tekrar deneyin.");
+        return;
+      }
 
       setStep(7);
     } catch (err) {

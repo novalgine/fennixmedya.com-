@@ -1,5 +1,4 @@
 "use client";
-import { useState, useEffect } from "react";
 import {
     Accordion,
     AccordionContent,
@@ -7,9 +6,6 @@ import {
     AccordionTrigger,
 } from "@/components/ui/accordion";
 import { useScrollFadeIn } from "@/hooks/useScrollFadeIn";
-import { wpClient } from "@/lib/wp";
-import { gql } from "graphql-request";
-import { cleanWPContent, decodeHtmlEntities } from "@/lib/utils";
 import { CAPACITY_CONFIG } from "@/config/capacity";
 import JsonLd from "@/components/JsonLd";
 
@@ -46,63 +42,25 @@ const fallbackFaqs = [
 
 const FAQSection = () => {
     const { ref, isVisible } = useScrollFadeIn(0.1);
-    const [faqs, setFaqs] = useState(fallbackFaqs);
-    const [isLoading, setIsLoading] = useState(true);
-
-    useEffect(() => {
-        const fetchFaqs = async () => {
-            try {
-                // Fetch posts from WP category "faq"
-                const query = gql`
-                    query GetFaqs {
-                        posts(where: { categoryName: "faq" }, first: 20) {
-                            nodes {
-                                title
-                                content
-                            }
-                        }
-                    }
-                `;
-                const data = await wpClient.request<{
-                    posts?: { nodes?: { title?: string; content?: string }[] }
-                }>(query);
-
-                if (data?.posts?.nodes && data.posts.nodes.length > 0) {
-                    const formattedFaqs = data.posts.nodes.map((node) => ({
-                        question: decodeHtmlEntities(node.title || ""),
-                        answer: cleanWPContent(node.content || "")
-                    }));
-                    setFaqs(formattedFaqs);
-                }
-            } catch (err) {
-                console.log("Using static FAQs (WordPress API not reachable yet).");
-            } finally {
-                setIsLoading(false);
-            }
-        };
-
-        fetchFaqs();
-    }, []);
+    const faqs = fallbackFaqs;
 
     return (
         <section className="section-spacing bg-background relative z-10 w-full" ref={ref}>
-            {/* Dynamic FAQ Schema for SEO/GEO */}
-            {!isLoading && (
-                <JsonLd
-                    data={{
-                        "@context": "https://schema.org",
-                        "@type": "FAQPage",
-                        mainEntity: faqs.map((faq) => ({
-                            "@type": "Question",
-                            name: faq.question,
-                            acceptedAnswer: {
-                                "@type": "Answer",
-                                text: faq.answer,
-                            },
-                        })),
-                    }}
-                />
-            )}
+            {/* FAQ Schema for SEO/GEO */}
+            <JsonLd
+                data={{
+                    "@context": "https://schema.org",
+                    "@type": "FAQPage",
+                    mainEntity: faqs.map((faq) => ({
+                        "@type": "Question",
+                        name: faq.question,
+                        acceptedAnswer: {
+                            "@type": "Answer",
+                            text: faq.answer,
+                        },
+                    })),
+                }}
+            />
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gold/5 blur-[120px] rounded-full pointer-events-none" />
 
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -129,14 +87,7 @@ const FAQSection = () => {
                         transform: isVisible ? "translateY(0)" : "translateY(30px)"
                     }}
                 >
-                    {isLoading ? (
-                        <div className="w-full space-y-4 animate-pulse">
-                            {[1, 2, 3, 4].map((i) => (
-                                <div key={i} className="h-16 bg-muted/50 rounded-xl w-full"></div>
-                            ))}
-                        </div>
-                    ) : (
-                        <Accordion type="single" collapsible className="w-full space-y-4">
+                    <Accordion type="single" collapsible className="w-full space-y-4">
                             {faqs.map((faq, index) => (
                                 <AccordionItem
                                     key={index}
@@ -151,8 +102,7 @@ const FAQSection = () => {
                                     </AccordionContent>
                                 </AccordionItem>
                             ))}
-                        </Accordion>
-                    )}
+                    </Accordion>
                 </div>
             </div>
         </section>

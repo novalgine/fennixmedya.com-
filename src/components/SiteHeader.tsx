@@ -4,7 +4,6 @@ import { useState } from "react";
 import Link from "next/link";
 import { Menu, X, ChevronDown } from "lucide-react";
 import LiveCapacityHybrid from "@/components/LiveCapacityHybrid";
-import { ThemeToggle } from "@/components/ThemeToggle";
 import dynamic from "next/dynamic";
 
 const FunnelWizardModal = dynamic(() => import("@/components/FunnelWizardModal"), {
@@ -93,7 +92,6 @@ export default function SiteHeader() {
             <div className="hidden sm:block">
               <LiveCapacityHybrid />
             </div>
-            <ThemeToggle />
             {/* Mobile Menu Toggle */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}

@@ -1,13 +1,10 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import Image from "next/image";
 import staticComparisonImg from "@/assets/ornekgorsel.webp";
 import { Clock, ZapOff, TrendingDown } from "lucide-react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import { wpClient } from "@/lib/wp";
-import { gql } from "graphql-request";
-import { cleanWPContent, decodeHtmlEntities } from "@/lib/utils";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -40,74 +37,7 @@ const fallbackData = {
 
 const ProblemSection = () => {
   const containerRef = useRef<HTMLElement>(null);
-  const [data, setData] = useState(fallbackData);
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    const fetchProblemData = async () => {
-      try {
-        const query = gql`
-            query GetProblemSection {
-                page(id: "problem-section", idType: URI) {
-                    title
-                    content
-                }
-                posts(where: {categoryName: "problem"}, first: 3) {
-                    nodes {
-                        title
-                        excerpt
-                        content
-                    }
-                }
-            }
-        `;
-        const response = await wpClient.request<{
-          page?: { title?: string; content?: string };
-          posts?: { nodes?: { title?: string; excerpt?: string; content?: string }[] }
-        }>(query);
-
-        let newHeaderTitle = fallbackData.headerTitle;
-        let newHeaderDesc = fallbackData.headerDesc;
-        let newPainPoints = fallbackData.painPoints;
-
-        if (response?.page) {
-          if (response.page.title) newHeaderTitle = decodeHtmlEntities(response.page.title);
-          if (response.page.content) newHeaderDesc = cleanWPContent(response.page.content);
-        }
-
-        if ((response?.posts?.nodes?.length ?? 0) > 0) {
-          newPainPoints = response!.posts!.nodes!.map((node, index: number) => {
-            let iconStr = "Clock"; // Default
-            if (node.excerpt) {
-              const cleanExcerpt = node.excerpt.replace(/(<([^>]+)>)/gi, "").trim();
-              if (cleanExcerpt) iconStr = cleanExcerpt;
-            }
-            return {
-              id: index + 1,
-              title: decodeHtmlEntities(node.title || ""),
-              desc: cleanWPContent(node.content || ""),
-              icon: iconStr
-            };
-          });
-          // Reverse because WP posts order is latest first, we might want them in their natural order or default to map order
-          newPainPoints = newPainPoints.reverse();
-        }
-
-        setData((prev) => ({
-          ...prev,
-          headerTitle: newHeaderTitle,
-          headerDesc: newHeaderDesc,
-          painPoints: newPainPoints,
-        }));
-      } catch (err) {
-        console.log("Using static Problem data (WordPress API not reachable yet).");
-      } finally {
-        setIsLoading(false);
-      }
-    };
-
-    fetchProblemData();
-  }, []);
+  const data = fallbackData;
 
   useEffect(() => {
     const ctx = gsap.context(() => {

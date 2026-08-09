@@ -73,7 +73,7 @@ const FunnelWizardModal: React.FC<FunnelWizardModalProps> = ({ isOpen, onClose }
 
     try {
       // 1. Web3Forms ile E-posta Gönderimi (client-side)
-      await fetch("https://api.web3forms.com/submit", {
+      const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -88,6 +88,12 @@ const FunnelWizardModal: React.FC<FunnelWizardModalProps> = ({ isOpen, onClose }
           "İçerik/Senaryo Türü": answers.content,
         }),
       });
+      const data = await response.json();
+
+      if (!data.success) {
+        setError("Bir hata oluştu. Lütfen tekrar deneyin.");
+        return;
+      }
 
       // 2. Takvim Adımına Geçiş (Cal.com Inline Embed)
       setStep(5);

@@ -1,11 +1,8 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import { Calendar, Video, Scissors, Package } from "lucide-react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import { wpClient } from "@/lib/wp";
-import { gql } from "graphql-request";
-import { cleanWPContent, decodeHtmlEntities } from "@/lib/utils";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -33,52 +30,9 @@ const fallbackSteps = [
   },
 ];
 
-const iconsList = [Calendar, Video, Package];
-
 const ProcessSection = () => {
   const containerRef = useRef<HTMLElement>(null);
-  const [steps, setSteps] = useState(fallbackSteps);
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    const fetchProcessData = async () => {
-      try {
-        const query = gql`
-            query GetProcessSection {
-                posts(where: {categoryName: "process"}, first: 5, orderby: {field: DATE, order: ASC}) {
-                    nodes {
-                        title
-                        excerpt
-                        content
-                    }
-                }
-            }
-        `;
-        const response = await wpClient.request<{
-          posts?: { nodes?: { title?: string; excerpt?: string; content?: string }[] }
-        }>(query);
-
-        if ((response?.posts?.nodes?.length ?? 0) > 0) {
-          const newSteps = response!.posts!.nodes!.map((node, index: number) => {
-            return {
-              day: cleanWPContent(node.excerpt || ""),
-              icon: iconsList[index % iconsList.length],
-              title: decodeHtmlEntities(node.title || ""),
-              htmlContent: decodeHtmlEntities(node.content || ""),
-              items: [] // we will render htmlContent directly now
-            };
-          });
-          setSteps(newSteps);
-        }
-      } catch (err) {
-        console.log("Using static Process data (WordPress API not reachable yet).");
-      } finally {
-        setIsLoading(false);
-      }
-    };
-
-    fetchProcessData();
-  }, []);
+  const steps = fallbackSteps;
 
   useEffect(() => {
     const ctx = gsap.context(() => {

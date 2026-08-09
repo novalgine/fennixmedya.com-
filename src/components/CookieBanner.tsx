@@ -19,15 +19,15 @@ export default function CookieBanner() {
     }
   }, []);
 
-  const acceptCookies = () => {
-    localStorage.setItem("fennix-cookie-consent", "accepted");
+  const setConsent = (value: "accepted" | "declined") => {
+    localStorage.setItem("fennix-cookie-consent", value);
+    // FacebookPixel bu event'i dinler — karar, sayfa yenilenmeden anında uygulanır
+    window.dispatchEvent(new CustomEvent("fennix-consent-changed", { detail: value }));
     setShowBanner(false);
   };
 
-  const declineCookies = () => {
-    localStorage.setItem("fennix-cookie-consent", "declined");
-    setShowBanner(false);
-  };
+  const acceptCookies = () => setConsent("accepted");
+  const declineCookies = () => setConsent("declined");
 
   if (!showBanner) return null;
 

@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import colors from "tailwindcss/colors";
 import tailwindcssAnimate from "tailwindcss-animate";
 
 export default {
@@ -58,6 +59,9 @@ export default {
           dark: "hsl(var(--gold-dark))",
         },
         emerald: {
+          // Varsayılan 50–950 skalası korunmalı: custom obje onu tamamen ezer,
+          // yoksa emerald-400/500/950 gibi sınıflar hiç CSS üretmez
+          ...colors.emerald,
           DEFAULT: "hsl(var(--emerald))",
           light: "hsl(var(--emerald-light))",
           dark: "hsl(var(--emerald-dark))",

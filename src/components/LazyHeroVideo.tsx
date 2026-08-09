@@ -16,9 +16,12 @@ export default function LazyHeroVideo({ src, poster, title, className = "w-full 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
+        // Görünürken oynat, ekrandan çıkınca durdur — arka planda decode maliyeti kalmasın
         if (entry.isIntersecting) {
           setShouldPlay(true);
-          observer.disconnect();
+          videoRef.current?.play().catch(() => {});
+        } else {
+          videoRef.current?.pause();
         }
       },
       { rootMargin: "200px" }
@@ -35,7 +38,7 @@ export default function LazyHeroVideo({ src, poster, title, className = "w-full 
 
   useEffect(() => {
     if (shouldPlay && videoRef.current) {
-      videoRef.current.play().catch(e => console.log("Autoplay prevented:", e));
+      videoRef.current.play().catch(() => {});
     }
   }, [shouldPlay]);
 

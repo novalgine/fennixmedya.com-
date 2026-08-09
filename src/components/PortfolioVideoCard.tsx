@@ -1,65 +1,58 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
+import { Play } from "lucide-react";
 import VideoSchema from "./VideoSchema";
+import type { PortfolioItem } from "@/data/portfolio";
 
-interface PortfolioProject {
-  title: string;
-  category: string;
-  format: string;
-  videoSrc: string;
-  thumbnailSrc?: string;
-}
-
-export default function PortfolioVideoCard({ project, isVertical }: { project: PortfolioProject, isVertical: boolean }) {
+export default function PortfolioVideoCard({ project, isVertical }: { project: PortfolioItem, isVertical: boolean }) {
   const videoRef = useRef<HTMLVideoElement>(null);
-  const [isVisible, setIsVisible] = useState(false);
+  const [playing, setPlaying] = useState(false);
   const posterSrc = project.thumbnailSrc || "";
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          observer.disconnect();
-        }
-      },
-      { rootMargin: "200px" } // Load slightly before it comes into view
-    );
-
-    if (videoRef.current) {
-      observer.observe(videoRef.current);
-    }
-
-    return () => {
-      observer.disconnect();
-    };
-  }, []);
+  const handlePlay = () => {
+    const v = videoRef.current;
+    if (!v) return;
+    // iOS: src ataması ve play() aynı kullanıcı jesti içinde senkron olmalı,
+    // yoksa Safari sesli oynatmayı engeller
+    v.src = project.videoSrc;
+    v.play().catch(() => {});
+    setPlaying(true);
+  };
 
   return (
     <div className={`group bg-card/60 backdrop-blur-sm border border-border/40 rounded-3xl overflow-hidden hover:border-primary/30 transition-all duration-500 shadow-xl flex flex-col ${isVertical ? 'md:row-span-2' : 'md:col-span-2 lg:col-span-2'}`}>
-      <VideoSchema 
+      <VideoSchema
         name={project.title}
-        description={`Fennix Medya - ${project.title} (${project.category})`}
+        description={project.description}
         thumbnailUrl={`https://fennixmedya.com${posterSrc}`}
         contentUrl={`https://fennixmedya.com${project.videoSrc}`}
-        uploadDate="2026-05-15"
+        uploadDate={project.uploadDate}
       />
       <div className={`relative bg-black flex-1 ${isVertical ? 'aspect-[9/16]' : 'aspect-video'}`}>
         <video
           ref={videoRef}
-          src={isVisible ? project.videoSrc : undefined}
           title={project.title}
           className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-300"
-          controls
-          autoPlay={isVisible}
-          muted
-          loop
+          controls={playing}
           playsInline
           preload="none"
           poster={posterSrc}
           aria-label={project.title}
+          onEnded={() => setPlaying(false)}
         />
+        {!playing && (
+          <button
+            type="button"
+            onClick={handlePlay}
+            aria-label={`${project.title} videosunu oynat`}
+            className="absolute inset-0 z-10 flex items-center justify-center cursor-pointer group/play"
+          >
+            <span className="w-16 h-16 rounded-full bg-gradient-gold flex items-center justify-center border border-white/20 shadow-xl transition-transform duration-300 group-hover/play:scale-110">
+              <Play className="w-7 h-7 text-black fill-black ml-1" />
+            </span>
+          </button>
+        )}
       </div>
       <div className="p-6 bg-card">
         <div className="flex items-center gap-2 mb-3">
