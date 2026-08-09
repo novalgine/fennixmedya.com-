@@ -19,11 +19,13 @@ const StickyCTA = () => {
     const handleScroll = () => {
       setVisible(window.scrollY > 600);
     };
-    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    window.addEventListener("scroll", handleScroll, { passive: true });
 
-    checkMobile();
-    window.addEventListener("scroll", handleScroll);
-    window.addEventListener("resize", checkMobile);
+    // Breakpoint takibi: resize dinlemekten ucuz, yalnızca eşikte tetiklenir
+    const mql = window.matchMedia("(max-width: 767px)");
+    const onBreakpoint = (e: MediaQueryListEvent | MediaQueryList) => setIsMobile(e.matches);
+    onBreakpoint(mql);
+    mql.addEventListener("change", onBreakpoint);
 
     // Watch for form section
     const observer = new IntersectionObserver(
@@ -38,7 +40,7 @@ const StickyCTA = () => {
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
-      window.removeEventListener("resize", checkMobile);
+      mql.removeEventListener("change", onBreakpoint);
       if (formElement) observer.unobserve(formElement);
     };
   }, []);
@@ -50,59 +52,61 @@ const StickyCTA = () => {
     }
   };
 
-  const handleWhatsApp = () => {
+  const trackWhatsApp = () => {
     if (typeof window.trackEvent === "function") {
       window.trackEvent("whatsapp_click", { source: "sticky_cta" });
     }
-    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE}`, "_blank");
   };
 
-  const handleCall = () => {
+  const trackCall = () => {
     if (typeof window.trackEvent === "function") {
       window.trackEvent("phone_call_click", { source: "sticky_cta" });
     }
-    window.location.href = `tel:${PHONE_NUMBER}`;
   };
 
   if (!visible || formInView) return null;
 
   return (
     <div className="fixed bottom-6 right-4 sm:right-8 z-50 animate-fade-in-up flex items-center gap-2.5">
-      {/* Mobile: Phone Call Button */}
+      {/* Mobile: Phone Call Link */}
       {isMobile && (
-        <button
-          onClick={handleCall}
+        <a
+          href={`tel:${PHONE_NUMBER}`}
+          onClick={trackCall}
           className="w-12 h-12 rounded-full bg-blue-500 hover:bg-blue-600 text-white flex items-center justify-center shadow-xl transition-all active:scale-90 border border-blue-400/30"
-          aria-label="Hemen Ara"
+          aria-label="Hemen arayın"
         >
-          <Phone className="w-5 h-5" />
-        </button>
+          <Phone className="w-5 h-5" aria-hidden />
+        </a>
       )}
 
-      {/* WhatsApp Button */}
-      <button
-        onClick={handleWhatsApp}
+      {/* WhatsApp Link */}
+      <a
+        href={`https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE}`}
+        target="_blank"
+        rel="noopener noreferrer"
+        onClick={trackWhatsApp}
         className="w-12 h-12 rounded-full bg-[#25D366] hover:bg-[#20bd5a] text-white flex items-center justify-center shadow-xl transition-all active:scale-90 border border-green-400/30"
-        aria-label="WhatsApp"
+        aria-label="WhatsApp ile yazın"
       >
-        <MessageCircle className="w-5 h-5" />
-      </button>
+        <MessageCircle className="w-5 h-5" aria-hidden />
+      </a>
 
-      {/* Main CTA Button */}
+      {/* Main CTA Button — metin JS branch'inden gelir, CSS'le gizleme yok */}
       {isMobile ? (
         <button
           onClick={handleMainCTA}
-          className="bg-gradient-gold text-primary-foreground font-heading font-bold px-6 sm:px-8 py-3 sm:py-4 rounded-full shadow-2xl hover:scale-105 active:scale-95 transition-all animate-pulse-gold text-sm sm:text-base cursor-pointer border border-white/10"
+          className="bg-gradient-gold text-primary-foreground font-heading font-bold px-6 py-3 rounded-full shadow-2xl hover:scale-105 active:scale-95 transition-all animate-pulse-gold text-sm cursor-pointer border border-white/10"
         >
-          <span className="sm:hidden">Ücretsiz Görüşme Al →</span>
+          Ücretsiz Görüşme Al →
         </button>
       ) : (
         <MagneticWrapper strength={0.3}>
           <button
             onClick={handleMainCTA}
-            className="bg-gradient-gold text-primary-foreground font-heading font-bold px-6 sm:px-8 py-3 sm:py-4 rounded-full shadow-2xl hover:scale-105 active:scale-95 transition-all animate-pulse-gold text-sm sm:text-base cursor-pointer border border-white/10"
+            className="bg-gradient-gold text-primary-foreground font-heading font-bold px-8 py-4 rounded-full shadow-2xl hover:scale-105 active:scale-95 transition-all animate-pulse-gold text-base cursor-pointer border border-white/10"
           >
-            <span className="hidden sm:inline">Ücretsiz Strateji Görüşmesi Al →</span>
+            Ücretsiz Strateji Görüşmesi Al →
           </button>
         </MagneticWrapper>
       )}
