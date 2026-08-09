@@ -1,7 +1,8 @@
 "use client";
-import Image from "next/image";
-import staticComparisonImg from "@/assets/ornekgorsel.webp";
-import { Clock, ZapOff, TrendingDown, Smartphone, Clapperboard } from "lucide-react";
+import ornekAmator from "@/assets/ornek-amator.png";
+import ornekSinematik from "@/assets/ornek-sinematik.png";
+import ImageComparison from "@/components/ImageComparison";
+import { Clock, ZapOff, TrendingDown } from "lucide-react";
 import Reveal from "@/components/Reveal";
 import SectionHeading from "@/components/SectionHeading";
 
@@ -57,34 +58,12 @@ const ProblemSection = () => {
 
             <h3 className="font-heading text-2xl font-bold mb-6 text-foreground relative z-10">Farkı Kendiniz Görün</h3>
             <div className="relative z-10 flex-1 flex flex-col justify-center">
-              <div className="rounded-2xl overflow-hidden ring-1 ring-white/10 relative">
-                {/* Labels overlay — only on desktop */}
-                <div className="absolute top-4 left-4 right-4 justify-between z-10 pointer-events-none hidden md:flex">
-                  <span className="inline-flex items-center gap-1.5 bg-danger/95 text-white font-bold px-3 py-1.5 rounded-lg text-sm shadow-lg border border-danger/50">
-                    <Smartphone className="w-3.5 h-3.5" aria-hidden /> Telefon — Amatör
-                  </span>
-                  <span className="inline-flex items-center gap-1.5 bg-emerald-600/95 text-white font-bold px-3 py-1.5 rounded-lg text-sm shadow-lg border border-emerald-500/50">
-                    <Clapperboard className="w-3.5 h-3.5" aria-hidden /> Sinematik
-                  </span>
-                </div>
-                <Image
-                  src={staticComparisonImg}
-                  alt="Amatör ve Sinematik Çekim Karşılaştırması"
-                  className="w-full h-auto object-cover aspect-video"
-                  placeholder="blur"
-                  loading="lazy"
-                />
-              </div>
-              {/* Labels below image — only on mobile */}
-              <div className="flex justify-between mt-3 md:hidden">
-                <span className="inline-flex items-center gap-1.5 bg-danger/95 text-white font-bold px-3 py-1.5 rounded-lg text-xs shadow-lg border border-danger/50">
-                  <Smartphone className="w-3 h-3" aria-hidden /> Telefon — Amatör
-                </span>
-                <span className="inline-flex items-center gap-1.5 bg-emerald-600/95 text-white font-bold px-3 py-1.5 rounded-lg text-xs shadow-lg border border-emerald-500/50">
-                  <Clapperboard className="w-3 h-3" aria-hidden /> Sinematik
-                </span>
-              </div>
-              <p className="text-center text-[11px] uppercase tracking-widest text-muted-foreground/60 mt-4 font-bold">Gerçek Kalite Farkını İnceleyin</p>
+              <ImageComparison
+                before={ornekAmator}
+                after={ornekSinematik}
+                alt="Amatör telefon çekimi ile sinematik çekim karşılaştırması — kaydırarak farkı görün"
+              />
+              <p className="text-center text-[11px] uppercase tracking-widest text-muted-foreground/60 mt-4 font-bold">Kaydırın — Farkı Kendiniz Görün</p>
             </div>
           </div></Reveal>
 
