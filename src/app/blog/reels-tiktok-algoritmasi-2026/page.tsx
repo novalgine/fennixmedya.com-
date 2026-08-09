@@ -1,28 +1,19 @@
-import type { Metadata } from "next";
-import { ArrowLeft, Clock, Calendar, User, ChevronRight } from "lucide-react";
+import { Clock, Calendar, User } from "lucide-react";
 import Link from "next/link";
+import Breadcrumbs from "@/components/Breadcrumbs";
+import RelatedPosts from "@/components/RelatedPosts";
+import { createBlogMetadata } from "@/data/blog-posts";
 import WizardCta from "@/components/WizardCta";
 import TldrSummary from "@/components/TldrSummary";
 import LastUpdated from "@/components/LastUpdated";
 
-export const metadata: Metadata = {
-  title: "Reels ve TikTok Algoritması (2026 Güncellemesi) — Fennix Medya",
-  description: "Sosyal medya algoritmaları 2026 yılında nasıl çalışıyor? Etkileşimi ve organik erişimi artırmanın yolları.",
-  alternates: { canonical: "https://fennixmedya.com/blog/reels-tiktok-algoritmasi-2026" },
-};
+export const metadata = createBlogMetadata("reels-tiktok-algoritmasi-2026");
 
 export default function BlogPost() {
   return (
     <div className="min-h-screen bg-background pt-16 pb-20">
       <div className="max-w-3xl mx-auto px-6">
-        {/* Breadcrumb */}
-        <div className="flex items-center gap-2 text-sm text-muted-foreground mb-8">
-          <Link href="/blog" className="hover:text-primary transition-colors flex items-center gap-1">
-            <ArrowLeft className="w-4 h-4" /> Blog
-          </Link>
-          <ChevronRight className="w-4 h-4" />
-          <span className="truncate">{"Reels ve TikTok Algoritması (2026 Güncellemesi)"}</span>
-        </div>
+        <Breadcrumbs items={[{ name: "Blog", href: "/blog" }, { name: "Reels ve TikTok Algoritması (2026 Güncellemesi)" }]} />
 
         <header className="mb-12">
           <h1 className="font-heading text-3xl md:text-5xl font-black mb-6 leading-tight">
@@ -81,7 +72,7 @@ export default function BlogPost() {
 
           <h2 className="text-3xl mt-12 mb-6">3. İlk 3 Saniye Kancası (Hook) — Hayatta Kalma Kuralı</h2>
           <p>
-            Kullanıcılar saniyede 3-4 video arasında geçiş yapıyor. Bu, videonuzun hayatta kalmak için <strong className="text-foreground">ilk 3 saniyede bir kanca (hook) atması gerektiği</strong> anlamına gelir. Algoritma, hızlı kaydırılan (swipe away) videoları anında cezalandırır ve o videoyu daha az kişiye gösterir.
+            Kullanıcılar saniyede 3-4 video arasında geçiş yapıyor. Bu, videonuzun hayatta kalmak için <strong className="text-foreground"><Link href="/blog/videolarda-ilk-3-saniye-kurali-hook">ilk 3 saniye</Link>de bir kanca (hook) atması gerektiği</strong> anlamına gelir. Algoritma, hızlı kaydırılan (swipe away) videoları anında cezalandırır ve o videoyu daha az kişiye gösterir.
           </p>
           <p>
             Etkili hook türleri şunlardır:
@@ -167,11 +158,13 @@ export default function BlogPost() {
           </div>
         </div>
 
+        <RelatedPosts slug="reels-tiktok-algoritmasi-2026" />
+
         <div className="mt-16 pt-10 border-t border-border">
           <div className="bg-card border border-white/5 p-8 rounded-3xl text-center shadow-2xl">
             <h3 className="font-heading text-2xl font-bold mb-4">Markanızın hikayesini anlatmaya hazır mısınız?</h3>
             <p className="text-muted-foreground mb-8">
-              Stratejik içerik üretimi ve profesyonel video prodüksiyonu ile rakiplerinizin bir adım önüne geçin.
+              Stratejik içerik üretimi ve <Link href="/hizmetler/sosyal-medya-video">profesyonel video prodüksiyon</Link>u ile rakiplerinizin bir adım önüne geçin.
             </p>
             <WizardCta text="Hemen Ücretsiz Strateji Görüşmesi Al" />
           </div>

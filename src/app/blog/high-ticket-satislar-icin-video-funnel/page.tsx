@@ -1,29 +1,20 @@
-import type { Metadata } from "next";
-import { ArrowLeft, Clock, Calendar, User, ChevronRight } from "lucide-react";
+import { Clock, Calendar, User } from "lucide-react";
 import Link from "next/link";
+import Breadcrumbs from "@/components/Breadcrumbs";
+import RelatedPosts from "@/components/RelatedPosts";
+import { createBlogMetadata } from "@/data/blog-posts";
 import Image from "next/image";
 import WizardCta from "@/components/WizardCta";
 import TldrSummary from "@/components/TldrSummary";
 import LastUpdated from "@/components/LastUpdated";
 
-export const metadata: Metadata = {
-  title: "High-Ticket (Yüksek Fiyatlı) Satışlar İçin Video Funnel — Fennix Medya",
-  description: "Premium hizmetler veya yüksek fiyatlı ürünler satanlar için müşteri itirazlarını kıran video huni (funnel) mimarisi.",
-  alternates: { canonical: "https://fennixmedya.com/blog/high-ticket-satislar-icin-video-funnel" },
-};
+export const metadata = createBlogMetadata("high-ticket-satislar-icin-video-funnel");
 
 export default function BlogPost() {
   return (
     <div className="min-h-screen bg-background pt-16 pb-20">
       <div className="max-w-3xl mx-auto px-6">
-        {/* Breadcrumb */}
-        <div className="flex items-center gap-2 text-sm text-muted-foreground mb-8">
-          <Link href="/blog" className="hover:text-primary transition-colors flex items-center gap-1">
-            <ArrowLeft className="w-4 h-4" /> Blog
-          </Link>
-          <ChevronRight className="w-4 h-4" />
-          <span className="truncate">{"High-Ticket (Yüksek Fiyatlı) Satışlar İçin Video Funnel"}</span>
-        </div>
+        <Breadcrumbs items={[{ name: "Blog", href: "/blog" }, { name: "High-Ticket (Yüksek Fiyatlı) Satışlar İçin Video Funnel" }]} />
 
         <header className="mb-12">
           <h1 className="font-heading text-3xl md:text-5xl font-black mb-6 leading-tight">
@@ -67,7 +58,7 @@ export default function BlogPost() {
             Bu aşamada kimse sizin hizmetinizi satın almaya hazır değildir. Hedef kitleniz sadece sosyal medyada (Instagram, TikTok, LinkedIn) gezinmektedir. Burada amacımız satış yapmak <strong>değil</strong>, hedef kitlenin başparmağını kaydırmayı bırakmasını sağlamak (Scroll-stopper) ve dikkatini çekmektir.
           </p>
           <ul className="space-y-3">
-            <li><strong>Video Formatı:</strong> 15-45 saniyelik, çok dinamik, hızlı kurgulanmış "Hook (Kanca)" videoları.</li>
+            <li><strong>Video Formatı:</strong> 15-45 saniyelik, çok dinamik, hızlı kurgulanmış "<Link href="/blog/videolarda-ilk-3-saniye-kurali-hook">Hook</Link> (Kanca)" videoları.</li>
             <li><strong>İçerik Stratejisi:</strong> Müşterinin gece uyurken düşündüğü o en büyük soruna doğrudan parmak basın. "Neden şirketiniz büyümüyor?", "Neden sattığınız evlerin değerini alamıyorsunuz?" gibi vurucu sorularla başlayın.</li>
             <li><strong>Hedef (Call to Action):</strong> Tıklama almak ve kullanıcıyı "Daha Fazlasını Öğren" diyerek web sitenize / açılış sayfanıza (Landing Page) çekmek.</li>
           </ul>
@@ -77,7 +68,7 @@ export default function BlogPost() {
             Tebrikler, reklam videonuz çalıştı ve kullanıcı açılış sayfanıza geldi. Ama hala size güvenmiyor. O yüzden karşısına "Hemen Satın Al" butonu çıkarmamalısınız. Bunun yerine ona değer sunan, aydınlanma yaşamasına sebep olacak bir video sunmanız gerekir. Bu videoya <strong>VSL (Video Sales Letter / Video Satış Mektubu)</strong> diyoruz.
           </p>
           <ul className="space-y-3">
-            <li><strong>Video Formatı:</strong> 5 ila 15 dakika arası sürebilen, yüksek otorite hissi veren, stüdyo ortamında veya şık bir ofiste profesyonelce çekilmiş yatay (16:9) ana tanıtım videosu.</li>
+            <li><strong>Video Formatı:</strong> 5 ila 15 dakika arası sürebilen, yüksek otorite hissi veren, <Link href="/hizmetler/anahtar-teslim-studyo">stüdyo</Link> ortamında veya şık bir ofiste profesyonelce çekilmiş yatay (16:9) ana tanıtım videosu.</li>
             <li><strong>İçerik Stratejisi:</strong> Önce kullanıcının sorununu tekrar teyit edin. Sonra, bu sorunun neden eski yöntemlerle çözülemeyeceğini mantıksal argümanlarla (veriler ve grafiklerle) açıklayın. Son olarak kendi sisteminizi (ürününüzü/hizmetinizi) "yeni, mantıklı ve kesin çözüm" olarak sunun.</li>
             <li><strong>Hedef (Call to Action):</strong> "Randevu Al", "Ücretsiz Strateji Görüşmesi Talep Et" veya "Formu Doldur".</li>
           </ul>
@@ -100,11 +91,13 @@ export default function BlogPost() {
           </div>
         </div>
 
+        <RelatedPosts slug="high-ticket-satislar-icin-video-funnel" />
+
         <div className="mt-16 pt-10 border-t border-border">
           <div className="bg-card border border-white/5 p-8 rounded-3xl text-center shadow-2xl">
             <h3 className="font-heading text-2xl font-bold mb-4">Markanızın hikayesini anlatmaya hazır mısınız?</h3>
             <p className="text-muted-foreground mb-8">
-              Stratejik içerik üretimi ve profesyonel video prodüksiyonu ile rakiplerinizin bir adım önüne geçin.
+              Stratejik içerik üretimi ve <Link href="/hizmetler/kurumsal-tanitim-filmi">profesyonel video prodüksiyon</Link>u ile rakiplerinizin bir adım önüne geçin.
             </p>
             <WizardCta text="Hemen Ücretsiz Strateji Görüşmesi Al" />
           </div>

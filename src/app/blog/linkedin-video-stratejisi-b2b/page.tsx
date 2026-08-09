@@ -1,28 +1,19 @@
-import type { Metadata } from "next";
-import { ArrowLeft, Clock, Calendar, User, ChevronRight } from "lucide-react";
+import { Clock, Calendar, User } from "lucide-react";
 import Link from "next/link";
+import Breadcrumbs from "@/components/Breadcrumbs";
+import RelatedPosts from "@/components/RelatedPosts";
+import { createBlogMetadata } from "@/data/blog-posts";
 import WizardCta from "@/components/WizardCta";
 import TldrSummary from "@/components/TldrSummary";
 import LastUpdated from "@/components/LastUpdated";
 
-export const metadata: Metadata = {
-  title: "LinkedIn Video Stratejisi: B2B Markalar İçin 2026 Rehberi",
-  description: "B2B markalar için LinkedIn video stratejisi nasıl kurulur? Düşünce liderliği videoları, algoritma ipuçları ve dönüşüm odaklı içerik formatları.",
-  alternates: { canonical: "https://fennixmedya.com/blog/linkedin-video-stratejisi-b2b" },
-};
+export const metadata = createBlogMetadata("linkedin-video-stratejisi-b2b");
 
 export default function BlogPost() {
   return (
     <div className="min-h-screen bg-background pt-16 pb-20">
       <div className="max-w-3xl mx-auto px-6">
-        {/* Breadcrumb */}
-        <div className="flex items-center gap-2 text-sm text-muted-foreground mb-8">
-          <Link href="/blog" className="hover:text-primary transition-colors flex items-center gap-1">
-            <ArrowLeft className="w-4 h-4" /> Blog
-          </Link>
-          <ChevronRight className="w-4 h-4" />
-          <span className="truncate">{"LinkedIn Video Stratejisi: B2B Rehberi"}</span>
-        </div>
+        <Breadcrumbs items={[{ name: "Blog", href: "/blog" }, { name: "LinkedIn Video Stratejisi: B2B Markalar İçin 2026 Rehberi" }]} />
 
         <header className="mb-12">
           <h1 className="font-heading text-3xl md:text-5xl font-black mb-6 leading-tight">
@@ -51,7 +42,7 @@ export default function BlogPost() {
             TikTok ve Instagram Reels konuşulurken, B2B dünyasında sessiz bir dev büyüyor: LinkedIn Video. 2026 itibarıyla LinkedIn, <strong>1 milyardan fazla profesyonel kullanıcıya</strong> sahip ve platformdaki video içerik tüketimi son 1 yılda %36 arttı (LinkedIn Marketing Solutions, 2026). Ancak birçok B2B marka hâlâ LinkedIn&apos;de video paylaşmıyor veya yanlış formatlarla paylaşıyor.
           </p>
           <p>
-            Bu rehberde, <strong className="text-foreground">LinkedIn algoritmasının video içerikleri nasıl değerlendirdiğini, en etkili video formatlarını ve CEO / kurucu düzeyinde kişisel marka oluşturma stratejilerini</strong> detaylı olarak anlatıyoruz.
+            Bu rehberde, <strong className="text-foreground">LinkedIn <Link href="/blog/reels-tiktok-algoritmasi-2026">algoritma</Link>sının video içerikleri nasıl değerlendirdiğini, en etkili video formatlarını ve CEO / kurucu düzeyinde kişisel marka oluşturma stratejilerini</strong> detaylı olarak anlatıyoruz.
           </p>
 
           <h2 className="text-3xl mt-12 mb-6">1. LinkedIn Algoritması Video İçerikleri Nasıl Değerlendiriyor?</h2>
@@ -59,7 +50,7 @@ export default function BlogPost() {
             LinkedIn&apos;in 2026 algoritması, video içerikleri değerlendirirken şu sinyallere bakıyor:
           </p>
           <ul className="space-y-3">
-            <li><strong>Dwell Time (Bekleme Süresi):</strong> Kullanıcının videonuzda ne kadar süre durduğu. LinkedIn, hızlı kaydırmayı (&quot;scroll past&quot;) negatif sinyal, durup izlemeyi pozitif sinyal olarak algılıyor. Bu nedenle ilk 3 saniye kritiktir.</li>
+            <li><strong>Dwell Time (Bekleme Süresi):</strong> Kullanıcının videonuzda ne kadar süre durduğu. LinkedIn, hızlı kaydırmayı (&quot;scroll past&quot;) negatif sinyal, durup izlemeyi pozitif sinyal olarak algılıyor. Bu nedenle <Link href="/blog/videolarda-ilk-3-saniye-kurali-hook">ilk 3 saniye</Link> kritiktir.</li>
             <li><strong>Meaningful Comments (Nitelikli Yorumlar):</strong> &quot;Harika&quot; veya emoji yorumları değil, en az 10+ kelimelik düşünceli yorumlar. Algoritma, tartışma başlatan içerikleri ödüllendiriyor.</li>
             <li><strong>Native Video Terciheti:</strong> LinkedIn, kendi platformuna doğrudan yüklenen videoları (native), YouTube veya Vimeo linklerine göre 3-5 kat daha fazla gösteriyor. Dış link paylaşmak yerine videoyu mutlaka doğrudan yükleyin.</li>
             <li><strong>İlk 60 Dakika Etkileşimi:</strong> Videonuzun ilk 1 saatteki performansı, sonraki erişimini belirliyor. Yayınlama zamanlaması kritik: Türkiye için en iyi saatler hafta içi 08:00-09:00 ve 12:00-13:00 arasıdır.</li>
@@ -131,6 +122,8 @@ export default function BlogPost() {
             </p>
           </div>
         </div>
+
+        <RelatedPosts slug="linkedin-video-stratejisi-b2b" />
 
         <div className="mt-16 pt-10 border-t border-border">
           <div className="bg-card border border-white/5 p-8 rounded-3xl text-center shadow-2xl">

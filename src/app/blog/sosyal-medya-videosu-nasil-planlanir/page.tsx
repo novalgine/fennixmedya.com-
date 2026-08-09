@@ -1,26 +1,18 @@
-import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowLeft, ArrowRight, Calendar, Clock, User } from "lucide-react";
+import Breadcrumbs from "@/components/Breadcrumbs";
+import RelatedPosts from "@/components/RelatedPosts";
+import { createBlogMetadata } from "@/data/blog-posts";
+import { ArrowRight, Calendar, Clock, User } from "lucide-react";
 import TldrSummary from "@/components/TldrSummary";
 
-export const metadata: Metadata = {
-  title: "Sosyal Medya Videosu Nasıl Planlanır? (2026 Rehberi)",
-  description:
-    "İster Reels, ister TikTok, ister Shorts — profesyonel bir sosyal medya videosu planlamanın tüm adımlarını bu kapsamlı rehberde bulabilirsiniz.",
-  authors: [{ name: "Semih Hasanoğlu" }],
-  alternates: { canonical: "https://fennixmedya.com/blog/sosyal-medya-videosu-nasil-planlanir" },
-};
+export const metadata = createBlogMetadata("sosyal-medya-videosu-nasil-planlanir");
 
 export default function BlogPost1() {
   return (
     <article className="min-h-screen bg-background pt-16">
       <div className="max-w-3xl mx-auto px-6 py-16">
         {/* Breadcrumb */}
-        <nav className="mb-8">
-          <Link href="/blog" className="text-primary text-sm flex items-center gap-1 hover:underline">
-            <ArrowLeft className="w-4 h-4" /> Blog&apos;a Dön
-          </Link>
-        </nav>
+        <Breadcrumbs items={[{ name: "Blog", href: "/blog" }, { name: "Sosyal Medya Videosu Nasıl Planlanır? (2026 Rehberi)" }]} />
 
         {/* Header */}
         <header className="mb-12">
@@ -64,7 +56,7 @@ export default function BlogPost1() {
           </p>
 
           <p className="text-muted-foreground leading-relaxed">
-            Hedef belirlenmeden çekilen videolar, <strong>ne algoritmayı ne de izleyiciyi memnun eder</strong>. Algoritma, net bir etkileşim sinyali almaz; izleyici ise &quot;bu videodan ne çıkaracağım?&quot; sorusunun cevabını bulamaz.
+            Hedef belirlenmeden çekilen videolar, <strong>ne <Link href="/blog/reels-tiktok-algoritmasi-2026">algoritma</Link>yı ne de izleyiciyi memnun eder</strong>. Algoritma, net bir etkileşim sinyali almaz; izleyici ise &quot;bu videodan ne çıkaracağım?&quot; sorusunun cevabını bulamaz.
           </p>
 
           <h3 className="font-heading text-xl font-bold mt-8 mb-3">Üç Temel Video Hedefi</h3>
@@ -130,7 +122,7 @@ export default function BlogPost1() {
           <h2 className="font-heading text-2xl font-bold mt-10 mb-4">4. Senaryo Yazımı: Çekim Öncesi En Kritik Adım</h2>
 
           <p className="text-muted-foreground leading-relaxed">
-            Profesyonel video prodüksiyonunda kamerayı açmadan önce yapılması gereken en önemli iş <strong>senaryo yazmaktır</strong>. Doğaçlama çekimler nadiren işe yarar — çoğu zaman rampa yapısı eksik, mesaj dağınık ve CTA belirsiz olur.
+            <Link href="/hizmetler/sosyal-medya-video">Profesyonel video prodüksiyon</Link>unda kamerayı açmadan önce yapılması gereken en önemli iş <strong>senaryo yazmaktır</strong>. Doğaçlama çekimler nadiren işe yarar — çoğu zaman rampa yapısı eksik, mesaj dağınık ve CTA belirsiz olur.
           </p>
 
           <h3 className="font-heading text-xl font-bold mt-8 mb-3">Basit Senaryo Şablonu</h3>
@@ -305,6 +297,8 @@ export default function BlogPost1() {
         </div>
 
         {/* CTA */}
+        <RelatedPosts slug="sosyal-medya-videosu-nasil-planlanir" />
+
         <div className="mt-16 bg-muted/30 border border-border rounded-2xl p-8 text-center">
           <p className="text-lg font-heading font-bold text-foreground mb-2">Profesyonel video desteği mi arıyorsunuz?</p>
           <p className="text-muted-foreground text-sm mb-6">15 dakikalık ücretsiz görüşmede sosyal medya stratejinizi planlayalım.</p>

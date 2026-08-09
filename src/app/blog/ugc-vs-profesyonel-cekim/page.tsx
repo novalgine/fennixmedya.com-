@@ -1,29 +1,20 @@
-import type { Metadata } from "next";
-import { ArrowLeft, Clock, Calendar, User, ChevronRight } from "lucide-react";
+import { Clock, Calendar, User } from "lucide-react";
 import Link from "next/link";
+import Breadcrumbs from "@/components/Breadcrumbs";
+import RelatedPosts from "@/components/RelatedPosts";
+import { createBlogMetadata } from "@/data/blog-posts";
 import Image from "next/image";
 import WizardCta from "@/components/WizardCta";
 import TldrSummary from "@/components/TldrSummary";
 import LastUpdated from "@/components/LastUpdated";
 
-export const metadata: Metadata = {
-  title: "Kullanıcı Tarafından Oluşturulan İçerik (UGC) vs Profesyonel Çekim — Fennix Medya",
-  description: "Hangi durumda UGC (User Generated Content), hangi durumda sinematik profesyonel çekim kullanılmalı? Markalar için karşılaştırmalı rehber.",
-  alternates: { canonical: "https://fennixmedya.com/blog/ugc-vs-profesyonel-cekim" },
-};
+export const metadata = createBlogMetadata("ugc-vs-profesyonel-cekim");
 
 export default function BlogPost() {
   return (
     <div className="min-h-screen bg-background pt-16 pb-20">
       <div className="max-w-3xl mx-auto px-6">
-        {/* Breadcrumb */}
-        <div className="flex items-center gap-2 text-sm text-muted-foreground mb-8">
-          <Link href="/blog" className="hover:text-primary transition-colors flex items-center gap-1">
-            <ArrowLeft className="w-4 h-4" /> Blog
-          </Link>
-          <ChevronRight className="w-4 h-4" />
-          <span className="truncate">{"Kullanıcı Tarafından Oluşturulan İçerik (UGC) vs Profesyonel Çekim"}</span>
-        </div>
+        <Breadcrumbs items={[{ name: "Blog", href: "/blog" }, { name: "Kullanıcı Tarafından Oluşturulan İçerik (UGC) vs Profesyonel Çekim" }]} />
 
         <header className="mb-12">
           <h1 className="font-heading text-3xl md:text-5xl font-black mb-6 leading-tight">
@@ -90,7 +81,7 @@ export default function BlogPost() {
             Markaların UGC'ye bu kadar yönelmesinin bir diğer nedeni de maliyettir. Bir reklam ajansından tek bir profesyonel reklam filmi almak yüz binlerce liraya mal olabilirken, aynı bütçeyle onlarca farklı UGC içerik üreticisine onlarca farklı video çektirebilirsiniz.
           </p>
           <p>
-            Ancak burada yapılan hata, elma ile armudu kıyaslamaktır. UGC videoları hızlı tüketilir, ömürleri 2-3 haftadır ve sürekli yenilenmeleri gerekir. Profesyonel bir marka filmi veya "Case Study" (Başarı Hikayesi) videosu ise <strong>yıllarca web sitenizde ve YouTube kanalınızda kalır,</strong> binlerce dolarlık satışı kendi kendine kapatmaya devam eder.
+            Ancak burada yapılan hata, elma ile armudu kıyaslamaktır. UGC videoları hızlı tüketilir, ömürleri 2-3 haftadır ve sürekli yenilenmeleri gerekir. Profesyonel bir marka filmi veya "Case Study" (Başarı Hikayesi) videosu ise <strong>yıllarca web sitenizde ve <Link href="/blog/kurumsal-youtube-kanali-acmak-isteyenlere-tavsiyeler">YouTube kanal</Link>ınızda kalır,</strong> binlerce dolarlık satışı kendi kendine kapatmaya devam eder.
           </p>
 
           <h2 className="text-3xl mt-12 mb-6">4. 2026'nın En Başarılı Stratejisi: Hibrit Model</h2>
@@ -111,11 +102,13 @@ export default function BlogPost() {
           </div>
         </div>
 
+        <RelatedPosts slug="ugc-vs-profesyonel-cekim" />
+
         <div className="mt-16 pt-10 border-t border-border">
           <div className="bg-card border border-white/5 p-8 rounded-3xl text-center shadow-2xl">
             <h3 className="font-heading text-2xl font-bold mb-4">Markanızın hikayesini anlatmaya hazır mısınız?</h3>
             <p className="text-muted-foreground mb-8">
-              Stratejik içerik üretimi ve profesyonel video prodüksiyonu ile rakiplerinizin bir adım önüne geçin.
+              Stratejik içerik üretimi ve <Link href="/hizmetler/sosyal-medya-video">profesyonel video prodüksiyon</Link>u ile rakiplerinizin bir adım önüne geçin.
             </p>
             <WizardCta text="Hemen Ücretsiz Strateji Görüşmesi Al" />
           </div>

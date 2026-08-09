@@ -1,15 +1,13 @@
-import type { Metadata } from "next";
-import { ArrowLeft, Clock, Calendar, User, ChevronRight } from "lucide-react";
+import { Clock, Calendar, User } from "lucide-react";
 import Link from "next/link";
+import Breadcrumbs from "@/components/Breadcrumbs";
+import RelatedPosts from "@/components/RelatedPosts";
+import { createBlogMetadata } from "@/data/blog-posts";
 import WizardCta from "@/components/WizardCta";
 import TldrSummary from "@/components/TldrSummary";
 import LastUpdated from "@/components/LastUpdated";
 
-export const metadata: Metadata = {
-  title: "Kurumsal YouTube Kanalı Açmak İsteyenlere Tavsiyeler — Fennix Medya",
-  description: "Şirketiniz için sıfırdan başarılı, izlenen ve müşteri getiren bir YouTube kanalı oluşturma rehberi.",
-  alternates: { canonical: "https://fennixmedya.com/blog/kurumsal-youtube-kanali-acmak-isteyenlere-tavsiyeler" },
-};
+export const metadata = createBlogMetadata("kurumsal-youtube-kanali-acmak-isteyenlere-tavsiyeler");
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -32,14 +30,7 @@ export default function BlogPost() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <div className="max-w-3xl mx-auto px-6">
-        {/* Breadcrumb */}
-        <div className="flex items-center gap-2 text-sm text-muted-foreground mb-8">
-          <Link href="/blog" className="hover:text-primary transition-colors flex items-center gap-1">
-            <ArrowLeft className="w-4 h-4" /> Blog
-          </Link>
-          <ChevronRight className="w-4 h-4" />
-          <span className="truncate">{"Kurumsal YouTube Kanalı Açmak İsteyenlere Tavsiyeler"}</span>
-        </div>
+        <Breadcrumbs items={[{ name: "Blog", href: "/blog" }, { name: "Kurumsal YouTube Kanalı Açmak İsteyenlere Tavsiyeler" }]} />
 
         <header className="mb-12">
           <h1 className="font-heading text-3xl md:text-5xl font-black mb-6 leading-tight">
@@ -93,7 +84,7 @@ export default function BlogPost() {
           </p>
 
           <p>
-            İçerik planlamanızda "80/20 kuralı"nı uygulayın: İçeriklerinizin %80'i eğitici ve değer veren içerikler olsun, %20'si şirket haberleri, etkinlik videoları ve tanıtım içerikleri olsun. Bu denge, hem algoritmanın sizi keşfetmesini sağlar hem de izleyici kitlenizin büyümesini destekler.
+            İçerik planlamanızda "80/20 kuralı"nı uygulayın: İçeriklerinizin %80'i eğitici ve değer veren içerikler olsun, %20'si şirket haberleri, etkinlik videoları ve tanıtım içerikleri olsun. Bu denge, hem <Link href="/blog/reels-tiktok-algoritmasi-2026">algoritma</Link>nın sizi keşfetmesini sağlar hem de izleyici kitlenizin büyümesini destekler.
           </p>
 
           <h2>2. Thumbnail ve Başlık Optimizasyonu (Tıklanma Oranı - CTR)</h2>
@@ -147,7 +138,7 @@ export default function BlogPost() {
           </p>
 
           <p>
-            İlk 5 saniye kuralını unutmayın: İzleyiciyi ilk 5 saniyede yakalamalısınız. Logonuzla başlamayın. Bunun yerine güçlü bir hook kullanın: Bir soru, şaşırtıcı bir istatistik veya merak uyandırıcı bir görüntü. <strong>"Merhaba ben Ahmet, bugün size…" diye başlayan videoların %60'ı ilk 10 saniyede terk ediliyor.</strong>
+            İlk 5 saniye kuralını unutmayın: İzleyiciyi ilk 5 saniyede yakalamalısınız. Logonuzla başlamayın. Bunun yerine güçlü bir <Link href="/blog/videolarda-ilk-3-saniye-kurali-hook">hook</Link> kullanın: Bir soru, şaşırtıcı bir istatistik veya merak uyandırıcı bir görüntü. <strong>"Merhaba ben Ahmet, bugün size…" diye başlayan videoların %60'ı ilk 10 saniyede terk ediliyor.</strong>
           </p>
 
           <h2>5. Playlists ve İçerik Serisi Oluşturma</h2>
@@ -230,11 +221,13 @@ export default function BlogPost() {
           </div>
         </div>
 
+        <RelatedPosts slug="kurumsal-youtube-kanali-acmak-isteyenlere-tavsiyeler" />
+
         <div className="mt-16 pt-10 border-t border-border">
           <div className="bg-card border border-white/5 p-8 rounded-3xl text-center shadow-2xl">
             <h3 className="font-heading text-2xl font-bold mb-4">Markanızın hikayesini anlatmaya hazır mısınız?</h3>
             <p className="text-muted-foreground mb-8">
-              Stratejik içerik üretimi ve profesyonel video prodüksiyonu ile rakiplerinizin bir adım önüne geçin.
+              Stratejik içerik üretimi ve <Link href="/hizmetler/youtube-icerik-uretimi">profesyonel video prodüksiyon</Link>u ile rakiplerinizin bir adım önüne geçin.
             </p>
             <WizardCta text="Hemen Ücretsiz Strateji Görüşmesi Al" />
           </div>

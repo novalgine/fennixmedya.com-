@@ -1,28 +1,19 @@
-import type { Metadata } from "next";
-import { ArrowLeft, Clock, Calendar, User, ChevronRight } from "lucide-react";
+import { Clock, Calendar, User } from "lucide-react";
 import Link from "next/link";
+import Breadcrumbs from "@/components/Breadcrumbs";
+import RelatedPosts from "@/components/RelatedPosts";
+import { createBlogMetadata } from "@/data/blog-posts";
 import WizardCta from "@/components/WizardCta";
 import TldrSummary from "@/components/TldrSummary";
 import LastUpdated from "@/components/LastUpdated";
 
-export const metadata: Metadata = {
-  title: "Podcast'ten Video İçeriğe: Tek Çekimle 30 Günlük İçerik Üretme",
-  description: "Tek bir podcast veya röportaj çekiminden 30 günlük çoklu platform video içeriği nasıl çıkarılır? İçerik yeniden kullanım (repurposing) stratejileri ve pratik iş akışı.",
-  alternates: { canonical: "https://fennixmedya.com/blog/podcast-ten-video-icerigi-uretmek" },
-};
+export const metadata = createBlogMetadata("podcast-ten-video-icerigi-uretmek");
 
 export default function BlogPost() {
   return (
     <div className="min-h-screen bg-background pt-16 pb-20">
       <div className="max-w-3xl mx-auto px-6">
-        {/* Breadcrumb */}
-        <div className="flex items-center gap-2 text-sm text-muted-foreground mb-8">
-          <Link href="/blog" className="hover:text-primary transition-colors flex items-center gap-1">
-            <ArrowLeft className="w-4 h-4" /> Blog
-          </Link>
-          <ChevronRight className="w-4 h-4" />
-          <span className="truncate">{"Podcast'ten Video İçeriğe"}</span>
-        </div>
+        <Breadcrumbs items={[{ name: "Blog", href: "/blog" }, { name: "Podcast'ten Video İçeriğe: Tek Çekimle 30 Günlük İçerik Üretme" }]} />
 
         <header className="mb-12">
           <h1 className="font-heading text-3xl md:text-5xl font-black mb-6 leading-tight">
@@ -85,7 +76,7 @@ export default function BlogPost() {
             <strong>Her klip için yapılacaklar:</strong>
           </p>
           <ul className="space-y-3">
-            <li>Dikkat çekici bir hook (kanca) ile başlayın — konuşmanın en vurucu cümlesini ilk 3 saniyeye taşıyın.</li>
+            <li>Dikkat çekici bir hook (kanca) ile başlayın — konuşmanın en vurucu cümlesini <Link href="/blog/videolarda-ilk-3-saniye-kurali-hook">ilk 3 saniye</Link>ye taşıyın.</li>
             <li>Alt yazı ekleyin (sessiz izleyenler için).</li>
             <li>Platformun native formatına uygun hale getirin (9:16 dikey).</li>
             <li>Her klibe özgü kapak karesi (thumbnail) tasarlayın.</li>
@@ -112,7 +103,7 @@ export default function BlogPost() {
           </p>
           <ul className="space-y-3">
             <li><strong>2 saat pre-prodüksiyon:</strong> Müşterimizle birlikte konu başlıklarını, mesajları ve hedef kitleyi belirliyoruz. Senaryo/konu haritası hazırlıyoruz.</li>
-            <li><strong>3 saat çekim:</strong> Profesyonel stüdyomuzda, 2-3 kameralı setup ile çekim yapıyoruz. Tek seansta 4-6 ana konu çekiyoruz.</li>
+            <li><strong>3 saat çekim:</strong> Profesyonel <Link href="/hizmetler/anahtar-teslim-studyo">stüdyo</Link>muzda, 2-3 kameralı setup ile çekim yapıyoruz. Tek seansta 4-6 ana konu çekiyoruz.</li>
             <li><strong>1 saat gözden geçirme:</strong> İlk kurgular müşteriye sunulur, geri bildirimler toplanır.</li>
             <li><strong>Post-prodüksiyon (bizde):</strong> Müşterinin 6 saatlik katkısından sonra, ekibimiz kurgulama, alt yazı, grafik tasarım ve platform optimizasyonu yaparak 30 günlük içerik paketini hazırlar.</li>
           </ul>
@@ -138,6 +129,8 @@ export default function BlogPost() {
             </p>
           </div>
         </div>
+
+        <RelatedPosts slug="podcast-ten-video-icerigi-uretmek" />
 
         <div className="mt-16 pt-10 border-t border-border">
           <div className="bg-card border border-white/5 p-8 rounded-3xl text-center shadow-2xl">

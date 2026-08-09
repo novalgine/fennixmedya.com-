@@ -3,161 +3,22 @@ import Link from "next/link";
 import { ArrowRight, Calendar, User, Clock } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Blog | Fennix Medya - Video Prodüksiyon Rehberleri",
+  title: "Blog: Video Prodüksiyon Rehberleri",
   description:
     "Sosyal medya videoları, kurumsal filmler ve YouTube içerik üretimi hakkında profesyonel rehberler ve ipuçları.",
   alternates: { canonical: "https://fennixmedya.com/blog" },
+  openGraph: {
+    type: "website",
+    url: "https://fennixmedya.com/blog",
+    title: "Blog: Video Prodüksiyon Rehberleri",
+    description:
+      "Sosyal medya videoları, kurumsal filmler ve YouTube içerik üretimi hakkında profesyonel rehberler ve ipuçları.",
+    siteName: "Fennix Medya",
+    locale: "tr_TR",
+  },
 };
 
-// Blog post metadata — in a real setup this would come from MDX/CMS
-const blogPosts = [
-  {
-    slug: 'video-produksiyon-maliyetleri-2026',
-    title: 'Video Prodüksiyon Maliyetleri 2026: Ne Kadar Bütçe Ayırmalısınız?',
-    excerpt: '2026 yılında profesyonel video prodüksiyon maliyetleri ne kadar? Kurumsal film, sosyal medya videosu ve reklam filmi fiyatlarını karşılaştırmalı olarak inceliyoruz.',
-    date: '2026-06-15',
-    readTime: '8-10 dk',
-    category: 'Maliyet',
-  },
-  {
-    slug: 'yapay-zeka-ile-video-uretimi',
-    title: 'Yapay Zeka ile Video Üretimi: AI Araçları mı Profesyonel Ekip mi?',
-    excerpt: '2026\'da yapay zeka video araçları profesyonel prodüksiyon ekiplerinin yerini alabilir mi? Sora, Runway ve Kling gibi AI araçlarını gerçek prodüksiyonla karşılaştırıyoruz.',
-    date: '2026-06-12',
-    readTime: '9-10 dk',
-    category: 'Yapay Zeka',
-  },
-  {
-    slug: 'linkedin-video-stratejisi-b2b',
-    title: 'LinkedIn Video Stratejisi: B2B Markalar İçin 2026 Rehberi',
-    excerpt: 'B2B markalar için LinkedIn video stratejisi nasıl kurulur? Düşünce liderliği videoları, algoritma ipuçları ve dönüşüm odaklı içerik formatları.',
-    date: '2026-06-10',
-    readTime: '7-8 dk',
-    category: 'B2B',
-  },
-  {
-    slug: 'e-ticaret-urun-videolari',
-    title: 'E-Ticaret Ürün Videoları: Satışları Artıran Teknikler (2026)',
-    excerpt: 'E-ticaret sitelerinde ürün videoları satışları nasıl artırır? Dönüşüm oranını yükselten video türleri, çekim teknikleri ve platform stratejileri.',
-    date: '2026-06-08',
-    readTime: '8-9 dk',
-    category: 'E-Ticaret',
-  },
-  {
-    slug: 'podcast-ten-video-icerigi-uretmek',
-    title: 'Podcast\'ten Video İçeriğe: Tek Çekimle 30 Günlük İçerik Üretme',
-    excerpt: 'Tek bir podcast veya röportaj çekiminden 30 günlük çoklu platform video içeriği nasıl çıkarılır? İçerik yeniden kullanım (repurposing) stratejileri.',
-    date: '2026-06-05',
-    readTime: '7-8 dk',
-    category: 'Strateji',
-  },
-  {
-    slug: "sosyal-medya-videosu-nasil-planlanir",
-    title: "Sosyal Medya Videosu Nasıl Planlanır? (2026 Rehberi)",
-    excerpt:
-      "İster Reels, ister TikTok, ister Shorts — profesyonel bir sosyal medya videosu planlamanın tüm adımlarını bu rehberde bulabilirsiniz.",
-    date: "2026-05-20",
-    readTime: "2-3 dk",
-    category: "Sosyal Medya",
-  },
-  {
-    slug: "iphone-vs-profesyonel-kamera",
-    title: "iPhone ile mi Profesyonel Kamera ile mi Çekilmeli?",
-    excerpt:
-      "Markanız için iPhone yeterli mi yoksa profesyonel ekipmana mı ihtiyacınız var? Karşılaştırmalı analiz.",
-    date: "2026-05-18",
-    readTime: "2-3 dk",
-    category: "Ekipman",
-  },
-  {
-    slug: "doktorlar-icin-video-icerik-rehberi",
-    title: "Doktorlar İçin Sosyal Medya Video İçerik Rehberi",
-    excerpt:
-      "Sağlık sektöründe video içerikle hasta güveni inşa etmenin yolları. Etik kurallar ve içerik fikirleri.",
-    date: "2026-05-15",
-    readTime: "2-3 dk",
-  },
-  {
-    slug: 'sirketler-icin-video-pazarlama-stratejisi-2026',
-    title: 'Şirketler İçin Video Pazarlama Stratejisi (2026)',
-    excerpt: '2026 yılında B2B ve B2C şirketlerin kullanması gereken en etkili video pazarlama stratejileri ve trendleri.',
-    date: '2026-05-28',
-    readTime: '4-5 dk',
-    category: 'Strateji',
-  },
-  {
-    slug: 'ugc-vs-profesyonel-cekim',
-    title: 'Kullanıcı Tarafından Oluşturulan İçerik (UGC) vs Profesyonel Çekim',
-    excerpt: 'Hangi durumda UGC (User Generated Content), hangi durumda sinematik profesyonel çekim kullanılmalı? Markalar için karşılaştırmalı rehber.',
-    date: '2026-05-26',
-    readTime: '4-5 dk',
-    category: 'Prodüksiyon',
-  },
-  {
-    slug: 'saglik-turizminde-video-kullanimi',
-    title: 'Sağlık Turizminde Videonun Gücü: Yabancı Hasta Nasıl Bulunur?',
-    excerpt: 'Türkiye\'deki klinikler ve hastaneler için yurtdışından hasta getiren güven odaklı video pazarlama stratejileri.',
-    date: '2026-05-24',
-    readTime: '4-5 dk',
-    category: 'Sektörel',
-  },
-  {
-    slug: 'gayrimenkul-satislarinda-video-produksiyon',
-    title: 'Gayrimenkul Satışlarında Video Prodüksiyonun Gücü',
-    excerpt: 'Lüks konut ve ticari gayrimenkul satışlarında video içeriklerle satış sürecini hızlandırma rehberi.',
-    date: '2026-05-22',
-    readTime: '4-5 dk',
-    category: 'Sektörel',
-  },
-  {
-    slug: 'iyi-bir-kurumsal-tanitim-filmi-nasil-olmali',
-    title: 'İyi Bir Kurumsal Tanıtım Filmi Nasıl Olmalı?',
-    excerpt: 'B2B markalar için sıkıcı olmayan, akılda kalıcı ve vizyoner bir kurumsal tanıtım filmi hazırlamanın sırları.',
-    date: '2026-05-20',
-    readTime: '4-5 dk',
-    category: 'Kurumsal Film',
-  },
-  {
-    slug: 'reels-tiktok-algoritmasi-2026',
-    title: 'Reels ve TikTok Algoritması (2026 Güncellemesi)',
-    excerpt: 'Sosyal medya algoritmaları 2026 yılında nasıl çalışıyor? Etkileşimi ve organik erişimi artırmanın yolları.',
-    date: '2026-05-18',
-    readTime: '4-5 dk',
-    category: 'Sosyal Medya',
-  },
-  {
-    slug: 'high-ticket-satislar-icin-video-funnel',
-    title: 'High-Ticket (Yüksek Fiyatlı) Satışlar İçin Video Funnel',
-    excerpt: 'Premium hizmetler veya yüksek fiyatlı ürünler satanlar için müşteri itirazlarını kıran video huni (funnel) mimarisi.',
-    date: '2026-05-16',
-    readTime: '4-5 dk',
-    category: 'Strateji',
-  },
-  {
-    slug: 'videolarda-ilk-3-saniye-kurali-hook',
-    title: 'Videolarda İlk 3 Saniye Kuralı (Hook Stratejileri)',
-    excerpt: 'İzleyicinin dikkatini anında yakalamak ve kaydırmasını (scroll) durdurmak için etkili kanca (hook) taktikleri.',
-    date: '2026-05-14',
-    readTime: '4-5 dk',
-    category: 'İçerik',
-  },
-  {
-    slug: 'kurumsal-youtube-kanali-acmak-isteyenlere-tavsiyeler',
-    title: 'Kurumsal YouTube Kanalı Açmak İsteyenlere Tavsiyeler',
-    excerpt: 'Şirketiniz için sıfırdan başarılı, izlenen ve müşteri getiren bir YouTube kanalı oluşturma rehberi.',
-    date: '2026-05-12',
-    readTime: '4-5 dk',
-    category: 'YouTube',
-  },
-  {
-    slug: 'kamera-karsisinda-rahat-konusma-teknikleri',
-    title: 'Kamera Karşısında Rahat Konuşma Teknikleri',
-    excerpt: 'CEO\'lar, uzmanlar ve marka yüzleri için kamera önü gerginliğini atıp doğal ve otoriter görünme ipuçları.',
-    date: '2026-05-10',
-    readTime: '4-5 dk',
-    category: 'Kamera Önü',
-  },
-];
+import { blogPosts } from "@/data/blog-posts";
 
 export default function BlogPage() {
   return (

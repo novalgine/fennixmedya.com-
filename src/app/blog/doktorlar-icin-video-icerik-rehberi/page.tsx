@@ -1,23 +1,16 @@
-import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowLeft, ArrowRight, Calendar, Clock, User } from "lucide-react";
+import Breadcrumbs from "@/components/Breadcrumbs";
+import RelatedPosts from "@/components/RelatedPosts";
+import { createBlogMetadata } from "@/data/blog-posts";
+import { ArrowRight, Calendar, Clock, User } from "lucide-react";
 
-export const metadata: Metadata = {
-  title: "Doktorlar İçin Sosyal Medya Video İçerik Rehberi",
-  description: "Sağlık sektöründe video içerikle hasta güveni inşa etmenin yolları. Doktorlar için etik kurallara uygun içerik fikirleri ve pratik öneriler.",
-  authors: [{ name: "Semih Hasanoğlu" }],
-  alternates: { canonical: "https://fennixmedya.com/blog/doktorlar-icin-video-icerik-rehberi" },
-};
+export const metadata = createBlogMetadata("doktorlar-icin-video-icerik-rehberi");
 
 export default function BlogPost3() {
   return (
     <article className="min-h-screen bg-background pt-16">
       <div className="max-w-3xl mx-auto px-6 py-16">
-        <nav className="mb-8">
-          <Link href="/blog" className="text-primary text-sm flex items-center gap-1 hover:underline">
-            <ArrowLeft className="w-4 h-4" /> Blog&apos;a Dön
-          </Link>
-        </nav>
+        <Breadcrumbs items={[{ name: "Blog", href: "/blog" }, { name: "Doktorlar İçin Sosyal Medya Video İçerik Rehberi" }]} />
 
         <header className="mb-12">
           <span className="text-xs px-2.5 py-1 bg-primary/10 text-primary rounded-full font-medium">Sektörel</span>
@@ -75,7 +68,7 @@ export default function BlogPost3() {
 
           <h2 className="font-heading text-3xl font-bold mt-12 mb-6 text-foreground">3. Doktorlar İçin 10 Yüksek Dönüşümlü Video İçerik Fikri</h2>
           <p className="text-muted-foreground leading-relaxed mb-6">
-            Peki kamera karşısında ne konuşacaksınız? Hastalarınızın neyi duymaya ihtiyacı var? İşte size ilham verecek, uzmanlığınızı parlatacak 10 test edilmiş içerik formatı:
+            Peki <Link href="/blog/kamera-karsisinda-rahat-konusma-teknikleri">kamera karşısında</Link> ne konuşacaksınız? Hastalarınızın neyi duymaya ihtiyacı var? İşte size ilham verecek, uzmanlığınızı parlatacak 10 test edilmiş içerik formatı:
           </p>
           
           <div className="space-y-6">
@@ -141,6 +134,8 @@ export default function BlogPost3() {
             Unutmayın, kamera karşısında uzmanlığına güvenen, kendinden emin bir doktor duruşu sergilemeniz gerekir; bu da ancak arka plandaki tüm teknik dertleri (ışık, ses, kamera açıları, ezber yapma derdi) profesyonel bir ekibe bırakmanızla mümkündür.
           </p>
         </div>
+
+        <RelatedPosts slug="doktorlar-icin-video-icerik-rehberi" />
 
         <div className="mt-16 bg-muted/30 border border-border rounded-2xl p-8 text-center">
           <p className="text-lg font-heading font-bold text-foreground mb-2">Sağlık sektöründe video içerik desteği mi arıyorsunuz?</p>

@@ -1,23 +1,16 @@
-import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowLeft, ArrowRight, Calendar, Clock, User } from "lucide-react";
+import Breadcrumbs from "@/components/Breadcrumbs";
+import RelatedPosts from "@/components/RelatedPosts";
+import { createBlogMetadata } from "@/data/blog-posts";
+import { ArrowRight, Calendar, Clock, User } from "lucide-react";
 
-export const metadata: Metadata = {
-  title: "iPhone ile mi Profesyonel Kamera ile mi Çekilmeli?",
-  description: "Markanız için iPhone yeterli mi yoksa profesyonel ekipmana mı ihtiyacınız var? Karşılaştırmalı analiz ve pratik öneriler.",
-  authors: [{ name: "Semih Hasanoğlu" }],
-  alternates: { canonical: "https://fennixmedya.com/blog/iphone-vs-profesyonel-kamera" },
-};
+export const metadata = createBlogMetadata("iphone-vs-profesyonel-kamera");
 
 export default function BlogPost2() {
   return (
     <article className="min-h-screen bg-background pt-16">
       <div className="max-w-3xl mx-auto px-6 py-16">
-        <nav className="mb-8">
-          <Link href="/blog" className="text-primary text-sm flex items-center gap-1 hover:underline">
-            <ArrowLeft className="w-4 h-4" /> Blog&apos;a Dön
-          </Link>
-        </nav>
+        <Breadcrumbs items={[{ name: "Blog", href: "/blog" }, { name: "iPhone ile mi Profesyonel Kamera ile mi Çekilmeli?" }]} />
 
         <header className="mb-12">
           <span className="text-xs px-2.5 py-1 bg-primary/10 text-primary rounded-full font-medium">Ekipman</span>
@@ -52,7 +45,7 @@ export default function BlogPost2() {
             <li><strong className="text-foreground">Spontan, otantik anlık paylaşımlar:</strong> Bir etkinlikte, ofiste veya üretim sürecinde çekilen anlık kareler, profesyonel ekipmanla çekildiğinde yapay hissedebilir.</li>
             <li><strong className="text-foreground">Hızlı üretilmesi gereken düşük bütçeli içerikler:</strong> Test amaçlı içerikler, A/B testleri için hızlı videolar.</li>
             <li><strong className="text-foreground">Kişisel marka oluşturmanın ilk aşamaları:</strong> Henüz kitlesi küçük olan hesaplar için iPhone yeterli bir başlangıç noktasıdır.</li>
-            <li><strong className="text-foreground">UGC (User Generated Content) tarzı içerikler:</strong> Kullanıcı tarafından üretilmiş gibi görünen reklamlar, iPhone ile daha organik hissedilir.</li>
+            <li><strong className="text-foreground"><Link href="/blog/ugc-vs-profesyonel-cekim">UGC</Link> (User Generated Content) tarzı içerikler:</strong> Kullanıcı tarafından üretilmiş gibi görünen reklamlar, iPhone ile daha organik hissedilir.</li>
           </ul>
 
           <p className="text-muted-foreground leading-relaxed">
@@ -189,7 +182,7 @@ export default function BlogPost2() {
           </p>
 
           <p className="text-muted-foreground leading-relaxed">
-            Karşılaştırma olarak: iPhone ile çekilen &quot;amatör&quot; görünen bir tanıtım filmi, potansiyel müşterilerin <strong>&quot;bu marka profesyonel değil&quot;</strong> algısı oluşturmasına neden olabilir. Kaybedilen tek bir büyük müşteri bile, profesyonel prodüksiyon maliyetinin çok üzerinde bir kayıptır.
+            Karşılaştırma olarak: iPhone ile çekilen &quot;amatör&quot; görünen bir tanıtım filmi, potansiyel müşterilerin <strong>&quot;bu marka profesyonel değil&quot;</strong> algısı oluşturmasına neden olabilir. Kaybedilen tek bir büyük müşteri bile, <Link href="/hizmetler/anahtar-teslim-studyo">profesyonel prodüksiyon</Link> maliyetinin çok üzerinde bir kayıptır.
           </p>
 
           <h2 className="font-heading text-2xl font-bold mt-10 mb-4">9. Hangi İşletme Hangi Stratejiyi Seçmeli?</h2>
@@ -228,6 +221,8 @@ export default function BlogPost2() {
             </p>
           </div>
         </div>
+
+        <RelatedPosts slug="iphone-vs-profesyonel-kamera" />
 
         <div className="mt-16 bg-muted/30 border border-border rounded-2xl p-8 text-center">
           <p className="text-lg font-heading font-bold text-foreground mb-2">Hangisinin size uygun olduğundan emin değil misiniz?</p>

@@ -1,29 +1,20 @@
-import type { Metadata } from "next";
-import { ArrowLeft, Clock, Calendar, User, ChevronRight } from "lucide-react";
+import { Clock, Calendar, User } from "lucide-react";
 import Link from "next/link";
+import Breadcrumbs from "@/components/Breadcrumbs";
+import RelatedPosts from "@/components/RelatedPosts";
+import { createBlogMetadata } from "@/data/blog-posts";
 import Image from "next/image";
 import WizardCta from "@/components/WizardCta";
 import TldrSummary from "@/components/TldrSummary";
 import LastUpdated from "@/components/LastUpdated";
 
-export const metadata: Metadata = {
-  title: "Videolarda İlk 3 Saniye Kuralı (Hook Stratejileri) — Fennix Medya",
-  description: "İzleyicinin dikkatini anında yakalamak ve kaydırmasını (scroll) durdurmak için etkili kanca (hook) taktikleri.",
-  alternates: { canonical: "https://fennixmedya.com/blog/videolarda-ilk-3-saniye-kurali-hook" },
-};
+export const metadata = createBlogMetadata("videolarda-ilk-3-saniye-kurali-hook");
 
 export default function BlogPost() {
   return (
     <div className="min-h-screen bg-background pt-16 pb-20">
       <div className="max-w-3xl mx-auto px-6">
-        {/* Breadcrumb */}
-        <div className="flex items-center gap-2 text-sm text-muted-foreground mb-8">
-          <Link href="/blog" className="hover:text-primary transition-colors flex items-center gap-1">
-            <ArrowLeft className="w-4 h-4" /> Blog
-          </Link>
-          <ChevronRight className="w-4 h-4" />
-          <span className="truncate">{"Videolarda İlk 3 Saniye Kuralı (Hook Stratejileri)"}</span>
-        </div>
+        <Breadcrumbs items={[{ name: "Blog", href: "/blog" }, { name: "Videolarda İlk 3 Saniye Kuralı (Hook Stratejileri)" }]} />
 
         <header className="mb-12">
           <h1 className="font-heading text-3xl md:text-5xl font-black mb-6 leading-tight">
@@ -52,7 +43,7 @@ export default function BlogPost() {
             Büyük bir hevesle, saatlerinizi hatta belki binlerce liranızı harcayarak harika bir video çektiniz. Işık mükemmel, ses kusursuz, verdiğiniz bilgiler altın değerinde. Ancak videoyu yayınladıktan sonra analitik verilerine bir bakıyorsunuz: İzleyicilerin %70'i videoyu henüz 3. saniyede terk etmiş! Neden?
           </p>
           <p>
-            Çünkü günümüzün acımasız sosyal medya algoritmalarında (TikTok, Reels, Shorts) kimse sizin "kim olduğunuzla" veya "ne kadar iyi çektiğinizle" ilgilenmiyor. Algoritma tek bir şeye bakıyor: <strong>Kullanıcının kaydırma (scroll) hareketini durdurabildiniz mi?</strong> İşte bu durdurucu güce <em>Hook (Kanca)</em> diyoruz.
+            Çünkü günümüzün acımasız sosyal medya <Link href="/blog/reels-tiktok-algoritmasi-2026">algoritma</Link>larında (TikTok, Reels, Shorts) kimse sizin "kim olduğunuzla" veya "ne kadar iyi çektiğinizle" ilgilenmiyor. Algoritma tek bir şeye bakıyor: <strong>Kullanıcının kaydırma (scroll) hareketini durdurabildiniz mi?</strong> İşte bu durdurucu güce <em>Hook (Kanca)</em> diyoruz.
           </p>
 
           <h2 className="text-3xl mt-12 mb-6">1. Kanca (Hook) Psikolojisi: Beyin Neden Durur?</h2>
@@ -113,11 +104,13 @@ export default function BlogPost() {
           </div>
         </div>
 
+        <RelatedPosts slug="videolarda-ilk-3-saniye-kurali-hook" />
+
         <div className="mt-16 pt-10 border-t border-border">
           <div className="bg-card border border-white/5 p-8 rounded-3xl text-center shadow-2xl">
             <h3 className="font-heading text-2xl font-bold mb-4">Markanızın hikayesini anlatmaya hazır mısınız?</h3>
             <p className="text-muted-foreground mb-8">
-              Stratejik içerik üretimi ve profesyonel video prodüksiyonu ile rakiplerinizin bir adım önüne geçin.
+              Stratejik içerik üretimi ve <Link href="/hizmetler/sosyal-medya-video">profesyonel video prodüksiyon</Link>u ile rakiplerinizin bir adım önüne geçin.
             </p>
             <WizardCta text="Hemen Ücretsiz Strateji Görüşmesi Al" />
           </div>

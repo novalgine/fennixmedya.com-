@@ -1,16 +1,14 @@
-import type { Metadata } from "next";
-import { ArrowLeft, Clock, Calendar, User, ChevronRight } from "lucide-react";
+import { Clock, Calendar, User } from "lucide-react";
 import Link from "next/link";
+import Breadcrumbs from "@/components/Breadcrumbs";
+import RelatedPosts from "@/components/RelatedPosts";
+import { createBlogMetadata } from "@/data/blog-posts";
 import Image from "next/image";
 import WizardCta from "@/components/WizardCta";
 import TldrSummary from "@/components/TldrSummary";
 import LastUpdated from "@/components/LastUpdated";
 
-export const metadata: Metadata = {
-  title: "İyi Bir Kurumsal Tanıtım Filmi Nasıl Olmalı? — Fennix Medya",
-  description: "B2B markalar için sıkıcı olmayan, akılda kalıcı ve vizyoner bir kurumsal tanıtım filmi hazırlamanın sırları.",
-  alternates: { canonical: "https://fennixmedya.com/blog/iyi-bir-kurumsal-tanitim-filmi-nasil-olmali" },
-};
+export const metadata = createBlogMetadata("iyi-bir-kurumsal-tanitim-filmi-nasil-olmali");
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -33,14 +31,7 @@ export default function BlogPost() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <div className="max-w-3xl mx-auto px-6">
-        {/* Breadcrumb */}
-        <div className="flex items-center gap-2 text-sm text-muted-foreground mb-8">
-          <Link href="/blog" className="hover:text-primary transition-colors flex items-center gap-1">
-            <ArrowLeft className="w-4 h-4" /> Blog
-          </Link>
-          <ChevronRight className="w-4 h-4" />
-          <span className="truncate">{"İyi Bir Kurumsal Tanıtım Filmi Nasıl Olmalı?"}</span>
-        </div>
+        <Breadcrumbs items={[{ name: "Blog", href: "/blog" }, { name: "İyi Bir Kurumsal Tanıtım Filmi Nasıl Olmalı?" }]} />
 
         <header className="mb-12">
           <h1 className="font-heading text-3xl md:text-5xl font-black mb-6 leading-tight">
@@ -52,7 +43,7 @@ export default function BlogPost() {
             <span className="flex items-center gap-1"><Calendar className="w-4 h-4" /> 20 Mayıs 2026</span>
             <span className="flex items-center gap-1"><Clock className="w-4 h-4" /> 7-8 dk okuma</span>
           </div>
-          <LastUpdated date="2026-05-20" />
+          <LastUpdated date="2026-05-29" />
         </header>
 
         <TldrSummary
@@ -185,7 +176,7 @@ export default function BlogPost() {
           </p>
 
           <p>
-            Bütçeyi etkileyen ana faktörler şunlardır: Film süresi, çekim günü sayısı, lokasyon sayısı (stüdyo mu, dış mekan mı?), oyuncu veya sunucu kullanımı, drone ve özel ekipman ihtiyacı, post-prodüksiyon kapsamı (animasyon, VFX, color grading) ve müzik lisanslama.
+            Bütçeyi etkileyen ana faktörler şunlardır: Film süresi, çekim günü sayısı, lokasyon sayısı (<Link href="/hizmetler/anahtar-teslim-studyo">stüdyo</Link> mu, dış mekan mı?), oyuncu veya sunucu kullanımı, drone ve özel ekipman ihtiyacı, post-prodüksiyon kapsamı (animasyon, VFX, color grading) ve müzik lisanslama.
           </p>
 
           <p>
@@ -222,17 +213,18 @@ export default function BlogPost() {
           </div>
         </div>
 
+        <RelatedPosts slug="iyi-bir-kurumsal-tanitim-filmi-nasil-olmali" />
+
         <div className="mt-16 pt-10 border-t border-border">
           <div className="bg-card border border-white/5 p-8 rounded-3xl text-center shadow-2xl">
             <h3 className="font-heading text-2xl font-bold mb-4">Markanızın hikayesini anlatmaya hazır mısınız?</h3>
             <p className="text-muted-foreground mb-8">
-              Stratejik içerik üretimi ve profesyonel video prodüksiyonu ile rakiplerinizin bir adım önüne geçin.
+              Stratejik içerik üretimi ve <Link href="/hizmetler/kurumsal-tanitim-filmi">profesyonel video prodüksiyon</Link>u ile rakiplerinizin bir adım önüne geçin.
             </p>
             <WizardCta text="Hemen Ücretsiz Strateji Görüşmesi Al" />
           </div>
         </div>
       </div>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "BlogPosting", headline: "İyi Bir Kurumsal Tanıtım Filmi Nasıl Olmalı?", author: { "@type": "Person", name: "Semih Hasanoğlu" }, datePublished: "2026-05-20", publisher: { "@type": "Organization", name: "Fennix Medya" }, mainEntityOfPage: "https://fennixmedya.com/blog/iyi-bir-kurumsal-tanitim-filmi-nasil-olmali" }) }} />
     </div>
   );
 }

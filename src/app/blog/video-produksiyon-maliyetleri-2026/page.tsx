@@ -1,28 +1,19 @@
-import type { Metadata } from "next";
-import { ArrowLeft, Clock, Calendar, User, ChevronRight } from "lucide-react";
+import { Clock, Calendar, User } from "lucide-react";
 import Link from "next/link";
+import Breadcrumbs from "@/components/Breadcrumbs";
+import RelatedPosts from "@/components/RelatedPosts";
+import { createBlogMetadata } from "@/data/blog-posts";
 import WizardCta from "@/components/WizardCta";
 import TldrSummary from "@/components/TldrSummary";
 import LastUpdated from "@/components/LastUpdated";
 
-export const metadata: Metadata = {
-  title: "Video Prodüksiyon Maliyetleri 2026: Ne Kadar Bütçe Ayırmalısınız?",
-  description: "2026 yılında profesyonel video prodüksiyon maliyetleri ne kadar? Kurumsal film, sosyal medya videosu ve reklam filmi fiyatlarını karşılaştırmalı olarak inceliyoruz.",
-  alternates: { canonical: "https://fennixmedya.com/blog/video-produksiyon-maliyetleri-2026" },
-};
+export const metadata = createBlogMetadata("video-produksiyon-maliyetleri-2026");
 
 export default function BlogPost() {
   return (
     <div className="min-h-screen bg-background pt-16 pb-20">
       <div className="max-w-3xl mx-auto px-6">
-        {/* Breadcrumb */}
-        <div className="flex items-center gap-2 text-sm text-muted-foreground mb-8">
-          <Link href="/blog" className="hover:text-primary transition-colors flex items-center gap-1">
-            <ArrowLeft className="w-4 h-4" /> Blog
-          </Link>
-          <ChevronRight className="w-4 h-4" />
-          <span className="truncate">{"Video Prodüksiyon Maliyetleri 2026"}</span>
-        </div>
+        <Breadcrumbs items={[{ name: "Blog", href: "/blog" }, { name: "Video Prodüksiyon Maliyetleri 2026: Ne Kadar Bütçe Ayırmalısınız?" }]} />
 
         <header className="mb-12">
           <h1 className="font-heading text-3xl md:text-5xl font-black mb-6 leading-tight">
@@ -86,7 +77,7 @@ export default function BlogPost() {
             <li><strong>Pre-prodüksiyon (Planlama):</strong> Senaryo yazımı, storyboard hazırlığı, lokasyon keşfi ve casting süreci. Bir kurumsal filmin ön prodüksiyon aşaması tek başına 1-3 hafta sürebilir ve toplam bütçenin %15-20&apos;sini oluşturur.</li>
             <li><strong>Ekip büyüklüğü:</strong> Tek kameramanlı bir çekim ile yönetmen, görüntü yönetmeni, ses teknisyeni, ışıkçı ve asistandan oluşan 5-6 kişilik bir ekip arasında ciddi maliyet farkı vardır.</li>
             <li><strong>Çekim günü sayısı:</strong> Her ek çekim günü, ekip maliyeti, ekipman kirası ve lojistik giderleri yeniden hesaba katar. Tek günde tamamlanan bir proje ile 3 günlük bir çekim arasında 2-3 kat fiyat farkı olabilir.</li>
-            <li><strong>Lokasyon:</strong> Stüdyo çekimi, ofis içi çekim ve dış mekan çekimi farklı maliyetler getirir. Özel lokasyonlar (otel, restoran, fabrika) ek izin ve kiralama bedeli gerektirir.</li>
+            <li><strong>Lokasyon:</strong> <Link href="/hizmetler/anahtar-teslim-studyo">Stüdyo</Link> çekimi, ofis içi çekim ve dış mekan çekimi farklı maliyetler getirir. Özel lokasyonlar (otel, restoran, fabrika) ek izin ve kiralama bedeli gerektirir.</li>
             <li><strong>Ekipman kalitesi:</strong> 4K sinema kamerası (RED, ARRI) ile prosumer kamera arasında hem kalite hem de kiralama maliyeti farkı belirgindir. Drone, gimbal, slider gibi ek ekipmanlar da bütçeyi etkiler.</li>
             <li><strong>Post-prodüksiyon:</strong> Kurgu, renk düzeltme (color grading), ses tasarımı, motion graphics ve alt yazı ekleme gibi işlemler toplam maliyetin %30-40&apos;ını oluşturabilir. Bu, müşterilerin en çok hafife aldığı kalemdir.</li>
             <li><strong>Müzik ve lisanslama:</strong> Stok müzik 500-5.000 TL arasında değişirken, orijinal müzik besteleme 15.000-50.000 TL&apos;ye çıkabilir. Tanınmış bir şarkının lisansı ise çok daha yüksek bedeller gerektirir.</li>
@@ -111,7 +102,7 @@ export default function BlogPost() {
             <li><strong>Doğrudan satış etkisi:</strong> Video içerikli ürün sayfalarının dönüşüm oranı, videosuz sayfalara göre ortalama %80 daha yüksektir (Wyzowl, 2026).</li>
             <li><strong>Müşteri kazanım maliyeti (CPA):</strong> Profesyonel video kampanyalarıyla edinilen müşterilerin CPA&apos;sı, geleneksel dijital reklamlara göre %30-40 daha düşüktür.</li>
             <li><strong>Marka bilinirliği:</strong> Tutarlı video içerik stratejisi uygulayan markalar, 6 ay içinde organik arama trafiğinde ortalama %150 artış görür.</li>
-            <li><strong>İçerik ömrü:</strong> Bir kurumsal tanıtım filmi ortalama 2-3 yıl boyunca kullanılabilir. Aylık maliyete böldüğünüzde, yatırımın ne kadar verimli olduğu ortaya çıkar.</li>
+            <li><strong>İçerik ömrü:</strong> Bir <Link href="/hizmetler/kurumsal-tanitim-filmi">kurumsal tanıtım filmi</Link> ortalama 2-3 yıl boyunca kullanılabilir. Aylık maliyete böldüğünüzde, yatırımın ne kadar verimli olduğu ortaya çıkar.</li>
           </ul>
 
           <h2 className="text-3xl mt-12 mb-6">5. Bütçenizi Optimize Etmenin 5 Yolu</h2>
@@ -130,6 +121,8 @@ export default function BlogPost() {
             </p>
           </div>
         </div>
+
+        <RelatedPosts slug="video-produksiyon-maliyetleri-2026" />
 
         <div className="mt-16 pt-10 border-t border-border">
           <div className="bg-card border border-white/5 p-8 rounded-3xl text-center shadow-2xl">

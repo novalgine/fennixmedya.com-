@@ -1,28 +1,19 @@
-import type { Metadata } from "next";
-import { ArrowLeft, Clock, Calendar, User, ChevronRight } from "lucide-react";
+import { Clock, Calendar, User } from "lucide-react";
 import Link from "next/link";
+import Breadcrumbs from "@/components/Breadcrumbs";
+import RelatedPosts from "@/components/RelatedPosts";
+import { createBlogMetadata } from "@/data/blog-posts";
 import WizardCta from "@/components/WizardCta";
 import TldrSummary from "@/components/TldrSummary";
 import LastUpdated from "@/components/LastUpdated";
 
-export const metadata: Metadata = {
-  title: "Şirketler İçin Video Pazarlama Stratejisi (2026) — Fennix Medya",
-  description: "2026 yılında B2B ve B2C şirketlerin kullanması gereken en etkili video pazarlama stratejileri ve trendleri.",
-  alternates: { canonical: "https://fennixmedya.com/blog/sirketler-icin-video-pazarlama-stratejisi-2026" },
-};
+export const metadata = createBlogMetadata("sirketler-icin-video-pazarlama-stratejisi-2026");
 
 export default function BlogPost() {
   return (
     <div className="min-h-screen bg-background pt-16 pb-20">
       <div className="max-w-3xl mx-auto px-6">
-        {/* Breadcrumb */}
-        <div className="flex items-center gap-2 text-sm text-muted-foreground mb-8">
-          <Link href="/blog" className="hover:text-primary transition-colors flex items-center gap-1">
-            <ArrowLeft className="w-4 h-4" /> Blog
-          </Link>
-          <ChevronRight className="w-4 h-4" />
-          <span className="truncate">{"Şirketler İçin Video Pazarlama Stratejisi (2026)"}</span>
-        </div>
+        <Breadcrumbs items={[{ name: "Blog", href: "/blog" }, { name: "Şirketler İçin Video Pazarlama Stratejisi (2026)" }]} />
 
         <header className="mb-12">
           <h1 className="font-heading text-3xl md:text-5xl font-black mb-6 leading-tight">
@@ -59,7 +50,7 @@ export default function BlogPost() {
             TikTok, Instagram Reels ve YouTube Shorts gibi platformlar sayesinde kullanıcıların dikkat süresi giderek kısalıyor. <strong className="text-foreground">Ortalama dikkat süresi 2026'da 6.8 saniyeye kadar düştü.</strong> Bu, şirketlerin mesajlarını ultra-kısa ve etkili bir şekilde iletmesi gerektiği anlamına geliyor.
           </p>
           <p>
-            Kısa form video, özellikle <strong>farkındalık aşamasında (Top of Funnel)</strong> inanılmaz etkili. Ürününüzü veya hizmetinizi ilk 3 saniyede etkileyici bir şekilde sunan dikey videolar (9:16 format), organik erişimin anahtarıdır. 2026'da en başarılı markalar, haftada en az 5-7 kısa form içerik yayınlıyor.
+            Kısa form video, özellikle <strong>farkındalık aşamasında (Top of Funnel)</strong> inanılmaz etkili. Ürününüzü veya hizmetinizi <Link href="/blog/videolarda-ilk-3-saniye-kurali-hook">ilk 3 saniye</Link>de etkileyici bir şekilde sunan dikey videolar (9:16 format), organik erişimin anahtarıdır. 2026'da en başarılı markalar, haftada en az 5-7 kısa form içerik yayınlıyor.
           </p>
           <p>
             <strong>Pratik uygulama:</strong> Her kısa form videonuzu bir &quot;mikro-hikaye&quot; olarak düşünün. Sorun → Çözüm → Sonuç formatı, 15-30 saniyelik videolarda bile güçlü bir anlatı oluşturur. Örneğin, &quot;Müşterilerimiz bize geldiğinde web sitelerinin dönüşüm oranı %1.2'ydi. 3 video sonra %4.7'ye çıktı&quot; — bu tip somut sonuçlar gösteren içerikler organik olarak yayılır.
@@ -84,7 +75,7 @@ export default function BlogPost() {
 
           <h2 className="text-3xl mt-12 mb-6">3. Video Funnel (Video Hunisi) Kurulumu</h2>
           <p>
-            Sadece farkındalık yaratmak yetmez. Şirketlerin, izleyicileri müşteriye dönüştürecek <strong className="text-foreground">sistematik bir video hunisi (video funnel)</strong> kurması gerekiyor. 2026'da en başarılı şirketler, her aşama için farklı türde video içerikler üretiyor.
+            Sadece farkındalık yaratmak yetmez. Şirketlerin, izleyicileri müşteriye dönüştürecek <strong className="text-foreground">sistematik bir video hunisi (<Link href="/blog/high-ticket-satislar-icin-video-funnel">video funnel</Link>)</strong> kurması gerekiyor. 2026'da en başarılı şirketler, her aşama için farklı türde video içerikler üretiyor.
           </p>
           <p>
             <strong>Aşama 1 — Farkındalık (TOFU - Top of Funnel):</strong> Soğuk kitleye yönelik, genel sorunları ele alan kısa form içerikler. Bu aşamadaki videolar satış yapmaz, dikkat çeker ve merak uyandırır. Format: TikTok, Reels, Shorts (15-60 saniye).
@@ -174,11 +165,13 @@ export default function BlogPost() {
           </div>
         </div>
 
+        <RelatedPosts slug="sirketler-icin-video-pazarlama-stratejisi-2026" />
+
         <div className="mt-16 pt-10 border-t border-border">
           <div className="bg-card border border-white/5 p-8 rounded-3xl text-center shadow-2xl">
             <h3 className="font-heading text-2xl font-bold mb-4">Markanızın hikayesini anlatmaya hazır mısınız?</h3>
             <p className="text-muted-foreground mb-8">
-              Stratejik içerik üretimi ve profesyonel video prodüksiyonu ile rakiplerinizin bir adım önüne geçin.
+              Stratejik içerik üretimi ve <Link href="/hizmetler/sosyal-medya-video">profesyonel video prodüksiyon</Link>u ile rakiplerinizin bir adım önüne geçin.
             </p>
             <WizardCta text="Hemen Ücretsiz Strateji Görüşmesi Al" />
           </div>

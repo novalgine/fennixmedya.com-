@@ -1,29 +1,20 @@
-import type { Metadata } from "next";
-import { ArrowLeft, Clock, Calendar, User, ChevronRight } from "lucide-react";
+import { Clock, Calendar, User } from "lucide-react";
 import Link from "next/link";
+import Breadcrumbs from "@/components/Breadcrumbs";
+import RelatedPosts from "@/components/RelatedPosts";
+import { createBlogMetadata } from "@/data/blog-posts";
 import Image from "next/image";
 import WizardCta from "@/components/WizardCta";
 import TldrSummary from "@/components/TldrSummary";
 import LastUpdated from "@/components/LastUpdated";
 
-export const metadata: Metadata = {
-  title: "Gayrimenkul Satışlarında Video Prodüksiyonun Gücü — Fennix Medya",
-  description: "Lüks konut ve ticari gayrimenkul satışlarında video içeriklerle satış sürecini hızlandırma rehberi.",
-  alternates: { canonical: "https://fennixmedya.com/blog/gayrimenkul-satislarinda-video-produksiyon" },
-};
+export const metadata = createBlogMetadata("gayrimenkul-satislarinda-video-produksiyon");
 
 export default function BlogPost() {
   return (
     <div className="min-h-screen bg-background pt-16 pb-20">
       <div className="max-w-3xl mx-auto px-6">
-        {/* Breadcrumb */}
-        <div className="flex items-center gap-2 text-sm text-muted-foreground mb-8">
-          <Link href="/blog" className="hover:text-primary transition-colors flex items-center gap-1">
-            <ArrowLeft className="w-4 h-4" /> Blog
-          </Link>
-          <ChevronRight className="w-4 h-4" />
-          <span className="truncate">{"Gayrimenkul Satışlarında Video Prodüksiyonun Gücü"}</span>
-        </div>
+        <Breadcrumbs items={[{ name: "Blog", href: "/blog" }, { name: "Gayrimenkul Satışlarında Video Prodüksiyonun Gücü" }]} />
 
         <header className="mb-12">
           <h1 className="font-heading text-3xl md:text-5xl font-black mb-6 leading-tight">
@@ -51,7 +42,7 @@ export default function BlogPost() {
             Gayrimenkul sektörü, devasa bütçelerin ve yoğun duyguların birleştiği, dünyanın en rekabetçi alanlarından biridir. İster deniz manzaralı bir yalı, ister şehir merkezinde ultra lüks bir penthouse, ister ticari bir plaza katı satıyor olun; potansiyel müşterinizi tek bir fotoğrafla ikna etme devri çoktan kapandı. 
           </p>
           <p>
-            Alıcılar artık statik görseller yerine, o mekanda yaşamayı hayal edebilecekleri dinamik bir deneyim arıyorlar. İnternetteki binlerce ilan arasında "kaydırıp geçilmeyen" ve doğrudan telefonunuzun çalmasını sağlayan tek bir silah var: <strong>Profesyonel Video Prodüksiyonu.</strong>
+            Alıcılar artık statik görseller yerine, o mekanda yaşamayı hayal edebilecekleri dinamik bir deneyim arıyorlar. İnternetteki binlerce ilan arasında "kaydırıp geçilmeyen" ve doğrudan telefonunuzun çalmasını sağlayan tek bir silah var: <strong><Link href="/hizmetler/kurumsal-tanitim-filmi">Profesyonel Video Prodüksiyon</Link>u.</strong>
           </p>
 
           <h2 className="text-3xl mt-12 mb-6">1. Mülkünüzün Değerini Video Kalitesi Belirler</h2>
@@ -95,6 +86,8 @@ export default function BlogPost() {
             </p>
           </div>
         </div>
+
+        <RelatedPosts slug="gayrimenkul-satislarinda-video-produksiyon" />
 
         <div className="mt-16 pt-10 border-t border-border">
           <div className="bg-card border border-white/5 p-8 rounded-3xl text-center shadow-2xl">

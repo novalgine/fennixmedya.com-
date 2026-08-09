@@ -1,28 +1,19 @@
-import type { Metadata } from "next";
-import { ArrowLeft, Clock, Calendar, User, ChevronRight } from "lucide-react";
+import { Clock, Calendar, User } from "lucide-react";
 import Link from "next/link";
+import Breadcrumbs from "@/components/Breadcrumbs";
+import RelatedPosts from "@/components/RelatedPosts";
+import { createBlogMetadata } from "@/data/blog-posts";
 import WizardCta from "@/components/WizardCta";
 import TldrSummary from "@/components/TldrSummary";
 import LastUpdated from "@/components/LastUpdated";
 
-export const metadata: Metadata = {
-  title: "Yapay Zeka ile Video Üretimi: AI Araçları mı Profesyonel Ekip mi?",
-  description: "2026'da yapay zeka video araçları profesyonel prodüksiyon ekiplerinin yerini alabilir mi? Sora, Runway ve Kling gibi AI araçlarını gerçek prodüksiyonla karşılaştırıyoruz.",
-  alternates: { canonical: "https://fennixmedya.com/blog/yapay-zeka-ile-video-uretimi" },
-};
+export const metadata = createBlogMetadata("yapay-zeka-ile-video-uretimi");
 
 export default function BlogPost() {
   return (
     <div className="min-h-screen bg-background pt-16 pb-20">
       <div className="max-w-3xl mx-auto px-6">
-        {/* Breadcrumb */}
-        <div className="flex items-center gap-2 text-sm text-muted-foreground mb-8">
-          <Link href="/blog" className="hover:text-primary transition-colors flex items-center gap-1">
-            <ArrowLeft className="w-4 h-4" /> Blog
-          </Link>
-          <ChevronRight className="w-4 h-4" />
-          <span className="truncate">{"Yapay Zeka ile Video Üretimi"}</span>
-        </div>
+        <Breadcrumbs items={[{ name: "Blog", href: "/blog" }, { name: "Yapay Zeka ile Video Üretimi: AI Araçları mı Profesyonel Ekip mi?" }]} />
 
         <header className="mb-12">
           <h1 className="font-heading text-3xl md:text-5xl font-black mb-6 leading-tight">
@@ -70,7 +61,7 @@ export default function BlogPost() {
             Tüm bu ilerlemelere rağmen, AI video üretiminin <strong className="text-foreground">kritik sınırları</strong> bulunuyor ve bu sınırlar, marka iletişimi söz konusu olduğunda göz ardı edilemez:
           </p>
           <ul className="space-y-3">
-            <li><strong>Otantik insan performansı:</strong> Gerçek bir CEO&apos;nun kamera karşısında tutku ve vizyonunu anlatması, bir müşterinin samimi referansı... Bu tür otantik insan anları AI ile taklit edilemez. İzleyiciler sahte ile gerçeği bilinçaltında ayırt edebiliyor.</li>
+            <li><strong>Otantik insan performansı:</strong> Gerçek bir CEO&apos;nun <Link href="/blog/kamera-karsisinda-rahat-konusma-teknikleri">kamera karşısında</Link> tutku ve vizyonunu anlatması, bir müşterinin samimi referansı... Bu tür otantik insan anları AI ile taklit edilemez. İzleyiciler sahte ile gerçeği bilinçaltında ayırt edebiliyor.</li>
             <li><strong>Marka tutarlılığı:</strong> AI araçları her seferinde farklı bir &quot;yorum&quot; üretir. Markanızın renk paleti, tipografi, çekim tarzı ve ton tutarlılığını sağlamak, insan gözetimi olmadan imkânsızdır.</li>
             <li><strong>Duygusal hikaye anlatımı:</strong> İyi bir kurumsal film veya belgesel, izleyicide derin bir duygusal bağ kurar. Bu bağ, yönetmenin vizyonu, oyuncunun performansı ve ses tasarımcısının inceliğiyle oluşur — algoritmalarla değil.</li>
             <li><strong>Gerçek mekân ve ürün çekimleri:</strong> Fabrikanızın gerçek görüntüleri, ürününüzün elle tutulur detayları, ofisinizin atmosferi... Bunlar AI ile üretilemez çünkü izleyici gerçek ile sahtesi arasındaki farkı hisseder.</li>
@@ -127,6 +118,8 @@ export default function BlogPost() {
             </p>
           </div>
         </div>
+
+        <RelatedPosts slug="yapay-zeka-ile-video-uretimi" />
 
         <div className="mt-16 pt-10 border-t border-border">
           <div className="bg-card border border-white/5 p-8 rounded-3xl text-center shadow-2xl">

@@ -1,28 +1,19 @@
-import type { Metadata } from "next";
-import { ArrowLeft, Clock, Calendar, User, ChevronRight } from "lucide-react";
+import { Clock, Calendar, User } from "lucide-react";
 import Link from "next/link";
+import Breadcrumbs from "@/components/Breadcrumbs";
+import RelatedPosts from "@/components/RelatedPosts";
+import { createBlogMetadata } from "@/data/blog-posts";
 import WizardCta from "@/components/WizardCta";
 import TldrSummary from "@/components/TldrSummary";
 import LastUpdated from "@/components/LastUpdated";
 
-export const metadata: Metadata = {
-  title: "E-Ticaret Ürün Videoları: Satışları Artıran Teknikler (2026)",
-  description: "E-ticaret sitelerinde ürün videoları satışları nasıl artırır? Dönüşüm oranını yükselten video türleri, çekim teknikleri ve platform stratejileri.",
-  alternates: { canonical: "https://fennixmedya.com/blog/e-ticaret-urun-videolari" },
-};
+export const metadata = createBlogMetadata("e-ticaret-urun-videolari");
 
 export default function BlogPost() {
   return (
     <div className="min-h-screen bg-background pt-16 pb-20">
       <div className="max-w-3xl mx-auto px-6">
-        {/* Breadcrumb */}
-        <div className="flex items-center gap-2 text-sm text-muted-foreground mb-8">
-          <Link href="/blog" className="hover:text-primary transition-colors flex items-center gap-1">
-            <ArrowLeft className="w-4 h-4" /> Blog
-          </Link>
-          <ChevronRight className="w-4 h-4" />
-          <span className="truncate">{"E-Ticaret Ürün Videoları"}</span>
-        </div>
+        <Breadcrumbs items={[{ name: "Blog", href: "/blog" }, { name: "E-Ticaret Ürün Videoları: Satışları Artıran Teknikler (2026)" }]} />
 
         <header className="mb-12">
           <h1 className="font-heading text-3xl md:text-5xl font-black mb-6 leading-tight">
@@ -125,10 +116,12 @@ export default function BlogPost() {
           <div className="bg-gradient-to-r from-primary/10 to-transparent border-l-4 border-primary p-6 mt-12 rounded-r-xl">
             <h3 className="font-bold text-2xl text-foreground mb-3">Video, E-Ticarette Artık Opsiyonel Değil</h3>
             <p className="m-0 text-muted-foreground text-base">
-              2026&apos;da ürün videosu olmayan bir e-ticaret sayfası, vitrini olmayan bir mağaza gibidir. Müşteriler artık fotoğraflarla yetinmiyor — ürünü hareket halinde görmek, dokunmadan hissetmek, deneyimlemeden deneyimlemek istiyor. <strong>Video, bu dijital deneyim boşluğunu kapatır.</strong> Profesyonel çekilmiş ürün videoları yatırımınızı en hızlı geri döndüren pazarlama aracıdır.
+              2026&apos;da ürün videosu olmayan bir e-ticaret sayfası, vitrini olmayan bir mağaza gibidir. Müşteriler artık fotoğraflarla yetinmiyor — ürünü hareket halinde görmek, dokunmadan hissetmek, deneyimlemeden deneyimlemek istiyor. <strong>Video, bu dijital deneyim boşluğunu kapatır.</strong> <Link href="/hizmetler/sosyal-medya-video">Profesyonel çekilmiş ürün videoları</Link> yatırımınızı en hızlı geri döndüren pazarlama aracıdır.
             </p>
           </div>
         </div>
+
+        <RelatedPosts slug="e-ticaret-urun-videolari" />
 
         <div className="mt-16 pt-10 border-t border-border">
           <div className="bg-card border border-white/5 p-8 rounded-3xl text-center shadow-2xl">
