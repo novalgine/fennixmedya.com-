@@ -1,9 +1,10 @@
 import HeroSection from "@/components/HeroSection";
-import ScrollProgress from "@/components/ScrollProgress";
 import TrustCounterBand from "@/components/TrustCounterBand";
 import ClientMarquee from "@/components/ClientMarquee";
 import Reveal from "@/components/Reveal";
 import SocialProofSection from "@/components/SocialProofSection";
+import TimelineHud from "@/components/editor/TimelineHud";
+import ClipCut from "@/components/editor/ClipCut";
 import dynamic from "next/dynamic";
 
 const ProblemSection = dynamic(() => import("@/components/ProblemSection"));
@@ -16,36 +17,53 @@ const StickyCTA = dynamic(() => import("@/components/StickyCTA"));
 const TestimonialsStrip = dynamic(() => import("@/components/TestimonialsStrip"));
 const MidPageCTA = dynamic(() => import("@/components/MidPageCTA"));
 
+// Kurgu masası: alt timeline'daki klipler
+const CLIPS = [
+  { id: "acilis", label: "Açılış", track: "V1" as const },
+  { id: "sorun", label: "Sorun", track: "V1" as const },
+  { id: "portfolyo", label: "İşler", track: "V1" as const },
+  { id: "surec", label: "Süreç", track: "V1" as const },
+  { id: "referanslar", label: "Referanslar", track: "A1" as const },
+  { id: "basvuru", label: "Teklif", track: "V1" as const },
+];
+
 export default function HomePage() {
   return (
-    <div className="min-h-[100dvh] bg-background">
+    <div className="min-h-[100dvh] bg-background pb-14">
       <div className="film-grain" />
-      <ScrollProgress />
 
-      {/* 01 Açılış — mesaj + kanıt */}
-      <HeroSection />
+      {/* AÇILIŞ — program monitörü */}
+      <div id="acilis">
+        <HeroSection />
+      </div>
       <ClientMarquee />
 
-      {/* Sahne 01 — Sorun */}
-      <ProblemSection />
+      <ClipCut track="V1" name="Sahne 01 — Sorun" tc="00:00:08:00 — 00:00:24:00" />
+      <div id="sorun">
+        <ProblemSection />
+      </div>
 
-      {/* Sahne 02 — Kanıt */}
+      <ClipCut track="V1" name="Sahne 02 — Kanıt" tc="00:00:24:00 — 00:00:52:00" />
       <FilmStripWorkRow />
       <TrustCounterBand />
       <Reveal><SocialProofSection /></Reveal>
 
-      {/* Sahne 03 — Süreç */}
-      <ProcessSection />
+      <ClipCut track="V1" name="Sahne 03 — Süreç" tc="00:00:52:00 — 00:01:10:00" />
+      <div id="surec">
+        <ProcessSection />
+      </div>
       <MidPageCTA />
 
-      {/* İnsan kanıtı + itirazlar */}
+      <ClipCut track="A1" name="Ses Kaydı — Müşteriler" tc="00:01:10:00 — 00:01:26:00" />
       <Reveal><TestimonialsStrip /></Reveal>
       <GuaranteesSection />
       <FAQSection />
 
-      {/* Kapanış */}
+      <ClipCut track="V1" name="Kapanış" tc="00:01:26:00 — 00:01:40:00" />
       <FinalCTASection />
+
       <StickyCTA />
+      <TimelineHud clips={CLIPS} />
     </div>
   );
 }

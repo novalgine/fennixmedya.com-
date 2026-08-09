@@ -68,7 +68,7 @@ const StickyCTA = () => {
   if (!visible || formInView) return null;
 
   return (
-    <div className="fixed bottom-6 right-4 sm:right-8 z-50 animate-fade-in-up flex items-center gap-2.5">
+    <div className="fixed bottom-14 md:bottom-[4.5rem] right-4 sm:right-8 z-50 animate-fade-in-up flex items-center gap-2.5">
       {/* Mobile: Phone Call Link */}
       {isMobile && (
         <a

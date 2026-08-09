@@ -35,7 +35,13 @@ function PhoneFrame() {
 
   return (
     <div className="relative w-[220px] sm:w-[250px] lg:w-[290px] mx-auto">
+      <p className="mb-3 text-center font-mono text-[10px] tracking-widest text-muted-foreground/60 uppercase">
+        Kaynak · VAVEYLA_HOME.MP4
+      </p>
       <div className="relative aspect-[9/16] rounded-[2.5rem] border border-white/15 ring-1 ring-white/5 shadow-2xl shadow-black/60 overflow-hidden bg-black">
+        <span className="absolute top-4 right-4 z-10 flex items-center gap-1.5 font-mono text-[9px] tracking-widest text-white/80">
+          <span className="w-1.5 h-1.5 rounded-full bg-danger animate-pulse" aria-hidden /> REC
+        </span>
         {/* Çentik */}
         <div className="absolute top-2.5 left-1/2 -translate-x-1/2 w-20 h-5 bg-black rounded-full z-10 border border-white/10" />
         <video
