@@ -58,7 +58,7 @@ const FinalCTASection = () => {
 
         <MagneticWrapper strength={0.3}>
           <button
-            onClick={openWizard}
+            onClick={() => openWizard()}
             className="bg-gradient-gold text-primary-foreground font-heading font-bold text-2xl md:text-3xl px-12 py-6 rounded-2xl hover:scale-[1.02] active:scale-[0.98] transition-all shadow-[0_0_40px_rgba(212,164,74,0.3)] cursor-pointer relative overflow-hidden group inline-flex"
           >
             <span className="relative z-10 transition-transform group-hover:translate-x-2 inline-block">

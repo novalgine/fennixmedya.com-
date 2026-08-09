@@ -1,12 +1,7 @@
 "use client";
 
-import { useState } from "react";
-import dynamic from "next/dynamic";
-
-const FunnelWizardModal = dynamic(() => import("@/components/FunnelWizardModal"), {
-  ssr: false,
-});
 import { ArrowRight } from "lucide-react";
+import { useWizard } from "@/components/WizardContext";
 
 interface WizardCtaProps {
   text?: string;
@@ -14,17 +9,14 @@ interface WizardCtaProps {
 }
 
 export default function WizardCta({ text = "Ücretsiz Strateji Görüşmesi Al", className }: WizardCtaProps) {
-  const [isWizardOpen, setIsWizardOpen] = useState(false);
+  const { openWizard } = useWizard();
 
   return (
-    <>
-      <button
-        onClick={() => setIsWizardOpen(true)}
-        className={className || "inline-flex items-center justify-center gap-2 bg-gradient-gold text-primary-foreground font-heading font-bold text-lg px-8 py-4 rounded-xl hover:scale-105 active:scale-95 transition-all shadow-lg shadow-gold/20"}
-      >
-        {text} <ArrowRight className="w-5 h-5" />
-      </button>
-      {isWizardOpen && <FunnelWizardModal isOpen={isWizardOpen} onClose={() => setIsWizardOpen(false)} />}
-    </>
+    <button
+      onClick={() => openWizard("funnel")}
+      className={className || "inline-flex items-center justify-center gap-2 bg-gradient-gold text-primary-foreground font-heading font-bold text-lg px-8 py-4 rounded-xl hover:scale-105 active:scale-95 transition-all shadow-lg shadow-gold/20"}
+    >
+      {text} <ArrowRight className="w-5 h-5" />
+    </button>
   );
 }
