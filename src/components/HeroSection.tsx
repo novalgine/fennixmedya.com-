@@ -5,7 +5,8 @@ import heroBg from "@/assets/hero-bg.webp";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { CAPACITY_CONFIG } from "@/config/capacity";
-import { X, Play, ChevronDown, Star, Clock, CheckCircle } from "lucide-react";
+import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
+import { Play, ChevronDown, Star, Clock, CheckCircle } from "lucide-react";
 import Link from "next/link";
 
 if (typeof window !== "undefined") {
@@ -19,7 +20,6 @@ const HeroSection = () => {
   const containerRef = useRef<HTMLElement>(null);
   const bgRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
-  const videoModalRef = useRef<HTMLDivElement>(null);
   const [greeting, setGreeting] = useState("");
   const [showVideo, setShowVideo] = useState(false);
 
@@ -50,19 +50,6 @@ const HeroSection = () => {
     return () => ctx.revert();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-
-  // Handle Video Modal GSAP Animation
-  useEffect(() => {
-    if (showVideo) {
-      document.body.style.overflow = "hidden";
-      gsap.fromTo(videoModalRef.current,
-        { opacity: 0, scale: 0.95 },
-        { opacity: 1, scale: 1, duration: 0.4, ease: "power2.out" }
-      );
-    } else {
-      document.body.style.overflow = "auto";
-    }
-  }, [showVideo]);
 
   // Lazy-load hero background video only when in viewport
   const heroVideoRef = useRef<HTMLVideoElement>(null);
@@ -256,46 +243,30 @@ const HeroSection = () => {
         <ChevronDown className="w-5 h-5 text-muted-foreground" />
       </div>
 
-      {/* Modern Video Modal Overlay */}
-      {showVideo && (
-        <div
-          className="fixed inset-0 z-[100] flex flex-col items-center justify-center p-4 md:p-10 backdrop-blur-2xl bg-black/95"
-          onClick={() => setShowVideo(false)}
-        >
-          <div
-            ref={videoModalRef}
-            className="relative w-full max-w-6xl flex flex-col items-center"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-[0_0_100px_rgba(232,106,31,0.2)] border border-white/10 mb-6">
-              <button
-                onClick={() => setShowVideo(false)}
-                aria-label="Videoyu Kapat"
-                className="absolute top-4 right-4 z-[60] w-12 h-12 rounded-full bg-black/50 backdrop-blur-md border border-white/10 flex items-center justify-center text-white hover:bg-white/20 transition-all cursor-pointer"
-              >
-                <X className="w-6 h-6 text-white" />
-              </button>
-              <iframe
-                src="https://www.youtube.com/embed/t1edyqgT1UQ?autoplay=1&mute=0&rel=0&start=1&modestbranding=1"
-                title="Fennix Medya - Vizyonumuz"
-                className="w-full h-full border-0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              ></iframe>
-            </div>
-            
-            <button
-              onClick={() => {
-                setShowVideo(false);
-                handleCTAClick();
-              }}
-              className="bg-gradient-gold text-primary-foreground font-heading font-bold text-lg px-8 py-4 rounded-xl transition-all shadow-lg shadow-gold/20 hover:scale-105 cursor-pointer flex items-center gap-2"
-            >
-              Şimdi Randevu Al →
-            </button>
+      {/* VSL Video Dialog */}
+      <Dialog open={showVideo} onOpenChange={setShowVideo}>
+        <DialogContent className="max-w-6xl bg-transparent border-0 shadow-none p-0">
+          <DialogTitle className="sr-only">Fennix Medya - Vizyonumuz</DialogTitle>
+          <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-[0_0_100px_rgba(232,106,31,0.2)] border border-white/10 mb-6">
+            <iframe
+              src="https://www.youtube.com/embed/t1edyqgT1UQ?autoplay=1&mute=0&rel=0&start=1&modestbranding=1"
+              title="Fennix Medya - Vizyonumuz"
+              className="w-full h-full border-0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
           </div>
-        </div>
-      )}
+          <button
+            onClick={() => {
+              setShowVideo(false);
+              handleCTAClick();
+            }}
+            className="mx-auto bg-gradient-gold text-primary-foreground font-heading font-bold text-lg px-8 py-4 rounded-xl transition-all shadow-lg shadow-gold/20 hover:scale-105 cursor-pointer flex items-center gap-2"
+          >
+            Şimdi Randevu Al →
+          </button>
+        </DialogContent>
+      </Dialog>
     </section>
   );
 };

@@ -1,60 +1,7 @@
 "use client";
 import { useState, useRef, useCallback, useEffect } from "react";
-import { Trophy, Zap, LayoutList, ChevronLeft, ChevronRight, Play, ExternalLink, Users, Star, X } from "lucide-react";
-
-const VideoModal = ({
-    isOpen,
-    onClose,
-    videoSrc,
-    name,
-}: {
-    isOpen: boolean;
-    onClose: () => void;
-    videoSrc: string;
-    name: string;
-}) => {
-    useEffect(() => {
-        if (!isOpen) return;
-        const handler = (e: KeyboardEvent) => { if (e.key === "Escape") onClose(); };
-        document.addEventListener("keydown", handler);
-        return () => document.removeEventListener("keydown", handler);
-    }, [isOpen, onClose]);
-
-    if (!isOpen) return null;
-
-    return (
-        <div
-            className="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 backdrop-blur-md animate-[fadeSlideIn_0.3s_ease-out]"
-            onClick={onClose}
-        >
-            <div
-                className="relative w-[95vw] max-w-[480px] rounded-2xl overflow-hidden shadow-2xl border border-border/20 bg-black"
-                onClick={(e) => e.stopPropagation()}
-            >
-                <button
-                    onClick={onClose}
-                    className="absolute top-4 right-4 z-10 w-10 h-10 rounded-full bg-black/50 backdrop-blur-lg flex items-center justify-center text-white border border-white/10 hover:bg-white/20 transition-all cursor-pointer"
-                    aria-label="Kapat"
-                >
-                    <X className="w-5 h-5" />
-                </button>
-                <div className="w-full aspect-[9/16] bg-black flex items-center justify-center relative">
-                    <video
-                        src={videoSrc}
-                        className="w-full h-full object-cover"
-                        controls
-                        autoPlay
-                        playsInline
-                        preload="metadata"
-                        title={`${name} referans videosu`}
-                    >
-                        Tarayıcınız video etiketini desteklemiyor.
-                    </video>
-                </div>
-            </div>
-        </div>
-    );
-};
+import VideoLightbox from "@/components/VideoLightbox";
+import { Trophy, Zap, LayoutList, ChevronLeft, ChevronRight, Play, ExternalLink, Users, Star } from "lucide-react";
 
 /* ── Animasyonlu İstatistik Bileşeni ── */
 const AnimatedStat = ({ value }: { value: string }) => {
@@ -378,11 +325,11 @@ export default function SocialProofCarousel() {
           </div>
         </div>
 
-      <VideoModal
-          isOpen={activeVideo !== null}
-          onClose={closeModal}
-          videoSrc={activeVideo?.src ?? ""}
-          name={activeVideo?.name ?? ""}
+      <VideoLightbox
+          open={activeVideo !== null}
+          onOpenChange={(o) => !o && setActiveVideo(null)}
+          src={activeVideo?.src ?? ""}
+          title={`${activeVideo?.name ?? ""} referans videosu`}
       />
     </>
   );
