@@ -1,14 +1,17 @@
 "use client";
 import { Mail, MapPin } from "lucide-react";
 import Link from "next/link";
+import CtaButton from "@/components/CtaButton";
+import { useWizard } from "@/components/WizardContext";
 
 const Footer = () => {
+  const { openWizard } = useWizard();
   return (
     <footer className="py-14 bg-background border-t border-border/50">
       <div className="max-w-5xl mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 md:gap-8 items-start">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-10 md:gap-8 items-start">
           {/* Brand */}
-          <div className="md:col-span-1">
+          <div className="md:col-span-2">
             <h3 className="font-heading text-xl font-bold text-foreground uppercase tracking-widest mb-2">
               Fennix Medya
             </h3>
@@ -18,12 +21,16 @@ const Footer = () => {
             <p className="text-xs text-muted-foreground/60 mt-2 leading-relaxed max-w-xs">
               High-ticket profesyoneller ve markalar için sinematik içerik üretimi, sosyal medya stratejisi ve profesyonel video çekim hizmetleri.
             </p>
+            <CtaButton variant="secondary" size="md" onClick={() => openWizard()} className="mt-5 text-sm">
+              Ücretsiz Strateji Görüşmesi Al →
+            </CtaButton>
           </div>
 
           {/* Menü & Hizmetler */}
           <div className="space-y-3">
             <h4 className="font-heading text-sm font-bold uppercase tracking-widest text-foreground/50 mb-1">Hizmetlerimiz</h4>
             <div className="flex flex-col gap-2">
+              <Link href="/hizmetler" className="text-muted-foreground hover:text-primary transition-colors text-sm font-medium">Tüm Hizmetler</Link>
               <Link href="/hizmetler/sosyal-medya-video" className="text-muted-foreground hover:text-primary transition-colors text-sm font-medium">Sosyal Medya Videosu</Link>
               <Link href="/hizmetler/kurumsal-tanitim-filmi" className="text-muted-foreground hover:text-primary transition-colors text-sm font-medium">Kurumsal Tanıtım Filmi</Link>
               <Link href="/hizmetler/youtube-icerik-uretimi" className="text-muted-foreground hover:text-primary transition-colors text-sm font-medium">YouTube İçerik Üretimi</Link>
@@ -31,6 +38,7 @@ const Footer = () => {
               <div className="h-px w-8 bg-border/50 my-1"></div>
               <Link href="/blog" className="text-muted-foreground hover:text-primary transition-colors text-sm font-medium">Blog & Rehberler</Link>
               <Link href="/portfolyo" className="text-muted-foreground hover:text-primary transition-colors text-sm font-medium">Portfolyo</Link>
+              <Link href="/hakkimizda" className="text-muted-foreground hover:text-primary transition-colors text-sm font-medium">Hakkımızda</Link>
             </div>
           </div>
 
@@ -79,6 +87,7 @@ const Footer = () => {
                 href="https://x.com/semih3445"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="X (Twitter) profilimizi ziyaret edin"
                 className="w-10 h-10 rounded-xl bg-card border border-border/50 flex items-center justify-center hover:border-primary/50 hover:bg-primary/5 transition-all group"
               >
                 <svg className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors" fill="currentColor" viewBox="0 0 24 24">
@@ -89,6 +98,7 @@ const Footer = () => {
                 href="https://www.linkedin.com/in/semih-hasanoğlu-abaa28137/"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="LinkedIn profilimizi ziyaret edin"
                 className="w-10 h-10 rounded-xl bg-card border border-border/50 flex items-center justify-center hover:border-primary/50 hover:bg-primary/5 transition-all group"
               >
                 <svg className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" fill="currentColor" viewBox="0 0 24 24">
@@ -101,27 +111,27 @@ const Footer = () => {
 
         {/* Bottom bar */}
         <div className="mt-10 pt-6 border-t border-border/30 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-muted-foreground/50">
+          <p className="text-xs text-muted-foreground/70">
             © {new Date().getFullYear()} Fennix Medya. Tüm hakları saklıdır.
           </p>
           <div className="flex items-center gap-4 flex-wrap justify-center">
             <Link
               href="/kvkk-aydinlatma-metni"
-              className="text-xs text-muted-foreground/40 hover:text-muted-foreground transition-colors"
+              className="text-xs text-muted-foreground/70 hover:text-foreground transition-colors"
             >
               KVKK Aydınlatma Metni
             </Link>
             <span className="text-muted-foreground/20">•</span>
             <Link
               href="/gizlilik-politikasi"
-              className="text-xs text-muted-foreground/40 hover:text-muted-foreground transition-colors"
+              className="text-xs text-muted-foreground/70 hover:text-foreground transition-colors"
             >
               Gizlilik Politikası
             </Link>
             <span className="text-muted-foreground/20">•</span>
             <Link
               href="/cerez-politikasi"
-              className="text-xs text-muted-foreground/40 hover:text-muted-foreground transition-colors"
+              className="text-xs text-muted-foreground/70 hover:text-foreground transition-colors"
             >
               Çerez Politikası
             </Link>

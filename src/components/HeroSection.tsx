@@ -122,9 +122,10 @@ const HeroSection = () => {
         </p>
 
         {/* Video Sales Letter (VSL) Section - Premium Light Embed */}
+        <div className="w-full max-w-4xl mx-auto p-px rounded-2xl bg-gradient-to-b from-white/20 via-white/5 to-transparent mb-10">
         <div
           onClick={handleVideoClick}
-          className="relative w-full max-w-4xl mx-auto rounded-2xl overflow-hidden shadow-2xl shadow-gold/20 border border-white/10 mb-10 transition-all duration-500 ease-out group cursor-pointer"
+          className="relative w-full rounded-[15px] overflow-hidden shadow-2xl shadow-gold/20 transition-all duration-500 ease-out group cursor-pointer"
         >
           <div className="aspect-video bg-[#0A0A0A] relative flex items-center justify-center overflow-hidden">
             {/* Background Loop maintains the premium motion aesthetic */}
@@ -159,6 +160,8 @@ const HeroSection = () => {
             </div>
           </div>
         </div>
+        </div>
+
         {/* Zamansız kalite ifadesi */}
         <p className="mb-4 text-sm text-muted-foreground">
           Kaliteyi korumak için ayda sınırlı sayıda marka ile çalışıyoruz.
@@ -182,7 +185,7 @@ const HeroSection = () => {
           </div>
           
           {/* Mikro Güvence Metni */}
-          <div className="flex items-center gap-3 mt-4 text-xs font-medium text-muted-foreground/70">
+          <div className="flex items-center gap-4 mt-5 text-xs sm:text-sm font-medium text-muted-foreground/80">
             <span className="flex items-center gap-1.5"><Clock className="w-3.5 h-3.5" /> 15 Dakika</span>
             <span className="w-1 h-1 rounded-full bg-primary/40"></span>
             <span className="flex items-center gap-1.5"><CheckCircle className="w-3.5 h-3.5" /> Tamamen Ücretsiz</span>

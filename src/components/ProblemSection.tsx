@@ -44,6 +44,7 @@ const ProblemSection = () => {
           <SectionHeading
             eyebrow="Algı Gerçektir"
             title="Neden Telefonla Çekmek Artık Yetmiyor?"
+            animateTitle
             sub={data.headerDesc}
           />
         </Reveal>

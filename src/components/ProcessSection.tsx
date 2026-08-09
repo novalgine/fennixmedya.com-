@@ -37,6 +37,7 @@ const ProcessSection = () => {
           <SectionHeading
             eyebrow="Süreç"
             title="Ayda Sadece 6 Saatinizi Ayırın"
+            animateTitle
             sub="30 Günlük İçeriğiniz Hazır Olsun"
           />
         </Reveal>

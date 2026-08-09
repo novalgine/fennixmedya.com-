@@ -1,4 +1,5 @@
 import { cn } from "@/lib/utils";
+import WordReveal from "@/components/WordReveal";
 
 /**
  * Tek bölüm başlığı spec'i:
@@ -11,12 +12,15 @@ export default function SectionHeading({
   sub,
   align = "center",
   className,
+  animateTitle = false,
 }: {
   eyebrow?: string;
   title: React.ReactNode;
   sub?: React.ReactNode;
   align?: "center" | "left";
   className?: string;
+  /** Fold-altı bölümlerde kelime kelime giriş — title string olmalı */
+  animateTitle?: boolean;
 }) {
   return (
     <div className={cn("mb-14", align === "center" ? "text-center" : "text-left", className)}>
@@ -26,7 +30,7 @@ export default function SectionHeading({
         </p>
       )}
       <h2 className="font-heading text-3xl md:text-5xl font-bold tracking-tight text-foreground mb-4">
-        {title}
+        {animateTitle && typeof title === "string" ? <WordReveal text={title} /> : title}
       </h2>
       {sub && (
         <p
