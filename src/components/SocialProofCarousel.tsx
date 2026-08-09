@@ -3,45 +3,6 @@ import { useState, useRef, useCallback, useEffect } from "react";
 import VideoLightbox from "@/components/VideoLightbox";
 import { Trophy, Zap, LayoutList, ChevronLeft, ChevronRight, Play, ExternalLink, Users, Star } from "lucide-react";
 
-/* ── Animasyonlu İstatistik Bileşeni ── */
-const AnimatedStat = ({ value }: { value: string }) => {
-  const [display, setDisplay] = useState("0");
-
-  useEffect(() => {
-    // Rakam ve harfleri/sembolleri ayır (örn: "1.5M+" -> num: 1.5, suffix: "M+")
-    const match = value.match(/^([\d.]+)(.*)$/);
-    if (!match) {
-      setDisplay(value);
-      return;
-    }
-
-    const target = parseFloat(match[1]);
-    const suffix = match[2];
-    const isFloat = match[1].includes(".");
-    const duration = 1000; // 1 saniyede say
-    const frames = 30;
-    const step = target / frames;
-    const intervalTime = duration / frames;
-    let current = 0;
-    let frameCount = 0;
-
-    const interval = setInterval(() => {
-      frameCount++;
-      current += step;
-      if (frameCount >= frames || current >= target) {
-        clearInterval(interval);
-        setDisplay(value);
-      } else {
-        setDisplay((isFloat ? current.toFixed(1) : Math.round(current).toString()) + suffix);
-      }
-    }, intervalTime);
-
-    return () => clearInterval(interval);
-  }, [value]);
-
-  return <span>{display}</span>;
-};
-
 /* ── Müşteri Verileri ── */
 const caseStudies = [
   {
@@ -49,9 +10,7 @@ const caseStudies = [
     sector: "Kişiye Özel Altın Takı",
     videoSrc: "/videos/portfolyo/boogold.mp4",
     before: "Bütçesi kısıtlı bir marka algısı yaratan sıradan içerikler.",
-    after: "Premium müşteri kitlesinde %40 artış ve marka otoritesinde anında dönüşüm.",
-    stat1: { value: "1.5M+", label: "Aylık Organik Erişim" },
-    stat2: { value: "3x", label: "DM Satışlarında Artış" },
+    after: "Premium müşteri kitlesinin dikkatini çeken ve marka otoritesini anında dönüştüren içerikler.",
   },
   {
     name: "Mukaddes Gün",
@@ -59,8 +18,6 @@ const caseStudies = [
     videoSrc: "/videos/referans/mukaddes.mp4",
     before: "Düzensiz ve amatör hissettiren kişisel marka içerikleri.",
     after: "Sinematik içerik kalitesi ve hikâye anlatımıyla güçlü bir kişisel marka konumlandırması.",
-    stat1: { value: "320K+", label: "Aylık Organik Erişim" },
-    stat2: { value: "2.5x", label: "Takipçi Artışı" },
   },
   {
     name: "Melis Ulaş",
@@ -68,8 +25,6 @@ const caseStudies = [
     videoSrc: "/videos/portfolyo/melis.mp4",
     before: "Telefonla çekilmiş amatör içerikler.",
     after: "Görsel hikaye anlatıcılığı ve otoriteyi birleştiren otantik içerikler.",
-    stat1: { value: "180K+", label: "Aylık Organik Erişim" },
-    stat2: { value: "2x", label: "Danışan Artışı" },
   },
   {
     name: "Ayzıt Umay",
@@ -77,8 +32,6 @@ const caseStudies = [
     videoSrc: "/videos/portfolyo/umay.mp4",
     before: "Sıradan klinik görselleri ve düşük etkileşim.",
     after: "Sanatsal ve güvenilir bir kişisel marka oluşumu.",
-    stat1: { value: "250K+", label: "Aylık Organik Erişim" },
-    stat2: { value: "1.8x", label: "Hasta Artışı" },
   },
   {
     name: "Afife",
@@ -86,8 +39,6 @@ const caseStudies = [
     videoSrc: "/videos/portfolyo/afife.mp4",
     before: "Standart afiş ve düz tanıtım paylaşımları.",
     after: "Sinematik ve otantik içeriklerle yüksek bilet dönüşümü.",
-    stat1: { value: "420K+", label: "Aylık Organik Erişim" },
-    stat2: { value: "2x", label: "Bilet Satışı Artışı" },
   },
   {
     name: "Vaveyla Home",
@@ -95,8 +46,6 @@ const caseStudies = [
     videoSrc: "/videos/portfolyo/vaveyla.mp4",
     before: "Sıradan ürün çekimleri ve amatör içerikler.",
     after: "Kaliteli reklam içerikleriyle artan satışlar ve premium marka algısı.",
-    stat1: { value: "500K+", label: "Aylık Organik Erişim" },
-    stat2: { value: "3x", label: "Satış Artışı" },
   },
   {
     name: "Vet House",
@@ -104,8 +53,6 @@ const caseStudies = [
     videoSrc: "/videos/portfolyo/vethouse.mp4",
     before: "Klasik klinik paylaşımları.",
     after: "Güven veren uzman videolarıyla yüksek hasta dönüşümü.",
-    stat1: { value: "200K+", label: "Aylık Organik Erişim" },
-    stat2: { value: "2.5x", label: "Randevu Artışı" },
   },
 ];
 
@@ -261,17 +208,6 @@ export default function SocialProofCarousel() {
                         Sonuç (Fennix Medya İle)
                       </p>
                       <p className="text-foreground font-bold text-lg leading-tight mt-1">{study.after}</p>
-                    </div>
-                  </div>
-
-                  <div className="grid grid-cols-2 gap-4 pt-5 border-t border-border/50 relative">
-                    <div>
-                      <p className="text-4xl font-heading font-bold text-white mb-1"><AnimatedStat value={study.stat1.value} /></p>
-                      <p className="text-muted-foreground text-sm font-medium">{study.stat1.label}</p>
-                    </div>
-                    <div>
-                      <p className="text-4xl font-heading font-bold text-primary mb-1"><AnimatedStat value={study.stat2.value} /></p>
-                      <p className="text-muted-foreground text-sm font-medium">{study.stat2.label}</p>
                     </div>
                   </div>
                 </div>

@@ -3,7 +3,7 @@ import { ShieldCheck, Clock, RefreshCw, Unlock } from "lucide-react";
 import Reveal from "@/components/Reveal";
 import SectionHeading from "@/components/SectionHeading";
 
-const fallbackGuarantees = [
+const guarantees = [
   {
     icon: Unlock,
     title: "Sıfır Risk İade Garantisi",
@@ -23,7 +23,7 @@ const fallbackGuarantees = [
   {
     icon: RefreshCw,
     title: "Revize Hakkı",
-    desc: "Aramızdaki ritmi yakalamak için; ilk videonun tarzında ve kurgusunda tam içinize sinene kadar sınırsız revize yapıyoruz. Sonraki içeriklerimiz bu kalite çizgisini koruyarak üretilir.",
+    desc: "Aramızdaki ritmi yakalamak için; ilk videonun tarzında ve kurgusunda tam içinize sinene kadar revize yapıyoruz. Sonraki içeriklerimiz bu kalite çizgisini koruyarak üretilir.",
     accent: "text-sky-400",
     accentBg: "bg-sky-400/10",
     accentBorder: "hover:border-sky-400/40",
@@ -39,7 +39,6 @@ const fallbackGuarantees = [
 ];
 
 const GuaranteesSection = () => {
-  const guarantees = fallbackGuarantees;
 
   return (
     <section className="section-spacing bg-surface relative z-10 w-full">

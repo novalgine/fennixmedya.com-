@@ -6,11 +6,10 @@ import {
     AccordionTrigger,
 } from "@/components/ui/accordion";
 import Reveal from "@/components/Reveal";
-import { CAPACITY_CONFIG } from "@/config/capacity";
 import JsonLd from "@/components/JsonLd";
 import SectionHeading from "@/components/SectionHeading";
 
-const fallbackFaqs = [
+const faqs = [
     {
         question: "Çekimlerim için stüdyo veya kamera kiralamama gerek var mı?",
         answer: "Kesinlikle hayır. Biz kendi sinematik Cinema Line kameralarımız, ses ekipmanlarımız ve gimbal sistemlerimizle şirketinize veya dilediğiniz lokasyona geliyoruz.",
@@ -37,12 +36,11 @@ const fallbackFaqs = [
     },
     {
         question: "Hangi sektördeki markaları kabul ediyorsunuz?",
-        answer: `Aylık kontenjanımız, kalite standartlarımızı koruyabilmek için ${CAPACITY_CONFIG.TOTAL_SLOTS} marka ile sınırlıdır. Kendi alanında değer üreten, ancak bunu dijital dünyadaki potansiyel müşterilerine henüz %100 profesyonel bir şekilde yansıtamayan tüm uzmanlarla (Danışmanlar, Sağlık Profesyonelleri, Ticari İşletme Sahipleri vb.) çalışıyoruz.`,
+        answer: `Aylık kontenjanımız, kalite standartlarımızı koruyabilmek için sınırlı sayıda marka ile sınırlıdır. Kendi alanında değer üreten, ancak bunu dijital dünyadaki potansiyel müşterilerine henüz %100 profesyonel bir şekilde yansıtamayan tüm uzmanlarla (Danışmanlar, Sağlık Profesyonelleri, Ticari İşletme Sahipleri vb.) çalışıyoruz.`,
     }
 ];
 
 const FAQSection = () => {
-    const faqs = fallbackFaqs;
 
     return (
         <section className="section-spacing bg-background relative z-10 w-full">

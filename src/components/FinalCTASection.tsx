@@ -2,22 +2,18 @@
 import MagneticWrapper from "@/components/MagneticWrapper";
 import CtaButton from "@/components/CtaButton";
 import Reveal from "@/components/Reveal";
-import { CAPACITY_CONFIG } from "@/config/capacity";
 
 import { useWizard } from "@/components/WizardContext";
 
 const FinalCTASection = () => {
   const { openWizard } = useWizard();
-  const { TOTAL_SLOTS, OCCUPIED_SLOTS } = CAPACITY_CONFIG;
-  const remainingSlots = Math.max(0, TOTAL_SLOTS - OCCUPIED_SLOTS);
-
   return (
     <section id="basvuru" className="section-spacing bg-surface overflow-hidden relative">
       {/* Emerald Spotlight behind CTA */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,var(--tw-gradient-stops))] from-emerald-900/10 via-transparent to-transparent pointer-events-none" />
       <Reveal className="max-w-4xl mx-auto px-6 text-center relative z-10">
         <p className="text-center text-primary font-bold text-sm md:text-base uppercase tracking-widest mb-6">
-          Sürdürülebilir Kalite İçin Ayda En Fazla {TOTAL_SLOTS} Marka: <span className="font-bold text-gradient-gold">(Bu Ay İçin Son {remainingSlots} Yer)</span>
+          Sürdürülebilir kalite için ayda sınırlı sayıda marka ile çalışıyoruz
         </p>
         
         <h2 className="font-heading text-3xl md:text-5xl lg:text-6xl font-bold text-center mb-8 tracking-tight leading-[1.1]">

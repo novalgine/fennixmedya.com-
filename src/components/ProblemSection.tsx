@@ -1,11 +1,11 @@
 "use client";
 import Image from "next/image";
 import staticComparisonImg from "@/assets/ornekgorsel.webp";
-import { Clock, ZapOff, TrendingDown } from "lucide-react";
+import { Clock, ZapOff, TrendingDown, Smartphone, Clapperboard } from "lucide-react";
 import Reveal from "@/components/Reveal";
 import SectionHeading from "@/components/SectionHeading";
 
-const fallbackData = {
+const content = {
   headerDesc: "Sektörünüzde en iyi olabilirsiniz. Ancak sosyal medyadaki görsel algınız gerçek değerinizi yansıtmıyorsa, pazar sizi ucuz algılar ve fiyatınıza itiraz eder.",
   painPoints: [
     {
@@ -32,7 +32,7 @@ const fallbackData = {
 };
 
 const ProblemSection = () => {
-  const data = fallbackData;
+  const data = content;
 
   return (
     <section className="section-spacing bg-surface relative z-10 w-full">
@@ -60,11 +60,11 @@ const ProblemSection = () => {
               <div className="rounded-2xl overflow-hidden ring-1 ring-white/10 relative">
                 {/* Labels overlay — only on desktop */}
                 <div className="absolute top-4 left-4 right-4 justify-between z-10 pointer-events-none hidden md:flex">
-                  <span className="bg-danger/95 text-white font-bold px-3 py-1.5 rounded-lg text-sm shadow-lg border border-danger/50">
-                    ❌ Telefon (Amatör)
+                  <span className="inline-flex items-center gap-1.5 bg-danger/95 text-white font-bold px-3 py-1.5 rounded-lg text-sm shadow-lg border border-danger/50">
+                    <Smartphone className="w-3.5 h-3.5" aria-hidden /> Telefon — Amatör
                   </span>
-                  <span className="bg-[#10b981]/95 text-white font-bold px-3 py-1.5 rounded-lg text-sm shadow-lg border border-[#10b981]/50">
-                    ✅ Sinematik
+                  <span className="inline-flex items-center gap-1.5 bg-emerald-600/95 text-white font-bold px-3 py-1.5 rounded-lg text-sm shadow-lg border border-emerald-500/50">
+                    <Clapperboard className="w-3.5 h-3.5" aria-hidden /> Sinematik
                   </span>
                 </div>
                 <Image
@@ -77,11 +77,11 @@ const ProblemSection = () => {
               </div>
               {/* Labels below image — only on mobile */}
               <div className="flex justify-between mt-3 md:hidden">
-                <span className="bg-danger/95 text-white font-bold px-3 py-1.5 rounded-lg text-xs shadow-lg border border-danger/50">
-                  ❌ Telefon (Amatör)
+                <span className="inline-flex items-center gap-1.5 bg-danger/95 text-white font-bold px-3 py-1.5 rounded-lg text-xs shadow-lg border border-danger/50">
+                  <Smartphone className="w-3 h-3" aria-hidden /> Telefon — Amatör
                 </span>
-                <span className="bg-[#10b981]/95 text-white font-bold px-3 py-1.5 rounded-lg text-xs shadow-lg border border-[#10b981]/50">
-                  ✅ Sinematik
+                <span className="inline-flex items-center gap-1.5 bg-emerald-600/95 text-white font-bold px-3 py-1.5 rounded-lg text-xs shadow-lg border border-emerald-500/50">
+                  <Clapperboard className="w-3 h-3" aria-hidden /> Sinematik
                 </span>
               </div>
               <p className="text-center text-[11px] uppercase tracking-widest text-muted-foreground/60 mt-4 font-bold">Gerçek Kalite Farkını İnceleyin</p>

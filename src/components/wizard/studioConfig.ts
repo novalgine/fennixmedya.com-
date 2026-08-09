@@ -29,17 +29,17 @@ export const studioConfig: WizardConfig<StudioAnswers> = {
       options: [
         {
           value: "Evde bir oda",
-          title: "🏠 Evde bir oda",
+          title: "Evde bir oda",
           description: "Evinizde bir odayı profesyonel stüdyoya dönüştürelim",
         },
         {
           value: "Ofiste bir alan",
-          title: "🏢 Ofiste bir alan",
+          title: "Ofiste bir alan",
           description: "Ofisinizde içerik üretim alanı oluşturalım",
         },
         {
           value: "Henüz karar vermedim",
-          title: "🤷 Henüz karar vermedim",
+          title: "Henüz karar vermedim",
           description: "Birlikte en uygun mekanı belirleyelim",
         },
       ],
@@ -49,11 +49,11 @@ export const studioConfig: WizardConfig<StudioAnswers> = {
       title: "Kullanım Amacı",
       subtitle: "Stüdyoyu ne için kullanacaksınız?",
       options: [
-        { value: "Sosyal medya içerikleri (Reels/TikTok)", title: "📱 Sosyal medya içerikleri (Reels/TikTok)" },
-        { value: "Podcast / Söyleşi", title: "🎙️ Podcast / Söyleşi" },
-        { value: "YouTube / Eğitim videoları", title: "📹 YouTube / Eğitim videoları" },
-        { value: "Ürün tanıtım çekimleri", title: "📦 Ürün tanıtım çekimleri" },
-        { value: "Hepsi bir arada", title: "🔄 Hepsi bir arada" },
+        { value: "Sosyal medya içerikleri (Reels/TikTok)", title: "Sosyal medya içerikleri (Reels/TikTok)" },
+        { value: "Podcast / Söyleşi", title: "Podcast / Söyleşi" },
+        { value: "YouTube / Eğitim videoları", title: "YouTube / Eğitim videoları" },
+        { value: "Ürün tanıtım çekimleri", title: "Ürün tanıtım çekimleri" },
+        { value: "Hepsi bir arada", title: "Hepsi bir arada" },
       ],
     },
     {
@@ -61,10 +61,10 @@ export const studioConfig: WizardConfig<StudioAnswers> = {
       title: "Bütçe Aralığı",
       subtitle: "Bu proje için düşündüğünüz bütçe nedir?",
       options: [
-        { value: "20.000₺ – 40.000₺", title: "💰 20.000₺ – 40.000₺" },
-        { value: "40.000₺ – 75.000₺", title: "💰💰 40.000₺ – 75.000₺" },
-        { value: "75.000₺ ve üzeri", title: "💰💰💰 75.000₺ ve üzeri" },
-        { value: "Henüz bir bütçe belirlemedim", title: "🤔 Henüz bir bütçe belirlemedim" },
+        { value: "20.000₺ – 40.000₺", title: "20.000₺ – 40.000₺" },
+        { value: "40.000₺ – 75.000₺", title: "40.000₺ – 75.000₺" },
+        { value: "75.000₺ ve üzeri", title: "75.000₺ ve üzeri" },
+        { value: "Henüz bir bütçe belirlemedim", title: "Henüz bir bütçe belirlemedim" },
       ],
     },
     {
@@ -74,17 +74,17 @@ export const studioConfig: WizardConfig<StudioAnswers> = {
       options: [
         {
           value: "Evet, düzenli üretiyorum ama kaliteden memnun değilim",
-          title: "✅ Evet, düzenli üretiyorum ama kaliteden memnun değilim",
+          title: "Evet, düzenli üretiyorum ama kaliteden memnun değilim",
           description: "Profesyonel ortamla seviye atlayalım",
         },
         {
           value: "Birkaç kez denedim ama sürdüremedim",
-          title: "🔄 Birkaç kez denedim ama sürdüremedim",
+          title: "Birkaç kez denedim ama sürdüremedim",
           description: "Doğru sistemle sürdürülebilir hale getirelim",
         },
         {
           value: "Hayır, sıfırdan başlayacağım",
-          title: "❌ Hayır, sıfırdan başlayacağım",
+          title: "Hayır, sıfırdan başlayacağım",
           description: "Sizi A'dan Z'ye hazırlayalım",
         },
       ],
@@ -97,12 +97,12 @@ export const studioConfig: WizardConfig<StudioAnswers> = {
       options: [
         {
           value: "Evet, kurgu desteği de almak isterim",
-          title: "✂️ Evet, kurgu desteği de almak isterim",
+          title: "Evet, kurgu desteği de almak isterim",
           description: "Çekim sonrası tüm düzenleme ve efektleri biz yapalım",
         },
         {
           value: "Hayır, sadece stüdyo kurulumu yeterli",
-          title: "⚙️ Hayır, sadece stüdyo kurulumu yeterli",
+          title: "Hayır, sadece stüdyo kurulumu yeterli",
           description: "Kurguyu ben veya kendi ekibim yapacak",
         },
       ],

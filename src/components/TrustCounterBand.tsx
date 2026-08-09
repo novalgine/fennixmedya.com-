@@ -1,13 +1,12 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import { useCountUp } from "@/hooks/useCountUp";
-import { Film, Users, Eye, Award } from "lucide-react";
+import { Film, Eye, Layers } from "lucide-react";
 
 const stats = [
-    { icon: Users, value: 15, suffix: "+", label: "Marka", duration: 1500 },
     { icon: Film, value: 500, suffix: "+", label: "Üretilen Video", duration: 2000 },
     { icon: Eye, value: 10, suffix: "M+", label: "Toplam Erişim", duration: 1800 },
-    { icon: Award, value: 100, suffix: "%", label: "Memnuniyet", duration: 1600 },
+    { icon: Layers, value: 8, suffix: "", label: "Sektör", duration: 1400 },
 ];
 
 // Extracted to avoid calling hooks inside a .map loop (React Rules of Hooks)
@@ -68,7 +67,7 @@ const TrustCounterBand = () => {
             className="py-10 md:py-16 bg-background border-y border-border/30 relative z-10"
         >
             <div className="max-w-6xl mx-auto px-4 sm:px-6">
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-x-4 gap-y-10 sm:gap-8 md:gap-4">
+                <div className="grid grid-cols-3 gap-x-4 gap-y-10 sm:gap-8">
                     {stats.map((stat, i) => (
                         <StatItem key={i} stat={stat} index={i} phase={phase} />
                     ))}

@@ -2,12 +2,12 @@
 import { useEffect, useRef, useState, useCallback } from "react";
 import MagneticWrapper from "@/components/MagneticWrapper";
 import CtaButton from "@/components/CtaButton";
+import Image from "next/image";
 import heroBg from "@/assets/hero-bg.webp";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import { CAPACITY_CONFIG } from "@/config/capacity";
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
-import { Play, ChevronDown, Star, Clock, CheckCircle } from "lucide-react";
+import { Play, ChevronDown, Clock, CheckCircle } from "lucide-react";
 import Link from "next/link";
 
 if (typeof window !== "undefined") {
@@ -21,19 +21,9 @@ const HeroSection = () => {
   const containerRef = useRef<HTMLElement>(null);
   const bgRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
-  const [greeting, setGreeting] = useState("");
   const [showVideo, setShowVideo] = useState(false);
 
-  const { TOTAL_SLOTS, OCCUPIED_SLOTS, CAPACITY_TEXT } = CAPACITY_CONFIG;
-  const remainingSlots = Math.max(0, TOTAL_SLOTS - OCCUPIED_SLOTS);
-
   useEffect(() => {
-    const hour = new Date().getHours();
-    if (hour >= 5 && hour < 12) setGreeting("Gününüz aydın olsun. Bu sabahı rakiplerinizin önüne geçerek değerlendirin.");
-    else if (hour >= 12 && hour < 17) setGreeting("İyi günler. Bugün, markanızın hikayesini değiştirecek o adımı atın.");
-    else if (hour >= 17 && hour < 22) setGreeting("İyi akşamlar. Rakipleriniz günü bitirmişken, siz markanızı zirveye taşıyacak adımı atın.");
-    else setGreeting("İyi geceler. Uyumadan önce markanızın kaderini değiştirecek o adımı atın.");
-
     const ctx = gsap.context(() => {
       // Parallax for Background only (content parallax causes cutoff on tall mobile screens)
       gsap.to(bgRef.current, {
@@ -105,11 +95,6 @@ const HeroSection = () => {
         {/* SEO H2 & Dynamic Greeting */}
         <div className="flex flex-col items-center gap-3 mb-6 transition-all duration-1000 ease-out">
           <h2 className="text-xs md:text-sm font-bold tracking-widest uppercase text-primary/80">Ayda Sadece 6 Saatinizi Ayırın. Gerisini Bize Bırakın.</h2>
-          {greeting && (
-            <div className="bg-muted/50 border border-border rounded-full px-4 py-1.5 backdrop-blur-md">
-              <span className="text-sm font-medium text-foreground/80 tracking-wide">{greeting}</span>
-            </div>
-          )}
         </div>
 
         <h1 className="font-heading text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.1] mb-6 tracking-tight text-left md:text-center w-full">
@@ -122,7 +107,7 @@ const HeroSection = () => {
           <span
             className="text-foreground inline-block transition-all duration-500 ease-out leading-[1.2] mt-2"
           >
-            <span className="text-gradient-gold">Sektörünüzde Otorite İnşa Eden</span>
+            <span className="text-gradient-gold">Sektörünüzde Otorite İnşa Eden</span>
           </span>
           <br />
           <span className="text-foreground/90 text-3xl md:text-5xl lg:text-6xl font-bold mt-4 block transition-all duration-500 ease-out">
@@ -174,19 +159,10 @@ const HeroSection = () => {
             </div>
           </div>
         </div>
-
-        {/* Scarcity / Urgency Above CTAs */}
-        <div className="mb-4 text-sm transition-all duration-500 ease-out content-rendered"
-        >
-          <div className="text-muted-foreground">
-            Kaliteyi korumak için ayda <span className="text-primary font-semibold">sadece {TOTAL_SLOTS} marka</span> ile çalışıyoruz
-          </div>
-          {remainingSlots > 0 && remainingSlots <= 2 && (
-            <p className="text-orange-500 font-bold mt-1 animate-pulse">
-              ⚠️ Bu ay için son {remainingSlots} yer!
-            </p>
-          )}
-        </div>
+        {/* Zamansız kalite ifadesi */}
+        <p className="mb-4 text-sm text-muted-foreground">
+          Kaliteyi korumak için ayda sınırlı sayıda marka ile çalışıyoruz.
+        </p>
 
         {/* Action Buttons & Micro-assurance */}
         <div className="flex flex-col items-center w-full transition-all duration-500 ease-out">
@@ -215,19 +191,19 @@ const HeroSection = () => {
           </div>
         </div>
 
-        {/* Social Proof Trust Band */}
-        <div className="mt-8 flex flex-col items-center gap-2 transition-all duration-500 ease-out">
-          <div className="flex -space-x-2">
-            {[...Array(5)].map((_, i) => (
-              <div key={i} className="w-8 h-8 rounded-full border-2 border-background bg-muted flex items-center justify-center overflow-hidden">
-                <Star className="w-4 h-4 text-gold fill-gold" />
-              </div>
+        {/* Gerçek referans bandı */}
+        <a href="#referanslar" className="mt-8 flex flex-col items-center gap-3 group/band">
+          <div className="flex -space-x-3">
+            {["esranur", "orhan", "mukaddes"].map((id) => (
+              <span key={id} className="block w-10 h-10 rounded-full border-2 border-background overflow-hidden">
+                <Image src={`/videos/referans/${id}.jpg`} alt="" width={80} height={80} className="w-full h-full object-cover" />
+              </span>
             ))}
           </div>
-          <p className="text-sm text-muted-foreground font-medium">
-            <strong className="text-foreground">+20 High-Ticket Uzman</strong> Tarafından Tercih Edildi
+          <p className="text-sm text-muted-foreground font-medium group-hover/band:text-foreground transition-colors">
+            <strong className="text-foreground">500&apos;den fazla video</strong> teslim ettik — gerçek müşteri deneyimlerini izleyin
           </p>
-        </div>
+        </a>
       </div>
 
       {/* Scroll Indicator */}

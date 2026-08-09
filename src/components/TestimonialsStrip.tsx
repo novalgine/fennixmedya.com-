@@ -20,7 +20,7 @@ const TestimonialsStrip = () => {
 
     return (
         <>
-            <section className="section-spacing bg-background">
+            <section id="referanslar" className="section-spacing bg-background">
                 <div className="max-w-6xl mx-auto px-4 sm:px-6">
                     <SectionHeading
                         eyebrow="Referanslar"
@@ -45,24 +45,20 @@ const TestimonialsStrip = () => {
                                 {/* Client Info + Play */}
                                 <div className="flex items-center justify-between pt-4 border-t border-border/30 mt-4">
                                     <div className="flex items-center gap-3">
-                                        <Image src={t.avatar} alt={t.name} width={80} height={80} className="w-10 h-10 rounded-full border border-border/50 object-cover shrink-0" />
+                                        <Image src={t.poster} alt={t.name} width={80} height={80} className="w-10 h-10 rounded-full border border-border/50 object-cover shrink-0" />
                                         <div>
                                             <p className="font-heading font-bold text-base text-foreground">{t.name}</p>
                                             <p className="text-muted-foreground text-xs font-medium italic mt-1">{t.title}</p>
                                         </div>
                                     </div>
-                                    {t.videoSrc ? (
-                                        <button
-                                            onClick={() => openModal(t.videoSrc, t.name)}
-                                            className="flex shrink-0 items-center justify-center w-10 h-10 bg-primary/10 hover:bg-primary text-primary hover:text-white rounded-full transition-all duration-300 border border-primary/20 hover:scale-110 shadow-lg cursor-pointer group-hover:bg-primary/20"
-                                            aria-label={`${t.name} referans videosunu izle`}
-                                            title="Videoyu İzle"
-                                        >
-                                            <Play className="w-4 h-4 ml-0.5 fill-current" />
-                                        </button>
-                                    ) : (
-                                        <div className="w-10 h-10 shrink-0"></div>
-                                    )}
+                                    <button
+                                        onClick={() => openModal(t.videoSrc, t.name)}
+                                        className="flex shrink-0 items-center justify-center w-10 h-10 bg-primary/10 hover:bg-primary text-primary hover:text-white rounded-full transition-all duration-300 border border-primary/20 hover:scale-110 shadow-lg cursor-pointer group-hover:bg-primary/20"
+                                        aria-label={`${t.name} referans videosunu izle`}
+                                        title="Videoyu İzle"
+                                    >
+                                        <Play className="w-4 h-4 ml-0.5 fill-current" />
+                                    </button>
                                 </div>
                             </div>
                         ))}

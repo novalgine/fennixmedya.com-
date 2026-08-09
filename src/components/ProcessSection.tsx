@@ -3,7 +3,7 @@ import { Calendar, Video, Package } from "lucide-react";
 import Reveal from "@/components/Reveal";
 import SectionHeading from "@/components/SectionHeading";
 
-const fallbackSteps = [
+const steps = [
   {
     day: "Adım 1",
     icon: Calendar,
@@ -28,7 +28,6 @@ const fallbackSteps = [
 ];
 
 const ProcessSection = () => {
-  const steps = fallbackSteps;
 
   return (
     <section className="section-spacing bg-background relative z-10">
@@ -108,7 +107,7 @@ const ProcessSection = () => {
         {/* Bottom summary */}
         <div className="mt-12 text-center">
           <p className="text-primary font-bold text-lg md:text-xl">
-            5 adım · 30 gün · Anahtar teslim içerik sistemi
+            3 adım · 30 gün · Anahtar teslim içerik sistemi
           </p>
         </div>
       </div>

@@ -3,7 +3,6 @@
 import { useRef, useState } from "react";
 import Link from "next/link";
 import { Menu, X, ChevronDown } from "lucide-react";
-import LiveCapacityHybrid from "@/components/LiveCapacityHybrid";
 import { useWizard } from "@/components/WizardContext";
 import CtaButton from "@/components/CtaButton";
 
@@ -127,9 +126,6 @@ export default function SiteHeader() {
 
         {/* Right Side Controls */}
         <div className="flex items-center gap-2 sm:gap-3">
-          <div className="hidden sm:block">
-            <LiveCapacityHybrid />
-          </div>
           {/* Mobile Menu Toggle */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
