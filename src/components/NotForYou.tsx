@@ -62,7 +62,7 @@ export default function NotForYou() {
               <ul className="space-y-4">
                 {YES.map((y) => (
                   <li key={y} className="flex gap-3 text-foreground/85 leading-relaxed">
-                    <Check className="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" aria-hidden />
+                    <Check className="w-5 h-5 text-primary shrink-0 mt-0.5" aria-hidden />
                     {y}
                   </li>
                 ))}

@@ -74,7 +74,7 @@ const StickyCTA = () => {
         <a
           href={`tel:${PHONE_NUMBER}`}
           onClick={trackCall}
-          className="w-12 h-12 rounded-full bg-blue-500 hover:bg-blue-600 text-white flex items-center justify-center shadow-xl transition-all active:scale-90 border border-blue-400/30"
+          className="w-12 h-12 rounded-full bg-card hover:bg-secondary text-ash hover:text-foreground flex items-center justify-center shadow-xl transition-all active:scale-90 border border-ash/25"
           aria-label="Hemen arayın"
         >
           <Phone className="w-5 h-5" aria-hidden />

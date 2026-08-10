@@ -76,6 +76,7 @@ export default {
           DEFAULT: "hsl(var(--surface))",
           elevated: "hsl(var(--surface-elevated))",
         },
+        ash: "hsl(var(--ash))",
         success: "hsl(var(--success))",
         danger: "hsl(var(--danger))",
         sidebar: {

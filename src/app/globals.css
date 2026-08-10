@@ -48,26 +48,27 @@
     --surface-elevated: 60 9% 98%;
     --success: 142 70% 45%;
     --danger: 0 72% 50%;
+    --ash: 205 12% 45%;
   }
 
   .dark {
-    --background: 0 0% 4%;
-    --foreground: 0 0% 92%;
+    --background: 28 8% 5%;
+    --foreground: 38 10% 93%;
 
-    --card: 0 0% 7%;
-    --card-foreground: 0 0% 92%;
+    --card: 28 7% 9%;
+    --card-foreground: 38 10% 93%;
 
-    --popover: 0 0% 7%;
-    --popover-foreground: 0 0% 92%;
+    --popover: 28 7% 9%;
+    --popover-foreground: 38 10% 93%;
 
     --primary: 43 45% 65%;
-    --primary-foreground: 0 0% 0%;
+    --primary-foreground: 25 20% 7%;
 
-    --secondary: 0 0% 12%;
-    --secondary-foreground: 0 0% 85%;
+    --secondary: 28 6% 13%;
+    --secondary-foreground: 36 8% 86%;
 
-    --muted: 0 0% 14%;
-    --muted-foreground: 0 0% 75%;
+    --muted: 28 6% 14%;
+    --muted-foreground: 33 7% 70%;
 
     --accent: 43 45% 65%;
     --accent-foreground: 0 0% 4%;
@@ -75,8 +76,8 @@
     --destructive: 0 72% 50%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 0 0% 20%;
-    --input: 0 0% 20%;
+    --border: 30 6% 18%;
+    --input: 30 6% 18%;
     --ring: 38 85% 55%;
 
     --radius: 0.5rem;
@@ -89,12 +90,15 @@
     --emerald-light: 164 50% 40%;
     --emerald-dark: 164 70% 10%;
     --emerald-surface: 164 60% 6%;
-    --surface: 0 0% 7%;
-    --surface-elevated: 0 0% 10%;
+    --surface: 28 7% 8%;
+    --surface-elevated: 28 7% 11%;
     --success: 142 70% 45%;
     --danger: 0 72% 50%;
 
-    --background-elevated: 0 0% 7%;
+    /* Makine dili: timecode, kanal etiketleri, dosya adları */
+    --ash: 205 10% 58%;
+
+    --background-elevated: 28 7% 9%;
   }
 
   .light {

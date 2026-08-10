@@ -126,10 +126,10 @@ export default function TimelineHud({ clips }: { clips: TimelineClip[] }) {
       {/* Mobil: timecode + mini klip çubuğu */}
       <div className="md:hidden px-4 py-2">
         <div className="flex items-center justify-between mb-1.5">
-          <span ref={tcMobileRef} className="font-mono text-[10px] tracking-widest text-primary tabular-nums">
+          <span ref={tcMobileRef} className="font-mono text-[10px] tracking-widest text-ash tabular-nums">
             00:00:00:00
           </span>
-          <span className="flex items-center gap-1.5 font-mono text-[10px] tracking-widest text-muted-foreground">
+          <span className="flex items-center gap-1.5 font-mono text-[10px] tracking-widest text-ash/80">
             <span className="w-1.5 h-1.5 rounded-full bg-danger" aria-hidden /> KURGU
           </span>
         </div>
@@ -152,7 +152,7 @@ export default function TimelineHud({ clips }: { clips: TimelineClip[] }) {
       {/* Masaüstü: tam timeline */}
       <div className="hidden md:flex items-stretch h-14">
         <div className="flex items-center px-5 border-r border-border/60 shrink-0">
-          <span ref={tcRef} className="font-mono text-sm tracking-widest text-primary tabular-nums">
+          <span ref={tcRef} className="font-mono text-sm tracking-widest text-ash tabular-nums">
             00:00:00:00
           </span>
         </div>
@@ -180,7 +180,7 @@ export default function TimelineHud({ clips }: { clips: TimelineClip[] }) {
               />
               <span
                 className={`relative block font-mono text-[9px] leading-none mt-1 ${
-                  clip.track === "A1" ? "text-emerald-500/80" : "text-muted-foreground/70"
+                  clip.track === "A1" ? "text-emerald-500/80" : "text-ash/70"
                 }`}
               >
                 {clip.track}
@@ -203,7 +203,7 @@ export default function TimelineHud({ clips }: { clips: TimelineClip[] }) {
 
         <div className="flex items-center gap-2 px-5 border-l border-border/60 shrink-0">
           <span className="w-2 h-2 rounded-full bg-danger" aria-hidden />
-          <span className="font-mono text-[11px] tracking-widest text-muted-foreground">
+          <span className="font-mono text-[11px] tracking-widest text-ash/80">
             KURGU · FENNIX MEDYA
           </span>
         </div>

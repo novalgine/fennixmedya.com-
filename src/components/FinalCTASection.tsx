@@ -10,7 +10,7 @@ const FinalCTASection = () => {
   return (
     <section id="basvuru" className="section-spacing bg-background overflow-hidden relative">
       {/* Emerald Spotlight behind CTA */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,var(--tw-gradient-stops))] from-emerald-900/10 via-transparent to-transparent pointer-events-none" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,var(--tw-gradient-stops))] from-gold/10 via-transparent to-transparent pointer-events-none" />
       <Reveal className="max-w-4xl mx-auto px-6 text-center relative z-10">
         <p className="text-center text-primary font-bold text-sm md:text-base uppercase tracking-widest mb-6">
           Sürdürülebilir kalite için ayda sınırlı sayıda marka ile çalışıyorum

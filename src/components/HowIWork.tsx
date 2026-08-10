@@ -56,13 +56,13 @@ export default function HowIWork() {
 
         <Reveal delay={80}>
           <div className="mt-10 flex flex-wrap items-center gap-x-3 gap-y-2">
-            <span className="font-mono text-[10px] uppercase tracking-[0.25em] text-muted-foreground/60 mr-1">
+            <span className="font-mono text-[10px] uppercase tracking-[0.25em] text-ash mr-1">
               Sete getirdiklerim
             </span>
             {GEAR.map((g) => (
               <span
                 key={g}
-                className="font-mono text-[11px] px-2.5 py-1 rounded border border-border/60 text-muted-foreground"
+                className="font-mono text-[11px] px-2.5 py-1 rounded border border-ash/25 text-ash"
               >
                 {g}
               </span>

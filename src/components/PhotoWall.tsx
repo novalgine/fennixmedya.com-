@@ -14,11 +14,11 @@ export default function PhotoWall({ count }: { count: number }) {
   return (
     <>
       <div className="flex items-center gap-3 container-page mb-4">
-        <span className="font-mono text-[10px] uppercase tracking-[0.25em] text-primary/80">
+        <span className="font-mono text-[10px] uppercase tracking-[0.25em] text-ash">
           Medya Havuzu
         </span>
         <span className="h-px flex-1 bg-border/50" />
-        <span className="font-mono text-[10px] uppercase tracking-[0.25em] text-muted-foreground/50">
+        <span className="font-mono text-[10px] uppercase tracking-[0.25em] text-ash/60">
           {count} kare · setten
         </span>
       </div>
