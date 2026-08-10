@@ -7,6 +7,7 @@ import TimelineHud from "@/components/editor/TimelineHud";
 import dynamic from "next/dynamic";
 
 const FilmStripWorkRow = dynamic(() => import("@/components/FilmStripWorkRow"));
+const SetWall = dynamic(() => import("@/components/SetWall"));
 const BeforeAfter = dynamic(() => import("@/components/BeforeAfter"));
 const HowIWork = dynamic(() => import("@/components/HowIWork"));
 const NotForYou = dynamic(() => import("@/components/NotForYou"));
@@ -21,6 +22,7 @@ const CLIPS = [
   { id: "acilis", label: "Açılış", track: "V1" as const },
   { id: "portfolyo", label: "İşler", track: "V1" as const },
   { id: "ben", label: "Ben", track: "V1" as const },
+  { id: "set", label: "Set", track: "V1" as const },
   { id: "fark", label: "Fark", track: "V1" as const },
   { id: "surec", label: "Süreç", track: "V1" as const },
   { id: "referanslar", label: "Müşteriler", track: "A1" as const },
@@ -45,6 +47,7 @@ export default function HomePage() {
 
       {/* Ben kimim */}
       <AboutMe />
+      <SetWall />
 
       {/* Aradaki fark */}
       <div id="fark"><BeforeAfter /></div>

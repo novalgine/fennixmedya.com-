@@ -74,7 +74,7 @@ export default function HakkimdaPage() {
                   fill
                   priority
                   sizes="(max-width: 1024px) 90vw, 480px"
-                  className="object-cover object-[62%_38%]"
+                  className="object-cover"
                 />
               </div>
               <figcaption className="mt-3 flex items-center gap-3">

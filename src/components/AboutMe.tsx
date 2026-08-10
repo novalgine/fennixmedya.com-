@@ -1,12 +1,9 @@
 import Image from "next/image";
 import Reveal from "@/components/Reveal";
-import PhotoWall from "@/components/PhotoWall";
-
-const PHOTO_COUNT = 25;
 
 export default function AboutMe() {
   return (
-    <section id="ben" className="section-spacing bg-surface overflow-hidden">
+    <section id="ben" className="section-spacing bg-surface">
       <div className="container-page">
         <Reveal>
           <p className="font-heading font-semibold text-sm uppercase tracking-[0.25em] text-primary mb-3">
@@ -43,7 +40,7 @@ export default function AboutMe() {
                   alt="Semih Hasanoğlu, İstanbul'da gün batımında Boğaz manzarası önünde"
                   fill
                   sizes="(max-width: 1024px) 90vw, 340px"
-                  className="object-cover object-[62%_38%]"
+                  className="object-cover"
                 />
               </div>
               <figcaption className="mt-3 flex items-center gap-3">
@@ -59,10 +56,6 @@ export default function AboutMe() {
           </div>
         </Reveal>
       </div>
-
-      <Reveal delay={80} className="mt-12">
-        <PhotoWall count={PHOTO_COUNT} />
-      </Reveal>
     </section>
   );
 }

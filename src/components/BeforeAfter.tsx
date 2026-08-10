@@ -5,7 +5,7 @@ import ornekSinematik from "@/assets/ornek-sinematik.jpg";
 
 export default function BeforeAfter() {
   return (
-    <section className="section-spacing bg-background">
+    <section className="section-spacing bg-surface">
       <div className="container-page">
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           <Reveal>
