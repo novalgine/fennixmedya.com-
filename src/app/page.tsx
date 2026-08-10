@@ -2,10 +2,12 @@ import HeroSection from "@/components/HeroSection";
 import ClientMarquee from "@/components/ClientMarquee";
 import Reveal from "@/components/Reveal";
 import AboutMe from "@/components/AboutMe";
+import TrustCounterBand from "@/components/TrustCounterBand";
 import TimelineHud from "@/components/editor/TimelineHud";
 import dynamic from "next/dynamic";
 
 const FilmStripWorkRow = dynamic(() => import("@/components/FilmStripWorkRow"));
+const BeforeAfter = dynamic(() => import("@/components/BeforeAfter"));
 const HowIWork = dynamic(() => import("@/components/HowIWork"));
 const NotForYou = dynamic(() => import("@/components/NotForYou"));
 const Pricing = dynamic(() => import("@/components/Pricing"));
@@ -19,6 +21,7 @@ const CLIPS = [
   { id: "acilis", label: "Açılış", track: "V1" as const },
   { id: "portfolyo", label: "İşler", track: "V1" as const },
   { id: "ben", label: "Ben", track: "V1" as const },
+  { id: "fark", label: "Fark", track: "V1" as const },
   { id: "surec", label: "Süreç", track: "V1" as const },
   { id: "referanslar", label: "Müşteriler", track: "A1" as const },
   { id: "fiyat", label: "Fiyat", track: "V1" as const },
@@ -38,9 +41,13 @@ export default function HomePage() {
 
       {/* İşler — konuşmadan önce göster */}
       <FilmStripWorkRow />
+      <TrustCounterBand />
 
       {/* Ben kimim */}
       <AboutMe />
+
+      {/* Aradaki fark */}
+      <div id="fark"><BeforeAfter /></div>
 
       {/* Nasıl çalışıyorum */}
       <HowIWork />

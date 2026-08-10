@@ -46,7 +46,7 @@ export default function ImageComparison({
   return (
     <div
       ref={containerRef}
-      className="relative w-full aspect-video overflow-hidden rounded-2xl ring-1 ring-white/10 has-[input:focus-visible]:ring-2 has-[input:focus-visible]:ring-primary select-none touch-pan-y cursor-ew-resize"
+      className="relative w-full aspect-[797/893] overflow-hidden rounded-2xl ring-1 ring-white/10 has-[input:focus-visible]:ring-2 has-[input:focus-visible]:ring-primary select-none touch-pan-y cursor-ew-resize"
       onPointerDown={onPointerDown}
       onPointerMove={onPointerMove}
       onPointerUp={onPointerUp}
@@ -57,7 +57,7 @@ export default function ImageComparison({
         src={after}
         alt={alt}
         fill
-        sizes="(max-width: 1024px) 100vw, 720px"
+        sizes="(max-width: 1024px) 90vw, 440px"
         className="object-cover"
         placeholder="blur"
         draggable={false}
@@ -72,7 +72,7 @@ export default function ImageComparison({
           src={before}
           alt=""
           fill
-          sizes="(max-width: 1024px) 100vw, 720px"
+          sizes="(max-width: 1024px) 90vw, 440px"
           className="object-cover"
           placeholder="blur"
           draggable={false}
@@ -80,10 +80,10 @@ export default function ImageComparison({
       </div>
 
       {/* Etiketler */}
-      <span className="absolute top-4 left-4 z-10 inline-flex items-center gap-1.5 bg-danger/95 text-white font-bold px-3 py-1.5 rounded-lg text-xs md:text-sm shadow-lg border border-danger/50 pointer-events-none">
+      <span className="absolute top-4 left-4 z-10 inline-flex items-center gap-1.5 bg-background/85 text-muted-foreground font-semibold px-3 py-1.5 rounded-lg text-xs md:text-sm border border-white/10 backdrop-blur-sm pointer-events-none">
         <Smartphone className="w-3.5 h-3.5" aria-hidden /> {beforeLabel}
       </span>
-      <span className="absolute top-4 right-4 z-10 inline-flex items-center gap-1.5 bg-emerald-600/95 text-white font-bold px-3 py-1.5 rounded-lg text-xs md:text-sm shadow-lg border border-emerald-500/50 pointer-events-none">
+      <span className="absolute top-4 right-4 z-10 inline-flex items-center gap-1.5 bg-gradient-gold text-primary-foreground font-bold px-3 py-1.5 rounded-lg text-xs md:text-sm shadow-lg pointer-events-none">
         <Clapperboard className="w-3.5 h-3.5" aria-hidden /> {afterLabel}
       </span>
 

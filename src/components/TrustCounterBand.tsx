@@ -62,9 +62,9 @@ const TrustCounterBand = () => {
     return (
         <section
             ref={ref}
-            className="py-12 md:py-16 bg-surface border-y border-border/30 relative z-10"
+            className="py-12 md:py-16 bg-surface border-y border-border/40 relative z-10"
         >
-            <div className="max-w-6xl mx-auto px-4 sm:px-6">
+            <div className="container-page">
                 <div className="grid grid-cols-3 md:divide-x md:divide-border/40">
                     {stats.map((stat, i) => (
                         <StatItem key={i} stat={stat} index={i} phase={phase} />
