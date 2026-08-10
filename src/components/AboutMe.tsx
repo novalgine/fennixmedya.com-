@@ -36,10 +36,11 @@ export default function AboutMe() {
             <figure className="w-full max-w-sm mx-auto lg:max-w-none">
               <div className="relative aspect-[4/5] overflow-hidden border border-white/10">
                 <Image
-                  src="/foto/semih-portre.jpg"
+                  src="/foto/semih-portre-4x5.jpg"
                   alt="Semih Hasanoğlu, İstanbul'da gün batımında Boğaz manzarası önünde"
                   fill
-                  sizes="(max-width: 1024px) 90vw, 340px"
+                  sizes="(max-width: 1024px) 92vw, 360px"
+                  quality={90}
                   className="object-cover"
                 />
               </div>

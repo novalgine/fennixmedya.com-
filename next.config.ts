@@ -3,6 +3,9 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   images: {
     formats: ['image/avif', 'image/webp'],
+    // Next 16'da qualities bir izin listesi; portre gibi geniş yumuşak gradyanlı
+    // fotoğraflar 75'te bantlanıyor, 90 onlar için.
+    qualities: [75, 90],
   },
   async headers() {
     return [

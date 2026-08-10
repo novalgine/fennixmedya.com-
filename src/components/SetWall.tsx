@@ -12,9 +12,6 @@ export default function SetWall() {
             Kamera arkası
           </p>
           <h2 className="text-display-2 text-foreground mb-4">Setten Kareler</h2>
-          <p className="text-lg text-muted-foreground max-w-2xl">
-            Çekim günlerinden kareler. Bir kareye dokunursanız büyür.
-          </p>
         </Reveal>
       </div>
 
