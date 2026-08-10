@@ -1,34 +1,45 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# fennixmedya.com
 
-## Getting Started
+Semih Hasanoğlu'nun video prodüksiyon sitesi. Next.js 16 (App Router), React 19, TypeScript, Tailwind v3. Vercel'de barınıyor, `main`'e her push otomatik deploy tetikliyor.
 
-First, run the development server:
+## Çalıştırma
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev        # http://localhost:3000
+npm run build      # derleme + sitemap üretimi
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+`.env.local` gerekli iki değişken: `NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY`, `INDEXNOW_TRIGGER_SECRET`. İkisi de Vercel'in üç ortamında kurulu.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Metin yazmadan önce
 
-## Learn More
+**`TONE.md` bağlayıcıdır.** Kullanıcıya görünen her Türkçe metin — başlık, buton, form etiketi, hata mesajı, meta açıklaması, `alt` metni — oradaki sözleşmeye uyar. Kısa hâli: marka **ben** der, okuyucuya **siz** der, "biz" hiç kullanılmaz; yasaklı terim tablosuna bakılır; doğrulanmamış sayı ve uydurma müşteri alıntısı yazılmaz. Müşteri sözleri birebir kalır, tona uydurulmaz.
 
-To learn more about Next.js, take a look at the following resources:
+`AGENTS.md` bunu yapay zekâ ajanları için tekrarlar.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Bilinmesi gerekenler
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **`vercel.json` silinmemeli.** Vercel projesi eski siteden kalma "Vite" preset'iyle kurulu; içindeki `{"framework":"nextjs"}` onu eziyor. Silinirse deploy'lar sessizce bozulur.
+- **Next 16'da `images.qualities` bir izin listesi.** `next.config.ts`'de tanımlı olmayan bir `quality` değeri sessizce 75'e yuvarlanır.
+- **Görsel değişip dosya adı sabit kalırsa** Vercel'in optimize edici önbelleği eski baytları servis etmeye devam eder. İçerik değiştiyse adı da değiştirin.
+- **`public/googlec8a2bb1bf9a343f4.html`** Google Search Console doğrulama dosyasıdır, silinirse doğrulama düşer.
+- **Uzun videolarda otomatik oynatma kapalı** (`LazyHeroVideo`'nun `autoPlay` eşiği). Açılırsa ekranın üstünde onlarca megabayt kullanıcı istemeden iner.
 
-## Deploy on Vercel
+## Yapı
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```
+src/app/          rotalar; hizmet sayfaları ortak Service* bileşenlerini kullanır
+src/components/   editor/TimelineHud = ana sayfanın kurgu masası zaman çizelgesi
+src/data/         portfolyo, referanslar, hizmetler, fiyat — metin buradan gelir
+public/videos/    portfolyo ve referans videoları + poster kareleri
+public/foto/      set fotoğrafları (set-01…set-25) ve portre
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Geri dönüş
+
+Yeniden tasarım tek merge commit'iyle girdi:
+
+```bash
+git revert -m 1 d75f2b928b177f02ac7ae394fe7d1e4b5089340c
+```
