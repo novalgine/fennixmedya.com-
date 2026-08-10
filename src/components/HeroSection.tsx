@@ -22,7 +22,7 @@ function PhoneFrame() {
     const io = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          el.src = "/videos/hero-dikey.mp4";
+          el.src = "/videos/hero-semih.mp4";
           el.play().catch(() => {});
           io.disconnect();
         }
@@ -47,13 +47,13 @@ function PhoneFrame() {
           loop
           playsInline
           preload="none"
-          poster="/videos/portfolyo/vaveyla.jpg"
+          poster="/videos/hero-semih.jpg"
           className="absolute inset-0 w-full h-full object-cover"
-          aria-label="Fennix Medya örnek dikey video çalışması"
+          aria-label="Semih Hasanoğlu kamera karşısında konuşurken"
         />
       </div>
-      <p className="mt-4 text-center text-[11px] font-heading font-semibold uppercase tracking-[0.25em] text-muted-foreground/60">
-        Gerçek Müşteri İşi · Vavelya Home
+      <p className="mt-4 text-center text-sm text-muted-foreground/85 italic max-w-[280px] mx-auto leading-snug">
+        &ldquo;Videolarınız, dijitaldeki takım elbisenizdir.&rdquo;
       </p>
     </div>
   );
