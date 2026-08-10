@@ -56,7 +56,7 @@ export const funnelConfig: WizardConfig<FunnelAnswers> = {
               {
                 value: "Anahtar Teslim (Fennix Medya)",
                 title: "Anahtar Teslim (A'dan Z'ye)",
-                description: "Konsept, metin, çekim ve kurguyu biz halledelim",
+                description: "Konsept, metin, çekim ve kurguyu ben halledeyim",
               },
               {
                 value: "Sadece Çekim ve Kurgu",

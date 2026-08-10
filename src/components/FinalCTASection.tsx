@@ -12,21 +12,22 @@ const FinalCTASection = () => {
       {/* Emerald Spotlight behind CTA */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,var(--tw-gradient-stops))] from-gold/10 via-transparent to-transparent pointer-events-none" />
       <Reveal className="max-w-4xl mx-auto px-6 text-center relative z-10">
-        <p className="text-center text-primary font-bold text-sm md:text-base uppercase tracking-widest mb-6">
-          Sürdürülebilir kalite için ayda sınırlı sayıda marka ile çalışıyorum
+        <p className="font-heading font-semibold text-sm uppercase tracking-[0.25em] text-primary mb-6">
+          Son adım
         </p>
-        
+
         <h2 className="text-poster text-poster-sub text-center mb-8">
           <span className="block text-foreground">Hazırsanız</span>
           <span className="block text-gradient-gold">Sahne Sizin.</span>
         </h2>
 
         <p className="text-foreground/80 text-xl font-medium mb-12 max-w-2xl mx-auto">
-          15 dakika konuşalım. Markanıza ne çekeceğimizi, kaç videoyla başlayacağımızı ve bütçeyi netleştirelim. Bağlayıcı değil.
+          15 dakika konuşalım. Markanıza ne çekeceğimizi, kaç videoyla başlayacağımızı ve bütçeyi
+          netleştirelim. Ücret almıyorum, sonrasında devam etmek zorunda değilsiniz.
         </p>
 
         <MagneticWrapper>
-          <CtaButton onClick={() => openWizard()}>Ücretsiz Strateji Görüşmesi Al →</CtaButton>
+          <CtaButton onClick={() => openWizard()}>Görüşme Ayarlayalım →</CtaButton>
         </MagneticWrapper>
       </Reveal>
     </section>

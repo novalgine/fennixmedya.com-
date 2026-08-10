@@ -20,11 +20,11 @@ const bigShoulders = Big_Shoulders({
 export const metadata: Metadata = {
   metadataBase: new URL("https://fennixmedya.com"),
   title: {
-    default: "Fennix Medya | Premium Video Prodüksiyon İstanbul",
+    default: "Fennix Medya | İstanbul Video Prodüksiyon",
     template: "%s | Fennix Medya",
   },
   description:
-    "İstanbul merkezli profesyonel video prodüksiyon ajansı. Sosyal medya videoları, kurumsal tanıtım filmleri ve YouTube içerik üretimi. Ayda sadece 6 saat ayırarak 30 günlük video içeriğe sahip olun.",
+    "İstanbul'da markalar için video çekiyorum. Sosyal medya videoları, kurumsal tanıtım filmleri ve YouTube içerikleri — metinden teslimata kadar tek elden. Ayda iki çekim günü, sekiz video.",
   keywords: [
     "video prodüksiyon İstanbul",
     "kurumsal tanıtım filmi",
@@ -40,15 +40,15 @@ export const metadata: Metadata = {
     locale: "tr_TR",
     url: "https://fennixmedya.com",
     siteName: "Fennix Medya",
-    title: "Fennix Medya | Premium Video Prodüksiyon İstanbul",
+    title: "Fennix Medya | İstanbul Video Prodüksiyon",
     description:
-      "Ayda sadece 6 saat ayırarak 30 günlük yüksek kaliteli video içeriğe sahip olun. Profesyonel çekim, kurgu ve metin yazarlığı hizmeti.",
+      "Metni birlikte kurarız, çekimi ve kurguyu ben yaparım. Ayda iki çekim günü, sekiz video. İstanbul.",
     // og:image, app/opengraph-image.tsx dosya konvansiyonundan otomatik gelir
   },
   twitter: {
     card: "summary_large_image",
-    title: "Fennix Medya | Premium Video Prodüksiyon",
-    description: "İstanbul'da profesyonel video prodüksiyon hizmeti.",
+    title: "Fennix Medya | İstanbul Video Prodüksiyon",
+    description: "İstanbul'da markalar için video çekiyorum.",
   },
   robots: {
     index: true,
@@ -91,7 +91,7 @@ export default function RootLayout({
               name: "Fennix Medya",
               image: "https://fennixmedya.com/opengraph-image",
               logo: "https://fennixmedya.com/apple-icon",
-              description: "İstanbul merkezli profesyonel video prodüksiyon ajansı. Sosyal medya yönetimi, kurumsal tanıtım filmi, YouTube içerik üretimi.",
+              description: "İstanbul'da markalar için video çekiyorum. Sosyal medya yönetimi, kurumsal tanıtım filmi, YouTube içerik üretimi.",
               url: "https://fennixmedya.com",
               telephone: "+905467407084",
               areaServed: { "@type": "City", name: "İstanbul" },

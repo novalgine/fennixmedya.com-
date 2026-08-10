@@ -8,7 +8,7 @@ interface WizardCtaProps {
   className?: string;
 }
 
-export default function WizardCta({ text = "Ücretsiz Strateji Görüşmesi Al →", className }: WizardCtaProps) {
+export default function WizardCta({ text = "Görüşme Ayarlayalım →", className }: WizardCtaProps) {
   const { openWizard } = useWizard();
   return (
     <CtaButton onClick={() => openWizard("funnel")} className={className}>

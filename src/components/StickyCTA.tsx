@@ -5,7 +5,7 @@ import MagneticWrapper from "./MagneticWrapper";
 import CtaButton from "@/components/CtaButton";
 
 const WHATSAPP_NUMBER = "905467407084";
-const WHATSAPP_MESSAGE = encodeURIComponent("Merhaba, web sitenizden ulaşıyorum. Ücretsiz strateji görüşmesi hakkında bilgi almak istiyorum.");
+const WHATSAPP_MESSAGE = encodeURIComponent("Merhaba, web sitenizden ulaşıyorum. Bir görüşme ayarlamak istiyorum.");
 const PHONE_NUMBER = "+905467407084";
 
 import { useWizard } from "@/components/WizardContext";
@@ -101,7 +101,7 @@ const StickyCTA = () => {
       ) : (
         <MagneticWrapper>
           <CtaButton size="md" onClick={handleMainCTA} className="rounded-full">
-            Ücretsiz Strateji Görüşmesi Al →
+            Görüşme Ayarlayalım →
           </CtaButton>
         </MagneticWrapper>
       )}

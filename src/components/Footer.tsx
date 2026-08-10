@@ -19,13 +19,13 @@ const Footer = () => {
               Yapım — Fennix Medya · İstanbul · {new Date().getFullYear()}
             </p>
             <p className="text-base text-muted-foreground font-medium">
-              İstanbul Video Prodüksiyon & Reels Ajansı
+              İstanbul · Video çekimi ve kurgu
             </p>
             <p className="text-xs text-muted-foreground/60 mt-2 leading-relaxed max-w-xs">
-              High-ticket profesyoneller ve markalar için sinematik içerik üretimi, sosyal medya stratejisi ve profesyonel video çekim hizmetleri.
+              İstanbul'da markalar için video çekiyorum. Metni birlikte kurar, çekimi ve kurguyu tek başıma yaparım.
             </p>
             <CtaButton variant="secondary" size="md" onClick={() => openWizard()} className="mt-5 text-sm">
-              Ücretsiz Strateji Görüşmesi Al →
+              Görüşme Ayarlayalım →
             </CtaButton>
           </div>
 

@@ -32,11 +32,11 @@ const faqs = [
     },
     {
         question: "Sadece video düzenleme (kurgu) hizmeti veriyor musunuz? Videoyu ben çekip yollasam?",
-        answer: "Hayır. Farkım sadece kurgu değil, sette olan şey: kamera önünde nasıl durduğunuz, nasıl konuştuğunuz. Telefonla çekilmiş bir görüntüyü ne kadar iyi kurgularsam kurgulayayım o fark kapanmıyor. Bu yüzden uçtan uca çalışıyorum.",
+        answer: "Hayır. Farkım sadece kurgu değil, sette olan şey: kamera önünde nasıl durduğunuz, nasıl konuştuğunuz. Telefonla çekilmiş bir görüntüyü ne kadar iyi kurgularsam kurgulayayım o fark kapanmıyor. Bu yüzden metinden teslime kadar işi tek başıma yürütüyorum.",
     },
     {
         question: "Hangi sektördeki markaları kabul ediyorsunuz?",
-        answer: "Klinikler, doktorlar, koçlar, danışmanlar, tiyatrolar, butik ve kurumsal markalar ana çalışma alanım. Kaliteyi koruyabilmek için ayda sınırlı sayıda marka alıyorum. Kimlerle çalışmadığımı da sayfada açıkça yazdım — okumanızı öneririm.",
+        answer: "Klinikler, doktorlar, koçlar, danışmanlar, tiyatrolar, butik ve kurumsal markalar ana çalışma alanım. Kimlerle çalışmadığımı da sayfada açıkça yazdım — okumanızı öneririm.",
     }
 ];
 

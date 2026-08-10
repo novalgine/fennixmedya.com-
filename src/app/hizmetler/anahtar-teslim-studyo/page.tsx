@@ -129,7 +129,7 @@ export default function AnahtarTeslimStudyoPage() {
               </p>
             </div>
             <div className="flex flex-col sm:flex-row gap-4">
-              <StudioWizardCta text="Ücretsiz Mekân Analizi Talep Et" />
+              <StudioWizardCta text="Mekân Analizi İsteyin" />
               <PdfDownloadCta />
             </div>
           </Reveal>
@@ -222,7 +222,7 @@ export default function AnahtarTeslimStudyoPage() {
               Mekân analizi ücretsiz. Alanı gezip ne kurulabileceğini söylüyorum; devam etmek
               zorunda değilsiniz.
             </p>
-            <StudioWizardCta text="Ücretsiz Mekân Analizi Talep Et" />
+            <StudioWizardCta text="Mekân Analizi İsteyin" />
           </Reveal>
         </div>
       </section>

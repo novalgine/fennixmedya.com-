@@ -4,7 +4,7 @@ import Image from "next/image";
 import MagneticWrapper from "@/components/MagneticWrapper";
 import CtaButton from "@/components/CtaButton";
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
-import { Play, ChevronDown, Clock, CheckCircle, Volume2, VolumeX } from "lucide-react";
+import { Play, ChevronDown, Volume2, VolumeX } from "lucide-react";
 
 import { useWizard } from "@/components/WizardContext";
 
@@ -142,9 +142,9 @@ const HeroSection = () => {
 
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mb-5">
               <MagneticWrapper>
-                <CtaButton onClick={handleCTAClick} aria-label="Ücretsiz Strateji Görüşmesi Al" className="w-full sm:w-auto">
-                  <span className="hidden sm:inline">Ücretsiz Strateji Görüşmesi Al →</span>
-                  <span className="sm:hidden">Ücretsiz Görüşme Al →</span>
+                <CtaButton onClick={handleCTAClick} aria-label="Görüşme ayarlayın" className="w-full sm:w-auto">
+                  <span className="hidden sm:inline">Görüşme Ayarlayalım →</span>
+                  <span className="sm:hidden">Görüşelim →</span>
                 </CtaButton>
               </MagneticWrapper>
               <MagneticWrapper>
@@ -162,17 +162,10 @@ const HeroSection = () => {
               Vizyonumu izleyin — 3 dk
             </button>
 
-            <p className="text-sm text-muted-foreground mb-4">
-              Kaliteyi korumak için ayda sınırlı sayıda marka ile çalışıyorum.
+            <p className="text-sm text-muted-foreground mb-8 max-w-md leading-relaxed">
+              Görüşme 15 dakika sürüyor, ücret almıyorum ve sonrasında devam etmek zorunda
+              değilsiniz.
             </p>
-
-            <div className="flex items-center gap-4 text-xs sm:text-sm font-medium text-muted-foreground/80 mb-8">
-              <span className="flex items-center gap-1.5"><Clock className="w-3.5 h-3.5" aria-hidden /> 15 Dakika</span>
-              <span className="w-1 h-1 rounded-full bg-primary/40" />
-              <span className="flex items-center gap-1.5"><CheckCircle className="w-3.5 h-3.5" aria-hidden /> Tamamen Ücretsiz</span>
-              <span className="w-1 h-1 rounded-full bg-primary/40 hidden sm:block" />
-              <span className="hidden sm:inline">Bağlayıcı Değildir</span>
-            </div>
 
             {/* Gerçek referans bandı */}
             <a href="#referanslar" className="inline-flex items-center gap-3 group/band">
@@ -221,7 +214,7 @@ const HeroSection = () => {
               handleCTAClick();
             }}
           >
-            Ücretsiz Strateji Görüşmesi Al →
+            Görüşme Ayarlayalım →
           </CtaButton>
         </DialogContent>
       </Dialog>

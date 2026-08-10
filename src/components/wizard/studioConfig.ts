@@ -98,7 +98,7 @@ export const studioConfig: WizardConfig<StudioAnswers> = {
         {
           value: "Evet, kurgu desteği de almak isterim",
           title: "Evet, kurgu desteği de almak isterim",
-          description: "Çekim sonrası tüm düzenleme ve efektleri biz yapalım",
+          description: "Çekim sonrası düzenleme ve efektleri ben yapayım",
         },
         {
           value: "Hayır, sadece stüdyo kurulumu yeterli",

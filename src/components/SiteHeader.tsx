@@ -200,7 +200,7 @@ export default function SiteHeader() {
               }}
               className="mx-4 mt-2 text-sm"
             >
-              Ücretsiz Strateji Görüşmesi Al →
+              Görüşme Ayarlayalım →
             </CtaButton>
           </nav>
         </div>
