@@ -31,7 +31,7 @@ const Footer = () => {
 
           {/* Menü & Hizmetler */}
           <div className="space-y-3">
-            <h4 className="font-heading text-sm font-bold uppercase tracking-widest text-foreground/50 mb-1">Hizmetlerimiz</h4>
+            <h4 className="font-heading text-sm font-bold uppercase tracking-widest text-foreground/50 mb-1">Hizmetler</h4>
             <div className="flex flex-col gap-2">
               <Link href="/hizmetler" className="text-muted-foreground hover:text-primary transition-colors text-sm font-medium">Tüm Hizmetler</Link>
               <Link href="/hizmetler/sosyal-medya-video" className="text-muted-foreground hover:text-primary transition-colors text-sm font-medium">Sosyal Medya Videosu</Link>
@@ -41,7 +41,7 @@ const Footer = () => {
               <div className="h-px w-8 bg-border/50 my-1"></div>
               <Link href="/blog" className="text-muted-foreground hover:text-primary transition-colors text-sm font-medium">Blog & Rehberler</Link>
               <Link href="/portfolyo" className="text-muted-foreground hover:text-primary transition-colors text-sm font-medium">Portfolyo</Link>
-              <Link href="/hakkimizda" className="text-muted-foreground hover:text-primary transition-colors text-sm font-medium">Hakkımızda</Link>
+              <Link href="/hakkimizda" className="text-muted-foreground hover:text-primary transition-colors text-sm font-medium">Hakkımda</Link>
             </div>
           </div>
 

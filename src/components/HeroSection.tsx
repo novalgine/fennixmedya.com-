@@ -4,13 +4,14 @@ import Image from "next/image";
 import MagneticWrapper from "@/components/MagneticWrapper";
 import CtaButton from "@/components/CtaButton";
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
-import { Play, ChevronDown, Clock, CheckCircle } from "lucide-react";
+import { Play, ChevronDown, Clock, CheckCircle, Volume2, VolumeX } from "lucide-react";
 
 import { useWizard } from "@/components/WizardContext";
 
-/** Telefon çerçevesinde sessiz dönen dikey iş — mesajın kanıtı */
+/** Telefon çerçevesinde dönen dikey iş — mesajın kanıtı. Sessiz başlar, dokununca sesi açılır. */
 function PhoneFrame() {
   const videoRef = useRef<HTMLVideoElement>(null);
+  const [sesAcik, setSesAcik] = useState(false);
 
   useEffect(() => {
     const el = videoRef.current;
@@ -33,6 +34,22 @@ function PhoneFrame() {
     return () => io.disconnect();
   }, []);
 
+  // Tarayıcılar sesli otomatik oynatmayı engelliyor: ses ancak kullanıcı dokununca açılabilir.
+  // Açıldığında videoyu başa sarıyoruz ki cümlenin ortasından değil, baştan duyulsun.
+  const sesiDegistir = () => {
+    const el = videoRef.current;
+    if (!el) return;
+    if (!el.src) el.src = "/videos/hero-semih.mp4";
+    const acilacak = !sesAcik;
+    el.muted = !acilacak;
+    if (acilacak) el.currentTime = 0;
+    el.play().catch(() => {});
+    setSesAcik(acilacak);
+    if (typeof window.trackEvent === "function") {
+      window.trackEvent("hero_video_unmute", { muted: !acilacak });
+    }
+  };
+
   return (
     <div className="relative w-[220px] sm:w-[250px] lg:w-[290px] mx-auto">
       <div className="relative aspect-[9/16] rounded-[2.5rem] border border-white/15 ring-1 ring-white/5 shadow-2xl shadow-black/60 overflow-hidden bg-black">
@@ -51,6 +68,21 @@ function PhoneFrame() {
           className="absolute inset-0 w-full h-full object-cover"
           aria-label="Semih Hasanoğlu kamera karşısında konuşurken"
         />
+        <button
+          type="button"
+          onClick={sesiDegistir}
+          aria-pressed={sesAcik}
+          className="absolute bottom-4 right-4 z-10 flex items-center gap-1.5 rounded-full border border-white/20 bg-black/55 backdrop-blur-sm px-3 py-1.5 text-white/90 hover:text-primary hover:border-primary/50 transition-colors cursor-pointer"
+        >
+          {sesAcik ? (
+            <Volume2 className="w-3.5 h-3.5" aria-hidden />
+          ) : (
+            <VolumeX className="w-3.5 h-3.5" aria-hidden />
+          )}
+          <span className="font-mono text-[9px] uppercase tracking-widest">
+            {sesAcik ? "Ses açık" : "Sesi aç"}
+          </span>
+        </button>
       </div>
       <p className="mt-4 text-center text-sm text-muted-foreground/85 italic max-w-[280px] mx-auto leading-snug">
         &ldquo;Videolarınız, dijitaldeki takım elbisenizdir.&rdquo;
@@ -117,7 +149,7 @@ const HeroSection = () => {
               </MagneticWrapper>
               <MagneticWrapper>
                 <CtaButton variant="secondary" href="#portfolyo" className="w-full sm:w-auto">
-                  Portfolyomuzu İncele
+                  Portfolyomu İncele
                 </CtaButton>
               </MagneticWrapper>
             </div>
@@ -127,7 +159,7 @@ const HeroSection = () => {
               className="inline-flex items-center gap-2 text-primary hover:text-gold-light text-sm font-medium underline-offset-4 hover:underline transition-colors mb-6 cursor-pointer"
             >
               <Play className="w-3.5 h-3.5 fill-current" aria-hidden />
-              Vizyonumuzu izleyin — 3 dk
+              Vizyonumu izleyin — 3 dk
             </button>
 
             <p className="text-sm text-muted-foreground mb-4">
@@ -172,11 +204,11 @@ const HeroSection = () => {
       {/* VSL Video Dialog */}
       <Dialog open={showVideo} onOpenChange={setShowVideo}>
         <DialogContent className="max-w-6xl bg-transparent border-0 shadow-none p-0">
-          <DialogTitle className="sr-only">Fennix Medya - Vizyonumuz</DialogTitle>
+          <DialogTitle className="sr-only">Fennix Medya — Vizyonum</DialogTitle>
           <div className="relative w-full aspect-video rounded-2xl overflow-hidden border border-white/10 mb-6">
             <iframe
               src="https://www.youtube.com/embed/t1edyqgT1UQ?autoplay=1&mute=0&rel=0&start=1&modestbranding=1"
-              title="Fennix Medya - Vizyonumuz"
+              title="Fennix Medya — Vizyonum"
               className="w-full h-full border-0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen

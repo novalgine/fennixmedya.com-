@@ -20,7 +20,7 @@ const navLinks = [
   },
   { label: "Portfolyo", href: "/portfolyo" },
   { label: "Blog", href: "/blog" },
-  { label: "Hakkımızda", href: "/hakkimizda" },
+  { label: "Hakkımda", href: "/hakkimizda" },
 ];
 
 export default function SiteHeader() {

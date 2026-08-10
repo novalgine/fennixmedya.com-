@@ -1,50 +1,49 @@
-import { Play, MonitorPlay, Building2, MonitorSpeaker, type LucideIcon } from "lucide-react";
-
 export interface Service {
   id: string;
+  /** Künye kodu — kartlarda makine dili aksanı olarak kullanılır */
+  code: string;
   title: string;
   description: string;
-  icon: LucideIcon;
+  /** Kart altındaki somut künye satırı: format, ritim, kapsam */
+  meta: string[];
   href: string;
-  color: string;
-  border: string;
 }
 
 export const services: Service[] = [
   {
     id: "sosyal-medya-video",
+    code: "H01",
     title: "Sosyal Medya Videosu",
-    description: "Instagram, TikTok ve reklam kampanyaları için kısa ve etkili videolar.",
-    icon: Play,
+    description:
+      "Instagram Reels, TikTok ve Shorts için dikey videolar. Metni önceden yazarız, ayda iki çekim gününde bir aylık içeriğinizi tamamlarız.",
+    meta: ["Dikey · 9:16", "Ayda 2 çekim günü", "Aylık 8 video"],
     href: "/hizmetler/sosyal-medya-video",
-    color: "from-blue-500/20 to-purple-500/20",
-    border: "group-hover:border-blue-500/50",
   },
   {
     id: "kurumsal-tanitim-filmi",
+    code: "H02",
     title: "Kurumsal Tanıtım Filmi",
-    description: "Markanızın hikayesini en prestijli şekilde anlatan sinematik filmler.",
-    icon: Building2,
+    description:
+      "Markanızı tek bir filmde anlatan yatay prodüksiyon. Web siteniz, fuar standınız ve reklam kampanyalarınız için.",
+    meta: ["Yatay · 16:9", "Tek proje", "Senaryo dahil"],
     href: "/hizmetler/kurumsal-tanitim-filmi",
-    color: "from-amber-500/20 to-orange-500/20",
-    border: "group-hover:border-amber-500/50",
   },
   {
     id: "youtube-icerik-uretimi",
+    code: "H03",
     title: "YouTube İçerik Üretimi",
-    description: "Kanalınızı büyütecek algoritma uyumlu içerik mimarisi.",
-    icon: MonitorPlay,
+    description:
+      "Uzun formatta anlatım videoları. Çekim, kurgu ve altyazı bende; kanalınızın düzenli yayın ritmini birlikte kurarız.",
+    meta: ["Yatay · uzun format", "Kurgu + altyazı", "Düzenli yayın"],
     href: "/hizmetler/youtube-icerik-uretimi",
-    color: "from-red-500/20 to-rose-500/20",
-    border: "group-hover:border-red-500/50",
   },
   {
     id: "anahtar-teslim-studyo",
+    code: "H04",
     title: "Anahtar Teslim Stüdyo",
-    description: "Tek tuşla sinematik içerik üretebileceğiniz kişisel stüdyo kurulumu.",
-    icon: MonitorSpeaker,
+    description:
+      "Kendi içeriğinizi kendiniz çekmek istiyorsanız: mekân analizi, ekipman listesi, kurulum ve kamera önü provası.",
+    meta: ["Tek seferlik kurulum", "Ekipman size ait", "Prova dahil"],
     href: "/hizmetler/anahtar-teslim-studyo",
-    color: "from-emerald-500/20 to-teal-500/20",
-    border: "group-hover:border-emerald-500/50",
   },
 ];

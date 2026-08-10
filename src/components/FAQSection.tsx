@@ -65,7 +65,7 @@ const FAQSection = () => {
                     <SectionHeading
                         eyebrow="Merak Edilenler"
                         title="Sıkça Sorulan Sorular"
-                        sub="Aklınıza takılan soruların cevaplarını burada bulabilirsiniz. Farklı bir sorunuz varsa bizimle iletişime geçmekten çekinmeyin."
+                        sub="Aklınıza takılan soruların cevaplarını burada bulabilirsiniz. Farklı bir sorunuz varsa bana yazın."
                     />
                 </Reveal>
 

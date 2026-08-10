@@ -1,22 +1,23 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import { ArrowRight } from "lucide-react";
 import { services } from "@/data/services";
+import ServiceCard from "@/components/ServiceCard";
 import WizardCta from "@/components/WizardCta";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import Reveal from "@/components/Reveal";
 import JsonLd from "@/components/JsonLd";
 
+const OZET =
+  "Sosyal medya videosu, kurumsal tanıtım filmi, YouTube içerik üretimi ve anahtar teslim stüdyo kurulumu. İstanbul'da senaryodan teslimata kadar tek elden video prodüksiyon.";
+
 export const metadata: Metadata = {
-  title: "Hizmetlerimiz",
-  description:
-    "Sosyal medya videoları, kurumsal tanıtım filmleri, YouTube içerik üretimi ve anahtar teslim stüdyo kurulumu. İstanbul merkezli profesyonel video prodüksiyon hizmetleri.",
+  title: "Hizmetler",
+  description: OZET,
   alternates: { canonical: "https://fennixmedya.com/hizmetler" },
   openGraph: {
     type: "website",
     url: "https://fennixmedya.com/hizmetler",
-    title: "Hizmetlerimiz",
-    description:
-      "Sosyal medya videoları, kurumsal tanıtım filmleri, YouTube içerik üretimi ve anahtar teslim stüdyo kurulumu.",
+    title: "Hizmetler",
+    description: OZET,
     siteName: "Fennix Medya",
     locale: "tr_TR",
   },
@@ -29,7 +30,7 @@ export default function HizmetlerPage() {
         data={{
           "@context": "https://schema.org",
           "@type": "ItemList",
-          name: "Fennix Medya Hizmetleri",
+          name: "Fennix Medya hizmetleri",
           itemListElement: services.map((s, i) => ({
             "@type": "ListItem",
             position: i + 1,
@@ -38,57 +39,45 @@ export default function HizmetlerPage() {
           })),
         }}
       />
-      <section className="max-w-6xl mx-auto px-6 py-16 md:py-24">
+
+      <section className="container-page pt-8 pb-16 md:pb-20">
         <Breadcrumbs items={[{ name: "Hizmetler" }]} />
 
-        <div className="text-center mb-16">
-          <span className="text-primary font-medium text-sm tracking-widest uppercase mb-4 block">
-            Hizmetler
-          </span>
-          <h1 className="font-heading text-4xl md:text-6xl font-black tracking-tight mb-6">
-            Video Prodüksiyon <span className="text-gradient-gold">Çözümlerimiz</span>
-          </h1>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Markanızın ihtiyacına göre uçtan uca tasarlanmış dört ana hizmet.
-            Hepsinde aynı standart: sinematik kalite, stratejik kurgu.
+        <Reveal>
+          <p className="font-heading font-semibold text-sm uppercase tracking-[0.25em] text-primary mb-4 mt-8">
+            Ne yapıyorum
           </p>
-        </div>
+          <h1 className="text-poster mb-8">
+            <span className="block text-foreground">Dört İş.</span>
+            <span className="block text-gradient-gold">Hepsi Bende.</span>
+          </h1>
+          <p className="text-muted-foreground text-lg md:text-xl leading-relaxed max-w-2xl">
+            Aralarındaki tek fark format ve ritim. Hangisini seçerseniz seçin, metni birlikte
+            kurar, çekimi ben yapar, kurguyu ben bitiririm — arada devreden çıkan kimse olmaz.
+          </p>
+        </Reveal>
+      </section>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {services.map((service) => (
-            <Link
-              key={service.id}
-              href={service.href}
-              className={`group block h-full bg-card/50 backdrop-blur-sm border border-border/50 rounded-2xl p-8 transition-all duration-300 hover:shadow-2xl hover:shadow-primary/5 hover:-translate-y-1 ${service.border}`}
-            >
-              <div
-                className={`w-14 h-14 rounded-xl flex items-center justify-center bg-gradient-to-br ${service.color} mb-6`}
-              >
-                <service.icon className="w-7 h-7 text-foreground/80 group-hover:text-primary transition-colors" />
-              </div>
-
-              <h2 className="font-heading font-bold text-2xl mb-3 group-hover:text-primary transition-colors">
-                {service.title}
-              </h2>
-
-              <p className="text-muted-foreground leading-relaxed mb-6">{service.description}</p>
-
-              <div className="flex items-center text-primary font-medium text-sm group-hover:translate-x-2 transition-transform">
-                İncele <ArrowRight className="w-4 h-4 ml-1.5" />
-              </div>
-            </Link>
+      <section className="container-page pb-16 md:pb-24">
+        <div className="grid gap-12 md:grid-cols-2 md:gap-x-12 md:gap-y-14 items-stretch">
+          {services.map((service, i) => (
+            <Reveal key={service.id} delay={i * 60}>
+              <ServiceCard service={service} />
+            </Reveal>
           ))}
         </div>
+      </section>
 
-        <div className="mt-16 text-center bg-card border border-white/5 p-8 md:p-12 rounded-2xl shadow-2xl">
-          <h2 className="font-heading text-2xl md:text-3xl font-bold mb-4">
-            Hangisinin size uygun olduğundan emin değil misiniz?
-          </h2>
-          <p className="text-muted-foreground mb-8 max-w-xl mx-auto">
-            15 dakikalık ücretsiz strateji görüşmesinde markanız için en doğru çözümü birlikte
-            belirleyelim.
-          </p>
-          <WizardCta />
+      <section className="section-spacing bg-surface border-t border-border/40">
+        <div className="container-page text-center">
+          <Reveal>
+            <h2 className="text-display-2 text-foreground mb-4">Hangisi Size Uyar?</h2>
+            <p className="text-muted-foreground text-lg mb-8 max-w-xl mx-auto">
+              Emin değilseniz 15 dakikalık görüşmede konuşalım. Markanızı dinledikten sonra
+              hangisinin işe yarayacağını söylemek benim işim.
+            </p>
+            <WizardCta />
+          </Reveal>
         </div>
       </section>
     </div>
