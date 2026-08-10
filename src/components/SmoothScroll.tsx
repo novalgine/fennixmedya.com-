@@ -32,7 +32,8 @@ export default function SmoothScroll({ children }: { children: React.ReactNode }
       ref={lenisRef}
       options={{
         autoRaf: false,
-        lerp: 0.09,
+        lerp: 0.14,
+        wheelMultiplier: 1.1,
         anchors: true,
         stopInertiaOnNavigate: true,
         prevent: (node) => !!node.closest("[data-lenis-prevent]"),

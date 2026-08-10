@@ -8,6 +8,8 @@ export interface PortfolioItem {
   /** Sitede yayına alındığı tarih (VideoObject şeması için) */
   uploadDate: string;
   description: string;
+  /** Kartın altında görünen gerçek tanım (ör. "Ev tekstili ve dekorasyon") */
+  subtitle?: string;
   /** Ana sayfa vaka bölümünde gösterilecekse doldurulur */
   caseStudy?: { sector: string; before: string; after: string };
 }
@@ -16,8 +18,20 @@ export const caseStudiesFrom = (items: PortfolioItem[]) => items.filter((p) => p
 
 export const portfolioData: PortfolioItem[] = [
   {
+    id: "sistemler",
+    title: "Sistemler.io",
+    subtitle: "Kurumsal içerik · Yazılım",
+    category: "Kurumsal",
+    format: "Dikey",
+    videoSrc: "/videos/portfolyo/sistemler.mp4",
+    thumbnailSrc: "/videos/portfolyo/sistemler.jpg",
+    uploadDate: "2026-07-22",
+    description: "Sistemler.io kurucusu Berke Derelioğlu için çekilen dikey içerik videosu.",
+  },
+  {
     id: "zuhal",
     title: "Zuhal",
+    subtitle: "Teaser · Tiyatro",
     category: "Kurumsal",
     format: "Dikey",
     videoSrc: "/videos/portfolyo/zuhal.mp4",
@@ -27,7 +41,8 @@ export const portfolioData: PortfolioItem[] = [
   },
   {
     id: "afife-turne",
-    title: "Afife Turne",
+    title: "Afife",
+    subtitle: "Tiyatro oyunu · Turne",
     category: "Kurumsal",
     format: "Dikey",
     videoSrc: "/videos/portfolyo/afife-turne.mp4",
@@ -37,7 +52,8 @@ export const portfolioData: PortfolioItem[] = [
   },
   {
     id: "afife-harbiye",
-    title: "Afife Harbiye",
+    title: "Afife",
+    subtitle: "Tiyatro oyunu · Harbiye",
     category: "Kurumsal",
     format: "Dikey",
     videoSrc: "/videos/portfolyo/afife-harbiye.mp4",
@@ -47,7 +63,8 @@ export const portfolioData: PortfolioItem[] = [
   },
   {
     id: "vavelya-karpuz",
-    title: "Vavelya · Karpuz",
+    title: "Vavelya Home",
+    subtitle: "Ev tekstili ve dekorasyon",
     category: "Sosyal Medya",
     format: "Dikey",
     videoSrc: "/videos/portfolyo/vavelya-karpuz.mp4",
@@ -57,7 +74,8 @@ export const portfolioData: PortfolioItem[] = [
   },
   {
     id: "vavelya-cilek",
-    title: "Vavelya · Çilek",
+    title: "Vavelya Home",
+    subtitle: "Ev tekstili ve dekorasyon",
     category: "Sosyal Medya",
     format: "Dikey",
     videoSrc: "/videos/portfolyo/vavelya-cilek.mp4",
@@ -67,7 +85,8 @@ export const portfolioData: PortfolioItem[] = [
   },
   {
     id: "vavelya-limon",
-    title: "Vavelya · Limon",
+    title: "Vavelya Home",
+    subtitle: "Ev tekstili ve dekorasyon",
     category: "Sosyal Medya",
     format: "Dikey",
     videoSrc: "/videos/portfolyo/vavelya-limon.mp4",
@@ -81,6 +100,7 @@ export const portfolioData: PortfolioItem[] = [
     uploadDate: "2026-05-29",
     description: "Vavelya Home çeyiz markası için çekilen dikey sosyal medya tanıtım videosu.",
     title: "Vavelya Home",
+    subtitle: "Ev tekstili ve dekorasyon",
     category: "Sosyal Medya",
     format: "Dikey",
     videoSrc: "/videos/portfolyo/vaveyla.mp4",
@@ -91,7 +111,8 @@ export const portfolioData: PortfolioItem[] = [
     caseStudy: { sector: "Diş Hekimi ve Ressam", before: "Sıradan klinik görselleri ve düşük etkileşim.", after: "Sanatsal ve güvenilir bir kişisel marka oluşumu." },
     uploadDate: "2026-05-29",
     description: "Ayzıt Umay için çekilen dikey sosyal medya marka videosu.",
-    title: "Ayzıt Umay",
+    title: "Dt. Ayzıt Umay",
+    subtitle: "Diş hekimi ve ressam",
     category: "Sosyal Medya",
     format: "Dikey",
     videoSrc: "/videos/portfolyo/umay.mp4",
@@ -103,6 +124,7 @@ export const portfolioData: PortfolioItem[] = [
     uploadDate: "2026-05-29",
     description: "Boogold Kuyumculuk için çekilen dikey sosyal medya tanıtım videosu.",
     title: "Boogold Kuyumculuk",
+    subtitle: "Kişiye özel altın takı tasarımı",
     category: "Sosyal Medya",
     format: "Dikey",
     videoSrc: "/videos/portfolyo/boogold.mp4",
@@ -113,7 +135,8 @@ export const portfolioData: PortfolioItem[] = [
     caseStudy: { sector: "Duygusal Beslenme Uzmanı · Wellness", before: "Telefonla çekilmiş amatör içerikler.", after: "Görsel hikaye anlatıcılığı ve otoriteyi birleştiren otantik içerikler." },
     uploadDate: "2026-05-29",
     description: "Melis Ulaş Wellness için çekilen dikey sosyal medya içerik videosu.",
-    title: "Melis Ulaş Wellness",
+    title: "Melis Ulaş",
+    subtitle: "Duygusal beslenme uzmanı",
     category: "Sosyal Medya",
     format: "Dikey",
     videoSrc: "/videos/portfolyo/melis.mp4",
@@ -124,6 +147,7 @@ export const portfolioData: PortfolioItem[] = [
     uploadDate: "2026-05-29",
     description: "Vet House veteriner kliniği için çekilen dikey sosyal medya videosu.",
     title: "Vet House",
+    subtitle: "Veteriner kliniği",
     category: "Sosyal Medya",
     format: "Dikey",
     videoSrc: "/videos/portfolyo/vethouse.mp4",
@@ -134,6 +158,7 @@ export const portfolioData: PortfolioItem[] = [
     uploadDate: "2026-05-29",
     description: "Buzdağı Suları için çekilen dikey sosyal medya tanıtım videosu.",
     title: "Buzdağı Suları",
+    subtitle: "İçecek markası",
     category: "Sosyal Medya",
     format: "Dikey",
     videoSrc: "/videos/portfolyo/buzdagi.mp4",
@@ -143,7 +168,8 @@ export const portfolioData: PortfolioItem[] = [
     id: "afife",
     uploadDate: "2026-05-29",
     description: "Afife Turne için çekilen dikey sosyal medya etkinlik videosu.",
-    title: "Afife Turne",
+    title: "Afife",
+    subtitle: "Tiyatro oyunu",
     category: "Sosyal Medya",
     format: "Dikey",
     videoSrc: "/videos/portfolyo/afife.mp4",
@@ -153,7 +179,8 @@ export const portfolioData: PortfolioItem[] = [
     id: "petadress",
     uploadDate: "2026-05-29",
     description: "Petadress için çekilen yatay formatta kurumsal tanıtım filmi.",
-    title: "Petadress Tanıtım Filmi",
+    title: "Petadress",
+    subtitle: "Veteriner kliniği · Tanıtım filmi",
     category: "Kurumsal",
     format: "Yatay",
     videoSrc: "/videos/portfolyo/petadress.mp4",

@@ -33,6 +33,12 @@ export const testimonialsData: Testimonial[] = [
     videoSrc: "/videos/referans/mukaddes.mp4",
     poster: "/videos/referans/mukaddes.jpg",
   },
-  // NOT: berke.mp4 hazır (public/videos/referans/) ama gerçek alıntı/ünvan
-  // Semih'ten gelmeden eklenmeyecek — uydurma alıntı yazılmaz.
+  {
+    id: "berke",
+    name: "Berke Derelioğlu",
+    title: "Kurucu, Sistemler.io",
+    quote: "Eğer siz de yoğun bir işletme sahibiyseniz ve içerik üretecek vaktiniz yoksa Semih'ten yardım almanızı tavsiye ederim. Gerçekten işinde profesyonel. Sizi doğru bir şekilde yönlendiriyor ve başarıya ulaştırıyor.",
+    videoSrc: "/videos/referans/berke.mp4",
+    poster: "/videos/referans/berke.jpg",
+  },
 ];

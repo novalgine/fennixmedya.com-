@@ -60,8 +60,8 @@ export default function FilmStripWorkRow() {
                   <span className="block font-heading font-bold text-lg uppercase tracking-wide text-white leading-tight">
                     {item.title}
                   </span>
-                  <span className="block text-[11px] font-medium uppercase tracking-widest text-white/60 mt-1">
-                    {item.category}
+                  <span className="block text-[11px] font-medium uppercase tracking-wider text-white/65 mt-1">
+                    {item.subtitle ?? item.category}
                   </span>
                 </span>
               </button>

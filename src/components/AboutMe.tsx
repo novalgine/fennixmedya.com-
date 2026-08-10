@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Reveal from "@/components/Reveal";
 
-const PHOTOS = ["set-02", "set-07", "set-09", "set-03", "set-11", "set-06"];
+const PHOTOS = Array.from({ length: 10 }, (_, i) => `set-${String(i + 1).padStart(2, "0")}`);
 
 export default function AboutMe() {
   return (
@@ -44,7 +44,7 @@ export default function AboutMe() {
                 <div
                   key={p}
                   className={`relative overflow-hidden rounded-lg border border-white/10 ${
-                    i === 0 || i === 4 ? "row-span-2 aspect-[3/4]" : "aspect-square"
+                    i === 0 || i === 5 ? "row-span-2 aspect-[3/4]" : "aspect-square"
                   }`}
                 >
                   <Image

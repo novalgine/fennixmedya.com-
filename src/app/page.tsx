@@ -2,7 +2,6 @@ import HeroSection from "@/components/HeroSection";
 import ClientMarquee from "@/components/ClientMarquee";
 import Reveal from "@/components/Reveal";
 import AboutMe from "@/components/AboutMe";
-import ClientList from "@/components/ClientList";
 import TimelineHud from "@/components/editor/TimelineHud";
 import dynamic from "next/dynamic";
 
@@ -51,7 +50,6 @@ export default function HomePage() {
 
       {/* Müşteriler */}
       <Reveal><TestimonialsStrip /></Reveal>
-      <ClientList />
 
       {/* Fiyat */}
       <Pricing />

@@ -35,9 +35,6 @@ function PhoneFrame() {
 
   return (
     <div className="relative w-[220px] sm:w-[250px] lg:w-[290px] mx-auto">
-      <p className="mb-3 text-center font-mono text-[10px] tracking-widest text-muted-foreground/60 uppercase">
-        Kaynak · VAVELYA_HOME.MP4
-      </p>
       <div className="relative aspect-[9/16] rounded-[2.5rem] border border-white/15 ring-1 ring-white/5 shadow-2xl shadow-black/60 overflow-hidden bg-black">
         <span className="absolute top-4 right-4 z-10 flex items-center gap-1.5 font-mono text-[9px] tracking-widest text-white/80">
           <span className="w-1.5 h-1.5 rounded-full bg-danger animate-pulse" aria-hidden /> REC
@@ -106,9 +103,9 @@ const HeroSection = () => {
             </h1>
 
             <p className="text-muted-foreground text-lg md:text-xl max-w-xl mb-8 leading-relaxed">
-              Radyo-TV-Sinema mezunuyum, dört yıl sahnede oyunculuk ve yönetmenlik yaptım.
-              Kamera karşısında donuyorsanız önce sizi rahatlatırım — sonra çekerim.
-              Markanız için ayda 8 video: senaryo, çekim, kurgu, teslimat. Hepsi bende.
+              Sahnede dört yıl oyunculuk yaptım, şimdi kameranın arkasındayım. İşim, markaların
+              kamera karşısında kendileri gibi görünmesini sağlamak — senaryodan teslimata kadar
+              hepsi tek elden.
             </p>
 
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mb-5">
