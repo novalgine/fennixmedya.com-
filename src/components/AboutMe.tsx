@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Reveal from "@/components/Reveal";
 
-const PHOTOS = Array.from({ length: 10 }, (_, i) => `set-${String(i + 1).padStart(2, "0")}`);
+const PHOTOS = Array.from({ length: 9 }, (_, i) => `set-${String(i + 1).padStart(2, "0")}`);
 
 export default function AboutMe() {
   return (

@@ -19,8 +19,8 @@ export const caseStudiesFrom = (items: PortfolioItem[]) => items.filter((p) => p
 export const portfolioData: PortfolioItem[] = [
   {
     id: "sistemler",
-    title: "Sistemler.io",
-    subtitle: "Kurumsal içerik · Yazılım",
+    title: "Berke Derelioğlu",
+    subtitle: "Sistemler.io · Kurumsal içerik",
     category: "Kurumsal",
     format: "Dikey",
     videoSrc: "/videos/portfolyo/sistemler.mp4",

@@ -20,7 +20,7 @@ const STEPS = [
   },
 ];
 
-const GEAR = ["Sony FX30", "Tamron 17-70mm", "DJI RS4 Gimbal", "Tripod", "Yaka mikrofonları"];
+const GEAR = ["Sony FX30", "Tamron 17-70mm", "DJI RS4 Gimbal", "Tripod", "Rode Wireless GO II"];
 
 export default function HowIWork() {
   return (

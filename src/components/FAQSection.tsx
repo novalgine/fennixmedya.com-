@@ -12,7 +12,7 @@ import SectionHeading from "@/components/SectionHeading";
 const faqs = [
     {
         question: "Çekimlerim için stüdyo veya kamera kiralamama gerek var mı?",
-        answer: "Hayır. Sony FX30, Tamron 17-70mm lens, DJI RS4 gimbal, tripod ve yaka mikrofonlarımla sizin mekânınıza geliyorum. Ortamın doğal ışığını en verimli kullanacak şekilde çalışırım.",
+        answer: "Hayır. Sony FX30, Tamron 17-70mm lens, DJI RS4 gimbal, tripod ve Rode Wireless GO II mikrofonlarımla sizin mekânınıza geliyorum. Ortamın doğal ışığını en verimli kullanacak şekilde çalışırım.",
     },
     {
         question: "Süreç nasıl işliyor ve ne kadar vaktimi alacak?",
