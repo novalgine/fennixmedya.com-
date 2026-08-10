@@ -6,28 +6,31 @@ export default function AboutMe() {
     <section id="ben" className="section-spacing bg-surface">
       <div className="container-page">
         <Reveal>
-          <p className="font-heading font-semibold text-sm uppercase tracking-[0.25em] text-primary mb-3">
-            Kim çekiyor
-          </p>
-          <h2 className="text-display-2 text-gradient-gold mb-8">Ben Semih</h2>
+          {/* Başlık ızgaranın ÜSTÜNDE değil, sol sütunun İÇİNDE — hakkımda sayfasındaki gibi.
+              Dışarıda kaldığında başlıkla metin arasında fotoğraf boyu kadar boşluk açılıyordu. */}
+          <div className="grid lg:grid-cols-[2.1fr_1fr] gap-10 lg:gap-16 items-center">
+            <div>
+              <p className="font-heading font-semibold text-sm uppercase tracking-[0.25em] text-primary mb-3">
+                Kim çekiyor
+              </p>
+              <h2 className="text-display-2 text-gradient-gold mb-8">Ben Semih</h2>
 
-          {/* Hakkımda sayfasıyla aynı oran ve dikey ortalama — metinle fotoğraf birbirini dengeler */}
-          <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-10 lg:gap-16 items-center">
-            <div className="space-y-5 text-muted-foreground text-lg leading-relaxed">
-              <p>
-                Sinema-TV mezunuyum. İçerik stratejisinden metin yazımına, çekimden kurguya kadar
-                video üretiminin tüm süreçlerini üstleniyorum. Bunun yanında dört yıl tiyatro
-                oyunculuğu yaptım ve yaratıcı drama lideriyim.
-              </p>
-              <p>
-                Oyunculuk ve drama geçmişim, çekim anında doğrudan işe yarıyor: Kamera
-                karşısındakilere rol yaptırmak değil, kendi doğal enerjileriyle konuşmalarını
-                sağlamak ana odağım.
-              </p>
-              <p className="text-foreground font-medium">
-                Projeleri arada temsilciler veya ajans katmanları olmadan, doğrudan birebir
-                yürütüyorum.
-              </p>
+              <div className="space-y-5 text-muted-foreground text-lg leading-relaxed">
+                <p>
+                  Sinema-TV mezunuyum. İçerik stratejisinden metin yazımına, çekimden kurguya kadar
+                  video üretiminin tüm süreçlerini üstleniyorum. Bunun yanında dört yıl tiyatro
+                  oyunculuğu yaptım ve yaratıcı drama lideriyim.
+                </p>
+                <p>
+                  Oyunculuk ve drama geçmişim, çekim anında doğrudan işe yarıyor: Kamera
+                  karşısındakilere rol yaptırmak değil, kendi doğal enerjileriyle konuşmalarını
+                  sağlamak ana odağım.
+                </p>
+                <p className="text-foreground font-medium">
+                  Projeleri arada temsilciler veya ajans katmanları olmadan, doğrudan birebir
+                  yürütüyorum.
+                </p>
+              </div>
             </div>
 
             <figure className="w-full max-w-sm mx-auto lg:max-w-none">
@@ -36,7 +39,7 @@ export default function AboutMe() {
                   src="/foto/semih-portre-4x5.jpg"
                   alt="Semih Hasanoğlu, İstanbul'da gün batımında Boğaz manzarası önünde"
                   fill
-                  sizes="(max-width: 1024px) 92vw, 520px"
+                  sizes="(max-width: 1024px) 92vw, 380px"
                   quality={90}
                   className="object-cover"
                 />
