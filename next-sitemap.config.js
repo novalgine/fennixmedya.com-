@@ -13,7 +13,8 @@ const lastmodByPath = Object.fromEntries(
 module.exports = {
   siteUrl: 'https://fennixmedya.com',
   generateRobotsTxt: false,
-  exclude: [],
+  // opengraph-image bir sayfa değil, üretilen görsel rotası — dizinde yeri yok
+  exclude: ['/opengraph-image', '/icon'],
   changefreq: 'weekly',
   priority: 0.7,
   transform: async (config, path) => {

@@ -59,7 +59,12 @@ export default function ServiceHero({
                   : "aspect-[9/16] rounded-[2.5rem] max-w-[300px] mx-auto"
               }`}
             >
-              <LazyHeroVideo src={video.src} poster={video.poster} title={video.title} />
+              <LazyHeroVideo
+                src={video.src}
+                poster={video.poster}
+                title={video.title}
+                autoPlay={video.vertical !== false}
+              />
             </div>
             <figcaption className="mt-3 flex items-center gap-3 max-w-[300px] mx-auto lg:max-w-none">
               <span className="font-mono text-[10px] uppercase tracking-[0.25em] text-ash">

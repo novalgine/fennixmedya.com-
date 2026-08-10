@@ -7,13 +7,31 @@ interface LazyHeroVideoProps {
   poster: string;
   title: string;
   className?: string;
+  /**
+   * Görünür olunca sessizce oynamaya başlasın mı?
+   * Kısa dikey işlerde açık; uzun filmlerde kapalı, çünkü otomatik oynatma
+   * ekranın üstünde onlarca megabaytı kullanıcı istemeden indirtiyor.
+   * Kapalıyken poster gösterilir ve dosya ancak oynat'a basılınca inmeye başlar.
+   */
+  autoPlay?: boolean;
 }
 
-export default function LazyHeroVideo({ src, poster, title, className = "w-full h-full object-cover" }: LazyHeroVideoProps) {
+export default function LazyHeroVideo({
+  src,
+  poster,
+  title,
+  className = "w-full h-full object-cover",
+  autoPlay = true,
+}: LazyHeroVideoProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [shouldPlay, setShouldPlay] = useState(false);
 
   useEffect(() => {
+    if (!autoPlay) return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    // @ts-expect-error: saveData deneysel ama yaygın
+    if (navigator.connection?.saveData) return;
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         // Görünürken oynat, ekrandan çıkınca durdur — arka planda decode maliyeti kalmasın
@@ -34,7 +52,7 @@ export default function LazyHeroVideo({ src, poster, title, className = "w-full 
     return () => {
       observer.disconnect();
     };
-  }, []);
+  }, [autoPlay]);
 
   useEffect(() => {
     if (shouldPlay && videoRef.current) {
@@ -48,14 +66,13 @@ export default function LazyHeroVideo({ src, poster, title, className = "w-full 
       src={src}
       className={className}
       controls
-      muted
-      loop
+      muted={autoPlay}
+      loop={autoPlay}
       playsInline
-      preload="metadata"
+      preload="none"
       poster={poster}
       title={title}
       aria-label={title}
     />
   );
 }
-

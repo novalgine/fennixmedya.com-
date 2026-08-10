@@ -31,7 +31,7 @@ export default function GizlilikPolitikasiPage() {
 
           <h2>1. Toplanan Bilgiler</h2>
           <p>
-            Hizmetlerimizle ilgili bilgi almak, strateji görüşmesi talep etmek veya içeriklerimizi 
+            Hizmetlerimizle ilgili bilgi almak, görüşme talep etmek veya içeriklerimizi 
             indirmek amacıyla formlarımızı doldurduğunuzda; adınız, soyadınız, e-posta adresiniz, 
             telefon numaranız ve şirket bilgileriniz gibi kişisel verilerinizi toplamaktayız. 
             Ayrıca site performansını ölçmek ve kullanıcı deneyimini iyileştirmek için anonim 
