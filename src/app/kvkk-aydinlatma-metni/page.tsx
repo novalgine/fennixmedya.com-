@@ -21,7 +21,7 @@ export default function KvkkPage() {
       <div className="max-w-4xl mx-auto px-6">
         <h1 className="font-heading text-3xl md:text-5xl font-black mb-8">KVKK Aydınlatma Metni</h1>
         
-        <div className="prose prose-neutral dark:prose-invert max-w-none prose-headings:font-heading prose-headings:font-bold prose-p:text-muted-foreground prose-p:leading-relaxed">
+        <div className="prose prose-neutral dark:prose-invert max-w-none prose-headings:font-body prose-headings:font-bold prose-p:text-muted-foreground prose-p:leading-relaxed">
           <p>
             Fennix Medya olarak, kişisel verilerinizin güvenliğine ve gizliliğine büyük önem veriyoruz. 
             6698 sayılı Kişisel Verilerin Korunması Kanunu ("KVKK") uyarınca, veri sorumlusu sıfatıyla, 
@@ -32,7 +32,7 @@ export default function KvkkPage() {
 
           <h2>1. Kişisel Verilerin Toplanması ve İşlenmesi</h2>
           <p>
-            Kişisel verileriniz, web sitemiz üzerindeki formlar (ör. Strateji Görüşmesi Talep Formu, 
+            Kişisel verileriniz, web sitemiz üzerindeki formlar (ör. Görüşme Talep Formu, 
             Stüdyo Kurulum Formu, PDF İndirme Formu vb.) aracılığıyla elektronik ortamda doğrudan 
             tarafınızdan toplanmaktadır. Toplanan verileriniz arasında adınız, soyadınız, e-posta adresiniz, 
             telefon numaranız, şirket adınız ve projenize dair ilettiğiniz bilgiler yer almaktadır.

@@ -7,6 +7,8 @@ type VideoLightboxProps = {
   onOpenChange: (open: boolean) => void;
   /** Ekran okuyucular için erişilebilir başlık */
   title: string;
+  /** src modunda en-boy: varsayılan dikey (9:16) */
+  aspect?: "vertical" | "video";
 } & (
   | { src: string; youtubeId?: never }
   | { youtubeId: string; src?: never }
@@ -18,12 +20,13 @@ export default function VideoLightbox({
   title,
   src,
   youtubeId,
+  aspect = "vertical",
 }: VideoLightboxProps) {
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent
         className={
-          youtubeId
+          youtubeId || aspect === "video"
             ? "max-w-5xl aspect-video p-0 overflow-hidden bg-black"
             : "max-w-sm aspect-[9/16] max-h-[85dvh] p-0 overflow-hidden bg-black"
         }

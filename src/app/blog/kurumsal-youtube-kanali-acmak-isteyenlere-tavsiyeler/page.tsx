@@ -56,7 +56,7 @@ export default function BlogPost() {
           ]}
         />
 
-        <div className="prose prose-invert prose-lg max-w-none prose-headings:font-heading prose-headings:font-bold prose-a:text-primary hover:prose-a:text-primary/80 prose-img:rounded-2xl prose-img:border prose-img:border-white/10 prose-p:text-muted-foreground prose-li:text-muted-foreground">
+        <div className="prose prose-invert prose-lg max-w-none prose-headings:font-body prose-headings:font-bold prose-a:text-primary hover:prose-a:text-primary/80 prose-img:rounded-2xl prose-img:border prose-img:border-white/10 prose-p:text-muted-foreground prose-li:text-muted-foreground">
           <p>
             YouTube, sadece eğlence platformu değil — <strong>dünyanın en büyük ikinci arama motorudur.</strong> Her gün 1 milyardan fazla saat video izleniyor. İnsanlar sorunlarına çözüm ararken, büyük bir satın alma kararı öncesinde derinlemesine araştırma yapmak için YouTube'u kullanıyor.
           </p>

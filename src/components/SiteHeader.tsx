@@ -20,7 +20,7 @@ const navLinks = [
   },
   { label: "Portfolyo", href: "/portfolyo" },
   { label: "Blog", href: "/blog" },
-  { label: "Hakkımızda", href: "/hakkimizda" },
+  { label: "Hakkımda", href: "/hakkimizda" },
 ];
 
 export default function SiteHeader() {
@@ -39,7 +39,7 @@ export default function SiteHeader() {
     <header className="fixed top-0 left-0 w-full z-[60] bg-background/80 backdrop-blur-md border-b border-primary/20 py-2 sm:py-3 px-3 sm:px-4 md:px-8 transition-colors duration-300 transform-gpu">
       <div className="max-w-7xl mx-auto flex items-center justify-between gap-2">
         {/* Brand Logo */}
-        <Link href="/" className="font-heading text-base sm:text-lg md:text-xl font-bold tracking-widest uppercase flex items-center gap-1.5 sm:gap-2 shrink-0">
+        <Link href="/" className="font-heading text-lg sm:text-xl md:text-2xl font-bold tracking-[0.12em] uppercase flex items-center gap-1.5 sm:gap-2 shrink-0">
           <svg className="w-5 h-5 sm:w-5 sm:h-5 md:w-6 md:h-6" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M12 24V8H22V10H14V14H20V16H14V24H12Z" fill="url(#paint0_linear_header)" />
             <defs>
@@ -200,7 +200,7 @@ export default function SiteHeader() {
               }}
               className="mx-4 mt-2 text-sm"
             >
-              Ücretsiz Strateji Görüşmesi Al →
+              Görüşme Ayarlayalım →
             </CtaButton>
           </nav>
         </div>

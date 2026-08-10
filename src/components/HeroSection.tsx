@@ -1,68 +1,99 @@
 "use client";
 import { useEffect, useRef, useState, useCallback } from "react";
+import Image from "next/image";
 import MagneticWrapper from "@/components/MagneticWrapper";
 import CtaButton from "@/components/CtaButton";
-import Image from "next/image";
-import heroBg from "@/assets/hero-bg.webp";
-import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
-import { Play, ChevronDown, Clock, CheckCircle } from "lucide-react";
-import Link from "next/link";
-
-if (typeof window !== "undefined") {
-  gsap.registerPlugin(ScrollTrigger);
-}
+import { Play, ChevronDown, Volume2, VolumeX } from "lucide-react";
 
 import { useWizard } from "@/components/WizardContext";
 
-const HeroSection = () => {
-  const { openWizard } = useWizard();
-  const containerRef = useRef<HTMLElement>(null);
-  const bgRef = useRef<HTMLDivElement>(null);
-  const contentRef = useRef<HTMLDivElement>(null);
-  const [showVideo, setShowVideo] = useState(false);
+/** Telefon çerçevesinde dönen dikey iş — mesajın kanıtı. Sessiz başlar, dokununca sesi açılır. */
+function PhoneFrame() {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [sesAcik, setSesAcik] = useState(false);
 
   useEffect(() => {
-    const ctx = gsap.context(() => {
-      // Parallax for Background only (content parallax causes cutoff on tall mobile screens)
-      gsap.to(bgRef.current, {
-        yPercent: 10,
-        ease: "none",
-        scrollTrigger: {
-          trigger: containerRef.current,
-          start: "top top",
-          end: "bottom top",
-          scrub: true,
-        },
-      });
-    }, containerRef);
+    const el = videoRef.current;
+    if (!el) return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    // @ts-expect-error: saveData deneysel ama yaygın
+    if (navigator.connection?.saveData) return;
 
-    return () => ctx.revert();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
-  // Lazy-load hero background video only when in viewport
-  const heroVideoRef = useRef<HTMLVideoElement>(null);
-  const [videoLoaded, setVideoLoaded] = useState(false);
-
-  useEffect(() => {
-    const videoEl = heroVideoRef.current;
-    if (!videoEl) return;
-    const obs = new IntersectionObserver(
+    const io = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          videoEl.src = "/videos/hero-loop.mp4";
-          videoEl.load();
-          setVideoLoaded(true);
-          obs.disconnect();
+          el.src = "/videos/hero-semih.mp4";
+          el.play().catch(() => {});
+          io.disconnect();
         }
       },
-      { rootMargin: "200px" }
+      { rootMargin: "100px" }
     );
-    obs.observe(videoEl);
-    return () => obs.disconnect();
+    io.observe(el);
+    return () => io.disconnect();
   }, []);
+
+  // Tarayıcılar sesli otomatik oynatmayı engelliyor: ses ancak kullanıcı dokununca açılabilir.
+  // Açıldığında videoyu başa sarıyoruz ki cümlenin ortasından değil, baştan duyulsun.
+  const sesiDegistir = () => {
+    const el = videoRef.current;
+    if (!el) return;
+    if (!el.src) el.src = "/videos/hero-semih.mp4";
+    const acilacak = !sesAcik;
+    el.muted = !acilacak;
+    if (acilacak) el.currentTime = 0;
+    el.play().catch(() => {});
+    setSesAcik(acilacak);
+    if (typeof window.trackEvent === "function") {
+      window.trackEvent("hero_video_unmute", { muted: !acilacak });
+    }
+  };
+
+  return (
+    <div className="relative w-[220px] sm:w-[250px] lg:w-[290px] mx-auto">
+      <div className="relative aspect-[9/16] rounded-[2.5rem] border border-white/15 ring-1 ring-white/5 shadow-2xl shadow-black/60 overflow-hidden bg-black">
+        <span className="absolute top-4 right-4 z-10 flex items-center gap-1.5 font-mono text-[9px] tracking-widest text-white/80">
+          <span className="w-1.5 h-1.5 rounded-full bg-danger animate-pulse" aria-hidden /> REC
+        </span>
+        {/* Çentik */}
+        <div className="absolute top-2.5 left-1/2 -translate-x-1/2 w-20 h-5 bg-black rounded-full z-10 border border-white/10" />
+        <video
+          ref={videoRef}
+          muted
+          loop
+          playsInline
+          preload="none"
+          poster="/videos/hero-semih.jpg"
+          className="absolute inset-0 w-full h-full object-cover"
+          aria-label="Semih Hasanoğlu kamera karşısında konuşurken"
+        />
+        <button
+          type="button"
+          onClick={sesiDegistir}
+          aria-pressed={sesAcik}
+          className="absolute bottom-4 right-4 z-10 flex items-center gap-1.5 rounded-full border border-white/20 bg-black/55 backdrop-blur-sm px-3 py-1.5 text-white/90 hover:text-primary hover:border-primary/50 transition-colors cursor-pointer"
+        >
+          {sesAcik ? (
+            <Volume2 className="w-3.5 h-3.5" aria-hidden />
+          ) : (
+            <VolumeX className="w-3.5 h-3.5" aria-hidden />
+          )}
+          <span className="font-mono text-[9px] uppercase tracking-widest">
+            {sesAcik ? "Ses açık" : "Sesi aç"}
+          </span>
+        </button>
+      </div>
+      <p className="mt-4 text-center text-sm text-muted-foreground/85 max-w-[280px] mx-auto leading-snug">
+        Kendi hesabımdan bir video. Sesini açabilirsiniz.
+      </p>
+    </div>
+  );
+}
+
+const HeroSection = () => {
+  const { openWizard } = useWizard();
+  const [showVideo, setShowVideo] = useState(false);
 
   const handleCTAClick = useCallback(() => {
     openWizard();
@@ -79,150 +110,102 @@ const HeroSection = () => {
   };
 
   return (
-    <section ref={containerRef} className="relative min-h-[100dvh] w-full flex flex-col overflow-hidden bg-background">
+    <section className="relative min-h-[100dvh] w-full flex flex-col overflow-hidden bg-background">
+      {/* Statik altın ışık — foto/parallax yerine */}
       <div
-        ref={bgRef}
-        className="absolute inset-0 bg-cover bg-center will-change-transform scale-[1.15]"
-        style={{ backgroundImage: `url(${heroBg.src})`, transformOrigin: "center top" }}
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background:
+            "radial-gradient(ellipse 80% 60% at 15% 100%, hsl(43 45% 65% / 0.12) 0%, transparent 55%), radial-gradient(ellipse 60% 40% at 90% 0%, hsl(43 45% 65% / 0.05) 0%, transparent 60%)",
+        }}
       />
-      <div className="absolute inset-0 cinematic-overlay" />
-      <div className="absolute inset-0 bg-gradient-to-b from-background/20 via-background/60 to-background" />
 
-      <div
-        ref={contentRef}
-        className="relative z-10 max-w-5xl mx-auto px-6 text-center w-full my-auto pt-20 pb-24 will-change-transform flex flex-col items-center"
-      >
-        {/* SEO H2 & Dynamic Greeting */}
-        <div className="flex flex-col items-center gap-3 mb-6 transition-all duration-1000 ease-out">
-          <h2 className="text-xs md:text-sm font-bold tracking-widest uppercase text-primary/80">Ayda Sadece 6 Saatinizi Ayırın. Gerisini Bize Bırakın.</h2>
-        </div>
+      <div className="container-page relative z-10 my-auto pt-24 pb-16 lg:pt-20">
+        <div className="grid lg:grid-cols-[1.15fr_0.85fr] gap-12 lg:gap-8 items-center">
+          {/* Sol: mesaj */}
+          <div className="text-left">
+            <p className="font-heading font-semibold text-sm uppercase tracking-[0.25em] text-primary mb-6">
+              Semih Hasanoğlu · İstanbul
+            </p>
 
-        <h1 className="font-heading text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.1] mb-6 tracking-tight text-left md:text-center w-full">
-          <span
-            className="text-foreground inline-block transition-all duration-500 ease-out"
-          >
-            Sıradan Videoları Unutun.
-          </span>
-          <br />
-          <span
-            className="text-foreground inline-block transition-all duration-500 ease-out leading-[1.2] mt-2"
-          >
-            <span className="text-gradient-gold">Sektörünüzde Otorite İnşa Eden</span>
-          </span>
-          <br />
-          <span className="text-foreground/90 text-3xl md:text-5xl lg:text-6xl font-bold mt-4 block transition-all duration-500 ease-out">
-            Yüksek Kaliteli İçeriklere Sahip Olun.
-          </span>
-        </h1>
+            <h1 className="text-poster mb-8">
+              <span className="block text-foreground">Videolarınız</span>
+              <span className="block text-foreground">Dijitaldeki</span>
+              <span className="block text-gradient-gold">Takım Elbiseniz.</span>
+            </h1>
 
-        <p
-          className="text-muted-foreground text-left md:text-center text-lg md:text-xl max-w-3xl mx-auto mb-10 leading-relaxed transition-all duration-500 ease-out w-full"
-        >
-          Siz sadece kendi işinize odaklanın. Hedef kitlenize güven veren ve sizi pazarın en güçlü ismi yapacak tüm video prodüksiyon sürecini uçtan uca biz tasarlıyoruz.
-        </p>
-
-        {/* Video Sales Letter (VSL) Section - Premium Light Embed */}
-        <div className="w-full max-w-4xl mx-auto p-px rounded-2xl bg-gradient-to-b from-white/20 via-white/5 to-transparent mb-10">
-        <div
-          onClick={handleVideoClick}
-          className="relative w-full rounded-[15px] overflow-hidden shadow-2xl shadow-gold/20 transition-all duration-500 ease-out group cursor-pointer"
-        >
-          <div className="aspect-video bg-[#0A0A0A] relative flex items-center justify-center overflow-hidden">
-            {/* Background Loop maintains the premium motion aesthetic */}
-            <video
-              autoPlay
-              muted
-              loop
-              playsInline
-              className={`absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105 will-change-transform transform-gpu ${videoLoaded ? 'opacity-60' : 'opacity-0'}`}
-              style={{ contain: "strict" }}
-              poster={heroBg.src}
-              ref={heroVideoRef}
-              title="Fennix Medya Tanıtım Videosu Arka Planı"
-              aria-label="Fennix Medya Tanıtım Videosu Arka Planı"
-            >
-            </video>
-
-            <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-[#0A0A0A]/40 to-transparent" />
-
-            <div className="relative z-10 flex flex-col items-center justify-center gap-6 transition-all duration-500 group-hover:scale-110">
-              {/* Animated Play Button */}
-              <div className="relative w-24 h-24 flex items-center justify-center">
-                <div className="absolute inset-0 rounded-full bg-primary/20 transition-all duration-500 group-hover:bg-primary/30 group-hover:scale-110" />
-                <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-gradient-gold flex items-center justify-center border border-white/20 shadow-xl z-10">
-                  <Play className="w-8 h-8 text-black fill-black ml-1" />
-                </div>
-              </div>
-              <div className="text-center">
-                <p className="text-white font-bold tracking-[0.2em] uppercase text-sm md:text-base drop-shadow-2xl">VİZYONUMUZU İZLEYİN</p>
-                <p className="text-white/60 text-xs mt-2 font-medium tracking-wide">3 dakikada süreci keşfedin</p>
-              </div>
+            <div className="text-muted-foreground text-lg md:text-xl max-w-xl mb-8 leading-relaxed space-y-4">
+              <p>
+                Çoğu kişi kamera karşısında olduğundan daha iyi görünmeye çalışıyor. Oysa işe
+                yarayan tek şey kendiniz gibi görünmek — ve bunu tek başına bulmak zor.
+              </p>
+              <p>
+                Benim işim o alanı açmak. Metni birlikte kurarız, çekimi ve kurguyu ben yaparım.
+              </p>
             </div>
-          </div>
-        </div>
-        </div>
 
-        {/* Zamansız kalite ifadesi */}
-        <p className="mb-4 text-sm text-muted-foreground">
-          Kaliteyi korumak için ayda sınırlı sayıda marka ile çalışıyoruz.
-        </p>
+            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mb-5">
+              <MagneticWrapper>
+                <CtaButton onClick={handleCTAClick} aria-label="Görüşme ayarlayın" className="w-full sm:w-auto">
+                  <span className="hidden sm:inline">Görüşme Ayarlayalım →</span>
+                  <span className="sm:hidden">Görüşelim →</span>
+                </CtaButton>
+              </MagneticWrapper>
+              <MagneticWrapper>
+                <CtaButton variant="secondary" href="#portfolyo" className="w-full sm:w-auto">
+                  Portfolyomu İncele
+                </CtaButton>
+              </MagneticWrapper>
+            </div>
 
-        {/* Action Buttons & Micro-assurance */}
-        <div className="flex flex-col items-center w-full transition-all duration-500 ease-out">
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">
-            <MagneticWrapper>
-              <CtaButton onClick={handleCTAClick} aria-label="Ücretsiz Strateji Görüşmesi Al" className="w-full sm:w-auto">
-                <span className="hidden sm:inline">Ücretsiz Strateji Görüşmesi Al →</span>
-                <span className="sm:hidden">Ücretsiz Görüşme Al →</span>
-              </CtaButton>
-            </MagneticWrapper>
-            
-            <MagneticWrapper>
-              <CtaButton variant="secondary" href="#portfolyo" className="w-full sm:w-auto">
-                Portfolyomuzu İncele
-              </CtaButton>
-            </MagneticWrapper>
-          </div>
-          
-          {/* Mikro Güvence Metni */}
-          <div className="flex items-center gap-4 mt-5 text-xs sm:text-sm font-medium text-muted-foreground/80">
-            <span className="flex items-center gap-1.5"><Clock className="w-3.5 h-3.5" /> 15 Dakika</span>
-            <span className="w-1 h-1 rounded-full bg-primary/40"></span>
-            <span className="flex items-center gap-1.5"><CheckCircle className="w-3.5 h-3.5" /> Tamamen Ücretsiz</span>
-            <span className="w-1 h-1 rounded-full bg-primary/40 hidden sm:block"></span>
-            <span className="hidden sm:inline">Bağlayıcı Değildir</span>
-          </div>
-        </div>
+            <button
+              onClick={handleVideoClick}
+              className="inline-flex items-center gap-2 text-primary hover:text-gold-light text-sm font-medium underline-offset-4 hover:underline transition-colors mb-6 cursor-pointer"
+            >
+              <Play className="w-3.5 h-3.5 fill-current" aria-hidden />
+              Vizyonumu izleyin — 3 dk
+            </button>
 
-        {/* Gerçek referans bandı */}
-        <a href="#referanslar" className="mt-8 flex flex-col items-center gap-3 group/band">
-          <div className="flex -space-x-3">
-            {["esranur", "orhan", "mukaddes"].map((id) => (
-              <span key={id} className="block w-10 h-10 rounded-full border-2 border-background overflow-hidden">
-                <Image src={`/videos/referans/${id}.jpg`} alt="" width={80} height={80} className="w-full h-full object-cover" />
+            <p className="text-sm text-muted-foreground mb-8 max-w-md leading-relaxed">
+              Görüşme 15 dakika sürüyor, ücret almıyorum ve sonrasında devam etmek zorunda
+              değilsiniz.
+            </p>
+
+            {/* Gerçek referans bandı */}
+            <a href="#referanslar" className="inline-flex items-center gap-3 group/band">
+              <span className="flex -space-x-3">
+                {["esranur", "orhan", "mukaddes"].map((id) => (
+                  <span key={id} className="block w-9 h-9 rounded-full border-2 border-background overflow-hidden">
+                    <Image src={`/videos/referans/${id}.jpg`} alt="" width={72} height={72} className="w-full h-full object-cover" />
+                  </span>
+                ))}
               </span>
-            ))}
+              <span className="text-sm text-muted-foreground font-medium group-hover/band:text-foreground transition-colors">
+                <strong className="text-foreground">500&apos;den fazla video</strong> teslim ettim —
+                müşterilerimi dinleyin
+              </span>
+            </a>
           </div>
-          <p className="text-sm text-muted-foreground font-medium group-hover/band:text-foreground transition-colors">
-            <strong className="text-foreground">500&apos;den fazla video</strong> teslim ettik — gerçek müşteri deneyimlerini izleyin
-          </p>
-        </a>
+
+          {/* Sağ: kanıt */}
+          <PhoneFrame />
+        </div>
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-4 md:bottom-8 inset-x-0 w-full flex flex-col items-center justify-center animate-scroll-cue hover:opacity-100 transition-opacity z-10 pointer-events-none">
-        <span className="text-[10px] md:text-xs uppercase tracking-widest text-muted-foreground mb-1 md:mb-2 font-medium pl-[0.1em]">Aşağı Kaydırın</span>
-        <ChevronDown className="w-5 h-5 text-muted-foreground" />
+      <div className="absolute bottom-4 md:bottom-6 inset-x-0 w-full flex-col items-center justify-center animate-scroll-cue hover:opacity-100 transition-opacity z-10 pointer-events-none hidden md:flex">
+        <span className="text-[10px] md:text-xs uppercase tracking-widest text-muted-foreground mb-1 font-medium pl-[0.1em]">Aşağı Kaydırın</span>
+        <ChevronDown className="w-5 h-5 text-muted-foreground" aria-hidden />
       </div>
 
       {/* VSL Video Dialog */}
       <Dialog open={showVideo} onOpenChange={setShowVideo}>
         <DialogContent className="max-w-6xl bg-transparent border-0 shadow-none p-0">
-          <DialogTitle className="sr-only">Fennix Medya - Vizyonumuz</DialogTitle>
+          <DialogTitle className="sr-only">Fennix Medya — Vizyonum</DialogTitle>
           <div className="relative w-full aspect-video rounded-2xl overflow-hidden border border-white/10 mb-6">
             <iframe
               src="https://www.youtube.com/embed/t1edyqgT1UQ?autoplay=1&mute=0&rel=0&start=1&modestbranding=1"
-              title="Fennix Medya - Vizyonumuz"
+              title="Fennix Medya — Vizyonum"
               className="w-full h-full border-0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
@@ -235,7 +218,7 @@ const HeroSection = () => {
               handleCTAClick();
             }}
           >
-            Ücretsiz Strateji Görüşmesi Al →
+            Görüşme Ayarlayalım →
           </CtaButton>
         </DialogContent>
       </Dialog>

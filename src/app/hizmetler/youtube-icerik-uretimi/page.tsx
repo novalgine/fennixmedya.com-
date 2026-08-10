@@ -1,108 +1,131 @@
 import type { Metadata } from "next";
 import JsonLd from "@/components/JsonLd";
-import Image from "next/image";
-import { ArrowRight, Play } from "lucide-react";
-import WizardCta from "@/components/WizardCta";
+import ServiceHero from "@/components/ServiceHero";
+import ServiceSteps from "@/components/ServiceSteps";
+import ServiceFaq, { type Faq } from "@/components/ServiceFaq";
+import ServiceCta from "@/components/ServiceCta";
 import OtherServices from "@/components/OtherServices";
-import LazyHeroVideo from "@/components/LazyHeroVideo";
+
+const OZET =
+  "İstanbul'da YouTube için uzun format video çekimi ve kurgusu. Konu planından altyazıya kadar tek elden; kanalınızın düzenli yayın ritmini birlikte kurarız.";
 
 export const metadata: Metadata = {
   title: "YouTube İçerik Üretimi",
-  description:
-    "YouTube kanalınız için algoritma uyumlu içerik mimarisi. Tıklanma (CTR) ve dikkat yönetimi (retention) optimize edilmiş YouTube büyüme paketi.",
+  description: OZET,
   alternates: { canonical: "https://fennixmedya.com/hizmetler/youtube-icerik-uretimi" },
   openGraph: {
     type: "website",
     url: "https://fennixmedya.com/hizmetler/youtube-icerik-uretimi",
     title: "YouTube İçerik Üretimi",
-    description: "YouTube kanalınız için algoritma uyumlu içerik mimarisi. Tıklanma (CTR) ve dikkat yönetimi (retention) optimize edilmiş YouTube büyüme paketi.",
+    description: OZET,
     siteName: "Fennix Medya",
     locale: "tr_TR",
   },
 };
 
-const faqs = [
-  { q: "YouTube için hangi formatlarda içerik üretiyorsunuz?", a: "Yatay format (16:9) ana videolar, YouTube Shorts (dikey 9:16), podcast tarzı sohbet videoları ve ürün inceleme videoları üretiyoruz." },
-  { q: "Thumbnail tasarımı dahil mi?", a: "Evet, her video için tıklanma oranını artırmak üzere profesyonelce tasarlanmış thumbnail dahildir." },
-  { q: "SEO ve başlık optimizasyonu yapıyor musunuz?", a: "Evet, video başlığı, açıklama ve etiketleri YouTube algoritmasına uygun şekilde optimize ediyoruz." },
+const STEPS = [
+  {
+    title: "Konu planı",
+    body: "Kanalın kime hitap ettiğini konuşup bir konu listesi çıkarıyoruz. Tek tek video düşünmek yerine birbirini besleyen bir sıra kurmak, hem çekimi hem izleyicinin kanalda kalmasını kolaylaştırıyor.",
+  },
+  {
+    title: "Tek günde birden çok bölüm",
+    body: "Uzun format videolarda en pahalı şey kurulum. Bir kere kurup art arda birkaç bölüm çekmek, kanalın haftalarca yayın yapmasını sağlıyor. Aynı gün içinde kıyafet ve arka plan değişimiyle bölümleri ayırıyoruz.",
+  },
+  {
+    title: "Anlatımın kendisi",
+    body: "Uzun formatta izleyiciyi tutan şey kurgu hızı değil, konuşan kişinin rahatlığı. Ezber cümle ile kendi cümlesi arasındaki farkı kamera anında gösteriyor — oyunculuk geçmişim burada işe yarıyor.",
+  },
+  {
+    title: "Kurgu ve altyazı",
+    body: "Kurgu, ses dengeleme, renk düzeltme ve altyazı bende. Videoyu Shorts için kesmek isterseniz aynı çekimden dikey parçalar da çıkarıyorum.",
+  },
 ];
 
-export default function YouTubeIcerikUretimiPage() {
+const FAQS: Faq[] = [
+  {
+    q: "Hangi formatlarda çekiyorsunuz?",
+    a: "Ana videolar yatay 16:9. Aynı çekimden Shorts için dikey 9:16 kesitler de çıkarabiliyorum. Podcast tarzı sohbet ve ürün anlatım videoları da bu kapsamda.",
+  },
+  {
+    q: "Kapak görseli (thumbnail) tasarımı dahil mi?",
+    a: "Hayır. Grafik tasarım benim alanım değil, o yüzden kendim yapmıyorum. Çalıştığım güvendiğim tasarımcılara yönlendirir, süreci sizin adınıza takip ederim.",
+  },
+  {
+    q: "Başlık ve açıklama metinlerini yazıyor musunuz?",
+    a: "Konu planını birlikte çıkarırken başlık yönünü de konuşuyoruz. Ama kanalın büyümesi tek başına başlıktan gelmiyor; asıl belirleyici olan düzenli yayın ve videonun kendisi.",
+  },
+  {
+    q: "Ne sıklıkla çekim yapıyoruz?",
+    a: "Kanalın hedefine göre değişiyor. Genelde ayda bir veya iki çekim gününde birkaç bölüm birden çekip yayın takvimini önden dolduruyoruz.",
+  },
+  {
+    q: "Ne kadar sürede sonuç alırım?",
+    a: "Bir ayda patlarız diye bir söz veremem. YouTube'da kalıcı sonuç düzenli yayınla birkaç ay içinde geliyor; bunu baştan konuşalım ki ikimiz de doğru beklentiyle başlayalım.",
+  },
+];
+
+export default function YoutubeIcerikUretimiPage() {
   return (
     <div className="min-h-screen bg-background pt-header">
       <JsonLd
         data={{
           "@context": "https://schema.org",
           "@type": "Service",
-          name: "YouTube İçerik Üretimi",
-          serviceType: "Video Prodüksiyon",
-          description: "YouTube kanalları için algoritma uyumlu içerik mimarisi; CTR ve izlenme süresi optimize edilmiş video üretimi.",
+          name: "YouTube içerik üretimi",
+          serviceType: "Video prodüksiyon",
+          description: OZET,
           url: "https://fennixmedya.com/hizmetler/youtube-icerik-uretimi",
           areaServed: { "@type": "City", name: "İstanbul" },
           provider: { "@id": "https://fennixmedya.com/#organization" },
         }}
       />
-      <section className="max-w-6xl mx-auto px-6 py-16 md:py-24">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="text-left">
-            <span className="text-primary font-medium text-sm tracking-widest uppercase mb-4 block">
-              Hizmetlerimiz — YouTube
-            </span>
-            <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-black tracking-tight mb-6">
-              YouTube <span className="text-gradient-gold">İçerik Üretimi</span>
-            </h1>
-            <p className="text-muted-foreground text-lg md:text-xl leading-relaxed mb-10">
-              YouTube kanalınızı büyütmek için anahtar teslim video prodüksiyon. 
-              Senaryo, çekim, kurgu, renk düzeltme, ses tasarımı ve thumbnail — hepsi dahil.
+
+      <ServiceHero
+        breadcrumb="YouTube İçerik Üretimi"
+        eyebrow="Uzun format · 16:9"
+        title={[{ text: "Bir Gün Çekim" }, { text: "Aylarca Yayın", gold: true }]}
+        intro={
+          <>
+            <p>
+              YouTube için uzun format videolar çekiyorum. Konu planından altyazıya kadar süreç
+              bende; sizin işiniz anlatmak.
             </p>
-            <WizardCta />
-          </div>
-          <div className="relative w-full aspect-video flex items-center justify-center group rounded-2xl overflow-hidden border border-border/50 shadow-2xl bg-black">
-            <LazyHeroVideo
-              src="/videos/portfolyo/youtube.mp4"
-              poster="/videos/portfolyo/youtube.jpg"
-              title="YouTube Video Örneği"
-            />
-          </div>
-        </div>
-      </section>
+            <p>
+              Bir kere kurulup art arda bölüm çekmek, kanalın haftalarca yayında kalmasını
+              sağlıyor — uzun formatta en çok işe yarayan şey bu.
+            </p>
+          </>
+        }
+        video={{
+          src: "/videos/portfolyo/youtube.mp4",
+          poster: "/videos/portfolyo/youtube.jpg",
+          title: "YouTube için çekilen uzun format video",
+          vertical: false,
+        }}
+        videoCaption="Uzun format"
+      />
 
-      <section className="max-w-5xl mx-auto px-6 py-16 border-t border-border">
-        <h2 className="font-heading text-3xl md:text-4xl font-bold mb-10 text-center">Paket İçeriği</h2>
-        <div className="grid md:grid-cols-3 gap-8">
-          {[
-            { title: "Senaryo & Konsept", desc: "Kanalınıza özel konu araştırması, senaryo yazımı ve çekim planı." },
-            { title: "Profesyonel Çekim", desc: "Sinema kalitesinde yatay format çekim, aydınlatma ve ses kaydı." },
-            { title: "Post-Prodüksiyon", desc: "Kurgu, renk düzeltme, grafik, altyazı ve thumbnail tasarımı." },
-          ].map((item) => (
-            <div key={item.title} className="bg-muted/30 border border-border rounded-2xl p-6 hover:border-primary/30 transition-colors">
-              <h3 className="font-heading text-xl font-bold text-foreground mb-3">{item.title}</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">{item.desc}</p>
-            </div>
-          ))}
-        </div>
-      </section>
+      <ServiceSteps
+        eyebrow="Kanal akışı"
+        heading="Nasıl İşliyor"
+        steps={STEPS}
+        note={
+          <>
+            Kapak görseli tasarımı ve grafik işleri bu pakete dahil değil — benim alanım olmadığı
+            için kendim yapmıyorum, güvendiğim isimlere yönlendiriyorum.
+          </>
+        }
+      />
 
-      <section className="max-w-3xl mx-auto px-6 py-16 border-t border-border">
-        <h2 className="font-heading text-3xl font-bold mb-8 text-center">Sıkça Sorulan Sorular</h2>
-        <div className="space-y-6">
-          {faqs.map((faq) => (
-            <div key={faq.q} className="bg-muted/20 border border-border rounded-xl p-6">
-              <h3 className="font-heading font-bold text-foreground mb-2">{faq.q}</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">{faq.a}</p>
-            </div>
-          ))}
-        </div>
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "FAQPage", mainEntity: faqs.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) }) }} />
-      </section>
+      <ServiceFaq faqs={FAQS} />
 
-      {/* Other Services */}
       <OtherServices currentServiceId="youtube-icerik-uretimi" />
 
-      <section className="max-w-3xl mx-auto px-6 py-16 text-center">
-        <p className="text-muted-foreground text-lg mb-6">YouTube kanalınızı profesyonelce büyütmeye hazır mısınız?</p>
-        <WizardCta />
-      </section>
+      <ServiceCta
+        heading="Kanalınızı Konuşalım"
+        text="15 dakikalık görüşmede kanalın hedefini dinliyorum, hangi konu sırasının işe yarayacağını birlikte çıkarıyoruz."
+      />
     </div>
   );
 }

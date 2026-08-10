@@ -5,7 +5,7 @@ import MagneticWrapper from "./MagneticWrapper";
 import CtaButton from "@/components/CtaButton";
 
 const WHATSAPP_NUMBER = "905467407084";
-const WHATSAPP_MESSAGE = encodeURIComponent("Merhaba, web sitenizden ulaşıyorum. Ücretsiz strateji görüşmesi hakkında bilgi almak istiyorum.");
+const WHATSAPP_MESSAGE = encodeURIComponent("Merhaba, web sitenizden ulaşıyorum. Bir görüşme ayarlamak istiyorum.");
 const PHONE_NUMBER = "+905467407084";
 
 import { useWizard } from "@/components/WizardContext";
@@ -68,13 +68,13 @@ const StickyCTA = () => {
   if (!visible || formInView) return null;
 
   return (
-    <div className="fixed bottom-6 right-4 sm:right-8 z-50 animate-fade-in-up flex items-center gap-2.5">
+    <div className="fixed bottom-14 md:bottom-[4.5rem] right-4 sm:right-8 z-50 animate-fade-in-up flex items-center gap-2.5">
       {/* Mobile: Phone Call Link */}
       {isMobile && (
         <a
           href={`tel:${PHONE_NUMBER}`}
           onClick={trackCall}
-          className="w-12 h-12 rounded-full bg-blue-500 hover:bg-blue-600 text-white flex items-center justify-center shadow-xl transition-all active:scale-90 border border-blue-400/30"
+          className="w-12 h-12 rounded-full bg-card hover:bg-secondary text-ash hover:text-foreground flex items-center justify-center shadow-xl transition-all active:scale-90 border border-ash/25"
           aria-label="Hemen arayın"
         >
           <Phone className="w-5 h-5" aria-hidden />
@@ -101,7 +101,7 @@ const StickyCTA = () => {
       ) : (
         <MagneticWrapper>
           <CtaButton size="md" onClick={handleMainCTA} className="rounded-full">
-            Ücretsiz Strateji Görüşmesi Al →
+            Görüşme Ayarlayalım →
           </CtaButton>
         </MagneticWrapper>
       )}

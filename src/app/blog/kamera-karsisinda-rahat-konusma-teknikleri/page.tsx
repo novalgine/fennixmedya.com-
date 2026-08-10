@@ -56,7 +56,7 @@ export default function BlogPost() {
           ]}
         />
 
-        <div className="prose prose-invert prose-lg max-w-none prose-headings:font-heading prose-headings:font-bold prose-a:text-primary hover:prose-a:text-primary/80 prose-img:rounded-2xl prose-img:border prose-img:border-white/10 prose-p:text-muted-foreground prose-li:text-muted-foreground">
+        <div className="prose prose-invert prose-lg max-w-none prose-headings:font-body prose-headings:font-bold prose-a:text-primary hover:prose-a:text-primary/80 prose-img:rounded-2xl prose-img:border prose-img:border-white/10 prose-p:text-muted-foreground prose-li:text-muted-foreground">
           <p>
             Alanınızda dünyanın en iyi uzmanı olabilirsiniz. Konferanslarda yüzlerce kişiye sunum yapabilirsiniz. Ama kameranın o küçük siyah lensine bakmak, <strong>en profesyonel insanları bile terletebilir.</strong>
           </p>

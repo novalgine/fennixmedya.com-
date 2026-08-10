@@ -1,30 +1,68 @@
 import type { Metadata } from "next";
 import JsonLd from "@/components/JsonLd";
-import Image from "next/image";
-import { ArrowRight } from "lucide-react";
-import WizardCta from "@/components/WizardCta";
+import ServiceHero from "@/components/ServiceHero";
+import ServiceSteps from "@/components/ServiceSteps";
+import ServiceFaq, { type Faq } from "@/components/ServiceFaq";
+import ServiceCta from "@/components/ServiceCta";
 import OtherServices from "@/components/OtherServices";
-import LazyHeroVideo from "@/components/LazyHeroVideo";
+
+const OZET =
+  "İstanbul'da kurumsal tanıtım filmi çekimi. Senaryo, çekim, kurgu ve renk düzeltme tek elden; web siteniz, fuar standınız ve reklam kampanyalarınız için 1-3 dakikalık film.";
 
 export const metadata: Metadata = {
   title: "Kurumsal Tanıtım Filmi Çekimi",
-  description:
-    "Markanızın vizyonunu ve değerini kurumsal prestijinizi en üst seviyeye taşıyan stratejik marka filmleriyle anlatıyoruz.",
+  description: OZET,
   alternates: { canonical: "https://fennixmedya.com/hizmetler/kurumsal-tanitim-filmi" },
   openGraph: {
     type: "website",
     url: "https://fennixmedya.com/hizmetler/kurumsal-tanitim-filmi",
     title: "Kurumsal Tanıtım Filmi Çekimi",
-    description: "Markanızın vizyonunu ve değerini kurumsal prestijinizi en üst seviyeye taşıyan stratejik marka filmleriyle anlatıyoruz.",
+    description: OZET,
     siteName: "Fennix Medya",
     locale: "tr_TR",
   },
 };
 
-const faqs = [
-  { q: "Kurumsal tanıtım filmi ne kadar sürer?", a: "Projenin kapsamına göre 1-3 dakikalık filmler üretiyoruz. Araştırmalar, 2 dakikanın altındaki filmlerin en yüksek izlenme oranına sahip olduğunu gösteriyor." },
-  { q: "Çekim süreci nasıl işliyor?", a: "Ön prodüksiyon (senaryo + storyboard) → Çekim günü (1-2 gün) → Post-prodüksiyon (kurgu + renk düzeltme + ses) → Revizyon → Final teslimat. Toplam süre 2-4 hafta." },
-  { q: "Drone çekimi dahil mi?", a: "Evet, lokasyonun uygun olduğu projelerde drone çekimi ek ücret olmadan paketimize dahildir." },
+const STEPS = [
+  {
+    title: "Markayı dinlemek",
+    body: "İşinizi, kime sattığınızı ve filmin nerede kullanılacağını konuşarak başlıyoruz. Web sitesinde açılış videosu olacak film ile fuar standında sessiz dönecek film aynı film değildir; bunu baştan netleştiriyoruz.",
+  },
+  {
+    title: "Senaryo ve çekim planı",
+    body: "Filmin akışını, hangi mekânlarda ne çekeceğimizi ve kimin konuşacağını yazıya döküyorum. Onaylanmadan sete çıkmıyoruz — çekim gününde tartışılacak bir şey kalmıyor.",
+  },
+  {
+    title: "Çekim günü",
+    body: "Mekânı okuyup ışığı ona göre kuruyorum. Kamera karşısına geçen kişi ekibinizden biriyse, oyunculuk geçmişim burada devreye giriyor: metni ezberletmek yerine kendi cümlesi gibi söyletiyorum. Ardından mekânın atmosferini toplayan detay çekimlerini yapıyorum.",
+  },
+  {
+    title: "Kurgu, renk ve teslim",
+    body: "Kurgu, renk düzeltme ve ses dengeleme bende. İlk kesimi izliyorsunuz, revizyonları alıyorum, sonra web ve sosyal medya için farklı en-boy oranlarında teslim ediyorum.",
+  },
+];
+
+const FAQS: Faq[] = [
+  {
+    q: "Film ne kadar uzun oluyor?",
+    a: "Kapsamına göre genelde 1-3 dakika arasında. Filmin nerede kullanılacağı uzunluğu belirliyor: web sitesi açılışı için kısa, fuar veya sunum için daha uzun bir kurgu mantıklı oluyor.",
+  },
+  {
+    q: "Süreç ne kadar sürüyor?",
+    a: "Senaryo ve plan, çekim günü, kurgu ve revizyon dahil olmak üzere genelde 2-4 hafta. Kaç mekânda çekim yapacağımıza ve revizyon turlarına göre değişiyor.",
+  },
+  {
+    q: "Drone çekimi dahil mi?",
+    a: "Hayır, drone ayrı fiyatlandırılıyor. Lokasyon uygunsa ve gerçekten filme katkısı olacaksa öneriyorum; sırf görsel şov olsun diye eklemiyorum.",
+  },
+  {
+    q: "Oyuncu veya seslendirme sağlıyor musunuz?",
+    a: "Filmlerin çoğunda markanın kendi ekibi konuşuyor ve bu daha inandırıcı oluyor. Profesyonel oyuncu veya dış ses gerekiyorsa bütçeye ekleyerek ayrıca planlıyoruz.",
+  },
+  {
+    q: "Ödeme ne zaman yapılıyor?",
+    a: "Ödemeyi çekim gününün sonunda alıyorum. Kurgu ve teslim süreci bunun ardından işliyor.",
+  },
 ];
 
 export default function KurumsalTanitimFilmiPage() {
@@ -34,77 +72,60 @@ export default function KurumsalTanitimFilmiPage() {
         data={{
           "@context": "https://schema.org",
           "@type": "Service",
-          name: "Kurumsal Tanıtım Filmi Prodüksiyonu",
-          serviceType: "Video Prodüksiyon",
-          description: "Markanızın vizyonunu ve değerini anlatan stratejik kurumsal tanıtım filmleri; senaryo, çekim ve post-prodüksiyon dahil uçtan uca hizmet.",
+          name: "Kurumsal tanıtım filmi çekimi",
+          serviceType: "Video prodüksiyon",
+          description: OZET,
           url: "https://fennixmedya.com/hizmetler/kurumsal-tanitim-filmi",
           areaServed: { "@type": "City", name: "İstanbul" },
           provider: { "@id": "https://fennixmedya.com/#organization" },
         }}
       />
-      <section className="max-w-6xl mx-auto px-6 py-16 md:py-24">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="text-left">
-            <span className="text-primary font-medium text-sm tracking-widest uppercase mb-4 block">
-              Hizmetlerimiz — Yatay Format
-            </span>
-            <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-black tracking-tight mb-6">
-              Kurumsal Tanıtım <span className="text-gradient-gold">Filmi</span>
-            </h1>
-            <p className="text-muted-foreground text-lg md:text-xl leading-relaxed mb-10">
-              Markanızın hikayesini, değerlerini ve vizyonunu sinematik kalitede anlatan profesyonel tanıtım filmleri. 
-              Web siteniz, fuarlar, yatırımcı sunumları ve sosyal medya için kullanılabilir.
+
+      <ServiceHero
+        breadcrumb="Kurumsal Tanıtım Filmi"
+        eyebrow="Yatay format · 16:9"
+        title={[{ text: "Bir Film.", gold: true }, { text: "Sitede, Fuarda," }, { text: "Reklamda." }]}
+        intro={
+          <>
+            <p>
+              Şirketinizi bir kez doğru anlatan bir film çekiyorum; sonrasında aynı filmi web
+              sitenizde, fuar standınızda ve reklam kampanyalarınızda kullanırsınız.
             </p>
-            <WizardCta />
-          </div>
-          <div className="relative w-full aspect-video flex items-center justify-center group rounded-2xl overflow-hidden border border-border/50 shadow-2xl bg-black">
-            <LazyHeroVideo
-              src="/videos/portfolyo/petadress.mp4"
-              poster="/videos/portfolyo/petadress.jpg"
-              title="Kurumsal Tanıtım Filmi Örneği"
-            />
-          </div>
-        </div>
-      </section>
+            <p>
+              Senaryodan renk düzeltmeye kadar süreç bende. Kameraya dış ses değil, kendi ekibiniz
+              geçiyor — işini anlatan kişinin kendi sesi her zaman daha inandırıcı.
+            </p>
+          </>
+        }
+        video={{
+          src: "/videos/portfolyo/petadress.mp4",
+          poster: "/videos/portfolyo/petadress.jpg",
+          title: "Pet Adress için çekilen tanıtım filmi",
+          vertical: false,
+        }}
+        videoCaption="Pet Adress"
+      />
 
-      <section className="max-w-5xl mx-auto px-6 py-16 border-t border-border">
-        <h2 className="font-heading text-3xl md:text-4xl font-bold mb-10 text-center">Süreç</h2>
-        <div className="grid md:grid-cols-4 gap-6">
-          {[
-            { step: "01", title: "Keşif", desc: "Markanızı, hedef kitlenizi ve mesajınızı anlıyoruz." },
-            { step: "02", title: "Senaryo", desc: "Hikayenizi kağıda döküyor, storyboard hazırlıyoruz." },
-            { step: "03", title: "Çekim", desc: "Profesyonel ekipmanlarla lokasyon veya stüdyo çekimi." },
-            { step: "04", title: "Teslimat", desc: "Renk düzeltme, ses tasarımı ve final kurgu." },
-          ].map((item) => (
-            <div key={item.step} className="bg-muted/30 border border-border rounded-2xl p-6 hover:border-primary/30 transition-colors text-center">
-              <span className="text-primary font-heading text-3xl font-black">{item.step}</span>
-              <h3 className="font-heading text-lg font-bold text-foreground mt-3 mb-2">{item.title}</h3>
-              <p className="text-muted-foreground text-sm">{item.desc}</p>
-            </div>
-          ))}
-        </div>
-      </section>
+      <ServiceSteps
+        eyebrow="Proje akışı"
+        heading="Nasıl İşliyor"
+        steps={STEPS}
+        note={
+          <>
+            Grafik tasarım, animasyon ve statik görsel işleri benim alanım değil. Filminizde
+            ihtiyaç olursa güvendiğim isimlere yönlendirir, süreci sizin adınıza takip ederim.
+          </>
+        }
+      />
 
-      <section className="max-w-3xl mx-auto px-6 py-16 border-t border-border">
-        <h2 className="font-heading text-3xl font-bold mb-8 text-center">Sıkça Sorulan Sorular</h2>
-        <div className="space-y-6">
-          {faqs.map((faq) => (
-            <div key={faq.q} className="bg-muted/20 border border-border rounded-xl p-6">
-              <h3 className="font-heading font-bold text-foreground mb-2">{faq.q}</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">{faq.a}</p>
-            </div>
-          ))}
-        </div>
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "FAQPage", mainEntity: faqs.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) }) }} />
-      </section>
+      <ServiceFaq faqs={FAQS} />
 
-      {/* Other Services */}
       <OtherServices currentServiceId="kurumsal-tanitim-filmi" />
 
-      <section className="max-w-3xl mx-auto px-6 py-16 text-center">
-        <p className="text-muted-foreground text-lg mb-6">Markanızın hikayesini profesyonelce anlatmaya hazır mısınız?</p>
-        <WizardCta />
-      </section>
+      <ServiceCta
+        heading="Filminizi Konuşalım"
+        text="15 dakikalık görüşmede işinizi dinliyorum, filmin nerede kullanılacağına göre kapsamı birlikte belirliyoruz."
+      />
     </div>
   );
 }

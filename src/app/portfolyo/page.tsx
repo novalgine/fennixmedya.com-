@@ -6,13 +6,13 @@ import PortfolioVideoCard from "@/components/PortfolioVideoCard";
 export const metadata: Metadata = {
   title: "Portfolyo: Video Prodüksiyon İşlerimiz",
   description:
-    "Fennix Medya'nın teslim ettiği profesyonel video prodüksiyon projeleri. Kurumsal tanıtım filmleri, sosyal medya videoları ve YouTube içerikleri.",
+    "Sekiz sektörden markalar için çektiğim video işlerinden bir seçki: kurumsal tanıtım filmleri, dikey sosyal medya videoları ve YouTube içerikleri.",
   alternates: { canonical: "https://fennixmedya.com/portfolyo" },
   openGraph: {
     type: "website",
     url: "https://fennixmedya.com/portfolyo",
     title: "Portfolyo: Video Prodüksiyon İşlerimiz",
-    description: "Fennix Medya'nın teslim ettiği profesyonel video prodüksiyon projeleri. Kurumsal tanıtım filmleri, sosyal medya videoları ve YouTube içerikleri.",
+    description: "Sekiz sektörden markalar için çektiğim video işlerinden bir seçki: kurumsal tanıtım filmleri, dikey sosyal medya videoları ve YouTube içerikleri.",
     siteName: "Fennix Medya",
     locale: "tr_TR",
   },
@@ -21,16 +21,18 @@ export const metadata: Metadata = {
 export default function PortfolioPage() {
   return (
     <div className="min-h-screen bg-background pt-header">
-      <section className="max-w-6xl mx-auto px-6 py-16 md:py-24">
-        <div className="text-center mb-16">
-          <span className="text-primary font-medium text-sm tracking-widest uppercase mb-4 block">
+      <section className="container-page py-16 md:py-24">
+        <div className="mb-14">
+          <p className="font-heading font-semibold text-sm uppercase tracking-[0.25em] text-primary mb-4">
             Portfolyo
-          </span>
-          <h1 className="font-heading text-4xl md:text-6xl font-black tracking-tight mb-6">
-            Teslim Edilen <span className="text-gradient-gold">İşler</span>
+          </p>
+          <h1 className="text-poster mb-6">
+            <span className="block text-foreground">Teslim</span>
+            <span className="block text-gradient-gold">Edilen İşler</span>
           </h1>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Farklı sektörlerden markalar için ürettiğimiz profesyonel video projelerinden bir seçki.
+          <p className="text-muted-foreground text-lg max-w-2xl">
+            Sekiz farklı sektörden markalar için çektiğim işlerden bir seçki. Hepsinin metnini
+            birlikte kurduk, hepsini ben çekip ben kurguladım.
           </p>
         </div>
 
@@ -45,12 +47,14 @@ export default function PortfolioPage() {
         </div>
       </section>
 
-      <section className="max-w-3xl mx-auto px-6 py-16 text-center border-t border-border/40">
-        <h2 className="font-heading text-2xl md:text-3xl font-bold mb-4">
-          Sıradaki proje <span className="text-gradient-gold">sizinki</span> olsun.
-        </h2>
-        <p className="text-muted-foreground mb-8 text-lg">15 dakikalık ücretsiz görüşmede projenizi birlikte planlayalım.</p>
-        <WizardCta />
+      <section className="section-spacing bg-surface border-t border-border/40">
+        <div className="container-page text-center">
+          <h2 className="text-display-2 text-foreground mb-4">Sıradaki İş Sizinki Olsun</h2>
+          <p className="text-muted-foreground text-lg mb-8 max-w-xl mx-auto">
+            15 dakikalık görüşmede markanızı dinliyorum, neyin işe yarayacağını konuşuyoruz.
+          </p>
+          <WizardCta />
+        </div>
       </section>
     </div>
   );

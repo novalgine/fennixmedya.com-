@@ -21,7 +21,7 @@ export default function GizlilikPolitikasiPage() {
       <div className="max-w-4xl mx-auto px-6">
         <h1 className="font-heading text-3xl md:text-5xl font-black mb-8">Gizlilik Politikası</h1>
         
-        <div className="prose prose-neutral dark:prose-invert max-w-none prose-headings:font-heading prose-headings:font-bold prose-p:text-muted-foreground prose-p:leading-relaxed">
+        <div className="prose prose-neutral dark:prose-invert max-w-none prose-headings:font-body prose-headings:font-bold prose-p:text-muted-foreground prose-p:leading-relaxed">
           <p>
             Fennix Medya olarak, web sitemizi ziyaret eden ve hizmetlerimizden yararlanan tüm 
             kullanıcılarımızın gizliliğine ve kişisel verilerinin korunmasına büyük önem vermekteyiz. 
@@ -31,7 +31,7 @@ export default function GizlilikPolitikasiPage() {
 
           <h2>1. Toplanan Bilgiler</h2>
           <p>
-            Hizmetlerimizle ilgili bilgi almak, strateji görüşmesi talep etmek veya içeriklerimizi 
+            Hizmetlerimizle ilgili bilgi almak, görüşme talep etmek veya içeriklerimizi 
             indirmek amacıyla formlarımızı doldurduğunuzda; adınız, soyadınız, e-posta adresiniz, 
             telefon numaranız ve şirket bilgileriniz gibi kişisel verilerinizi toplamaktayız. 
             Ayrıca site performansını ölçmek ve kullanıcı deneyimini iyileştirmek için anonim 

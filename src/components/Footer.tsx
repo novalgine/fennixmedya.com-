@@ -12,23 +12,26 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-5 gap-10 md:gap-8 items-start">
           {/* Brand */}
           <div className="md:col-span-2">
-            <h3 className="font-heading text-xl font-bold text-foreground uppercase tracking-widest mb-2">
+            <h3 className="font-heading text-3xl md:text-4xl font-bold text-foreground uppercase tracking-[0.08em] mb-1">
               Fennix Medya
             </h3>
+            <p className="font-heading text-[11px] font-semibold uppercase tracking-[0.3em] text-muted-foreground/60 mb-3">
+              Yapım — Fennix Medya · İstanbul · {new Date().getFullYear()}
+            </p>
             <p className="text-base text-muted-foreground font-medium">
-              İstanbul Video Prodüksiyon & Reels Ajansı
+              İstanbul · Video çekimi ve kurgu
             </p>
             <p className="text-xs text-muted-foreground/60 mt-2 leading-relaxed max-w-xs">
-              High-ticket profesyoneller ve markalar için sinematik içerik üretimi, sosyal medya stratejisi ve profesyonel video çekim hizmetleri.
+              İstanbul'da markalar için video çekiyorum. Metni birlikte kurar, çekimi ve kurguyu tek başıma yaparım.
             </p>
             <CtaButton variant="secondary" size="md" onClick={() => openWizard()} className="mt-5 text-sm">
-              Ücretsiz Strateji Görüşmesi Al →
+              Görüşme Ayarlayalım →
             </CtaButton>
           </div>
 
           {/* Menü & Hizmetler */}
           <div className="space-y-3">
-            <h4 className="font-heading text-sm font-bold uppercase tracking-widest text-foreground/50 mb-1">Hizmetlerimiz</h4>
+            <h4 className="font-heading text-sm font-bold uppercase tracking-widest text-foreground/50 mb-1">Hizmetler</h4>
             <div className="flex flex-col gap-2">
               <Link href="/hizmetler" className="text-muted-foreground hover:text-primary transition-colors text-sm font-medium">Tüm Hizmetler</Link>
               <Link href="/hizmetler/sosyal-medya-video" className="text-muted-foreground hover:text-primary transition-colors text-sm font-medium">Sosyal Medya Videosu</Link>
@@ -38,7 +41,7 @@ const Footer = () => {
               <div className="h-px w-8 bg-border/50 my-1"></div>
               <Link href="/blog" className="text-muted-foreground hover:text-primary transition-colors text-sm font-medium">Blog & Rehberler</Link>
               <Link href="/portfolyo" className="text-muted-foreground hover:text-primary transition-colors text-sm font-medium">Portfolyo</Link>
-              <Link href="/hakkimizda" className="text-muted-foreground hover:text-primary transition-colors text-sm font-medium">Hakkımızda</Link>
+              <Link href="/hakkimizda" className="text-muted-foreground hover:text-primary transition-colors text-sm font-medium">Hakkımda</Link>
             </div>
           </div>
 

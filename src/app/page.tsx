@@ -1,50 +1,75 @@
 import HeroSection from "@/components/HeroSection";
-import ScrollProgress from "@/components/ScrollProgress";
-import TrustCounterBand from "@/components/TrustCounterBand";
 import ClientMarquee from "@/components/ClientMarquee";
 import Reveal from "@/components/Reveal";
-import SocialProofSection from "@/components/SocialProofSection";
+import AboutMe from "@/components/AboutMe";
+import TrustCounterBand from "@/components/TrustCounterBand";
+import TimelineHud from "@/components/editor/TimelineHud";
 import dynamic from "next/dynamic";
 
-const ProblemSection = dynamic(() => import("@/components/ProblemSection"));
-const ProcessSection = dynamic(() => import("@/components/ProcessSection"));
-const GuaranteesSection = dynamic(() => import("@/components/GuaranteesSection"));
+const FilmStripWorkRow = dynamic(() => import("@/components/FilmStripWorkRow"));
+const SetWall = dynamic(() => import("@/components/SetWall"));
+const BeforeAfter = dynamic(() => import("@/components/BeforeAfter"));
+const HowIWork = dynamic(() => import("@/components/HowIWork"));
+const NotForYou = dynamic(() => import("@/components/NotForYou"));
+const Pricing = dynamic(() => import("@/components/Pricing"));
+const TestimonialsStrip = dynamic(() => import("@/components/TestimonialsStrip"));
 const FAQSection = dynamic(() => import("@/components/FAQSection"));
 const FinalCTASection = dynamic(() => import("@/components/FinalCTASection"));
 const StickyCTA = dynamic(() => import("@/components/StickyCTA"));
-const TestimonialsStrip = dynamic(() => import("@/components/TestimonialsStrip"));
-const MidPageCTA = dynamic(() => import("@/components/MidPageCTA"));
+
+// Kurgu masası: alt timeline'daki klipler
+const CLIPS = [
+  { id: "acilis", label: "Açılış", track: "V1" as const },
+  { id: "portfolyo", label: "İşler", track: "V1" as const },
+  { id: "ben", label: "Ben", track: "V1" as const },
+  { id: "set", label: "Set", track: "V1" as const },
+  { id: "fark", label: "Fark", track: "V1" as const },
+  { id: "surec", label: "Süreç", track: "V1" as const },
+  { id: "referanslar", label: "Müşteriler", track: "A1" as const },
+  { id: "fiyat", label: "Fiyat", track: "V1" as const },
+  { id: "basvuru", label: "Randevu", track: "V1" as const },
+];
 
 export default function HomePage() {
   return (
-    <div className="min-h-[100dvh] bg-background">
+    <div className="min-h-[100dvh] bg-background pb-14">
       <div className="film-grain" />
-      <ScrollProgress />
 
-      {/* Hero loads immediately — above the fold */}
-      <HeroSection />
-
-      {/* Page sections */}
+      {/* Kim olduğum */}
+      <div id="acilis">
+        <HeroSection />
+      </div>
       <ClientMarquee />
+
+      {/* İşler — konuşmadan önce göster */}
+      <FilmStripWorkRow />
       <TrustCounterBand />
-      <Reveal><SocialProofSection /></Reveal>
 
-      <ProblemSection />
+      {/* Ben kimim */}
+      <AboutMe />
+      <SetWall />
 
-      <ProcessSection />
+      {/* Aradaki fark */}
+      <div id="fark"><BeforeAfter /></div>
 
-      {/* Mid-page CTA */}
-      <MidPageCTA />
+      {/* Nasıl çalışıyorum */}
+      <HowIWork />
 
-      {/* Testimonials */}
+      {/* Kimlerle çalışıyorum / çalışmıyorum */}
+      <NotForYou />
+
+      {/* Müşteriler */}
       <Reveal><TestimonialsStrip /></Reveal>
 
-      {/* Final CTA with Wizard Trigger */}
+      {/* Fiyat */}
+      <Pricing />
+
+      {/* Sorular ve kapanış */}
+      <FAQSection />
       <FinalCTASection />
 
-      <GuaranteesSection />
-      <FAQSection />
       <StickyCTA />
+      <TimelineHud clips={CLIPS} />
     </div>
   );
 }

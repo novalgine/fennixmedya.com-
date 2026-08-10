@@ -1,103 +1,262 @@
 import type { Metadata } from "next";
+import Image from "next/image";
+import Link from "next/link";
 import WizardCta from "@/components/WizardCta";
-import { ArrowRight, Camera, Film, Sparkles } from "lucide-react";
+import Breadcrumbs from "@/components/Breadcrumbs";
+import Reveal from "@/components/Reveal";
+import JsonLd from "@/components/JsonLd";
+
+const OZET =
+  "Semih Hasanoğlu — üniversitede sinema okudu, işi tiyatroda öğrendi. Dört yıl sahnede oyunculuk ve yönetmenlik yaptıktan sonra İstanbul'da markalar için video çekmeye başladı. Fikirden metne, çekimden kurguya kadar sürecin tamamında.";
 
 export const metadata: Metadata = {
-  title: "Hakkımızda",
-  description:
-    "Fennix Medya ve kurucusu Semih Hasanoğlu hakkında. Sektör liderleri ve high-ticket uzmanlar için algı yönetimi ve stratejik görsel iletişim danışmanlığı.",
+  title: "Hakkımda",
+  description: OZET,
   alternates: { canonical: "https://fennixmedya.com/hakkimizda" },
   openGraph: {
-    type: "website",
+    type: "profile",
     url: "https://fennixmedya.com/hakkimizda",
-    title: "Hakkımızda",
-    description: "Fennix Medya ve kurucusu Semih Hasanoğlu hakkında. Sektör liderleri ve high-ticket uzmanlar için algı yönetimi ve stratejik görsel iletişim danışmanlığı.",
+    title: "Hakkımda — Semih Hasanoğlu",
+    description: OZET,
     siteName: "Fennix Medya",
     locale: "tr_TR",
   },
 };
 
-export default function HakkimizdaPage() {
+const GEAR = ["Sony FX30", "Tamron 17-70mm", "DJI RS4 Gimbal", "Tripod", "Rode Wireless GO II"];
+
+export default function HakkimdaPage() {
   return (
     <div className="min-h-screen bg-background pt-header">
-      {/* Hero */}
-      <section className="max-w-4xl mx-auto px-6 py-16 md:py-24">
-        <span className="text-primary font-medium text-sm tracking-widest uppercase mb-4 block">
-          Hakkımızda
-        </span>
-        <h1 className="font-heading text-4xl md:text-6xl font-black tracking-tight mb-6">
-          Merhaba, ben <span className="text-gradient-gold">Semih Hasanoğlu</span>
-        </h1>
-        <p className="text-muted-foreground text-lg md:text-xl leading-relaxed mb-6">
-          Fennix Medya&apos;nın kurucusu ve görsel stratejistiyim. Sektör liderlerinin ve yüksek değerli (high-ticket) uzmanların dijital dünyadaki otoritesini sinematik kodlarla inşa ediyorum.
-        </p>
-        <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-          Kamera önü bariyerlerinizi içerik koçluğumuzla kaldırıyor, tüm stratejik, operasyonel ve yaratıcı yükü omuzlarınızdan tamamen alıyoruz. Amacımız sadece güzel görünen videolar değil, <strong className="text-foreground"> otoritenizi inşa edecek kârlı içerikler</strong> üretmek.
-        </p>
-        <p className="text-muted-foreground text-lg leading-relaxed">
-          İstanbul merkezli olarak kurumsal tanıtım filmleri, sosyal medya videoları ve 
-          YouTube içerik üretimi alanında hizmet veriyoruz. Her projede anahtar teslim 
-          çözümler sunuyor, müşterilerimizin tek yapması gereken şeyin kamera karşısına 
-          geçmek olmasını sağlıyoruz.
-        </p>
-      </section>
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "Person",
+          name: "Semih Hasanoğlu",
+          jobTitle: "Yönetmen ve video prodüktörü",
+          description: OZET,
+          image: "https://fennixmedya.com/foto/semih-portre-4x5.jpg",
+          worksFor: { "@type": "Organization", name: "Fennix Medya" },
+          url: "https://fennixmedya.com/hakkimizda",
+          alumniOf: { "@type": "CollegeOrUniversity", name: "Radyo, Televizyon ve Sinema" },
+          knowsAbout: ["Video prodüksiyon", "Yönetmenlik", "Oyunculuk", "Yaratıcı drama", "Kurgu"],
+          address: { "@type": "PostalAddress", addressLocality: "İstanbul", addressCountry: "TR" },
+        }}
+      />
 
-      {/* Values */}
-      <section className="max-w-5xl mx-auto px-6 py-16 border-t border-border">
-        <h2 className="font-heading text-3xl font-bold mb-10 text-center">Neden Fennix Medya?</h2>
-        <div className="grid md:grid-cols-3 gap-8">
-          {[
-            {
-              icon: Camera,
-              title: "Sinematik Görsel Kodlama",
-              desc: "Işık, gölge ve renklerin psikolojik etkisini kullanarak markanızın premium algısını izleyicinin bilinçaltına işliyoruz.",
-            },
-            {
-              icon: Film,
-              title: "Sıfır Operasyonel Yük",
-              desc: "Strateji, kanca senaryoları ve algoritma mühendisliğini üstleniyoruz. Siz sadece ayda 6 saatinizi ayırın, gerisini biz yönetelim.",
-            },
-            {
-              icon: Sparkles,
-              title: "Otorite ve Güven Odaklı Mimari",
-              desc: "Sadece izlenen değil, premium müşteri çeken ve rakiplerinizin fiyat itirazlarını daha video izlenirken eriten sistemler tasarlıyoruz.",
-            },
-          ].map((item) => (
-            <div key={item.title} className="bg-muted/30 border border-border rounded-2xl p-6 hover:border-primary/30 transition-colors">
-              <item.icon className="w-8 h-8 text-primary mb-4" />
-              <h3 className="font-heading text-xl font-bold text-foreground mb-3">{item.title}</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">{item.desc}</p>
+      {/* Açılış */}
+      <section className="container-page pt-8 pb-16 md:pb-24">
+        <Breadcrumbs items={[{ name: "Hakkımda" }]} />
+
+        <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-10 lg:gap-16 items-center mt-8">
+          <Reveal>
+            <p className="font-heading font-semibold text-sm uppercase tracking-[0.25em] text-primary mb-4">
+              Ne savunuyorum
+            </p>
+            <h1 className="text-poster mb-8">
+              <span className="block text-foreground">Herkes İçerik</span>
+              <span className="block text-foreground">Üretiyor.</span>
+              <span className="block text-gradient-gold">Mesele O Değil.</span>
+            </h1>
+            <div className="text-muted-foreground text-lg md:text-xl leading-relaxed max-w-xl space-y-5">
+              <p>
+                Yanıp dönen geçişler ve hızlı kesmeler dikkat çekiyor, ama izleyende bir şey
+                bırakmıyor. Ben görsel anlatıyla hikâye anlatıcılığını birleştirmeyi savunuyorum:
+                kancayla başlarsınız, ama içeride gerçekten bir şey olmalı.
+              </p>
+              <p>
+                Artık herkes içerik üretiyor; üretmek zorunlu hale geldi. Bu kalabalıkta öne çıkaran
+                şey dikkat yarışına girmek değil, istikrarlı biçimde nitelikli iş çıkarmak. Bu uzun
+                bir yol — ama sizi uzun vadede ciddiye alınan taraf yapan da bu.
+              </p>
             </div>
-          ))}
+          </Reveal>
+
+          <Reveal delay={80}>
+            <figure>
+              <div className="relative aspect-[4/5] overflow-hidden border border-white/10">
+                <Image
+                  src="/foto/semih-portre-4x5.jpg"
+                  alt="Semih Hasanoğlu, İstanbul'da gün batımında Boğaz manzarası önünde"
+                  fill
+                  priority
+                  sizes="(max-width: 1024px) 92vw, 520px"
+                  quality={90}
+                  className="object-cover"
+                />
+              </div>
+              <figcaption className="mt-3 flex items-center gap-3">
+                <span className="font-mono text-[10px] uppercase tracking-[0.25em] text-ash">
+                  Semih Hasanoğlu
+                </span>
+                <span className="h-px flex-1 bg-border/50" />
+                <span className="font-mono text-[10px] uppercase tracking-[0.25em] text-ash/60">
+                  İstanbul
+                </span>
+              </figcaption>
+            </figure>
+          </Reveal>
         </div>
       </section>
 
-      {/* Bottom CTA */}
-      <section className="max-w-3xl mx-auto px-6 py-16 text-center border-t border-border">
-        <h2 className="font-heading text-2xl md:text-3xl font-bold mb-4">
-          Birlikte çalışalım mı?
-        </h2>
-        <p className="text-muted-foreground mb-8">
-          15 dakikalık ücretsiz strateji görüşmesinde projenizi birlikte planlayalım.
-        </p>
-        <WizardCta />
+      {/* Tiyatro */}
+      <section className="section-spacing bg-surface">
+        <div className="container-page">
+          <Reveal>
+            <p className="font-heading font-semibold text-sm uppercase tracking-[0.25em] text-primary mb-3">
+              Nereden geliyorum
+            </p>
+            <h2 className="text-display-2 text-foreground mb-8">Dört Yıl Sahnedeydim</h2>
+          </Reveal>
+
+          <div className="grid md:grid-cols-2 gap-8 md:gap-14 max-w-5xl">
+            <Reveal>
+              <div className="space-y-5 text-muted-foreground text-lg leading-relaxed">
+                <p>
+                  İlk üç yıl oyunculuk, son yıl yönetmenlik yaptım. Orada bir insanın neden
+                  inandırıcı olmadığını görmeyi ve onu nasıl inandırıcı hâle getireceğimi öğrendim.
+                </p>
+              </div>
+            </Reveal>
+            <Reveal delay={70}>
+              <div className="space-y-5 text-muted-foreground text-lg leading-relaxed">
+                <p className="text-foreground font-medium">
+                  Yaptığım iş o günden beri çok değişmedi: karşımdaki insanın ne demek istediğini
+                  bulmak ve onu söyleyebileceği hâle getirmek.
+                </p>
+              </div>
+            </Reveal>
+          </div>
+        </div>
       </section>
 
-      {/* Person Schema */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Person",
-            name: "Semih Hasanoğlu",
-            jobTitle: "Görsel Stratejist & Kreatif Direktör",
-            worksFor: { "@type": "Organization", name: "Fennix Medya" },
-            url: "https://fennixmedya.com/hakkimizda",
-            sameAs: [],
-          }),
-        }}
-      />
+      {/* Bugün */}
+      <section className="section-spacing bg-background">
+        <div className="container-page">
+          <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-start">
+            <Reveal>
+              <p className="font-heading font-semibold text-sm uppercase tracking-[0.25em] text-primary mb-3">
+                Bugün
+              </p>
+              <h2 className="text-display-2 text-foreground mb-6">
+                &ldquo;Güzel Oldu Mu&rdquo; Değil, &ldquo;İnandım Mı&rdquo;
+              </h2>
+              <div className="space-y-5 text-muted-foreground text-lg leading-relaxed max-w-prose">
+                <p>
+                  Metni yazıyor, çekimi yapıyor ve kurguyu kendim tamamlıyorum. Ama kameranın
+                  arkasında dururken hâlâ yönetmen gibi düşünüyorum. Bir görüntüye bakarken sorum
+                  &ldquo;güzel oldu mu&rdquo; değil, &ldquo;inandım mı&rdquo;.
+                </p>
+                <p>
+                  Sette en zor iş çoğu zaman çekim yapmak değil. Kameranın karşısında ne
+                  söyleyeceğini bilemeyen, doğal davranamayan ya da bir anda kendini kaybeden
+                  insanı çözmek. İşin en sevdiğim tarafı da bu.
+                </p>
+                <p>
+                  Hâlâ tiyatrolarda oyuncu adaylarına gönüllü ders veriyorum; Semaver
+                  Kumpanya&apos;da konservatuara hazırlanan çocuklarla çalışıyorum. Sertifikalı bir
+                  yaratıcı drama lideriyim. Çünkü benim için kamera, ışık ve kurgu kadar insan da
+                  üretimin bir parçası.
+                </p>
+                <p>
+                  Bugün markalar, girişimler ve bireysel üreticiler için video çekiyorum. Fikirden
+                  metne, çekimden kurguya kadar sürecin tamamında varım.
+                </p>
+              </div>
+            </Reveal>
+
+            <Reveal delay={80}>
+              <div className="card-surface p-8 lg:p-10">
+                <h3 className="font-heading text-2xl font-bold uppercase text-foreground mb-6">
+                  Yapmadığım İşler
+                </h3>
+                <div className="space-y-5 text-muted-foreground leading-relaxed">
+                  <p>
+                    <strong className="text-foreground">Grafik tasarım ve statik görsel.</strong>{" "}
+                    Benim alanım değil, o yüzden kendim yapmıyorum. İhtiyacınız olursa güvendiğim
+                    isimlere yönlendirir, süreci sizin adınıza takip ederim.
+                  </p>
+                  <p>
+                    <strong className="text-foreground">Bir ayda sonuç sözü.</strong> Sosyal medyada
+                    kalıcı sonuç düzenli üretimle birkaç ay içinde geliyor. Veremeyeceğim sözü baştan
+                    vermiyorum.
+                  </p>
+                </div>
+                <p className="mt-8 pt-6 border-t border-border/40 text-muted-foreground leading-relaxed">
+                  Kimlerle iyi anlaştığımı ve fiyatların ne olduğunu{" "}
+                  <Link href="/#fiyat" className="text-primary underline-offset-4 hover:underline">
+                    ana sayfada açıkça
+                  </Link>{" "}
+                  yazdım.
+                </p>
+              </div>
+            </Reveal>
+          </div>
+
+          <Reveal delay={60}>
+            <div className="mt-12 flex flex-wrap items-center gap-x-3 gap-y-2">
+              <span className="font-mono text-[10px] uppercase tracking-[0.25em] text-ash mr-1">
+                Sete getirdiklerim
+              </span>
+              {GEAR.map((g) => (
+                <span
+                  key={g}
+                  className="font-mono text-[11px] px-2.5 py-1 rounded border border-ash/25 text-ash"
+                >
+                  {g}
+                </span>
+              ))}
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* Ara yazı — kurgu masasındaki jenerik kartı, üstüne düşen tek ışıkla */}
+      <section className="relative overflow-hidden bg-surface border-y border-border/40 py-24 md:py-36">
+        {/* Sıcak spot: hero ve kapanıştaki radyal ışığın aynısı, merkeze alınmış hali.
+            Çekirdekte logonun kehribarı, çevrede altın — düz turuncu daire yerine ışık. */}
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            background:
+              "radial-gradient(ellipse 42% 62% at 50% 50%, hsl(var(--gold-dark) / 0.14) 0%, transparent 70%), radial-gradient(ellipse 75% 90% at 50% 50%, hsl(var(--gold) / 0.09) 0%, transparent 72%)",
+          }}
+        />
+
+        <div className="container-page relative z-10">
+          <Reveal>
+            <div className="flex items-center justify-center gap-4 sm:gap-5 mb-10">
+              <span className="h-px w-12 sm:w-20 bg-ash/40" />
+              <span className="font-mono text-xs sm:text-sm uppercase tracking-[0.3em] text-ash">
+                Kapanış
+              </span>
+              <span className="h-px w-12 sm:w-20 bg-ash/40" />
+            </div>
+
+            <blockquote className="text-quote text-center text-foreground max-w-3xl mx-auto text-balance">
+              Söylemek istediğimiz şeyi gerçekten karşı tarafa geçirebildik mi?
+            </blockquote>
+
+            <p className="mt-10 text-center font-mono text-xs sm:text-sm uppercase tracking-[0.25em] text-ash">
+              Yaptığım işin merkezinde hâlâ aynı soru var
+            </p>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* Kapanış */}
+      <section className="section-spacing bg-background">
+        <div className="container-page text-center">
+          <Reveal>
+            <h2 className="text-display-2 text-foreground mb-4">Tanışalım</h2>
+            <p className="text-muted-foreground text-lg mb-8 max-w-xl mx-auto">
+              15 dakikalık görüşmede markanızı dinliyorum, neyin işe yarayacağını konuşuyoruz.
+              Ücret almıyorum, sonrasında devam etmek zorunda değilsiniz.
+            </p>
+            <WizardCta />
+          </Reveal>
+        </div>
+      </section>
     </div>
   );
 }

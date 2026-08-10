@@ -4,14 +4,20 @@
  * kesintisiz döngü. Hover'da durur; reduced-motion'da statik satıra düşer.
  */
 const CLIENTS = [
-  "Boogold",
-  "Vaveyla Home",
-  "Mukaddes Gün",
-  "Melis Ulaş",
-  "Ayzıt Umay",
-  "Afife",
-  "Vet House",
-  "Esranur Umurbeyli",
+  "Afife Tiyatro",
+  "Zuhal",
+  "Vethouse",
+  "Petadress",
+  "Dt. Ayzıt Umay",
+  "Derya Kayaalp",
+  "Mukaddes Doman",
+  "Bilal Şendir",
+  "Melis Ulaş Wellness",
+  "Vavelya Home",
+  "Herwish Home",
+  "Boogold Kuyumculuk",
+  "Doğal Köpükler",
+  "Uyaran Spor Kulübü",
 ];
 
 function Row({ hidden = false }: { hidden?: boolean }) {
@@ -23,7 +29,7 @@ function Row({ hidden = false }: { hidden?: boolean }) {
       {CLIENTS.map((name) => (
         <li
           key={name}
-          className="font-heading text-lg md:text-xl font-bold uppercase tracking-widest text-foreground/35 whitespace-nowrap"
+          className="font-heading text-xl md:text-2xl font-bold uppercase tracking-[0.08em] text-foreground/35 whitespace-nowrap"
         >
           {name}
         </li>

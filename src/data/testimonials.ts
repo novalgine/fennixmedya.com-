@@ -27,10 +27,18 @@ export const testimonialsData: Testimonial[] = [
   },
   {
     id: "mukaddes",
-    name: "Mukaddes Gün",
+    name: "Mukaddes Doman",
     title: "Mukaddes Storytelling",
     quote: "Her şey çok profesyonel, pürüzsüz ve planlı işliyor. Aklımdaki fikri tam olarak ekrana yansıtmamı sağlayan harika bir vizyonları var. Ortaya çıkan işten son derece memnunum.",
     videoSrc: "/videos/referans/mukaddes.mp4",
     poster: "/videos/referans/mukaddes.jpg",
+  },
+  {
+    id: "berke",
+    name: "Berke Derelioğlu",
+    title: "Kurucu, Sistemler.io",
+    quote: "Eğer siz de yoğun bir işletme sahibiyseniz ve içerik üretecek vaktiniz yoksa Semih'ten yardım almanızı tavsiye ederim. Gerçekten işinde profesyonel. Sizi doğru bir şekilde yönlendiriyor ve başarıya ulaştırıyor.",
+    videoSrc: "/videos/referans/berke.mp4",
+    poster: "/videos/referans/berke.jpg",
   },
 ];

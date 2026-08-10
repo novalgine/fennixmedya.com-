@@ -10,8 +10,8 @@ const GOLD = "#CEB77E";
 const GOLD_LIGHT = "#E6D7B3";
 
 export default async function Image() {
-  const manrope = await readFile(
-    join(process.cwd(), "src/assets/fonts/Manrope-ExtraBold.ttf")
+  const bigShoulders = await readFile(
+    join(process.cwd(), "src/assets/fonts/BigShoulders-Bold.ttf")
   );
 
   return new ImageResponse(
@@ -27,7 +27,7 @@ export default async function Image() {
           background: "#0A0A0A",
           backgroundImage:
             "radial-gradient(circle at 50% 120%, rgba(206,183,126,0.25) 0%, rgba(206,183,126,0.08) 40%, rgba(10,10,10,0) 70%)",
-          fontFamily: "Manrope",
+          fontFamily: "Big Shoulders",
         }}
       >
         <div
@@ -65,9 +65,9 @@ export default async function Image() {
 
         <div
           style={{
-            fontSize: "132px",
+            fontSize: "172px",
             color: "#F5F0E6",
-            letterSpacing: "-2px",
+            letterSpacing: "0px",
             lineHeight: 1,
             display: "flex",
           }}
@@ -104,7 +104,7 @@ export default async function Image() {
     {
       ...size,
       fonts: [
-        { name: "Manrope", data: manrope, style: "normal", weight: 800 },
+        { name: "Big Shoulders", data: bigShoulders, style: "normal", weight: 700 },
       ],
     }
   );

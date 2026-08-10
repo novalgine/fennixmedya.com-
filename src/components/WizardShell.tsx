@@ -156,7 +156,7 @@ export default function WizardShell<A extends ContactFields>({
         <div data-lenis-prevent className="p-6 md:p-8 flex-grow overflow-y-auto relative z-10">
           {currentChoice && (
             <div key={stepIdx} className="animate-in slide-in-from-right-4 fade-in duration-300">
-              <DialogTitle className="text-2xl font-heading font-bold text-foreground mb-2">
+              <DialogTitle className="text-2xl font-body font-bold text-foreground mb-2">
                 {resolve(currentChoice.title, answers)}
               </DialogTitle>
               <DialogDescription className="text-muted-foreground text-base mb-6">
@@ -198,7 +198,7 @@ export default function WizardShell<A extends ContactFields>({
 
           {stepIdx === contactIdx && (
             <div className="animate-in slide-in-from-right-4 fade-in duration-300">
-              <DialogTitle className="text-2xl font-heading font-bold text-foreground mb-2">
+              <DialogTitle className="text-2xl font-body font-bold text-foreground mb-2">
                 {config.contact.title}
               </DialogTitle>
               <DialogDescription className="text-muted-foreground text-base mb-6">

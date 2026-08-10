@@ -21,7 +21,7 @@ export default {
         header: "4rem",
       },
       fontFamily: {
-        heading: ["var(--font-manrope)", "sans-serif"],
+        heading: ["var(--font-display)", "sans-serif"],
         body: ["var(--font-inter)", "sans-serif"],
       },
       colors: {
@@ -76,6 +76,7 @@ export default {
           DEFAULT: "hsl(var(--surface))",
           elevated: "hsl(var(--surface-elevated))",
         },
+        ash: "hsl(var(--ash))",
         success: "hsl(var(--success))",
         danger: "hsl(var(--danger))",
         sidebar: {

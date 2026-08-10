@@ -37,7 +37,7 @@ export default function BlogPost() {
           ]}
         />
 
-        <div className="prose prose-invert prose-lg max-w-none prose-headings:font-heading prose-headings:font-bold prose-a:text-primary hover:prose-a:text-primary/80 prose-img:rounded-2xl prose-img:border prose-img:border-white/10 prose-p:text-muted-foreground prose-li:text-muted-foreground">
+        <div className="prose prose-invert prose-lg max-w-none prose-headings:font-body prose-headings:font-bold prose-a:text-primary hover:prose-a:text-primary/80 prose-img:rounded-2xl prose-img:border prose-img:border-white/10 prose-p:text-muted-foreground prose-li:text-muted-foreground">
           <p className="lead font-medium text-foreground">
             Dijital pazarlama dünyası her geçen gün daha fazla görselleşirken, 2026 yılında video pazarlamanın gücü tartışılmaz bir noktaya ulaştı. Cisco'nun güncellenmiş tahminlerine göre video içerik, 2026 yılında toplam internet trafiğinin %85'ini oluşturuyor. Bu, markaların artık sadece statik görsellerle ve metin tabanlı reklamlarla rekabet edemeyeceği anlamına geliyor.
           </p>
