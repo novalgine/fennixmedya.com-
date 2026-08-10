@@ -9,27 +9,23 @@ export default function AboutMe() {
           <p className="font-heading font-semibold text-sm uppercase tracking-[0.25em] text-primary mb-3">
             Kim çekiyor
           </p>
-          <h2 className="text-display-2 text-foreground mb-8">Ben Semih</h2>
+          <h2 className="text-display-2 text-foreground mb-8">Ben Semih Hasanoğlu</h2>
 
           <div className="grid lg:grid-cols-[1fr_minmax(0,340px)] gap-10 lg:gap-14 items-start max-w-5xl">
             <div className="space-y-5 text-muted-foreground text-lg leading-relaxed">
               <p>
-                Radyo-TV-Sinema mezunuyum. Dört yıl oyunculuk ve yönetmenlik yaptım. Hâlâ Semaver
-                Kumpanya&apos;da konservatuara hazırlanan çocuklara gönüllü eğitim veriyorum,
-                sertifikalı yaratıcı drama liderliği yapıyorum.
+                Sinema-TV mezunuyum. İçerik stratejisinden metin yazımına, çekimden kurguya kadar
+                video üretiminin tüm süreçlerini üstleniyorum. Bunun yanında dört yıl tiyatro
+                oyunculuğu yaptım ve yaratıcı drama lideriyim.
+              </p>
+              <p>
+                Oyunculuk ve drama geçmişim, çekim anında doğrudan işe yarıyor: Kamera
+                karşısındakilere rol yaptırmak değil, kendi doğal enerjileriyle konuşmalarını
+                sağlamak ana odağım.
               </p>
               <p className="text-foreground font-medium">
-                Bu yüzden sette sadece kayıt tuşuna basmıyorum.
-              </p>
-              <p>
-                Karşımdaki kişi kamera görünce donuyorsa, işim orada başlıyor: kendi ses tonunu ve
-                jestlerini bulmasına yardım ediyorum. Çoğu insan &quot;ben kamera karşısında
-                olamam&quot; diye başlıyor, iki saat sonra kendi kendine konuşuyor. Setlerim yüksek
-                enerjili ve keyifli geçer — çünkü iyi görüntü, rahat insandan çıkar.
-              </p>
-              <p>
-                Analizden teslimata kadar her şeyi tek başıma yürütüyorum. Siz bir ajansla değil,
-                işi yapan kişiyle çalışıyorsunuz.
+                Projeleri arada temsilciler veya ajans katmanları olmadan, doğrudan birebir
+                yürütüyorum.
               </p>
             </div>
 

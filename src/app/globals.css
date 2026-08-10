@@ -247,6 +247,15 @@
     text-transform: uppercase;
     letter-spacing: 0.01em;
   }
+  /* Alıntı: display yazı tipi ama VERSAL DEĞİL.
+     Büyük harf bildirir, küçük harf söyler — alıntıyı başlıktan ayıran tek şey bu. */
+  .text-quote {
+    font-family: var(--font-display), sans-serif;
+    font-size: clamp(1.9rem, 3.4vw + 0.6rem, 3.5rem);
+    line-height: 1.14;
+    font-weight: 600;
+    letter-spacing: 0.005em;
+  }
   .text-display-num {
     font-family: var(--font-display), sans-serif;
     font-size: clamp(4.5rem, 9vw, 8.5rem);

@@ -51,16 +51,25 @@ export default function HakkimdaPage() {
         <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-10 lg:gap-16 items-center mt-8">
           <Reveal>
             <p className="font-heading font-semibold text-sm uppercase tracking-[0.25em] text-primary mb-4">
-              Kim çekiyor
+              Ne savunuyorum
             </p>
             <h1 className="text-poster mb-8">
-              <span className="block text-foreground">Önce İnsanı</span>
-              <span className="block text-gradient-gold">Rahatlatırım.</span>
-              <span className="block text-foreground">Sonra Çekerim.</span>
+              <span className="block text-foreground">Herkes İçerik</span>
+              <span className="block text-foreground">Üretiyor.</span>
+              <span className="block text-gradient-gold">Mesele O Değil.</span>
             </h1>
-            <p className="text-muted-foreground text-lg md:text-xl leading-relaxed max-w-xl">
-              Ben Semih Hasanoğlu. Üniversitede sinema okudum, ama işi asıl tiyatroda öğrendim.
-            </p>
+            <div className="text-muted-foreground text-lg md:text-xl leading-relaxed max-w-xl space-y-5">
+              <p>
+                Yanıp dönen geçişler ve hızlı kesmeler dikkat çekiyor, ama izleyende bir şey
+                bırakmıyor. Ben görsel anlatıyla hikâye anlatıcılığını birleştirmeyi savunuyorum:
+                kancayla başlarsınız, ama içeride gerçekten bir şey olmalı.
+              </p>
+              <p>
+                Artık herkes içerik üretiyor; üretmek zorunlu hale geldi. Bu kalabalıkta öne çıkaran
+                şey dikkat yarışına girmek değil, istikrarlı biçimde nitelikli iş çıkarmak. Bu uzun
+                bir yol — ama sizi uzun vadede ciddiye alınan taraf yapan da bu.
+              </p>
+            </div>
           </Reveal>
 
           <Reveal delay={80}>
@@ -202,16 +211,25 @@ export default function HakkimdaPage() {
         </div>
       </section>
 
-      {/* Merkezdeki soru */}
-      <section className="section-spacing bg-surface border-y border-border/40">
+      {/* Ara yazı — kurgu masasındaki jenerik kartı */}
+      <section className="bg-surface border-y border-border/40 py-24 md:py-36">
         <div className="container-page">
           <Reveal>
-            <p className="font-mono text-[10px] uppercase tracking-[0.25em] text-ash mb-6">
-              Yaptığım işin merkezinde hâlâ aynı soru var
-            </p>
-            <blockquote className="text-display-2 text-foreground max-w-4xl text-balance">
+            <div className="flex items-center justify-center gap-4 mb-10">
+              <span className="h-px w-10 sm:w-16 bg-border/60" />
+              <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-ash">
+                Kapanış
+              </span>
+              <span className="h-px w-10 sm:w-16 bg-border/60" />
+            </div>
+
+            <blockquote className="text-quote text-center text-foreground max-w-3xl mx-auto text-balance">
               Söylemek istediğimiz şeyi gerçekten karşı tarafa geçirebildik mi?
             </blockquote>
+
+            <p className="mt-10 text-center font-mono text-[10px] uppercase tracking-[0.25em] text-ash/60">
+              Yaptığım işin merkezinde hâlâ aynı soru var
+            </p>
           </Reveal>
         </div>
       </section>
