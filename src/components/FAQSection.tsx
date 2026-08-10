@@ -12,31 +12,31 @@ import SectionHeading from "@/components/SectionHeading";
 const faqs = [
     {
         question: "Çekimlerim için stüdyo veya kamera kiralamama gerek var mı?",
-        answer: "Kesinlikle hayır. Biz kendi sinematik Cinema Line kameralarımız, ses ekipmanlarımız ve gimbal sistemlerimizle şirketinize veya dilediğiniz lokasyona geliyoruz.",
+        answer: "Hayır. Sony FX30, Tamron 17-70mm lens, DJI RS4 gimbal, tripod ve yaka mikrofonlarımla sizin mekânınıza geliyorum. Ortamın doğal ışığını en verimli kullanacak şekilde çalışırım.",
     },
     {
         question: "Süreç nasıl işliyor ve ne kadar vaktimi alacak?",
-        answer: "Size yazdığımız ilk 4 metni onayladığınız andan itibaren çekim günü belirlemek için sizlerle iletişime geçeriz. Ortak belirlediğimiz gün ekipmanlarımızla mekanınıza geliriz. 4 videonun çekimi maksimum 2-3 saatte tamamlanır (çekimlerin içimize ve size sinmesi çok önemli). Çekim bittikten sonra ilk videoları kurgulamak üzere oradan ayrılırız. Bütün süreciniz bu kadar zahmetsizdir.",
+        answer: "Metinler önceden hazırlanır, sete \"bugün ne çeksek\" diye gitmeyiz. Birlikte belirlediğimiz gün — genelde öğleden sonra — ekipmanımla gelirim. Bir çekim gününde hedefim 4 Reels; günün akışına göre 3-5 arasında değişir. Aylık 8 videoyu iki sete çıkarak tamamlarız. Akşam eve dönünce kurguya başlarım.",
     },
     {
         question: "Videolarda ne konuşacağımı benim mi düşünmem gerekiyor?",
-        answer: "Hayır, tüm yükü omuzlarınızdan alıyoruz. Hedef kitlenizin acı noktalarını ve sektörünüzdeki trendleri analiz ederek videolarınızın tüm konseptlerini ve akıcı metinlerini biz yazıyoruz. Size sadece onaylamak ve kamera karşısında kendi uzmanlığınızı konuşturmak kalıyor.",
+        answer: "Hayır. Markanızı tanıyıp metinleri ben yazarım. Ama siz kendi sektörünüzü benden iyi bildiğiniz için isterseniz siz yazarsınız, ya da ana konularınızdan yola çıkıp birlikte kurgularız. Üçü de olur.",
     },
     {
         question: "Sosyal medya hesaplarımın yönetimini ve paylaşımları da siz mi yapıyorsunuz?",
-        answer: "Hayır. Biz standart bir 'sosyal medya ajansı' değiliz; biz premium bir içerik stüdyosuyuz. Sayfanızda yorumlara cevap vermek veya hikaye (story) paylaşmak yerine, tüm odağımızı ve enerjimizi sizin markanıza 'Otorite' kazandıracak o sinematik videoları üretmeye harcıyoruz. Biz stratejiyi ve başyapıtı teslim ederiz, yayınlaması size kalır.",
+        answer: "İsterseniz evet — sosyal medya yönetimi ve Meta reklam yönetimi ayrı kalemler olarak pakete eklenebiliyor. Sadece video üretimi istiyorsanız da aylık paket tek başına çalışır; içerikleri yayınlamak size kalır.",
     },
     {
         question: "Çekilen videoları ya beğenmezsem? Revizyon hakkım var mı?",
-        answer: "Teslim ettiğimiz içeriklerin içinize sinmesi bizim kırmızı çizgimiz. İlk teslimatta videoları izleyip geri bildirimde bulunabilirsiniz. Kurgu, ritim, renk veya altyazı gibi post-prodüksiyon süreçlerinde revizyon hakkınız her zaman mevcuttur.",
+        answer: "Teslim ettiğim içeriğin içinize sinmesi benim kırmızı çizgim. Kurgu, ritim, renk, altyazı gibi post-prodüksiyon aşamalarında revizyon hakkınız var. Videoları ay sonunu bekletmeden bittikçe teslim ettiğim için geri bildirimi erken alır, sonraki videolarda uygularım.",
     },
     {
         question: "Sadece video düzenleme (kurgu) hizmeti veriyor musunuz? Videoyu ben çekip yollasam?",
-        answer: "Maalesef hayır. Bizim en büyük farkımız 'Sinematik Prodüksiyon' kalitemiz ve setteki profesyonelliğimizdir. Telefonunuzla evde veya ofiste çekeceğiniz bir görüntüyü ne kadar iyi kurgularsak kurgulayalım, müşterinize vaat ettiğimiz o 'Zirve' algısına ulaşılamaz. Kalitemizi bölmüyor, sadece uçtan uca anahtar teslim hizmet veriyoruz.",
+        answer: "Hayır. Farkım sadece kurgu değil, sette olan şey: kamera önünde nasıl durduğunuz, nasıl konuştuğunuz. Telefonla çekilmiş bir görüntüyü ne kadar iyi kurgularsam kurgulayayım o fark kapanmıyor. Bu yüzden uçtan uca çalışıyorum.",
     },
     {
         question: "Hangi sektördeki markaları kabul ediyorsunuz?",
-        answer: `Aylık kontenjanımız, kalite standartlarımızı koruyabilmek için sınırlı sayıda marka ile sınırlıdır. Kendi alanında değer üreten, ancak bunu dijital dünyadaki potansiyel müşterilerine henüz %100 profesyonel bir şekilde yansıtamayan tüm uzmanlarla (Danışmanlar, Sağlık Profesyonelleri, Ticari İşletme Sahipleri vb.) çalışıyoruz.`,
+        answer: "Klinikler, doktorlar, koçlar, danışmanlar, tiyatrolar, butik ve kurumsal markalar ana çalışma alanım. Kaliteyi koruyabilmek için ayda sınırlı sayıda marka alıyorum. Kimlerle çalışmadığımı da sayfada açıkça yazdım — okumanızı öneririm.",
     }
 ];
 

@@ -27,10 +27,12 @@ export const testimonialsData: Testimonial[] = [
   },
   {
     id: "mukaddes",
-    name: "Mukaddes Gün",
+    name: "Mukaddes Doman",
     title: "Mukaddes Storytelling",
     quote: "Her şey çok profesyonel, pürüzsüz ve planlı işliyor. Aklımdaki fikri tam olarak ekrana yansıtmamı sağlayan harika bir vizyonları var. Ortaya çıkan işten son derece memnunum.",
     videoSrc: "/videos/referans/mukaddes.mp4",
     poster: "/videos/referans/mukaddes.jpg",
   },
+  // NOT: berke.mp4 hazır (public/videos/referans/) ama gerçek alıntı/ünvan
+  // Semih'ten gelmeden eklenmeyecek — uydurma alıntı yazılmaz.
 ];

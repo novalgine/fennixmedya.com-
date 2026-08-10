@@ -20,9 +20,9 @@ export default function FilmStripWorkRow() {
       <div className="container-page">
         <Reveal>
           <SectionHeading
-            eyebrow="Sahne 02 — Kanıt"
-            title="Teslim Edilen İşler"
-            sub="Konuşmuyoruz, gösteriyoruz. Her kare gerçek bir müşteri projesinden."
+            eyebrow="İşler"
+            title="Ne Çekiyorum"
+            sub="Anlatmak yerine göstereyim. Her kare gerçek bir müşteri işi."
             align="left"
           />
         </Reveal>

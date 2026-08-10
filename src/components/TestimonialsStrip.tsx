@@ -24,8 +24,8 @@ const TestimonialsStrip = () => {
                 <div className="container-page">
                     <SectionHeading
                         eyebrow="Referanslar"
-                        title="Müşterilerimiz Ne Diyor?"
-                        sub="Gerçek müşterilerimizden, kendi ağızlarından referans videoları."
+                        title="Müşterilerim Ne Diyor?"
+                        sub="Kendi ağızlarından. Kurgusuz, senaryosuz."
                     />
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

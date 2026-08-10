@@ -4,14 +4,20 @@
  * kesintisiz döngü. Hover'da durur; reduced-motion'da statik satıra düşer.
  */
 const CLIENTS = [
-  "Boogold",
-  "Vaveyla Home",
-  "Mukaddes Gün",
-  "Melis Ulaş",
-  "Ayzıt Umay",
-  "Afife",
-  "Vet House",
-  "Esranur Umurbeyli",
+  "Afife Tiyatro",
+  "Zuhal",
+  "Vethouse",
+  "Petadress",
+  "Dt. Ayzıt Umay",
+  "Derya Kayaalp",
+  "Mukaddes Doman",
+  "Bilal Şendir",
+  "Melis Ulaş Wellness",
+  "Vavelya Home",
+  "Herwish Home",
+  "Boogold Kuyumculuk",
+  "Doğal Köpükler",
+  "Uyaran Spor Kulübü",
 ];
 
 function Row({ hidden = false }: { hidden?: boolean }) {

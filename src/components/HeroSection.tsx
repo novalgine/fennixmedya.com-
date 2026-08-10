@@ -36,7 +36,7 @@ function PhoneFrame() {
   return (
     <div className="relative w-[220px] sm:w-[250px] lg:w-[290px] mx-auto">
       <p className="mb-3 text-center font-mono text-[10px] tracking-widest text-muted-foreground/60 uppercase">
-        Kaynak · VAVEYLA_HOME.MP4
+        Kaynak · VAVELYA_HOME.MP4
       </p>
       <div className="relative aspect-[9/16] rounded-[2.5rem] border border-white/15 ring-1 ring-white/5 shadow-2xl shadow-black/60 overflow-hidden bg-black">
         <span className="absolute top-4 right-4 z-10 flex items-center gap-1.5 font-mono text-[9px] tracking-widest text-white/80">
@@ -56,7 +56,7 @@ function PhoneFrame() {
         />
       </div>
       <p className="mt-4 text-center text-[11px] font-heading font-semibold uppercase tracking-[0.25em] text-muted-foreground/60">
-        Gerçek Müşteri İşi · Vaveyla Home
+        Gerçek Müşteri İşi · Vavelya Home
       </p>
     </div>
   );
@@ -96,18 +96,19 @@ const HeroSection = () => {
           {/* Sol: mesaj */}
           <div className="text-left">
             <p className="font-heading font-semibold text-sm uppercase tracking-[0.25em] text-primary mb-6">
-              Video Prodüksiyon · İstanbul
+              Semih Hasanoğlu · İstanbul
             </p>
 
             <h1 className="text-poster mb-8">
-              <span className="block text-foreground/60">Telefon Çekimi</span>
-              <span className="block text-foreground">Otorite Kurmaz.</span>
-              <span className="block text-gradient-gold">Sinema Kurar.</span>
+              <span className="block text-foreground">Kameradan Önce</span>
+              <span className="block text-gradient-gold">Oyunculuk</span>
+              <span className="block text-foreground">Öğrendim.</span>
             </h1>
 
             <p className="text-muted-foreground text-lg md:text-xl max-w-xl mb-8 leading-relaxed">
-              Siz sadece kendi işinize odaklanın. Hedef kitlenize güven veren ve sizi pazarın en
-              güçlü ismi yapacak tüm video prodüksiyon sürecini uçtan uca biz tasarlıyoruz.
+              Radyo-TV-Sinema mezunuyum, dört yıl sahnede oyunculuk ve yönetmenlik yaptım.
+              Kamera karşısında donuyorsanız önce sizi rahatlatırım — sonra çekerim.
+              Markanız için ayda 8 video: senaryo, çekim, kurgu, teslimat. Hepsi bende.
             </p>
 
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mb-5">
@@ -133,7 +134,7 @@ const HeroSection = () => {
             </button>
 
             <p className="text-sm text-muted-foreground mb-4">
-              Kaliteyi korumak için ayda sınırlı sayıda marka ile çalışıyoruz.
+              Kaliteyi korumak için ayda sınırlı sayıda marka ile çalışıyorum.
             </p>
 
             <div className="flex items-center gap-4 text-xs sm:text-sm font-medium text-muted-foreground/80 mb-8">
@@ -154,8 +155,8 @@ const HeroSection = () => {
                 ))}
               </span>
               <span className="text-sm text-muted-foreground font-medium group-hover/band:text-foreground transition-colors">
-                <strong className="text-foreground">500&apos;den fazla video</strong> teslim ettik —
-                deneyimleri izleyin
+                <strong className="text-foreground">500&apos;den fazla video</strong> teslim ettim —
+                müşterilerimi dinleyin
               </span>
             </a>
           </div>

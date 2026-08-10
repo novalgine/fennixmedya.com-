@@ -13,16 +13,16 @@ const FinalCTASection = () => {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,var(--tw-gradient-stops))] from-emerald-900/10 via-transparent to-transparent pointer-events-none" />
       <Reveal className="max-w-4xl mx-auto px-6 text-center relative z-10">
         <p className="text-center text-primary font-bold text-sm md:text-base uppercase tracking-widest mb-6">
-          Sürdürülebilir kalite için ayda sınırlı sayıda marka ile çalışıyoruz
+          Sürdürülebilir kalite için ayda sınırlı sayıda marka ile çalışıyorum
         </p>
         
         <h2 className="text-poster text-poster-sub text-center mb-8">
-          <span className="block text-foreground">Fark Yaratmak İçin</span>
+          <span className="block text-foreground">Hazırsanız</span>
           <span className="block text-gradient-gold">Sahne Sizin.</span>
         </h2>
 
         <p className="text-foreground/80 text-xl font-medium mb-12 max-w-2xl mx-auto">
-          Zaman kaybetmeyin. Markanızı pazarın en çok aranan yüzü yapacak stratejik görsel iletişim planını tasarlayalım.
+          15 dakika konuşalım. Markanıza ne çekeceğimizi, kaç videoyla başlayacağımızı ve bütçeyi netleştirelim. Bağlayıcı değil.
         </p>
 
         <MagneticWrapper>
