@@ -211,23 +211,33 @@ export default function HakkimdaPage() {
         </div>
       </section>
 
-      {/* Ara yazı — kurgu masasındaki jenerik kartı */}
-      <section className="bg-surface border-y border-border/40 py-24 md:py-36">
-        <div className="container-page">
+      {/* Ara yazı — kurgu masasındaki jenerik kartı, üstüne düşen tek ışıkla */}
+      <section className="relative overflow-hidden bg-surface border-y border-border/40 py-24 md:py-36">
+        {/* Sıcak spot: hero ve kapanıştaki radyal ışığın aynısı, merkeze alınmış hali.
+            Çekirdekte logonun kehribarı, çevrede altın — düz turuncu daire yerine ışık. */}
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            background:
+              "radial-gradient(ellipse 42% 62% at 50% 50%, hsl(var(--gold-dark) / 0.14) 0%, transparent 70%), radial-gradient(ellipse 75% 90% at 50% 50%, hsl(var(--gold) / 0.09) 0%, transparent 72%)",
+          }}
+        />
+
+        <div className="container-page relative z-10">
           <Reveal>
-            <div className="flex items-center justify-center gap-4 mb-10">
-              <span className="h-px w-10 sm:w-16 bg-border/60" />
-              <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-ash">
+            <div className="flex items-center justify-center gap-4 sm:gap-5 mb-10">
+              <span className="h-px w-12 sm:w-20 bg-ash/40" />
+              <span className="font-mono text-xs sm:text-sm uppercase tracking-[0.3em] text-ash">
                 Kapanış
               </span>
-              <span className="h-px w-10 sm:w-16 bg-border/60" />
+              <span className="h-px w-12 sm:w-20 bg-ash/40" />
             </div>
 
             <blockquote className="text-quote text-center text-foreground max-w-3xl mx-auto text-balance">
               Söylemek istediğimiz şeyi gerçekten karşı tarafa geçirebildik mi?
             </blockquote>
 
-            <p className="mt-10 text-center font-mono text-[10px] uppercase tracking-[0.25em] text-ash/60">
+            <p className="mt-10 text-center font-mono text-xs sm:text-sm uppercase tracking-[0.25em] text-ash">
               Yaptığım işin merkezinde hâlâ aynı soru var
             </p>
           </Reveal>

@@ -9,9 +9,10 @@ export default function AboutMe() {
           <p className="font-heading font-semibold text-sm uppercase tracking-[0.25em] text-primary mb-3">
             Kim çekiyor
           </p>
-          <h2 className="text-display-2 text-foreground mb-8">Ben Semih Hasanoğlu</h2>
+          <h2 className="text-display-2 text-gradient-gold mb-8">Ben Semih</h2>
 
-          <div className="grid lg:grid-cols-[1fr_minmax(0,340px)] gap-10 lg:gap-14 items-start max-w-5xl">
+          {/* Hakkımda sayfasıyla aynı oran ve dikey ortalama — metinle fotoğraf birbirini dengeler */}
+          <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-10 lg:gap-16 items-center">
             <div className="space-y-5 text-muted-foreground text-lg leading-relaxed">
               <p>
                 Sinema-TV mezunuyum. İçerik stratejisinden metin yazımına, çekimden kurguya kadar
@@ -35,7 +36,7 @@ export default function AboutMe() {
                   src="/foto/semih-portre-4x5.jpg"
                   alt="Semih Hasanoğlu, İstanbul'da gün batımında Boğaz manzarası önünde"
                   fill
-                  sizes="(max-width: 1024px) 92vw, 360px"
+                  sizes="(max-width: 1024px) 92vw, 520px"
                   quality={90}
                   className="object-cover"
                 />
