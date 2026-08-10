@@ -84,8 +84,8 @@ function PhoneFrame() {
           </span>
         </button>
       </div>
-      <p className="mt-4 text-center text-sm text-muted-foreground/85 italic max-w-[280px] mx-auto leading-snug">
-        &ldquo;Videolarınız, dijitaldeki takım elbisenizdir.&rdquo;
+      <p className="mt-4 text-center text-sm text-muted-foreground/85 max-w-[280px] mx-auto leading-snug">
+        Kendi hesabımdan bir video. Sesini açabilirsiniz.
       </p>
     </div>
   );
@@ -129,16 +129,20 @@ const HeroSection = () => {
             </p>
 
             <h1 className="text-poster mb-8">
-              <span className="block text-foreground">Kameradan Önce</span>
-              <span className="block text-gradient-gold">Oyunculuk</span>
-              <span className="block text-foreground">Öğrendim.</span>
+              <span className="block text-foreground">Videolarınız</span>
+              <span className="block text-foreground">Dijitaldeki</span>
+              <span className="block text-gradient-gold">Takım Elbiseniz.</span>
             </h1>
 
-            <p className="text-muted-foreground text-lg md:text-xl max-w-xl mb-8 leading-relaxed">
-              Sahnede dört yıl oyunculuk yaptım, şimdi kameranın arkasındayım. İşim, markaların
-              kamera karşısında kendileri gibi görünmesini sağlamak — senaryodan teslimata kadar
-              hepsi tek elden.
-            </p>
+            <div className="text-muted-foreground text-lg md:text-xl max-w-xl mb-8 leading-relaxed space-y-4">
+              <p>
+                Çoğu kişi kamera karşısında olduğundan daha iyi görünmeye çalışıyor. Oysa işe
+                yarayan tek şey kendiniz gibi görünmek — ve bunu tek başına bulmak zor.
+              </p>
+              <p>
+                Benim işim o alanı açmak. Metni birlikte kurarız, çekimi ve kurguyu ben yaparım.
+              </p>
+            </div>
 
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mb-5">
               <MagneticWrapper>

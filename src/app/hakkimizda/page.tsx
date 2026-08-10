@@ -7,7 +7,7 @@ import Reveal from "@/components/Reveal";
 import JsonLd from "@/components/JsonLd";
 
 const OZET =
-  "Semih Hasanoğlu — Radyo-TV-Sinema mezunu, dört yıl oyunculuk ve yönetmenlik yaptı, şimdi İstanbul'da markalar için video çekiyor. Senaryodan teslimata kadar her işi tek başına yürütüyor.";
+  "Semih Hasanoğlu — üniversitede sinema okudu, işi tiyatroda öğrendi. Dört yıl sahnede oyunculuk ve yönetmenlik yaptıktan sonra İstanbul'da markalar için video çekmeye başladı. Fikirden metne, çekimden kurguya kadar sürecin tamamında.";
 
 export const metadata: Metadata = {
   title: "Hakkımda",
@@ -54,14 +54,12 @@ export default function HakkimdaPage() {
               Kim çekiyor
             </p>
             <h1 className="text-poster mb-8">
-              <span className="block text-foreground">Oyuncuydum.</span>
-              <span className="block text-gradient-gold">Şimdi</span>
-              <span className="block text-foreground">Kameradayım.</span>
+              <span className="block text-foreground">Önce İnsanı</span>
+              <span className="block text-gradient-gold">Rahatlatırım.</span>
+              <span className="block text-foreground">Sonra Çekerim.</span>
             </h1>
             <p className="text-muted-foreground text-lg md:text-xl leading-relaxed max-w-xl">
-              Ben Semih Hasanoğlu. İstanbul&apos;da markalar için video çekiyorum — analizden
-              senaryoya, çekimden kurguya kadar hepsini kendim yapıyorum. Bir ajansla değil, işi
-              yapan kişiyle çalışıyorsunuz.
+              Ben Semih Hasanoğlu. Üniversitede sinema okudum, ama işi asıl tiyatroda öğrendim.
             </p>
           </Reveal>
 
@@ -92,38 +90,30 @@ export default function HakkimdaPage() {
         </div>
       </section>
 
-      {/* Nereden geliyorum */}
+      {/* Tiyatro */}
       <section className="section-spacing bg-surface">
         <div className="container-page">
           <Reveal>
             <p className="font-heading font-semibold text-sm uppercase tracking-[0.25em] text-primary mb-3">
               Nereden geliyorum
             </p>
-            <h2 className="text-display-2 text-foreground mb-8">Önce Sahne, Sonra Kamera</h2>
+            <h2 className="text-display-2 text-foreground mb-8">Dört Yıl Sahnedeydim</h2>
           </Reveal>
 
           <div className="grid md:grid-cols-2 gap-8 md:gap-14 max-w-5xl">
             <Reveal>
               <div className="space-y-5 text-muted-foreground text-lg leading-relaxed">
                 <p>
-                  Radyo-TV-Sinema mezunuyum. Mezun olduktan sonra dört yıl boyunca oyunculuk ve
-                  yönetmenlik yaptım — kameranın hem önünde hem arkasında durdum.
-                </p>
-                <p>
-                  Hâlâ Semaver Kumpanya&apos;da konservatuara hazırlanan çocuklara gönüllü eğitim
-                  veriyorum. Sertifikalı yaratıcı drama liderliği yapıyorum.
+                  İlk üç yıl oyunculuk, son yıl yönetmenlik yaptım. Orada bir insanın neden
+                  inandırıcı olmadığını görmeyi ve onu nasıl inandırıcı hâle getireceğimi öğrendim.
                 </p>
               </div>
             </Reveal>
             <Reveal delay={70}>
               <div className="space-y-5 text-muted-foreground text-lg leading-relaxed">
                 <p className="text-foreground font-medium">
-                  Bu geçmiş, bu işte teknik bilgiden daha çok işime yarıyor.
-                </p>
-                <p>
-                  Çünkü video çekiminde asıl zor kısım kamera ayarı değil. Karşınızdaki kişinin
-                  kamera görünce donması. Ses tonunun değişmesi, ezberlediği cümleyi okuması,
-                  kendisi gibi görünmemesi. Ben tam olarak bunun eğitimini aldım.
+                  Yaptığım iş o günden beri çok değişmedi: karşımdaki insanın ne demek istediğini
+                  bulmak ve onu söyleyebileceği hâle getirmek.
                 </p>
               </div>
             </Reveal>
@@ -131,31 +121,37 @@ export default function HakkimdaPage() {
         </div>
       </section>
 
-      {/* Sette ne oluyor */}
+      {/* Bugün */}
       <section className="section-spacing bg-background">
         <div className="container-page">
           <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-start">
             <Reveal>
               <p className="font-heading font-semibold text-sm uppercase tracking-[0.25em] text-primary mb-3">
-                Sette ne oluyor
+                Bugün
               </p>
               <h2 className="text-display-2 text-foreground mb-6">
-                &ldquo;Ben Kamera Karşısında Olamam&rdquo;
+                &ldquo;Güzel Oldu Mu&rdquo; Değil, &ldquo;İnandım Mı&rdquo;
               </h2>
               <div className="space-y-5 text-muted-foreground text-lg leading-relaxed max-w-prose">
                 <p>
-                  Çalıştığım insanların çoğu bu cümleyle başlıyor. İki saat sonra kendi kendine
-                  konuşuyor, kameranın orada olduğunu unutuyor.
+                  Metni yazıyor, çekimi yapıyor ve kurguyu kendim tamamlıyorum. Ama kameranın
+                  arkasında dururken hâlâ yönetmen gibi düşünüyorum. Bir görüntüye bakarken sorum
+                  &ldquo;güzel oldu mu&rdquo; değil, &ldquo;inandım mı&rdquo;.
                 </p>
                 <p>
-                  Aradaki fark, benim işimin nerede başladığı: donduğunuz yerde devreye giriyorum.
-                  Kendi ses tonunuzu ve jestlerinizi bulana kadar birlikte çalışıyoruz. Setlerim
-                  yüksek enerjili ve keyifli geçiyor — çünkü iyi görüntü, rahat insandan çıkar.
+                  Sette en zor iş çoğu zaman çekim yapmak değil. Kameranın karşısında ne
+                  söyleyeceğini bilemeyen, doğal davranamayan ya da bir anda kendini kaybeden
+                  insanı çözmek. İşin en sevdiğim tarafı da bu.
                 </p>
                 <p>
-                  Konuşmalar bittiğinde mekânın atmosferini toplayan detay çekimlerini yapıyorum.
-                  Akşam eve döndüğümde kurgu başlıyor; videoları ay sonunu bekletmeden, bittikçe
-                  sırayla teslim ediyorum.
+                  Hâlâ tiyatrolarda oyuncu adaylarına gönüllü ders veriyorum; Semaver
+                  Kumpanya&apos;da konservatuara hazırlanan çocuklarla çalışıyorum. Sertifikalı bir
+                  yaratıcı drama lideriyim. Çünkü benim için kamera, ışık ve kurgu kadar insan da
+                  üretimin bir parçası.
+                </p>
+                <p>
+                  Bugün markalar, girişimler ve bireysel üreticiler için video çekiyorum. Fikirden
+                  metne, çekimden kurguya kadar sürecin tamamında varım.
                 </p>
               </div>
             </Reveal>
@@ -206,14 +202,28 @@ export default function HakkimdaPage() {
         </div>
       </section>
 
+      {/* Merkezdeki soru */}
+      <section className="section-spacing bg-surface border-y border-border/40">
+        <div className="container-page">
+          <Reveal>
+            <p className="font-mono text-[10px] uppercase tracking-[0.25em] text-ash mb-6">
+              Yaptığım işin merkezinde hâlâ aynı soru var
+            </p>
+            <blockquote className="text-display-2 text-foreground max-w-4xl text-balance">
+              Söylemek istediğimiz şeyi gerçekten karşı tarafa geçirebildik mi?
+            </blockquote>
+          </Reveal>
+        </div>
+      </section>
+
       {/* Kapanış */}
-      <section className="section-spacing bg-surface border-t border-border/40">
+      <section className="section-spacing bg-background">
         <div className="container-page text-center">
           <Reveal>
             <h2 className="text-display-2 text-foreground mb-4">Tanışalım</h2>
             <p className="text-muted-foreground text-lg mb-8 max-w-xl mx-auto">
               15 dakikalık görüşmede markanızı dinliyorum, neyin işe yarayacağını konuşuyoruz.
-              Bağlayıcı değil.
+              Ücret almıyorum, sonrasında devam etmek zorunda değilsiniz.
             </p>
             <WizardCta />
           </Reveal>

@@ -84,16 +84,16 @@ export default function KurumsalTanitimFilmiPage() {
       <ServiceHero
         breadcrumb="Kurumsal Tanıtım Filmi"
         eyebrow="Yatay format · 16:9"
-        title={[{ text: "Markanız" }, { text: "Tek Filmde", gold: true }]}
+        title={[{ text: "Bir Film.", gold: true }, { text: "Sitede, Fuarda," }, { text: "Reklamda." }]}
         intro={
           <>
             <p>
-              Web sitenizde, fuar standınızda ve reklam kampanyanızda kullanacağınız kurumsal
-              tanıtım filmi çekiyorum. Senaryodan renk düzeltmeye kadar tek elden.
+              Şirketinizi bir kez doğru anlatan bir film çekiyorum; sonrasında aynı filmi web
+              sitenizde, fuar standınızda ve reklam kampanyalarınızda kullanırsınız.
             </p>
             <p>
-              Kameraya sizin ekibiniz geçiyor — işini anlatan kişinin kendi sesi, dış sesle
-              okunmuş metinden her zaman daha inandırıcı.
+              Senaryodan renk düzeltmeye kadar süreç bende. Kameraya dış ses değil, kendi ekibiniz
+              geçiyor — işini anlatan kişinin kendi sesi her zaman daha inandırıcı.
             </p>
           </>
         }
@@ -101,7 +101,7 @@ export default function KurumsalTanitimFilmiPage() {
           src: "/videos/portfolyo/petadress.mp4",
           poster: "/videos/portfolyo/petadress.jpg",
           title: "Pet Adress için çekilen tanıtım filmi",
-          vertical: true,
+          vertical: false,
         }}
         videoCaption="Pet Adress"
       />
