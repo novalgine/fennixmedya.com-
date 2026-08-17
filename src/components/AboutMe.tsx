@@ -13,7 +13,7 @@ export default function AboutMe() {
               <p className="font-heading font-semibold text-sm uppercase tracking-[0.25em] text-primary mb-3">
                 Kim çekiyor
               </p>
-              <h2 className="text-display-2 text-gradient-gold mb-8">Ben Semih</h2>
+              <h2 className="text-display-2 text-foreground mb-8">Ben Semih</h2>
 
               <div className="space-y-5 text-muted-foreground text-lg leading-relaxed">
                 <p>

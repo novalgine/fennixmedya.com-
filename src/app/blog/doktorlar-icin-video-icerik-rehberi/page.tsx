@@ -15,7 +15,7 @@ export default function BlogPost3() {
         <header className="mb-12">
           <span className="text-xs px-2.5 py-1 bg-primary/10 text-primary rounded-full font-medium">Sektörel</span>
           <h1 className="font-heading text-3xl md:text-5xl font-black tracking-tight mt-4 mb-6">
-            Doktorlar İçin Sosyal Medya <span className="text-gradient-gold">Video İçerik Rehberi</span>
+            Doktorlar İçin Sosyal Medya <span className="text-primary">Video İçerik Rehberi</span>
           </h1>
           <div className="flex items-center gap-4 text-sm text-muted-foreground">
             <span className="flex items-center gap-1"><User className="w-4 h-4" /> Semih Hasanoğlu</span>

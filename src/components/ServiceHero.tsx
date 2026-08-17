@@ -37,7 +37,7 @@ export default function ServiceHero({
             {title.map((line) => (
               <span
                 key={line.text}
-                className={`block ${line.gold ? "text-gradient-gold" : "text-foreground"}`}
+                className={`block ${line.gold ? "text-primary" : "text-foreground"}`}
               >
                 {line.text}
               </span>

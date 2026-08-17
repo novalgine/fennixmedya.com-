@@ -56,7 +56,7 @@ export default function HakkimdaPage() {
             <h1 className="text-poster mb-8">
               <span className="block text-foreground">Herkes İçerik</span>
               <span className="block text-foreground">Üretiyor.</span>
-              <span className="block text-gradient-gold">Mesele O Değil.</span>
+              <span className="block text-primary">Mesele O Değil.</span>
             </h1>
             <div className="text-muted-foreground text-lg md:text-xl leading-relaxed max-w-xl space-y-5">
               <p>

@@ -22,7 +22,7 @@ export default function Error({
       />
       <div className="relative z-10 max-w-2xl mx-auto px-6 py-24 text-center">
         <h1 className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-4">
-          Bir şeyler <span className="text-gradient-gold">ters gitti</span>
+          Bir şeyler <span className="text-primary">ters gitti</span>
         </h1>
         <p className="text-muted-foreground text-lg mb-10 max-w-md mx-auto">
           Beklenmedik bir hata oluştu. Sayfayı yeniden yüklemeyi deneyin — sorun devam

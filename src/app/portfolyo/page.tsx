@@ -28,7 +28,7 @@ export default function PortfolioPage() {
           </p>
           <h1 className="text-poster mb-6">
             <span className="block text-foreground">Teslim</span>
-            <span className="block text-gradient-gold">Edilen İşler</span>
+            <span className="block text-primary">Edilen İşler</span>
           </h1>
           <p className="text-muted-foreground text-lg max-w-2xl">
             Sekiz farklı sektörden markalar için çektiğim işlerden bir seçki. Hepsinin metnini

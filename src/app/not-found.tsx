@@ -14,7 +14,7 @@ export default function NotFound() {
         style={{ background: "radial-gradient(circle, hsl(43 45% 65% / 0.06) 0%, transparent 50%)" }}
       />
       <div className="relative z-10 max-w-2xl mx-auto px-6 py-24 text-center">
-        <p className="font-heading text-8xl md:text-9xl font-black text-gradient-gold mb-6">404</p>
+        <p className="font-heading text-8xl md:text-9xl font-black text-primary mb-6">404</p>
         <h1 className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-4">
           Aradığınız sayfa bulunamadı
         </h1>

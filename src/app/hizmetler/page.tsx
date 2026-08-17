@@ -49,7 +49,7 @@ export default function HizmetlerPage() {
           </p>
           <h1 className="text-poster mb-8">
             <span className="block text-foreground">Dört İş.</span>
-            <span className="block text-gradient-gold">Hepsi Bende.</span>
+            <span className="block text-primary">Hepsi Bende.</span>
           </h1>
           <p className="text-muted-foreground text-lg md:text-xl leading-relaxed max-w-2xl">
             Aralarındaki tek fark format ve ritim. Hangisini seçerseniz seçin, metni birlikte

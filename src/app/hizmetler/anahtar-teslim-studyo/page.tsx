@@ -115,7 +115,7 @@ export default function AnahtarTeslimStudyoPage() {
             </p>
             <h1 className="text-poster mb-8">
               <span className="block text-foreground">Otur.</span>
-              <span className="block text-gradient-gold">Işığı Aç.</span>
+              <span className="block text-primary">Işığı Aç.</span>
               <span className="block text-foreground">Kaydet.</span>
             </h1>
             <div className="text-muted-foreground text-lg md:text-xl leading-relaxed max-w-xl mb-8 space-y-4">

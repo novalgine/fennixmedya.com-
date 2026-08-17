@@ -19,7 +19,7 @@ export default function BlogPost1() {
         <header className="mb-12">
           <span className="text-xs px-2.5 py-1 bg-primary/10 text-primary rounded-full font-medium">Sosyal Medya</span>
           <h1 className="font-heading text-3xl md:text-5xl font-black tracking-tight mt-4 mb-6">
-            Sosyal Medya Videosu Nasıl Planlanır? <span className="text-gradient-gold">(2026 Rehberi)</span>
+            Sosyal Medya Videosu Nasıl Planlanır? <span className="text-primary">(2026 Rehberi)</span>
           </h1>
           <div className="flex items-center gap-4 text-sm text-muted-foreground">
             <span className="flex items-center gap-1"><User className="w-4 h-4" /> Semih Hasanoğlu</span>
