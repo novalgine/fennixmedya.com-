@@ -1,6 +1,9 @@
 /**
  * Birebir çalışılan gerçek markalar (2025–2026).
  * Sayı iddiası yerine listenin kendisi kanıttır — bu yüzden hepsi isimle.
+ *
+ * NOT: Şu an hiçbir bileşen bu dosyayı import etmiyor (ClientMarquee kendi düz
+ * listesini taşıyor). Dosya, müşteri kaydı olarak bilinçli tutuluyor — silme.
  */
 export interface ClientGroup {
   sector: string;

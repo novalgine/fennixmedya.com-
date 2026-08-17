@@ -300,7 +300,7 @@ export default function BlogPost1() {
         <div className="mt-16 bg-muted/30 border border-border rounded-2xl p-8 text-center">
           <p className="text-lg font-heading font-bold text-foreground mb-2">Profesyonel video desteği mi arıyorsunuz?</p>
           <p className="text-muted-foreground text-sm mb-6">15 dakikalık ücretsiz görüşmede sosyal medya stratejinizi planlayalım.</p>
-          <Link href="/#wizard" className="inline-flex items-center gap-2 bg-gradient-gold text-primary-foreground font-heading font-black px-6 py-3 rounded-xl hover:scale-105 active:scale-95 transition-all shadow-lg shadow-gold/20">
+          <Link href="/#basvuru" className="inline-flex items-center gap-2 bg-gradient-gold text-primary-foreground font-heading font-black px-6 py-3 rounded-xl hover:scale-105 active:scale-95 transition-all shadow-lg shadow-gold/20">
             Ücretsiz Strateji Görüşmesi Al <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
