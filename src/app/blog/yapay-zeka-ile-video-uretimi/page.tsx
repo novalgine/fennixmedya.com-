@@ -6,6 +6,7 @@ import { createBlogMetadata } from "@/data/blog-posts";
 import WizardCta from "@/components/WizardCta";
 import TldrSummary from "@/components/TldrSummary";
 import LastUpdated from "@/components/LastUpdated";
+import EditorNote from "@/components/blog/EditorNote";
 
 export const metadata = createBlogMetadata("yapay-zeka-ile-video-uretimi");
 
@@ -70,12 +71,12 @@ export default function BlogPost() {
 
           <h2 className="text-3xl mt-12 mb-6">3. Hibrit Model: AI + Profesyonel Prodüksiyon</h2>
           <p>
-            2026&apos;da en akıllı yaklaşım &quot;ya AI ya insan&quot; demek değil, <strong className="text-foreground">ikisini birlikte kullanarak her ikisinin güçlü yanlarından faydalanmaktır</strong>. Fennix Medya olarak biz buna &quot;Hibrit Prodüksiyon&quot; diyoruz ve iş akışımıza şu şekilde entegre ettik:
+            2026&apos;da en akıllı yaklaşım &quot;ya AI ya insan&quot; demek değil, <strong className="text-foreground">ikisini birlikte kullanarak her ikisinin güçlü yanlarından faydalanmaktır</strong>. Ben de kendi iş akışımda ikisini birlikte kullanıyorum:
           </p>
           <ul className="space-y-3">
-            <li><strong>Ön Prodüksiyon:</strong> AI ile hızlı moodboard ve storyboard oluşturuyoruz → Müşteri onayı daha hızlı alınıyor.</li>
-            <li><strong>Çekim:</strong> %100 profesyonel ekip ve ekipman ile gerçek çekim yapıyoruz → Otantiklik korunuyor.</li>
-            <li><strong>Post-Prodüksiyon:</strong> AI destekli renk düzeltme önerileri, otomatik transkripsiyon ve alt yazı → Süre %40 kısalıyor.</li>
+            <li><strong>Ön Prodüksiyon:</strong> AI ile hızlı moodboard ve storyboard hazırlarım → Onay daha hızlı alınır.</li>
+            <li><strong>Çekim:</strong> Gerçek çekimi kameranın arkasında ben yaparım, gerçek ekipmanla → Otantiklik korunur.</li>
+            <li><strong>Post-Prodüksiyon:</strong> AI destekli renk düzeltme önerileri, otomatik transkripsiyon ve alt yazı → Kurgu süresi gözle görülür kısalır.</li>
             <li><strong>Dağıtım:</strong> AI ile platform bazlı format optimizasyonu (crop, aspect ratio) → Tek video, 5 platform.</li>
           </ul>
 
@@ -111,12 +112,11 @@ export default function BlogPost() {
             <li>Sonuç olarak, profesyonel prodüksiyon ekipleri ortadan kalkmayacak, ancak rolleri değişecek: &quot;İçerik üretici&quot;den &quot;içerik yöneticisi ve kalite kontrol uzmanı&quot;na dönüşecek.</li>
           </ul>
 
-          <div className="bg-gradient-to-r from-primary/10 to-transparent border-l-4 border-primary p-6 mt-12 rounded-r-xl">
-            <h3 className="font-bold text-2xl text-foreground mb-3">AI Bir Araçtır, Vizyoner Değil</h3>
+          <EditorNote title="AI Bir Araçtır, Vizyoner Değil">
             <p className="m-0 text-muted-foreground text-base">
-              Yapay zeka, fırça gibidir — harika bir araçtır ama resmi çizen sanatçı değildir. Markanızın hikayesini, değerlerini ve vizyonunu anlayacak, bunu görsel bir dile çevirecek olan hâlâ insanlardır. En güçlü strateji, AI&apos;ın verimliliğini profesyonel ekibin yaratıcılığıyla birleştirmektir. Fennix Medya olarak biz tam da bunu yapıyoruz.
+              Yapay zeka, fırça gibidir — harika bir araçtır ama resmi çizen sanatçı değildir. Markanızın hikayesini, değerlerini ve vizyonunu anlayacak, bunu görsel bir dile çevirecek olan hâlâ insanlardır. En güçlü strateji, AI&apos;ın verimliliğini insan yaratıcılığıyla birleştirmektir. Ben de tam olarak böyle çalışıyorum.
             </p>
-          </div>
+          </EditorNote>
         </div>
 
         <RelatedPosts slug="yapay-zeka-ile-video-uretimi" />

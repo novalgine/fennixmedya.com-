@@ -7,6 +7,7 @@ import Image from "next/image";
 import WizardCta from "@/components/WizardCta";
 import TldrSummary from "@/components/TldrSummary";
 import LastUpdated from "@/components/LastUpdated";
+import EditorNote from "@/components/blog/EditorNote";
 
 export const metadata = createBlogMetadata("iyi-bir-kurumsal-tanitim-filmi-nasil-olmali");
 
@@ -205,12 +206,11 @@ export default function BlogPost() {
             Performansı ölçmeyi de ihmal etmeyin. YouTube ve Vimeo analitiğinden izlenme süresi, tıklanma oranı ve terk noktalarını takip edin. Bu veriler, bir sonraki filminizi daha da iyi yapmanız için altın değerinde geri bildirimdir.
           </p>
 
-          <div className="bg-gradient-to-r from-primary/10 to-transparent border-l-4 border-primary p-6 mt-12 rounded-r-xl">
-            <p className="font-semibold text-foreground mb-2">Sonuç</p>
+          <EditorNote title="Sonuç">
             <p>
               İyi bir kurumsal tanıtım filmi, şirketinizin kartviziti değil — <strong>en güçlü satış elemanıdır.</strong> Vizyonunuzu anlatan, insanlarınızı gösteren, sinematik kaliteyle çekilen ve stratejik olarak dağıtılan bir film, rakiplerinizin arasından sıyrılmanızı ve potansiyel müşterilerinizde kalıcı bir izlenim bırakmanızı sağlar. Unutmayın: İzleyicinin dikkatini kazanmak için sadece 3 saniyeniz var. O 3 saniyeyi hak eden bir film üretin.
             </p>
-          </div>
+          </EditorNote>
         </div>
 
         <RelatedPosts slug="iyi-bir-kurumsal-tanitim-filmi-nasil-olmali" />

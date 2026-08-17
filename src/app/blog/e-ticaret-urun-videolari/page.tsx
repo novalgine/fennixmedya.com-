@@ -6,6 +6,7 @@ import { createBlogMetadata } from "@/data/blog-posts";
 import WizardCta from "@/components/WizardCta";
 import TldrSummary from "@/components/TldrSummary";
 import LastUpdated from "@/components/LastUpdated";
+import EditorNote from "@/components/blog/EditorNote";
 
 export const metadata = createBlogMetadata("e-ticaret-urun-videolari");
 
@@ -113,12 +114,11 @@ export default function BlogPost() {
             <li><strong>Transkripsiyon:</strong> Video içeriğinin metin dökümünü sayfa altına ekleyin. Bu hem erişilebilirliği artırır hem de SEO için ek metin sinyali oluşturur.</li>
           </ul>
 
-          <div className="bg-gradient-to-r from-primary/10 to-transparent border-l-4 border-primary p-6 mt-12 rounded-r-xl">
-            <h3 className="font-bold text-2xl text-foreground mb-3">Video, E-Ticarette Artık Opsiyonel Değil</h3>
+          <EditorNote title="Video, E-Ticarette Artık Opsiyonel Değil">
             <p className="m-0 text-muted-foreground text-base">
               2026&apos;da ürün videosu olmayan bir e-ticaret sayfası, vitrini olmayan bir mağaza gibidir. Müşteriler artık fotoğraflarla yetinmiyor — ürünü hareket halinde görmek, dokunmadan hissetmek, deneyimlemeden deneyimlemek istiyor. <strong>Video, bu dijital deneyim boşluğunu kapatır.</strong> <Link href="/hizmetler/sosyal-medya-video">Profesyonel çekilmiş ürün videoları</Link> yatırımınızı en hızlı geri döndüren pazarlama aracıdır.
             </p>
-          </div>
+          </EditorNote>
         </div>
 
         <RelatedPosts slug="e-ticaret-urun-videolari" />

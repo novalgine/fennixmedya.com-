@@ -4,6 +4,7 @@ import RelatedPosts from "@/components/RelatedPosts";
 import { createBlogMetadata } from "@/data/blog-posts";
 import { ArrowRight, Calendar, Clock, User } from "lucide-react";
 import TldrSummary from "@/components/TldrSummary";
+import EditorNote from "@/components/blog/EditorNote";
 
 export const metadata = createBlogMetadata("sosyal-medya-videosu-nasil-planlanir");
 
@@ -183,7 +184,7 @@ export default function BlogPost1() {
           </ul>
 
           <p className="text-muted-foreground leading-relaxed">
-            Bu yöntemle <strong>ayda sadece 1-2 çekim günü</strong> ayırarak, tüm ayın içeriklerini üretebilirsiniz. Fennix Medya olarak müşterilerimiz için tam da bu sistemi uyguluyoruz — ayda sadece 6 saatlerini ayırmaları yeterli.
+            Bu yöntemle <strong>ayda sadece 1-2 çekim günü</strong> ayırarak, tüm ayın içeriklerini üretebilirsiniz. Ben de müşterilerimle tam bu sistemle çalışıyorum: ayda iki çekim günü, aylık 8 video.
           </p>
 
           <h2 className="font-heading text-2xl font-bold mt-10 mb-4">7. Çekim Günü: Verimli Bir Çekim İçin Checklist</h2>
@@ -283,17 +284,14 @@ export default function BlogPost1() {
           </ul>
 
           <p className="text-muted-foreground leading-relaxed">
-            Fennix Medya olarak <strong>ayda sadece 6 saatinizi ayırmanız yeterli</strong> — strateji, çekim, kurgu ve yayınlama süreçlerinin tamamını biz yönetiyoruz. Siz işinize odaklanın, biz markanızı büyütelim.
+            Benimle çalışırsanız <strong>ayda iki çekim günü ayırmanız yeterli</strong> — metni birlikte kurarız, çekimi ve kurguyu ben yaparım. Paylaşım ve hesap yönetimi isterseniz, onu da kapsayan ayrı bir paketim var.
           </p>
 
-          <div className="bg-gradient-to-r from-primary/10 to-transparent border-l-4 border-primary p-6 mt-12 rounded-r-xl">
-            <p className="font-heading font-bold text-foreground text-lg mb-2">
-              Sonuç: Planlama = Performans
-            </p>
+          <EditorNote title="Sonuç: Planlama = Performans">
             <p className="text-muted-foreground mb-0">
               Sosyal medyada başarılı video içerik üretmek, <strong>rastgele değil stratejik bir süreçtir</strong>. Hedef belirleme, hedef kitle analizi, senaryo yazımı, çekim, post-prodüksiyon, yayınlama ve performans analizi — bu adımların her biri videonuzun başarısını doğrudan etkiler. Bu rehberdeki yol haritasını uygulayarak, içerik kalabalığında fark yaratabilir ve markanızı bir sonraki seviyeye taşıyabilirsiniz.
             </p>
-          </div>
+          </EditorNote>
         </div>
 
         {/* CTA */}

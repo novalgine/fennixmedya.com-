@@ -6,6 +6,7 @@ import { createBlogMetadata } from "@/data/blog-posts";
 import WizardCta from "@/components/WizardCta";
 import TldrSummary from "@/components/TldrSummary";
 import LastUpdated from "@/components/LastUpdated";
+import EditorNote from "@/components/blog/EditorNote";
 
 export const metadata = createBlogMetadata("reels-tiktok-algoritmasi-2026");
 
@@ -150,12 +151,11 @@ export default function BlogPost() {
             Bir diğer önemli strateji de <strong>tutarlılık</strong>tır. Algoritma, düzenli içerik üreten hesaplara öncelik verir. Haftada en az 4-5 içerik yayınlamak, hesap otoritenizi artırır ve algoritmanın sizi &quot;aktif yaratıcı&quot; olarak sınıflandırmasını sağlar. Sporadik paylaşımlar yapan hesaplar, ne kadar kaliteli içerik üretirse üretsin, tutarlı hesapların gerisinde kalır.
           </p>
 
-          <div className="bg-gradient-to-r from-primary/10 to-transparent border-l-4 border-primary p-6 mt-12 rounded-r-xl">
-            <h3 className="font-bold text-xl text-primary mb-3">Sonuç: Algoritmayı Yenmek Değil, Anlamak</h3>
+          <EditorNote title="Sonuç: Algoritmayı Yenmek Değil, Anlamak">
             <p className="m-0 text-muted-foreground text-base">
               2026 algoritmasını &quot;yenmeye&quot; çalışmak yerine, onun ne istediğini anlamak ve buna göre strateji geliştirmek çok daha sürdürülebilir bir yaklaşımdır. Algoritmanın istediği şey aslında basit: <strong>İzleyicinin gerçekten değer bulduğu, sonuna kadar izlediği ve başkalarıyla paylaştığı içerikler</strong>. Bu ilkeleri temel alarak içerik ürettiğinizde, algoritma zaten sizin tarafınızda çalışmaya başlar. Profesyonel bir video prodüksiyon ekibiyle çalışarak bu süreçte hem zamandan tasarruf edebilir hem de içerik kalitenizi rakiplerinizin erişemeyeceği bir seviyeye taşıyabilirsiniz.
             </p>
-          </div>
+          </EditorNote>
         </div>
 
         <RelatedPosts slug="reels-tiktok-algoritmasi-2026" />

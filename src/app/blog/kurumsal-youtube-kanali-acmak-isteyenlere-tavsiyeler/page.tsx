@@ -6,6 +6,7 @@ import { createBlogMetadata } from "@/data/blog-posts";
 import WizardCta from "@/components/WizardCta";
 import TldrSummary from "@/components/TldrSummary";
 import LastUpdated from "@/components/LastUpdated";
+import EditorNote from "@/components/blog/EditorNote";
 
 export const metadata = createBlogMetadata("kurumsal-youtube-kanali-acmak-isteyenlere-tavsiyeler");
 
@@ -213,12 +214,11 @@ export default function BlogPost() {
             Son olarak, YouTube kanalınızı diğer dijital varlıklarınızla entegre edin. Web sitenizde blog yazılarına video ekleyin, LinkedIn'de kısa kesitler paylaşın, e-posta bültenlerinizde yeni videolarınızı duyurun. <strong>Omnichannel bir yaklaşım</strong>, her platformdaki varlığınızı güçlendirir.
           </p>
 
-          <div className="bg-gradient-to-r from-primary/10 to-transparent border-l-4 border-primary p-6 mt-12 rounded-r-xl">
-            <p className="font-semibold text-foreground mb-2">Sonuç</p>
+          <EditorNote title="Sonuç">
             <p>
               Kurumsal bir YouTube kanalı oluşturmak, <strong>uzun vadeli bir yatırımdır</strong> — ama doğru yapıldığında geri dönüşü muazzamdır. Eğitici içerikler üreterek otorite kurun, SEO ile organik keşfedilebilirliğinizi artırın, profesyonel prodüksiyonla marka algınızı yükseltin ve tutarlılıkla algoritmayı yanınıza alın. Altı ay sonra geriye dönüp baktığınızda, bu kanalın şirketinizin en değerli dijital varlıklarından biri olduğunu göreceksiniz.
             </p>
-          </div>
+          </EditorNote>
         </div>
 
         <RelatedPosts slug="kurumsal-youtube-kanali-acmak-isteyenlere-tavsiyeler" />

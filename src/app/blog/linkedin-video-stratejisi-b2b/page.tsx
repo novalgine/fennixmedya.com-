@@ -6,6 +6,7 @@ import { createBlogMetadata } from "@/data/blog-posts";
 import WizardCta from "@/components/WizardCta";
 import TldrSummary from "@/components/TldrSummary";
 import LastUpdated from "@/components/LastUpdated";
+import EditorNote from "@/components/blog/EditorNote";
 
 export const metadata = createBlogMetadata("linkedin-video-stratejisi-b2b");
 
@@ -115,12 +116,11 @@ export default function BlogPost() {
             <li><strong>Hafta 4:</strong> Etkinlik klibi veya podcast kesiti (Salı) + &quot;Bunu biliyor muydunuz?&quot; videosu (Perşembe)</li>
           </ul>
 
-          <div className="bg-gradient-to-r from-primary/10 to-transparent border-l-4 border-primary p-6 mt-12 rounded-r-xl">
-            <h3 className="font-bold text-2xl text-foreground mb-3">LinkedIn, B2B&apos;nin TikTok&apos;udur</h3>
+          <EditorNote title="LinkedIn, B2B'nin TikTok'udur">
             <p className="m-0 text-muted-foreground text-base">
               TikTok tüketici markalarını nasıl dönüştürdüyse, LinkedIn de B2B markalar için aynı etkiyi yaratıyor. Fark şu: LinkedIn&apos;de her izlenme potansiyel bir karar verici. Bir TikTok izlenmenin değeri kuruşlarla ölçülürken, bir LinkedIn izlenmenin değeri binlerce liralık iş anlaşmalarına dönüşebilir. Bu fırsatı kaçırmayın.
             </p>
-          </div>
+          </EditorNote>
         </div>
 
         <RelatedPosts slug="linkedin-video-stratejisi-b2b" />

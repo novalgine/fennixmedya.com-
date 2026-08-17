@@ -6,6 +6,7 @@ import { createBlogMetadata } from "@/data/blog-posts";
 import WizardCta from "@/components/WizardCta";
 import TldrSummary from "@/components/TldrSummary";
 import LastUpdated from "@/components/LastUpdated";
+import EditorNote from "@/components/blog/EditorNote";
 
 export const metadata = createBlogMetadata("video-produksiyon-maliyetleri-2026");
 
@@ -107,19 +108,18 @@ export default function BlogPost() {
 
           <h2 className="text-3xl mt-12 mb-6">5. Bütçenizi Optimize Etmenin 5 Yolu</h2>
           <ul className="space-y-3">
-            <li><strong>Toplu çekim günleri planlayın:</strong> Tek bir çekim gününde birden fazla video çekerek ekip ve ekipman maliyetlerini optimize edin. Fennix Medya olarak biz, tek stüdyo gününde 30 günlük içerik çıkarmayı başarıyoruz.</li>
+            <li><strong>Toplu çekim günleri planlayın:</strong> Tek bir çekim gününde birden fazla video çekerek maliyeti düşürün. Ben de böyle çalışıyorum: bir çekim gününde 3-5 video çekerim, aylık 8 videoyu iki sete sığdırırım.</li>
             <li><strong>İçerik yeniden kullanımı (Repurposing):</strong> Bir uzun form videodan 5-8 kısa form içerik çıkarabilirsiniz. Böylece tek bir prodüksiyon maliyetiyle çoklu platform varlığı yaratırsınız.</li>
             <li><strong>Aylık retainer anlaşması yapın:</strong> Tek seferlik projeler yerine aylık paket anlaşmaları, birim maliyeti %20-30 oranında düşürür ve tutarlı içerik akışı sağlar.</li>
             <li><strong>Önceliklendirme yapın:</strong> Her video türünü aynı anda üretmeye çalışmayın. Önce en yüksek ROI potansiyeli olan video türüyle başlayın (genellikle sosyal medya içerikleri veya müşteri referans videoları).</li>
             <li><strong>Stüdyo kullanın:</strong> Dış mekan çekimleri, hava durumu riski ve izin süreçleri nedeniyle maliyetlidir. Kontrollü stüdyo ortamı, hem kaliteyi artırır hem de sürpriz giderleri önler.</li>
           </ul>
 
-          <div className="bg-gradient-to-r from-primary/10 to-transparent border-l-4 border-primary p-6 mt-12 rounded-r-xl">
-            <h3 className="font-bold text-2xl text-foreground mb-3">Video Prodüksiyon Yatırımdır, Gider Değil</h3>
+          <EditorNote title="Video Prodüksiyon Yatırımdır, Gider Değil">
             <p className="m-0 text-muted-foreground text-base">
               2026&apos;da video prodüksiyon maliyetleri, kaliteli bir prodüksiyona erişimin hiç olmadığı kadar kolay olduğu bir dönemde şekilleniyor. Önemli olan en düşük fiyatı bulmak değil, <strong>yatırımınızın karşılığını en hızlı şekilde alacağınız doğru partneri bulmaktır</strong>. Profesyonel bir video prodüksiyon ajansıyla çalışarak, bütçenizi stratejik olarak konumlandırabilir ve her harcanan kuruşun ölçülebilir bir geri dönüşe dönüşmesini sağlayabilirsiniz.
             </p>
-          </div>
+          </EditorNote>
         </div>
 
         <RelatedPosts slug="video-produksiyon-maliyetleri-2026" />

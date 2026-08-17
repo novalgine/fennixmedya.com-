@@ -6,6 +6,7 @@ import { createBlogMetadata } from "@/data/blog-posts";
 import WizardCta from "@/components/WizardCta";
 import TldrSummary from "@/components/TldrSummary";
 import LastUpdated from "@/components/LastUpdated";
+import EditorNote from "@/components/blog/EditorNote";
 
 export const metadata = createBlogMetadata("podcast-ten-video-icerigi-uretmek");
 
@@ -33,7 +34,7 @@ export default function BlogPost() {
             "Tek bir 45-60 dakikalık podcast veya röportaj çekiminden, 30+ ayrı içerik parçası üretilebilir: kısa videolar, blog yazıları, sosyal medya görselleri ve podcast bölümleri.",
             "Bu stratejinin adı 'Content Repurposing' (içerik yeniden kullanımı) ve 2026'da en verimli içerik üretim modelidir — birim içerik maliyetini %80'e kadar düşürür.",
             "İş akışı: Uzun form çekim → Ana video (YouTube) → 5-8 kısa klip (Reels/TikTok/Shorts) → Ses dosyası (Podcast) → Blog yazısı (SEO) → Alıntı görselleri (LinkedIn/Twitter).",
-            "Fennix Medya olarak 'Ayda 6 Saat' modelimizin temelinde bu strateji yatıyor: Tek bir stüdyo gününde müşterilerimize 30 günlük içerik çıkarıyoruz."
+            "Ben de benzer bir düzenle çalışıyorum: ayda iki çekim günü, aylık 8 video — kurguya çekim akşamı başlarım, videoları bittikçe teslim ederim."
           ]}
         />
 
@@ -42,7 +43,7 @@ export default function BlogPost() {
             Her gün yeni bir video çekmek, her platform için ayrı içerik üretmek... Bu düşünce bile iş insanlarının içerik üretiminden kaçmasına yetiyor. Ama ya size tek bir çekim gününde 30 günlük tüm içeriğinizi çıkarabileceğinizi söylesek? Bu, bir hayal değil — <strong>Content Repurposing (içerik yeniden kullanımı)</strong> stratejisinin gücü.
           </p>
           <p>
-            Bu makalede, <strong className="text-foreground">bir podcast veya röportaj formatındaki uzun çekimden nasıl çoklu platform içerik piramidi oluşturacağınızı</strong> adım adım gösteriyoruz. Fennix Medya&apos;nın &quot;Ayda 6 Saat&quot; modelinin iş akışını da açıklıyoruz.
+            Bu makalede, <strong className="text-foreground">bir podcast veya röportaj formatındaki uzun çekimden nasıl çoklu platform içerik piramidi oluşturacağınızı</strong> adım adım gösteriyorum. Bu stratejiyi kendi çalışma düzenimde nasıl uyguladığımı da anlatıyorum.
           </p>
 
           <h2 className="text-3xl mt-12 mb-6">1. İçerik Piramidi Nedir ve Neden Bu Kadar Etkili?</h2>
@@ -97,18 +98,17 @@ export default function BlogPost() {
             Çekimdeki en çarpıcı cümleleri, istatistikleri veya önerileri tasarlanmış görsellere dönüştürün. Bu görseller LinkedIn, Twitter/X ve Instagram carousel (kaydırmalı) postlarında kullanılır. Canva veya Figma ile hızlıca üretilebilir.
           </p>
 
-          <h2 className="text-3xl mt-12 mb-6">3. Fennix Medya &quot;Ayda 6 Saat&quot; Modeli</h2>
+          <h2 className="text-3xl mt-12 mb-6">3. Bu Stratejiyi Kendi Düzenimde Nasıl Uyguluyorum</h2>
           <p>
-            Bu repurposing stratejisinin en rafine halini Fennix Medya olarak &quot;Ayda 6 Saat&quot; modelimizde uyguluyoruz. İşte nasıl çalışıyor:
+            Yukarıdaki piramit büyük prodüksiyon ekiplerinin işi gibi görünebilir; oysa küçültülmüş hâli tek kişiyle de dönüyor. Benim düzenim şöyle:
           </p>
           <ul className="space-y-3">
-            <li><strong>2 saat pre-prodüksiyon:</strong> Müşterimizle birlikte konu başlıklarını, mesajları ve hedef kitleyi belirliyoruz. Senaryo/konu haritası hazırlıyoruz.</li>
-            <li><strong>3 saat çekim:</strong> Profesyonel <Link href="/hizmetler/anahtar-teslim-studyo">stüdyo</Link>muzda, 2-3 kameralı setup ile çekim yapıyoruz. Tek seansta 4-6 ana konu çekiyoruz.</li>
-            <li><strong>1 saat gözden geçirme:</strong> İlk kurgular müşteriye sunulur, geri bildirimler toplanır.</li>
-            <li><strong>Post-prodüksiyon (bizde):</strong> Müşterinin 6 saatlik katkısından sonra, ekibimiz kurgulama, alt yazı, grafik tasarım ve platform optimizasyonu yaparak 30 günlük içerik paketini hazırlar.</li>
+            <li><strong>Önce metin:</strong> Sete asla &quot;bugün ne çeksek&quot; diye gitmem. Konuları önceden netleştiririz — metinleri ben yazarım, kendi sektörünüzü benden iyi bildiğiniz için isterseniz siz yazarsınız, ya da birlikte kurarız.</li>
+            <li><strong>Ayda iki çekim günü:</strong> Çekimler genelde öğleden sonra olur. Bir günde 3-5 video çekerim; aylık 8 videoyu iki sete sığdırırız.</li>
+            <li><strong>Kurgu çekim akşamı başlar:</strong> Videoları ay sonunu bekletip toplu atmam — bittikçe sırayla teslim ederim. İçeriğinizin ne zaman geleceğini bilirsiniz.</li>
           </ul>
           <p>
-            <strong>Sonuç:</strong> Müşterimiz ayda sadece 6 saat harcayarak, tüm platformlarda 30 günlük profesyonel video içeriğe sahip oluyor. Geri kalan her şeyi biz hallediyoruz.
+            <strong>Sonuç:</strong> Siz ayda iki yarım gününüzü ayırıyorsunuz; metin, çekim ve kurgu bende. Grafik tasarım ve statik görsel benim alanım değil — ihtiyacınız olursa güvendiğim isimlere yönlendiririm.
           </p>
 
           <h2 className="text-3xl mt-12 mb-6">4. Hangi Konular Repurposing İçin En Uygun?</h2>
@@ -122,21 +122,20 @@ export default function BlogPost() {
             <li><strong>Sektör trendleri ve yorumları:</strong> Güncel bir olayı veya trendi yorumlamak, hem zamansız (evergreen) hem de güncel (timely) içerik üretmenizi sağlar.</li>
           </ul>
 
-          <div className="bg-gradient-to-r from-primary/10 to-transparent border-l-4 border-primary p-6 mt-12 rounded-r-xl">
-            <h3 className="font-bold text-2xl text-foreground mb-3">Daha Çok Çekmek Değil, Daha Akıllı Çekmek</h3>
+          <EditorNote title="Daha Çok Çekmek Değil, Daha Akıllı Çekmek">
             <p className="m-0 text-muted-foreground text-base">
-              İçerik üretiminin gizli formülü, her gün yeni bir şey çekmek değil — tek bir güçlü çekimi onlarca farklı formata dönüştürmektir. Bu strateji, zamanınızı koruduğu gibi <strong>mesaj tutarlılığını da sağlar</strong>. Her platformda farklı şeyler söyleyen bir marka yerine, aynı güçlü mesajı farklı formatlarda sunan tutarlı bir marka olursunuz. Fennix Medya olarak biz tam da bunu yapıyoruz — ve sonuçlar olağanüstü.
+              İçerik üretiminin gizli formülü, her gün yeni bir şey çekmek değil — tek bir güçlü çekimi onlarca farklı formata dönüştürmektir. Bu strateji, zamanınızı koruduğu gibi <strong>mesaj tutarlılığını da sağlar</strong>. Her platformda farklı şeyler söyleyen bir marka yerine, aynı güçlü mesajı farklı formatlarda sunan tutarlı bir marka olursunuz. Benim ayda iki çekim gününe dayanan düzenim de tam olarak bu ilkeyle çalışıyor.
             </p>
-          </div>
+          </EditorNote>
         </div>
 
         <RelatedPosts slug="podcast-ten-video-icerigi-uretmek" />
 
         <div className="mt-16 pt-10 border-t border-border">
           <div className="bg-card border border-white/5 p-8 rounded-2xl text-center shadow-2xl">
-            <h3 className="font-heading text-2xl font-bold mb-4">Ayda sadece 6 saat ayırarak 30 günlük içerik üretin</h3>
+            <h3 className="font-heading text-2xl font-bold mb-4">Ayda iki çekim gününe sığan bir düzen kuralım</h3>
             <p className="text-muted-foreground mb-8">
-              Content Repurposing modelimizle tüm platformlarınızı profesyonel içerikle dolduralım.
+              Metni birlikte kurarız; çekimi ve kurguyu ben yaparım. Görüşme 15 dakika sürüyor ve ücret almıyorum.
             </p>
             <WizardCta />
           </div>

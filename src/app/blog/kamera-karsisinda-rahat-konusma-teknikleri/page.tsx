@@ -7,6 +7,7 @@ import Image from "next/image";
 import WizardCta from "@/components/WizardCta";
 import TldrSummary from "@/components/TldrSummary";
 import LastUpdated from "@/components/LastUpdated";
+import EditorNote from "@/components/blog/EditorNote";
 
 export const metadata = createBlogMetadata("kamera-karsisinda-rahat-konusma-teknikleri");
 
@@ -195,12 +196,11 @@ export default function BlogPost() {
             Hatta bazen plansız anlar, en etkileyici anlar olur. Bir CEO'nun spontan olarak güldüğü, düşüncesini toplarken kısa bir duraklama yaptığı veya samimi bir itirafta bulunduğu an — <strong>bu "gerçek" anlar, izleyiciyi en çok etkileyen anlardır.</strong>
           </p>
 
-          <div className="bg-gradient-to-r from-primary/10 to-transparent border-l-4 border-primary p-6 mt-12 rounded-r-xl">
-            <p className="font-semibold text-foreground mb-2">Sonuç</p>
+          <EditorNote title="Sonuç">
             <p>
               Kamera karşısında rahat olmak bir süreçtir ve her çekimle biraz daha gelişirsiniz. <strong>Doğru nefes teknikleri, bilinçli beden dili, iyi bir hazırlık ve profesyonel bir ekip</strong> — bu dört unsur bir araya geldiğinde, kameranın siyah lensi bir düşman olmaktan çıkar ve mesajınızı dünyaya iletmenin en güçlü aracına dönüşür. Kendinize güvenin ve "Kayıt!" komutunu duyduğunuzda gülümseyin — çünkü anlattığınız konuyu sizden daha iyi bilen kimse yok.
             </p>
-          </div>
+          </EditorNote>
         </div>
 
         <RelatedPosts slug="kamera-karsisinda-rahat-konusma-teknikleri" />

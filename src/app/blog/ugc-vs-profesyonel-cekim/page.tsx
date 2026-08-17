@@ -7,6 +7,7 @@ import Image from "next/image";
 import WizardCta from "@/components/WizardCta";
 import TldrSummary from "@/components/TldrSummary";
 import LastUpdated from "@/components/LastUpdated";
+import EditorNote from "@/components/blog/EditorNote";
 
 export const metadata = createBlogMetadata("ugc-vs-profesyonel-cekim");
 
@@ -94,12 +95,11 @@ export default function BlogPost() {
             <li><strong>Karar ve Satın Alma (Bottom of Funnel):</strong> Son aşamada ise profesyonel olarak kurgulanmış "Müşteri Referans" (Testimonial) videoları devreye girer ve satışı kapatır.</li>
           </ol>
 
-          <div className="bg-gradient-to-r from-primary/10 to-transparent border-l-4 border-primary p-6 mt-12 rounded-r-xl">
-            <h3 className="font-bold text-2xl text-foreground mb-3">Sonuç Olarak: Yatırımınızı Nereye Yapmalısınız?</h3>
+          <EditorNote title="Sonuç Olarak: Yatırımınızı Nereye Yapmalısınız?">
             <p className="m-0 text-muted-foreground text-base">
               Eğer yeni bir B2C e-ticaret markasıysanız ve amacınız hızlı trafik çekmekse, bütçenizi UGC üreticilerine ayırın. Ancak kendinizi sektörünüzde "Premium", "Güvenilir" veya "Kurumsal" olarak konumlandırmak isteyen, yüksek bütçeli satışlar yapan bir B2B markasıysanız; profesyonel bir video prodüksiyonu sizin için masraf değil, en yüksek ROI (Yatırım Getirisi) sağlayacak dijital varlığınızdır. İdeal dünyada, bu iki gücü birleştiren markalar rekabetin her zaman bir adım önünde olacaktır.
             </p>
-          </div>
+          </EditorNote>
         </div>
 
         <RelatedPosts slug="ugc-vs-profesyonel-cekim" />

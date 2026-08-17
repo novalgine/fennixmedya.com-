@@ -7,6 +7,7 @@ import Image from "next/image";
 import WizardCta from "@/components/WizardCta";
 import TldrSummary from "@/components/TldrSummary";
 import LastUpdated from "@/components/LastUpdated";
+import EditorNote from "@/components/blog/EditorNote";
 
 export const metadata = createBlogMetadata("videolarda-ilk-3-saniye-kurali-hook");
 
@@ -96,12 +97,11 @@ export default function BlogPost() {
             Bir diğer hata ise kancayı çok uzun tutmaktır. Hook cümleniz 5 kelimeyi geçmemelidir. Kısa, net, vurucu olmalıdır.
           </p>
 
-          <div className="bg-gradient-to-r from-primary/10 to-transparent border-l-4 border-primary p-6 mt-12 rounded-r-xl">
-            <h3 className="font-bold text-2xl text-foreground mb-3">Hook, İçeriğinizin Vitrinidir</h3>
+          <EditorNote title="Hook, İçeriğinizin Vitrinidir">
             <p className="m-0 text-muted-foreground text-base">
               İster dünyanın en iyi kurgulanmış profesyonel filmi olsun, ister elinizdeki cep telefonuyla çektiğiniz bir vlog olsun — eğer doğru bir kancaya sahip değilse izlenmeyecektir. Video çekim planınızı yaparken enerjinizin ve zamanınızın %50'sini sadece videonun ilk 3 saniyesini tasarlamaya ayırın. Çünkü o ilk 3 saniye, geriye kalan tüm dakikaların izlenip izlenmeyeceğine karar verir.
             </p>
-          </div>
+          </EditorNote>
         </div>
 
         <RelatedPosts slug="videolarda-ilk-3-saniye-kurali-hook" />

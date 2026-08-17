@@ -202,7 +202,7 @@ export default function BlogPost2() {
             Marka algısı kritik. <strong>Tüm dışa dönük içerikler profesyonel olmalıdır.</strong> iPhone sadece iç iletişim ve behind-the-scenes için kullanılmalıdır. Bir lüks markanın iPhone ile çekilmiş bir tanıtım filmi, marka değerine ciddi zarar verir.
           </p>
 
-          <h2 className="font-heading text-2xl font-bold mt-10 mb-4">10. Bizim Önerimiz: Akıllı Hibrit Yaklaşım</h2>
+          <h2 className="font-heading text-2xl font-bold mt-10 mb-4">10. Önerim: Akıllı Hibrit Yaklaşım</h2>
 
           <p className="text-muted-foreground leading-relaxed">
             Günlük sosyal medya içeriklerinizi iPhone ile çekmeye devam edin — <strong>otantiklik ve hız burada avantajınızdır</strong>. Ancak markanızı &quot;bir üst seviyeye&quot; taşıyacak ana içerikler (tanıtım filmi, showreel, detaylı ürün videosu) için profesyonel prodüksiyon tercih edin.

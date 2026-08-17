@@ -7,6 +7,7 @@ import Image from "next/image";
 import WizardCta from "@/components/WizardCta";
 import TldrSummary from "@/components/TldrSummary";
 import LastUpdated from "@/components/LastUpdated";
+import EditorNote from "@/components/blog/EditorNote";
 
 export const metadata = createBlogMetadata("high-ticket-satislar-icin-video-funnel");
 
@@ -83,12 +84,11 @@ export default function BlogPost() {
             <li><strong>Hedef (Call to Action):</strong> "Sınırlı kontenjan", "Hemen Görüşelim" diyerek aciliyet hissi yaratıp o masaya oturtmak.</li>
           </ul>
 
-          <div className="bg-gradient-to-r from-primary/10 to-transparent border-l-4 border-primary p-6 mt-12 rounded-r-xl">
-            <h3 className="font-bold text-2xl text-foreground mb-3">En İyi Satış Personeliniz: Kurulum Sonrası Huni</h3>
+          <EditorNote title="En İyi Satış Personeliniz: Kurulum Sonrası Huni">
             <p className="m-0 text-muted-foreground text-base">
               High-ticket bir ürün satarken, her gün aynı itirazları dinlemekten, aynı sunumları yapmaktan yorulabilirsiniz. Profesyonelce kurgulanmış bir Video Funnel, <strong>hiç yorulmayan, maaş istemeyen, hasta olmayan ve 7/24 uyanık olan mükemmel bir satış temsilcisidir.</strong> Doğru mimariyle kurulduğunda, markanızın premium algısını her tıklamada korur ve size sadece, sisteme zaten inanmış sıcak müşterilerle (warm leads) anlaşma imzalamak kalır.
             </p>
-          </div>
+          </EditorNote>
         </div>
 
         <RelatedPosts slug="high-ticket-satislar-icin-video-funnel" />

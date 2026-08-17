@@ -7,6 +7,7 @@ import Image from "next/image";
 import WizardCta from "@/components/WizardCta";
 import TldrSummary from "@/components/TldrSummary";
 import LastUpdated from "@/components/LastUpdated";
+import EditorNote from "@/components/blog/EditorNote";
 
 export const metadata = createBlogMetadata("gayrimenkul-satislarinda-video-produksiyon");
 
@@ -79,12 +80,11 @@ export default function BlogPost() {
             Bu videolar sadece elinizdeki o evi satmakla kalmaz; o evi satmak isteyen diğer potansiyel müşterilerin sizi bulmasını (seller leads) sağlar. İnsanlar, mülklerini profesyonelce, bir film yıldızı gibi pazarlayan bir danışmana portföylerini teslim etmek için can atarlar.
           </p>
 
-          <div className="bg-gradient-to-r from-primary/10 to-transparent border-l-4 border-primary p-6 mt-12 rounded-r-xl">
-            <h3 className="font-bold text-2xl text-foreground mb-3">Emlak Pazarlamasında Devrim Yaratın</h3>
+          <EditorNote title="Emlak Pazarlamasında Devrim Yaratın">
             <p className="m-0 text-muted-foreground text-base">
               Portföyünüzdeki o çok değerli mülk aylardır satılmıyorsa, sorun mülkte değil, <strong>onu sunuş biçiminizde</strong> olabilir. Doğru bir video prodüksiyon stratejisi, sadece satış sürecinizi haftalarca kısaltmakla kalmaz, marka değerinizi sektörde rakipsiz bir noktaya taşır. Hemen bugün profesyonel bir çekim randevusu oluşturun ve dönüşümleri kendi gözlerinizle görün.
             </p>
-          </div>
+          </EditorNote>
         </div>
 
         <RelatedPosts slug="gayrimenkul-satislarinda-video-produksiyon" />
