@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     template: "%s | Fennix Medya",
   },
   description:
-    "İstanbul'da markalar için video çekiyorum. Sosyal medya videoları, kurumsal tanıtım filmleri ve YouTube içerikleri — metinden teslimata kadar tek elden. Ayda iki çekim günü, sekiz video.",
+    "İstanbul'da markalar için dikey sosyal medya videosu çekiyorum: Reels, TikTok, Shorts. Metinden kurguya tek elden, kamera önü koçluğu dahil. Ayda iki çekim günü, sekiz video, 30.000 ₺'den.",
   keywords: [
     "video prodüksiyon İstanbul",
     "kurumsal tanıtım filmi",
