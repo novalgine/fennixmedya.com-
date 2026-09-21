@@ -26,7 +26,7 @@ export default function BlogPost() {
             <span className="flex items-center gap-1"><Calendar className="w-4 h-4" /> 12 Haziran 2026</span>
             <span className="flex items-center gap-1"><Clock className="w-4 h-4" /> 9-10 dk okuma</span>
           </div>
-          <LastUpdated date="2026-06-18" />
+          <LastUpdated date="2026-08-18" />
         </header>
 
         <TldrSummary

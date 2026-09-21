@@ -9,6 +9,11 @@ const lastmodByPath = Object.fromEntries(
   ])
 );
 
+// Elle güncellenen statik sayfalar — yalnızca içerik gerçekten değiştiğinde tarih girilir
+Object.assign(lastmodByPath, {
+  '/hizmetler/sosyal-medya-video': '2026-09-22T00:00:00+03:00',
+});
+
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
   siteUrl: 'https://fennixmedya.com',

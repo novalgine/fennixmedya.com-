@@ -26,8 +26,15 @@ Allow: /
 User-agent: Googlebot
 Allow: /
 
-# Claude-Web
-User-agent: Claude-Web
+# ClaudeBot (Anthropic tarayıcısı)
+User-agent: ClaudeBot
+Allow: /
+
+# Claude-User / Claude-SearchBot
+User-agent: Claude-User
+Allow: /
+
+User-agent: Claude-SearchBot
 Allow: /
 
 # Anthropic-ai
