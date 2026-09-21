@@ -54,12 +54,15 @@ export default function PortfolioVideoCard({ project, isVertical }: { project: P
           </button>
         )}
       </div>
-      <div className="p-6 bg-card">
+      <div className="p-4 md:p-6 bg-card">
         <div className="flex items-center gap-2 mb-3">
-          <span className="text-xs px-3 py-1 bg-primary/10 text-primary rounded-full font-bold uppercase tracking-wider">{project.category}</span>
+          <span className="text-[10px] md:text-xs px-2 md:px-3 py-1 whitespace-nowrap bg-primary/10 text-primary rounded-full font-bold uppercase tracking-wider">{project.category}</span>
           <span className="text-xs font-medium text-muted-foreground">{project.format}</span>
         </div>
-        <h3 className="font-heading text-xl font-bold text-foreground">{project.title}</h3>
+        <h3 className="font-heading text-lg md:text-xl font-bold text-foreground">{project.title}</h3>
+        {project.subtitle && (
+          <p className="mt-1 text-sm text-muted-foreground">{project.subtitle}</p>
+        )}
       </div>
     </div>
   );

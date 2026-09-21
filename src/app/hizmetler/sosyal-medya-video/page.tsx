@@ -5,18 +5,25 @@ import ServiceSteps from "@/components/ServiceSteps";
 import ServiceFaq, { type Faq } from "@/components/ServiceFaq";
 import ServiceCta from "@/components/ServiceCta";
 import OtherServices from "@/components/OtherServices";
+import ServiceWorks from "@/components/ServiceWorks";
+import ServicePrice from "@/components/ServicePrice";
+import TestimonialsStrip from "@/components/TestimonialsStrip";
+import { packages } from "@/data/pricing";
+
+// Fiyat tek kaynaktan: data/pricing.ts
+const AYLIK = packages.find((p) => p.id === "aylik")!;
 
 const OZET =
-  "İstanbul'da Instagram Reels, TikTok ve YouTube Shorts için dikey video çekimi. Ayda iki çekim günü, sekiz video; metin yazımından kurguya kadar tek elden.";
+  `İstanbul'da Instagram Reels, TikTok ve YouTube Shorts için dikey video çekimi. Ayda iki çekim günü, sekiz video; metin yazımından kurguya kadar tek elden. Aylık ${AYLIK.price}'den başlar.`;
 
 export const metadata: Metadata = {
-  title: "Sosyal Medya Video Çekimi",
+  title: "Reels ve Sosyal Medya Video Çekimi · İstanbul",
   description: OZET,
   alternates: { canonical: "https://fennixmedya.com/hizmetler/sosyal-medya-video" },
   openGraph: {
     type: "website",
     url: "https://fennixmedya.com/hizmetler/sosyal-medya-video",
-    title: "Sosyal Medya Video Çekimi",
+    title: "Reels ve Sosyal Medya Video Çekimi · İstanbul",
     description: OZET,
     siteName: "Fennix Medya",
     locale: "tr_TR",
@@ -44,6 +51,14 @@ const STEPS = [
 
 const FAQS: Faq[] = [
   {
+    q: "Sosyal medya video çekimi ne kadar tutuyor?",
+    a: `Aylık üretim ${AYLIK.price}'den başlıyor: ayda sekiz video, iki çekim günü; senaryo, çekim, kurgu ve kamera önü koçluğu dahil. Ödemeyi çekim gününün sonunda alıyorum.`,
+  },
+  {
+    q: "Hangi sektörlerle çalıştınız?",
+    a: "Diş hekimi, veteriner klinikleri, beslenme uzmanı, kuyumcu, ev tekstili ve içecek markaları, tiyatro oyunları. İşlerin bir kısmı bu sayfada, tamamı portfolyoda duruyor.",
+  },
+  {
     q: "Bir çekim gününde kaç video çıkıyor?",
     a: "Hedefim dört Reels. Konuların uzunluğuna, mekân değişimine ve günün akışına göre üç ile beş arasında değişiyor. Ayda iki çekim gününde toplam sekiz video teslim ediyorum.",
   },
@@ -58,6 +73,10 @@ const FAQS: Faq[] = [
   {
     q: "Videolar ne zaman elime geçiyor?",
     a: "Çekim akşamı kurguya başlıyorum ve videoları bittikçe sırayla gönderiyorum. Toplu teslimat için ay sonunu beklemenize gerek kalmıyor.",
+  },
+  {
+    q: "Hangi ekipmanla çekiyorsunuz?",
+    a: "Sony FX30 kamera, Tamron 17-70mm lens, DJI RS4 gimbal, tripod ve Rode Wireless GO II yaka mikrofonu. Drone pakete dahil değil; gerekirse günlük ayrı kalem olarak ekliyorum.",
   },
   {
     q: "Kapak görseli veya grafik tasarım yapıyor musunuz?",
@@ -78,12 +97,18 @@ export default function SosyalMedyaVideoPage() {
           url: "https://fennixmedya.com/hizmetler/sosyal-medya-video",
           areaServed: { "@type": "City", name: "İstanbul" },
           provider: { "@id": "https://fennixmedya.com/#organization" },
+          offers: {
+            "@type": "Offer",
+            price: AYLIK.price.replace(/[^0-9]/g, ""),
+            priceCurrency: "TRY",
+            description: "Aylık üretim başlangıç fiyatı: ayda 8 video, 2 çekim günü",
+          },
         }}
       />
 
       <ServiceHero
         breadcrumb="Sosyal Medya Videosu"
-        eyebrow="Dikey format · 9:16"
+        eyebrow="Sosyal medya video çekimi · İstanbul"
         title={[{ text: "Ayda İki Gün" }, { text: "Sekiz Video", gold: true }]}
         intro={
           <>
@@ -106,6 +131,12 @@ export default function SosyalMedyaVideoPage() {
         videoCaption="Dt. Ayzıt Umay"
       />
 
+      <ServiceWorks
+        eyebrow="Teslim edilen işler"
+        heading="Kimlerle Çalıştım"
+        sub="Diş hekimi, veteriner kliniği, beslenme uzmanı, kuyumcu, ev tekstili ve içecek markaları, tiyatro oyunları. Hepsini ben çektim, ben kurguladım."
+        ids={["umay", "vethouse", "melis", "boogold", "vavelya-karpuz", "buzdagi", "afife", "zuhal"]}
+      />
       <ServiceSteps
         eyebrow="Bir çekim günü"
         heading="Nasıl İşliyor"
@@ -119,6 +150,12 @@ export default function SosyalMedyaVideoPage() {
         }
       />
 
+      <ServicePrice
+        packageId="aylik"
+        heading="Aylık Üretim Ne Kadar?"
+        sub="Fiyatı saklamıyorum. Görüşmeye gelmeden bilmeniz ikimizin de zamanını korur."
+      />
+      <TestimonialsStrip />
       <ServiceFaq faqs={FAQS} />
 
       <OtherServices currentServiceId="sosyal-medya-video" />
