@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import JsonLd from "@/components/JsonLd";
 import ServiceHero from "@/components/ServiceHero";
 import ServiceSteps from "@/components/ServiceSteps";
@@ -151,7 +152,11 @@ export default function SosyalMedyaVideoPage() {
         steps={STEPS}
         note={
           <>
-            Bu hizmet aylık düzenli çalışma üzerine kurulu — sosyal medyada kalıcı sonuç, düzenli
+            Klinik ya da hekimseniz{" "}
+            <Link href="/hizmetler/sosyal-medya-video/klinikler" className="text-primary hover:underline">
+              klinikler için ayrı bir sayfa
+            </Link>{" "}
+            var. Bu hizmet aylık düzenli çalışma üzerine kurulu — sosyal medyada kalıcı sonuç, düzenli
             üretimle birkaç ay içinde geliyor. Tek seferlik bir video ihtiyacınız varsa da
             konuşabiliriz, kapsamına göre fiyatlandırıyorum.
           </>

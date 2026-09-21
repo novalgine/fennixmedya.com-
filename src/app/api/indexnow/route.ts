@@ -10,6 +10,7 @@ const STATIC_PATHS = [
   '/blog',
   '/hizmetler',
   '/hizmetler/sosyal-medya-video',
+  '/hizmetler/sosyal-medya-video/klinikler',
   '/hizmetler/kurumsal-tanitim-filmi',
   '/hizmetler/anahtar-teslim-studyo',
 ];

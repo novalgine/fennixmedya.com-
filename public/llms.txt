@@ -23,6 +23,7 @@
 ## Sayfalar
 
 - [Sosyal medya video çekimi](https://fennixmedya.com/hizmetler/sosyal-medya-video): asıl hizmet — süreç, fiyat, teslim edilen işler, sık sorulan sorular
+- [Klinikler ve hekimler için sosyal medya videosu](https://fennixmedya.com/hizmetler/sosyal-medya-video/klinikler): diş hekimi ve veteriner klinikleri için uyarlanmış hali — hasta sorularından konu, sağlık tanıtımı sınırında metin
 - [Anahtar teslim stüdyo](https://fennixmedya.com/hizmetler/anahtar-teslim-studyo): kendi çekimini yapmak isteyenler için mekân analizi, ekipman listesi, kurulum ve kamera önü provası
 - [Portfolyo](https://fennixmedya.com/portfolyo): teslim edilen işler, müşteri adlarıyla
 - [Hakkımda](https://fennixmedya.com/hakkimizda): Semih Hasanoğlu'nun geçmişi ve çalışma biçimi
