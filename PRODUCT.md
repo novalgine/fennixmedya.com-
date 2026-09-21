@@ -65,7 +65,7 @@ Marmara ve yakın iller öncelikli; uzak şehirler görüşmeye bağlı. Kanıt:
 üç ay Ankara'ya gidildi (iş bitti, sürmüyor; video sayısı kesin bilinmiyor — sayı yazılmaz).
 
 **Müşteri kimlikleri (sayfa yazarken):** Derya Kayaalp — şan eğitmeni; Bilal Şendir —
-matematik koçu; Vet House ve Petadress — veteriner klinikleri; Ayzıt Umay — diş hekimi.
+matematik koçu; Vet House — veteriner kliniği, 6 aydır aylık düzenli müşteri, iş sürüyor (2026-09-22); Petadress — veteriner kliniği, tanıtım filmi; Ayzıt Umay — diş hekimi.
 Hekimlerle çalışmaya dair Semih'e özgü bir yöntem/bilgi yok — uydurulmaz, süreç ve
 mevzuat bilgisiyle yazılır.
 

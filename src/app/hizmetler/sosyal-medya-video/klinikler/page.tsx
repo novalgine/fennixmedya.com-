@@ -52,7 +52,7 @@ const STEPS = [
 const FAQS: Faq[] = [
   {
     q: "Hangi kliniklerle çalıştınız?",
-    a: "Diş hekimi Ayzıt Umay ile Ankara'da üç ay çalıştım. Vet House ve Petadress veteriner klinikleri için de çektim. Üçünün de videoları bu sayfada.",
+    a: "Vet House veteriner kliniğiyle altı aydır çalışıyorum, iş sürüyor. Diş hekimi Ayzıt Umay ile Ankara'da üç ay çalıştım. Petadress veteriner kliniği için tanıtım filmi çektim. Üçünün de videoları bu sayfada.",
   },
   {
     q: "Hasta görüntüsü olmadan video çekilir mi?",
@@ -132,7 +132,7 @@ export default function KliniklerPage() {
       <ServiceWorks
         eyebrow="Teslim edilen işler"
         heading="Klinik İşleri"
-        sub="Bir diş hekimi, iki veteriner kliniği. Hepsini ben çektim, ben kurguladım."
+        sub="Bir diş hekimi, iki veteriner kliniği — biriyle altı aydır düzenli çalışıyorum. Hepsini ben çektim, ben kurguladım."
         ids={["umay", "vethouse", "petadress"]}
       />
       <ServiceSteps
