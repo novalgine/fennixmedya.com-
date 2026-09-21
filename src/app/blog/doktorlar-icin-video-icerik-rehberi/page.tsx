@@ -18,7 +18,7 @@ export default function BlogPost3() {
             Doktorlar İçin Sosyal Medya <span className="text-primary">Video İçerik Rehberi</span>
           </h1>
           <div className="flex items-center gap-4 text-sm text-muted-foreground">
-            <span className="flex items-center gap-1"><User className="w-4 h-4" /> Semih Hasanoğlu</span>
+            <Link href="/hakkimizda" className="flex items-center gap-1 hover:text-primary transition-colors"><User className="w-4 h-4" /> Semih Hasanoğlu</Link>
             <span className="flex items-center gap-1"><Calendar className="w-4 h-4" /> 15 Mayıs 2026</span>
             <span className="flex items-center gap-1"><Clock className="w-4 h-4" /> 5-6 dk okuma</span>
           </div>
@@ -145,7 +145,7 @@ export default function BlogPost3() {
           </Link>
         </div>
       </div>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "BlogPosting", headline: "Doktorlar İçin Sosyal Medya Video İçerik Rehberi", author: { "@type": "Person", name: "Semih Hasanoğlu" }, datePublished: "2026-05-15", publisher: { "@type": "Organization", name: "Fennix Medya" }, mainEntityOfPage: "https://fennixmedya.com/blog/doktorlar-icin-video-icerik-rehberi" }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "BlogPosting", headline: "Doktorlar İçin Sosyal Medya Video İçerik Rehberi", author: { "@type": "Person", "@id": "https://fennixmedya.com/#person", name: "Semih Hasanoğlu", url: "https://fennixmedya.com/hakkimizda" }, datePublished: "2026-05-15", publisher: { "@type": "Organization", name: "Fennix Medya" }, mainEntityOfPage: "https://fennixmedya.com/blog/doktorlar-icin-video-icerik-rehberi" }) }} />
     </article>
   );
 }

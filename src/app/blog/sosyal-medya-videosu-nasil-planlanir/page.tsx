@@ -22,7 +22,7 @@ export default function BlogPost1() {
             Sosyal Medya Videosu Nasıl Planlanır? <span className="text-primary">(2026 Rehberi)</span>
           </h1>
           <div className="flex items-center gap-4 text-sm text-muted-foreground">
-            <span className="flex items-center gap-1"><User className="w-4 h-4" /> Semih Hasanoğlu</span>
+            <Link href="/hakkimizda" className="flex items-center gap-1 hover:text-primary transition-colors"><User className="w-4 h-4" /> Semih Hasanoğlu</Link>
             <span className="flex items-center gap-1"><Calendar className="w-4 h-4" /> 20 Mayıs 2026</span>
             <span className="flex items-center gap-1"><Clock className="w-4 h-4" /> 7-8 dk okuma</span>
           </div>
@@ -315,7 +315,7 @@ export default function BlogPost1() {
             "@type": "BlogPosting",
             headline: "Sosyal Medya Videosu Nasıl Planlanır? (2026 Rehberi)",
             description: "Profesyonel bir sosyal medya videosu planlamanın tüm adımları.",
-            author: { "@type": "Person", name: "Semih Hasanoğlu" },
+            author: { "@type": "Person", "@id": "https://fennixmedya.com/#person", name: "Semih Hasanoğlu", url: "https://fennixmedya.com/hakkimizda" },
             datePublished: "2026-05-20",
             dateModified: "2026-05-29",
             publisher: { "@type": "Organization", name: "Fennix Medya" },

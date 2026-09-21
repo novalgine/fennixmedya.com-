@@ -23,7 +23,7 @@ export default function BlogPost() {
           </h1>
           
           <div className="flex items-center gap-4 text-sm text-muted-foreground border-y border-border/50 py-4 mb-8">
-            <span className="flex items-center gap-1"><User className="w-4 h-4" /> Semih Hasanoğlu</span>
+            <Link href="/hakkimizda" className="flex items-center gap-1 hover:text-primary transition-colors"><User className="w-4 h-4" /> Semih Hasanoğlu</Link>
             <span className="flex items-center gap-1"><Calendar className="w-4 h-4" /> 16 Mayıs 2026</span>
             <span className="flex items-center gap-1"><Clock className="w-4 h-4" /> 7-8 dk okuma</span>
           </div>
@@ -103,7 +103,7 @@ export default function BlogPost() {
           </div>
         </div>
       </div>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "BlogPosting", headline: "High-Ticket (Yüksek Fiyatlı) Satışlar İçin Video Funnel", author: { "@type": "Person", name: "Semih Hasanoğlu" }, datePublished: "2026-05-16", publisher: { "@type": "Organization", name: "Fennix Medya" }, mainEntityOfPage: "https://fennixmedya.com/blog/high-ticket-satislar-icin-video-funnel" }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "BlogPosting", headline: "High-Ticket (Yüksek Fiyatlı) Satışlar İçin Video Funnel", author: { "@type": "Person", "@id": "https://fennixmedya.com/#person", name: "Semih Hasanoğlu", url: "https://fennixmedya.com/hakkimizda" }, datePublished: "2026-05-16", publisher: { "@type": "Organization", name: "Fennix Medya" }, mainEntityOfPage: "https://fennixmedya.com/blog/high-ticket-satislar-icin-video-funnel" }) }} />
     </div>
   );
 }

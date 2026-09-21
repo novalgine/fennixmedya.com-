@@ -97,7 +97,7 @@ export default function RootLayout({
               areaServed: { "@type": "City", name: "İstanbul" },
               address: { "@type": "PostalAddress", addressLocality: "İstanbul", addressCountry: "TR" },
               serviceType: ["Video Prodüksiyon", "Sosyal Medya Video Çekimi", "Kurumsal Tanıtım Filmi", "Anahtar Teslim Stüdyo Kurulumu"],
-              founder: { "@type": "Person", name: "Semih Hasanoğlu", jobTitle: "Video Prodüktör & Kreatif Direktör" },
+              founder: { "@type": "Person", "@id": "https://fennixmedya.com/#person", name: "Semih Hasanoğlu", url: "https://fennixmedya.com/hakkimizda" },
               priceRange: "$$$",
               sameAs: [
                 "https://www.instagram.com/fennixmedya",

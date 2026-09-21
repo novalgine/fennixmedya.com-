@@ -15,7 +15,7 @@ const jsonLd = {
   "@type": "BlogPosting",
   headline: "Kurumsal YouTube Kanalı Açmak İsteyenlere Tavsiyeler",
   description: "Şirketiniz için sıfırdan başarılı, izlenen ve müşteri getiren bir YouTube kanalı oluşturma rehberi.",
-  author: { "@type": "Person", name: "Semih Hasanoğlu" },
+  author: { "@type": "Person", "@id": "https://fennixmedya.com/#person", name: "Semih Hasanoğlu", url: "https://fennixmedya.com/hakkimizda" },
   publisher: { "@type": "Organization", name: "Fennix Medya", url: "https://fennixmedya.com" },
   datePublished: "2026-05-12",
   dateModified: "2026-05-29",
@@ -39,7 +39,7 @@ export default function BlogPost() {
           </h1>
           
           <div className="flex items-center gap-4 text-sm text-muted-foreground border-y border-border/50 py-4">
-            <span className="flex items-center gap-1"><User className="w-4 h-4" /> Semih Hasanoğlu</span>
+            <Link href="/hakkimizda" className="flex items-center gap-1 hover:text-primary transition-colors"><User className="w-4 h-4" /> Semih Hasanoğlu</Link>
             <span className="flex items-center gap-1"><Calendar className="w-4 h-4" /> 12 Mayıs 2026</span>
             <span className="flex items-center gap-1"><Clock className="w-4 h-4" /> 7-8 dk okuma</span>
           </div>

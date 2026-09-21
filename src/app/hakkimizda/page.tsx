@@ -32,11 +32,17 @@ export default function HakkimdaPage() {
         data={{
           "@context": "https://schema.org",
           "@type": "Person",
+          "@id": "https://fennixmedya.com/#person",
           name: "Semih Hasanoğlu",
           jobTitle: "Yönetmen ve video prodüktörü",
           description: OZET,
           image: "https://fennixmedya.com/foto/semih-portre-4x5.jpg",
-          worksFor: { "@type": "Organization", name: "Fennix Medya" },
+          worksFor: { "@id": "https://fennixmedya.com/#organization" },
+          sameAs: [
+            "https://www.instagram.com/fennixmedya",
+            "https://www.youtube.com/@fennixmedya",
+            "https://www.linkedin.com/company/fennixmedya",
+          ],
           url: "https://fennixmedya.com/hakkimizda",
           alumniOf: { "@type": "CollegeOrUniversity", name: "Radyo, Televizyon ve Sinema" },
           knowsAbout: ["Video prodüksiyon", "Yönetmenlik", "Oyunculuk", "Yaratıcı drama", "Kurgu"],

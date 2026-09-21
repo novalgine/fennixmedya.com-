@@ -22,7 +22,7 @@ export default function BlogPost() {
           </h1>
           
           <div className="flex items-center gap-4 text-sm text-muted-foreground border-y border-border/50 py-4 mb-8">
-            <span className="flex items-center gap-1"><User className="w-4 h-4" /> Semih Hasanoğlu</span>
+            <Link href="/hakkimizda" className="flex items-center gap-1 hover:text-primary transition-colors"><User className="w-4 h-4" /> Semih Hasanoğlu</Link>
             <span className="flex items-center gap-1"><Calendar className="w-4 h-4" /> 12 Haziran 2026</span>
             <span className="flex items-center gap-1"><Clock className="w-4 h-4" /> 9-10 dk okuma</span>
           </div>
@@ -131,7 +131,7 @@ export default function BlogPost() {
           </div>
         </div>
       </div>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "BlogPosting", headline: "Yapay Zeka ile Video Üretimi: AI Araçları mı Profesyonel Ekip mi?", author: { "@type": "Person", name: "Semih Hasanoğlu" }, datePublished: "2026-06-12", dateModified: "2026-06-18", publisher: { "@type": "Organization", name: "Fennix Medya" }, mainEntityOfPage: "https://fennixmedya.com/blog/yapay-zeka-ile-video-uretimi" }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "BlogPosting", headline: "Yapay Zeka ile Video Üretimi: AI Araçları mı Profesyonel Ekip mi?", author: { "@type": "Person", "@id": "https://fennixmedya.com/#person", name: "Semih Hasanoğlu", url: "https://fennixmedya.com/hakkimizda" }, datePublished: "2026-06-12", dateModified: "2026-06-18", publisher: { "@type": "Organization", name: "Fennix Medya" }, mainEntityOfPage: "https://fennixmedya.com/blog/yapay-zeka-ile-video-uretimi" }) }} />
     </div>
   );
 }
