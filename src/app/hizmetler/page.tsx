@@ -7,7 +7,7 @@ import Reveal from "@/components/Reveal";
 import JsonLd from "@/components/JsonLd";
 
 const OZET =
-  "Sosyal medya videosu, kurumsal tanıtım filmi, YouTube içerik üretimi ve anahtar teslim stüdyo kurulumu. İstanbul'da senaryodan teslimata kadar tek elden video prodüksiyon.";
+  "Sosyal medya videosu, kurumsal tanıtım filmi ve anahtar teslim stüdyo kurulumu. İstanbul'da senaryodan teslimata kadar tek elden video prodüksiyon.";
 
 export const metadata: Metadata = {
   title: "Hizmetler",
@@ -48,7 +48,7 @@ export default function HizmetlerPage() {
             Ne yapıyorum
           </p>
           <h1 className="text-poster mb-8">
-            <span className="block text-foreground">Dört İş.</span>
+            <span className="block text-foreground">Üç İş.</span>
             <span className="block text-primary">Hepsi Bende.</span>
           </h1>
           <p className="text-muted-foreground text-lg md:text-xl leading-relaxed max-w-2xl">

@@ -14,7 +14,6 @@ const navLinks = [
     children: [
       { label: "Sosyal Medya Video", href: "/hizmetler/sosyal-medya-video" },
       { label: "Kurumsal Tanıtım Filmi", href: "/hizmetler/kurumsal-tanitim-filmi" },
-      { label: "YouTube İçerik Üretimi", href: "/hizmetler/youtube-icerik-uretimi" },
       { label: "Anahtar Teslim Stüdyo", href: "/hizmetler/anahtar-teslim-studyo" },
     ],
   },

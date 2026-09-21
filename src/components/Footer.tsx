@@ -36,7 +36,6 @@ const Footer = () => {
               <Link href="/hizmetler" className="text-muted-foreground hover:text-primary transition-colors text-sm font-medium">Tüm Hizmetler</Link>
               <Link href="/hizmetler/sosyal-medya-video" className="text-muted-foreground hover:text-primary transition-colors text-sm font-medium">Sosyal Medya Videosu</Link>
               <Link href="/hizmetler/kurumsal-tanitim-filmi" className="text-muted-foreground hover:text-primary transition-colors text-sm font-medium">Kurumsal Tanıtım Filmi</Link>
-              <Link href="/hizmetler/youtube-icerik-uretimi" className="text-muted-foreground hover:text-primary transition-colors text-sm font-medium">YouTube İçerik Üretimi</Link>
               <Link href="/hizmetler/anahtar-teslim-studyo" className="text-muted-foreground hover:text-primary transition-colors text-sm font-medium">Anahtar Teslim Stüdyo</Link>
               <div className="h-px w-8 bg-border/50 my-1"></div>
               <Link href="/blog" className="text-muted-foreground hover:text-primary transition-colors text-sm font-medium">Blog & Rehberler</Link>

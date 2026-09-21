@@ -7,6 +7,16 @@ const nextConfig: NextConfig = {
     // fotoğraflar 75'te bantlanıyor, 90 onlar için.
     qualities: [75, 90],
   },
+  async redirects() {
+    return [
+      // YouTube içerik üretimi hizmeti kaldırıldı (2026-09-22): yapılmayan iş sitede durmaz
+      {
+        source: "/hizmetler/youtube-icerik-uretimi",
+        destination: "/hizmetler/sosyal-medya-video",
+        permanent: true,
+      },
+    ];
+  },
   async headers() {
     return [
       {

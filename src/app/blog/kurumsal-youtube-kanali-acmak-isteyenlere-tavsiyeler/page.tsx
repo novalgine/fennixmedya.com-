@@ -227,7 +227,7 @@ export default function BlogPost() {
           <div className="bg-card border border-white/5 p-8 rounded-2xl text-center shadow-2xl">
             <h3 className="font-heading text-2xl font-bold mb-4">Markanızın hikayesini anlatmaya hazır mısınız?</h3>
             <p className="text-muted-foreground mb-8">
-              Stratejik içerik üretimi ve <Link href="/hizmetler/youtube-icerik-uretimi">profesyonel video prodüksiyon</Link>u ile rakiplerinizin bir adım önüne geçin.
+              Stratejik içerik üretimi ve <Link href="/hizmetler/sosyal-medya-video">profesyonel video prodüksiyon</Link>u ile rakiplerinizin bir adım önüne geçin.
             </p>
             <WizardCta />
           </div>

@@ -52,7 +52,15 @@ const STEPS = [
 const FAQS: Faq[] = [
   {
     q: "Sosyal medya video çekimi ne kadar tutuyor?",
-    a: `Aylık üretim ${AYLIK.price}'den başlıyor: ayda sekiz video, iki çekim günü; senaryo, çekim, kurgu ve kamera önü koçluğu dahil. Ödemeyi çekim gününün sonunda alıyorum.`,
+    a: `Aylık üretim ${AYLIK.price}'den başlıyor: ayda sekiz video, iki çekim günü; senaryo, çekim, kurgu ve kamera önü koçluğu dahil. Ödemeyi ilk çekim gününün sonunda, ayın tamamı için alıyorum.`,
+  },
+  {
+    q: "En az ne kadar süre çalışıyoruz?",
+    a: "En az bir ay: iki çekim günü, sekiz video. Sosyal medyada sonuç düzenli üretimle geldiği için tek çekim günü satmıyorum; ama sizi bir yıla bağlayan sözleşme de yok, aydan aya devam ederiz.",
+  },
+  {
+    q: "İstanbul dışına geliyor musunuz?",
+    a: "Evet. Diş hekimi Ayzıt Umay için üç ay boyunca Ankara'ya gidip geldim. Yol ve konaklama karşılandığında Marmara ve yakın iller benim için rahat; daha uzak şehirler için önce konuşuruz.",
   },
   {
     q: "Hangi sektörlerle çalıştınız?",

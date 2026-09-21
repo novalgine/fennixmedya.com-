@@ -44,16 +44,33 @@ budur — "tek kişi" bir eksiklik değil, ürünün kendisi.
   konulardan birlikte kurulur.
 - **Teslim:** Çekim akşamı kurgu başlar, videolar bittikçe sırayla teslim edilir — ay sonu
   toplu teslim yok.
-- **Ödeme:** Çekim gününün sonunda alınır.
+- **Ödeme:** İlk çekim gününün sonunda, ayın tamamı için alınır.
 - **Randevu:** Cal.com gömülü widget (`WizardShell`). Form gönderimleri Web3Forms üzerinden.
 - **Sette kullanılan ekipman:** Sony FX30, Tamron 17–70mm, DJI RS4 Gimbal, tripod,
   Rode Wireless GO II.
 
 ## Capabilities and Constraints
 
-**Yapılan iş (4 hizmet):** sosyal medya videosu (dikey 9:16), kurumsal tanıtım filmi (yatay
-16:9), YouTube içerik üretimi (uzun format + kurgu + altyazı), anahtar teslim stüdyo (mekân
-analizi, ekipman listesi, kurulum, kamera önü provası).
+**Yapılan iş (3 hizmet):** sosyal medya videosu (dikey 9:16) — asıl iş; kurumsal tanıtım
+filmi (yatay 16:9) — nadiren, tek örnek var, sayfa olduğu gibi duruyor (karar: 2026-09-22);
+anahtar teslim stüdyo (mekân analizi, ekipman listesi, kurulum, kamera önü provası).
+YouTube içerik üretimi hiç yapılmadı, sayfası 2026-09-22'de kaldırıldı ve sosyal medya
+sayfasına yönlendirildi — yeniden eklenmez. Düğün ve etkinlik çekimi gerçekten alınan işler.
+
+**Süre ve ödeme:** En az bir ay (iki çekim günü, sekiz video); aydan aya devam, yıllık
+sözleşme yok. Ödeme ilk çekim gününün sonunda, ayın tamamı için alınır.
+
+**Coğrafya:** Türkiye'nin her yerine gidilir, yol ve konaklama müşteri tarafından karşılanır.
+Marmara ve yakın iller öncelikli; uzak şehirler görüşmeye bağlı. Kanıt: Dt. Ayzıt Umay için
+üç ay Ankara'ya gidildi (iş bitti, sürmüyor; video sayısı kesin bilinmiyor — sayı yazılmaz).
+
+**Müşteri kimlikleri (sayfa yazarken):** Derya Kayaalp — şan eğitmeni; Bilal Şendir —
+matematik koçu; Vet House ve Petadress — veteriner klinikleri; Ayzıt Umay — diş hekimi.
+Hekimlerle çalışmaya dair Semih'e özgü bir yöntem/bilgi yok — uydurulmaz, süreç ve
+mevzuat bilgisiyle yazılır.
+
+**Yazım kuralı:** yuvarlak/yaklaşık rakam yazılmaz ("civarı", "yaklaşık 20"). Sayı ya kesin
+bilinir ya hiç yazılmaz.
 
 **Fiyat (sitede açık):** Aylık üretim 30.000 ₺'den başlar · Tam kapsam 50.000 ₺ bandı
 (üretim + sosyal medya yönetimi + Meta reklam yönetimi) · Tek seferlik proje kapsama göre,

@@ -49,6 +49,6 @@ export const packages: Package[] = [
 ];
 
 export const pricingNotes = [
-  "Ödemeyi çekim gününün sonunda alıyorum.",
+  "Ödemeyi ilk çekim gününün sonunda, ayın tamamı için alıyorum.",
   "Drone çekimi pakete dahil değil; günlük ayrı kalem olarak fiyatlandırıyorum.",
 ];

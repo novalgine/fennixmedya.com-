@@ -6,13 +6,13 @@ import PortfolioVideoCard from "@/components/PortfolioVideoCard";
 export const metadata: Metadata = {
   title: "Portfolyo: Video Prodüksiyon İşlerimiz",
   description:
-    "Sekiz sektörden markalar için çektiğim video işlerinden bir seçki: kurumsal tanıtım filmleri, dikey sosyal medya videoları ve YouTube içerikleri.",
+    "Sekiz sektörden markalar için çektiğim video işlerinden bir seçki: dikey sosyal medya videoları ve kurumsal tanıtım filmleri.",
   alternates: { canonical: "https://fennixmedya.com/portfolyo" },
   openGraph: {
     type: "website",
     url: "https://fennixmedya.com/portfolyo",
     title: "Portfolyo: Video Prodüksiyon İşlerimiz",
-    description: "Sekiz sektörden markalar için çektiğim video işlerinden bir seçki: kurumsal tanıtım filmleri, dikey sosyal medya videoları ve YouTube içerikleri.",
+    description: "Sekiz sektörden markalar için çektiğim video işlerinden bir seçki: dikey sosyal medya videoları ve kurumsal tanıtım filmleri.",
     siteName: "Fennix Medya",
     locale: "tr_TR",
   },

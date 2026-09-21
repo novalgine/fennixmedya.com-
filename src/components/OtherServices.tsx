@@ -16,7 +16,7 @@ export default function OtherServices({ currentServiceId }: OtherServicesProps) 
         </p>
         <h2 className="text-display-2 text-foreground mb-12">Başka Neler Yapıyorum</h2>
 
-        <div className="grid gap-10 md:grid-cols-3 md:gap-8 items-stretch">
+        <div className="grid gap-10 md:grid-cols-2 md:gap-8 items-stretch">
           {digerleri.map((service) => (
             <ServiceCard key={service.id} service={service} />
           ))}

@@ -24,7 +24,6 @@
 
 - [Sosyal medya video çekimi](https://fennixmedya.com/hizmetler/sosyal-medya-video): asıl hizmet — süreç, fiyat, teslim edilen işler, sık sorulan sorular
 - [Anahtar teslim stüdyo](https://fennixmedya.com/hizmetler/anahtar-teslim-studyo): kendi çekimini yapmak isteyenler için mekân analizi, ekipman listesi, kurulum ve kamera önü provası
-- [YouTube içerik üretimi](https://fennixmedya.com/hizmetler/youtube-icerik-uretimi): uzun format çekim, kurgu, altyazı
 - [Portfolyo](https://fennixmedya.com/portfolyo): teslim edilen işler, müşteri adlarıyla
 - [Hakkımda](https://fennixmedya.com/hakkimizda): Semih Hasanoğlu'nun geçmişi ve çalışma biçimi
 - [Blog](https://fennixmedya.com/blog): video üretimi üzerine rehberler

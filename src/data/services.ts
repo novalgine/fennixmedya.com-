@@ -29,17 +29,8 @@ export const services: Service[] = [
     href: "/hizmetler/kurumsal-tanitim-filmi",
   },
   {
-    id: "youtube-icerik-uretimi",
-    code: "H03",
-    title: "YouTube İçerik Üretimi",
-    description:
-      "Uzun formatta anlatım videoları. Çekim, kurgu ve altyazı bende; kanalınızın düzenli yayın ritmini birlikte kurarız.",
-    meta: ["Yatay · uzun format", "Kurgu + altyazı", "Düzenli yayın"],
-    href: "/hizmetler/youtube-icerik-uretimi",
-  },
-  {
     id: "anahtar-teslim-studyo",
-    code: "H04",
+    code: "H03",
     title: "Anahtar Teslim Stüdyo",
     description:
       "Kendi içeriğinizi kendiniz çekmek istiyorsanız: mekân analizi, ekipman listesi, kurulum ve kamera önü provası.",
