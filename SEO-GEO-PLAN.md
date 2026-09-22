@@ -16,7 +16,7 @@ Search Console, son 12 ay (dışa aktarım 22 Eylül 2026):
 - **Asıl iş görünmüyordu:** sosyal medya video sayfası yılda 3 gösterim, 31. sıra. (22 Eylül'de güçlendirildi.)
 - **En iyi oran:** anahtar teslim stüdyo, 33 gösterim / 7 tıklama (%21), 5. sıra. Karar: şimdilik dursun.
 - **1. sayfada sıkışan yazılar (7-9. sıra):** ilk 3 saniye kuralı, kamera karşısında rahat konuşma, prodüksiyon maliyetleri, kurumsal YouTube. Az tıklanıyor → başlıklar yenilendi.
-- **Dış bağlantı:** 57 (kaynak kalitesi bilinmiyor). **Google İşletme Profili: yok.** **Bing Webmaster:** 22 Eylül'de açıldı, henüz veri yok.
+- **Dış bağlantı:** 57 (kaynak kalitesi bilinmiyor). **Google İşletme Profili: 23 Eylül 2026'da açıldı.** **Bing Webmaster:** 22 Eylül'de açıldı, henüz veri yok.
 - **Hız:** telefonda 85/100; darboğaz 190 KB font. Gerçek kullanıcı verisi oluşacak trafik yok → Google bu siteyi hızdan değerlendirmiyor. Öncelik değil.
 
 ### 23 Eylül ek yapılanlar
@@ -43,7 +43,7 @@ Bunlar sitede yapılabilecek her şeyden daha çok getirir; hiçbiri kod işi de
 
 | # | İş | Süre | Ne getirir |
 |---|---|---|---|
-| 0.1 | **Google İşletme Profili aç.** Kategori: "Video prodüksiyon hizmeti"; "müşteriye giden işletme" seçeneği (adres göstermek zorunlu değil). Telefon, site, çalışma saatleri. Açıklama/hizmet metinlerini Claude hazırlar. | 30 dk + doğrulama | Kendi adında sağdaki kart; "İstanbul video çekimi" haritasında görünürlük; yorumlar |
+| 0.1 | ~~Google İşletme Profili aç~~ — **23 Eylül'de açıldı ve doğrulandı**; logo, kapak, 14 set karesi, Cal.com rezervasyon bağlantısı eklendi. Kalan: yorumlar (0.2), profil bağlantısının site şemasına eklenmesi. ~~ Kategori: "Video prodüksiyon hizmeti"; "müşteriye giden işletme" seçeneği (adres göstermek zorunlu değil). Telefon, site, çalışma saatleri. Açıklama/hizmet metinlerini Claude hazırlar. | 30 dk + doğrulama | Kendi adında sağdaki kart; "İstanbul video çekimi" haritasında görünürlük; yorumlar |
 | 0.2 | **İlk 5 yorum iste:** Vet House, Boogold (Orhan), Mukaddes Gün, Sistemler.io (Berke), Doğal Köpükler (Esranur) — zaten video referans vermiş kişiler. | 15 dk | Kartın çalışması yoruma bağlı |
 | 0.3 | **Bing Webmaster:** Site Haritaları → `https://fennixmedya.com/sitemap.xml`; URL İnceleme → klinik sayfasını dizine ekleme isteği. | 5 dk | ChatGPT/Copilot'un kaynağına girmek |
 | 0.4 | **Search Console:** URL denetimi → `/hizmetler/sosyal-medya-video/klinikler` → dizine eklenmesini iste. Aynısını `/hizmetler/sosyal-medya-video` için. | 3 dk | Haftalar yerine günler |
