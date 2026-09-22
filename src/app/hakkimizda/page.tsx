@@ -41,7 +41,7 @@ export default function HakkimdaPage() {
           sameAs: [
             "https://www.instagram.com/fennixmedya",
             "https://www.youtube.com/@fennixmedya",
-            "https://www.linkedin.com/company/fennixmedya",
+            "https://www.linkedin.com/in/semih-hasano%C4%9Flu-abaa28137/",
           ],
           url: "https://fennixmedya.com/hakkimizda",
           alumniOf: { "@type": "CollegeOrUniversity", name: "Radyo, Televizyon ve Sinema" },

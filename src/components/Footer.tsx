@@ -99,7 +99,7 @@ const Footer = () => {
                 </svg>
               </a>
               <a
-                href="https://www.linkedin.com/in/semih-hasanoğlu-abaa28137/"
+                href="https://www.linkedin.com/in/semih-hasano%C4%9Flu-abaa28137/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn profilimizi ziyaret edin"

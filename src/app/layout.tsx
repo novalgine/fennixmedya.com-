@@ -102,7 +102,7 @@ export default function RootLayout({
               sameAs: [
                 "https://www.instagram.com/fennixmedya",
                 "https://www.youtube.com/@fennixmedya",
-                "https://www.linkedin.com/company/fennixmedya"
+                "https://www.linkedin.com/in/semih-hasano%C4%9Flu-abaa28137/"
               ]
             },
             { "@type": "WebSite", "@id": "https://fennixmedya.com/#website", name: "Fennix Medya", url: "https://fennixmedya.com", publisher: { "@id": "https://fennixmedya.com/#organization" } },

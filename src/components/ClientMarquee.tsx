@@ -3,23 +3,9 @@
  * Liste iki kez render edilir (ikincisi aria-hidden), -%50 translate ile
  * kesintisiz döngü. Hover'da durur; reduced-motion'da statik satıra düşer.
  */
-const CLIENTS = [
-  "Afife Tiyatro",
-  "Zuhal",
-  "Vethouse",
-  "Petadress",
-  "Dt. Ayzıt Umay",
-  "Derya Kayaalp",
-  "Mukaddes Gün",
-  "Bilal Şendir",
-  "Melis Ulaş Wellness",
-  "Vavelya Home",
-  "Herwish Home",
-  "Boogold Kuyumculuk",
-  "Doğal Köpükler",
-  "Uyaran Spor Kulübü",
-  "ZaKofi",
-];
+import { marqueeNames } from "@/data/clients";
+
+const CLIENTS = marqueeNames;
 
 function Row({ hidden = false }: { hidden?: boolean }) {
   return (
