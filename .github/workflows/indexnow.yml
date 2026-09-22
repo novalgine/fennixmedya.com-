@@ -1,0 +1,24 @@
+# Her main yayınından sonra Bing/Yandex'e (IndexNow) site haritasındaki adresleri bildirir.
+# Gizli anahtar gerekmez: IndexNow anahtarı zaten sitede herkese açık bir dosyadır.
+name: IndexNow bildirimi
+on:
+  push:
+    branches: [main]
+jobs:
+  indexnow:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Vercel yayınını bekle
+        run: sleep 180
+      - name: Site haritasından adresleri al ve IndexNow'a gönder
+        run: |
+          set -e
+          URLS=$(curl -fsSL --compressed https://fennixmedya.com/sitemap-0.xml | grep -o '<loc>[^<]*</loc>' | sed 's/<\/\?loc>//g')
+          COUNT=$(echo "$URLS" | wc -l | tr -d ' ')
+          LIST=$(echo "$URLS" | sed 's/.*/"&"/' | paste -sd, -)
+          echo "Bildirilecek adres: $COUNT"
+          STATUS=$(curl -s -o /dev/null -w '%{http_code}' -X POST https://api.indexnow.org/indexnow \
+            -H 'Content-Type: application/json; charset=utf-8' \
+            --data "{\"host\":\"fennixmedya.com\",\"key\":\"2345e2adf3aa3158a2c626aaaeaae24e\",\"keyLocation\":\"https://fennixmedya.com/2345e2adf3aa3158a2c626aaaeaae24e.txt\",\"urlList\":[$LIST]}")
+          echo "IndexNow yanıtı: $STATUS"
+          case "$STATUS" in 200|202) exit 0;; *) exit 1;; esac

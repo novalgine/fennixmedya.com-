@@ -58,3 +58,4 @@ Host: https://fennixmedya.com
 
 # Sitemaps
 Sitemap: https://fennixmedya.com/sitemap.xml
+Sitemap: https://fennixmedya.com/sitemap-video.xml
