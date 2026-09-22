@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { useSearchParams } from "next/navigation";
+import { useUrlParam } from "@/lib/useUrlParam";
 import Link from "next/link";
 import { ArrowRight, Calendar, Clock } from "lucide-react";
 import { blogPosts } from "@/data/blog-posts";
@@ -9,11 +9,12 @@ const CATEGORIES = ["Tümü", ...Array.from(new Set(blogPosts.map((p) => p.categ
 
 /** Blog listesi + kategori filtresi (?kategori=…). Sunucu HTML'i tüm yazıları içerir. */
 export default function BlogList() {
-  const q = useSearchParams().get("kategori");
-  const [cat, setCat] = useState(q && CATEGORIES.includes(q) ? q : "Tümü");
+  const q = useUrlParam("kategori");
+  const [override, setOverride] = useState<string | null>(null);
+  const cat = override ?? (q && CATEGORIES.includes(q) ? q : "Tümü");
 
   const choose = (c: string) => {
-    setCat(c);
+    setOverride(c);
     const url = new URL(window.location.href);
     if (c === "Tümü") url.searchParams.delete("kategori");
     else url.searchParams.set("kategori", c);

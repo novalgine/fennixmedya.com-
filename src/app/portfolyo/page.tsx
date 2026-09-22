@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Suspense } from "react";
 import WizardCta from "@/components/WizardCta";
 import PortfolioGrid from "@/components/PortfolioGrid";
 
@@ -36,9 +35,7 @@ export default function PortfolioPage() {
           </p>
         </div>
 
-        <Suspense fallback={null}>
-          <PortfolioGrid />
-        </Suspense>
+        <PortfolioGrid />
       </section>
 
       <section className="section-spacing bg-surface border-t border-border/40">

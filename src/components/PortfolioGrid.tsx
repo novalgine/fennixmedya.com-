@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { useSearchParams } from "next/navigation";
+import { useUrlParam } from "@/lib/useUrlParam";
 import PortfolioVideoCard from "@/components/PortfolioVideoCard";
 import { portfolioData, SECTOR_LABELS, type PortfolioSector } from "@/data/portfolio";
 
@@ -13,11 +13,12 @@ const ORDER: Filter[] = ["tumu", "klinik", "butik", "kafe", "tiyatro", "spor", "
  * içerir — arama motoru hepsini görür.
  */
 export default function PortfolioGrid() {
-  const q = useSearchParams().get("sektor") as Filter | null;
-  const [filter, setFilter] = useState<Filter>(q && ORDER.includes(q) ? q : "tumu");
+  const q = useUrlParam("sektor") as Filter | null;
+  const [override, setOverride] = useState<Filter | null>(null);
+  const filter: Filter = override ?? (q && ORDER.includes(q) ? q : "tumu");
 
   const choose = (f: Filter) => {
-    setFilter(f);
+    setOverride(f);
     const url = new URL(window.location.href);
     if (f === "tumu") url.searchParams.delete("sektor");
     else url.searchParams.set("sektor", f);

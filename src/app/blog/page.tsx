@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Suspense } from "react";
 
 export const metadata: Metadata = {
   title: "Blog: Video Prodüksiyon Rehberleri",
@@ -33,9 +32,7 @@ export default function BlogPage() {
           </p>
         </div>
 
-        <Suspense fallback={null}>
-          <BlogList />
-        </Suspense>
+        <BlogList />
       </section>
     </div>
   );
