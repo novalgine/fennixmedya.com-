@@ -116,11 +116,14 @@ export default function RootLayout({
           forcedTheme="dark"
           disableTransitionOnChange
         >
+          <a href="#icerik" className="skip-link">
+            Ana içeriğe atla
+          </a>
           <WizardProvider>
             <SmoothScroll>
             <div className="relative flex flex-col min-h-screen overflow-x-clip w-full">
               <SiteHeader />
-              <main className="flex-1 w-full">{children}</main>
+              <main id="icerik" className="flex-1 w-full">{children}</main>
               <Footer />
               <CookieBanner />
               <SiteAnalytics />

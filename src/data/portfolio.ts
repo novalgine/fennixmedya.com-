@@ -1,8 +1,21 @@
+export type PortfolioSector = "klinik" | "butik" | "kafe" | "tiyatro" | "spor" | "diger";
+
+export const SECTOR_LABELS: Record<PortfolioSector, string> = {
+  klinik: "Klinikler",
+  butik: "Butik markalar",
+  kafe: "Kafe",
+  tiyatro: "Tiyatro",
+  spor: "Spor",
+  diger: "Diğer",
+};
+
 export interface PortfolioItem {
   id: string;
   title: string;
   category: "Sosyal Medya" | "Kurumsal" | "YouTube" | "Tümü";
   format: "Dikey" | "Yatay";
+  /** Portfolyo filtresi — gerçek sektör; "diger" = tek işlik sektörler */
+  sector: PortfolioSector;
   videoSrc: string;
   thumbnailSrc?: string;
   /** Sitede yayına alındığı tarih (VideoObject şeması için) */
@@ -38,6 +51,7 @@ export const portfolioData: PortfolioItem[] = [
   // 2026-09 çekimleri — en yeniler üstte
   {
     id: "zakofi-1",
+    sector: "kafe",
     uploadDate: "2026-09-22",
     description: "Fatih'teki ZaKofi kafesi için çekilen dikey tanıtım videosu.",
     title: "ZaKofi",
@@ -49,6 +63,7 @@ export const portfolioData: PortfolioItem[] = [
   },
   {
     id: "vethouse-eylul",
+    sector: "klinik",
     uploadDate: "2026-09-22",
     description: "Vet House veteriner kliniği için çekilen bilgilendirme videosu: kedilerde megakolon hastalığı. Anlatan: Prof. Dr. Suphi Erdem Acar.",
     title: "Vet House",
@@ -60,6 +75,7 @@ export const portfolioData: PortfolioItem[] = [
   },
   {
     id: "uyaran-yuzme",
+    sector: "spor",
     uploadDate: "2026-09-22",
     description: "Uyaran Spor Kulübü için çekilen dikey video: otizmli çocuklar için yüzme eğitimi.",
     title: "Uyaran Spor Kulübü",
@@ -71,6 +87,7 @@ export const portfolioData: PortfolioItem[] = [
   },
   {
     id: "herwish-1",
+    sector: "butik",
     uploadDate: "2026-09-22",
     description: "Herwish Home için çekilen dikey çanta tanıtım videosu: kutu açılışı.",
     title: "Herwish Home",
@@ -82,6 +99,7 @@ export const portfolioData: PortfolioItem[] = [
   },
   {
     id: "afife-3sezon",
+    sector: "tiyatro",
     uploadDate: "2026-09-22",
     description: "Afife tiyatro oyununun üçüncü sezonu için çekilen dikey teaser.",
     title: "Afife",
@@ -93,6 +111,7 @@ export const portfolioData: PortfolioItem[] = [
   },
   {
     id: "vethouse-koray",
+    sector: "klinik",
     uploadDate: "2026-09-22",
     description: "Vet House veteriner kliniği için çekilen bilgilendirme videosu: evde fark edilebilecek ilk belirtiler. Anlatan: Vet. Hek. Koray Tekin.",
     title: "Vet House",
@@ -104,6 +123,7 @@ export const portfolioData: PortfolioItem[] = [
   },
   {
     id: "zakofi-3",
+    sector: "kafe",
     uploadDate: "2026-09-22",
     description: "ZaKofi için çekilen dikey içecek hazırlama videosu.",
     title: "ZaKofi",
@@ -115,6 +135,7 @@ export const portfolioData: PortfolioItem[] = [
   },
   {
     id: "herwish-birkin",
+    sector: "butik",
     uploadDate: "2026-09-22",
     description: "Herwish Home için çekilen dikey çanta tanıtım videosu.",
     title: "Herwish Home",
@@ -126,6 +147,7 @@ export const portfolioData: PortfolioItem[] = [
   },
   {
     id: "uyaran-tanitim",
+    sector: "spor",
     uploadDate: "2026-09-22",
     description: "Uyaran Spor Kulübü tanıtım videosu, dikey format.",
     title: "Uyaran Spor Kulübü",
@@ -137,6 +159,7 @@ export const portfolioData: PortfolioItem[] = [
   },
   {
     id: "vavelya-2",
+    sector: "butik",
     uploadDate: "2026-09-22",
     description: "Vavelya Home için çekilen dikey sosyal medya videosu.",
     title: "Vavelya Home",
@@ -148,6 +171,7 @@ export const portfolioData: PortfolioItem[] = [
   },
   {
     id: "zakofi-6",
+    sector: "kafe",
     uploadDate: "2026-09-22",
     description: "ZaKofi için makro kahve çekimi, altı saniyelik dikey video.",
     title: "ZaKofi",
@@ -159,6 +183,7 @@ export const portfolioData: PortfolioItem[] = [
   },
   {
     id: "sistemler",
+    sector: "diger",
     title: "Berke Derelioğlu",
     subtitle: "Sistemler.io · Kurumsal içerik",
     category: "Kurumsal",
@@ -170,6 +195,7 @@ export const portfolioData: PortfolioItem[] = [
   },
   {
     id: "zuhal",
+    sector: "tiyatro",
     title: "Zuhal",
     subtitle: "Teaser · Tiyatro",
     category: "Kurumsal",
@@ -181,6 +207,7 @@ export const portfolioData: PortfolioItem[] = [
   },
   {
     id: "afife-turne",
+    sector: "tiyatro",
     title: "Afife",
     subtitle: "Tiyatro oyunu · Turne",
     category: "Kurumsal",
@@ -192,6 +219,7 @@ export const portfolioData: PortfolioItem[] = [
   },
   {
     id: "afife-harbiye",
+    sector: "tiyatro",
     title: "Afife",
     subtitle: "Tiyatro oyunu · Harbiye",
     category: "Kurumsal",
@@ -203,6 +231,7 @@ export const portfolioData: PortfolioItem[] = [
   },
   {
     id: "vavelya-karpuz",
+    sector: "butik",
     title: "Vavelya Home",
     subtitle: "Ev tekstili ve dekorasyon",
     category: "Sosyal Medya",
@@ -214,6 +243,7 @@ export const portfolioData: PortfolioItem[] = [
   },
   {
     id: "vavelya-cilek",
+    sector: "butik",
     title: "Vavelya Home",
     subtitle: "Ev tekstili ve dekorasyon",
     category: "Sosyal Medya",
@@ -225,6 +255,7 @@ export const portfolioData: PortfolioItem[] = [
   },
   {
     id: "vavelya-limon",
+    sector: "butik",
     title: "Vavelya Home",
     subtitle: "Ev tekstili ve dekorasyon",
     category: "Sosyal Medya",
@@ -236,6 +267,7 @@ export const portfolioData: PortfolioItem[] = [
   },
   {
     id: "vaveyla",
+    sector: "butik",
     uploadDate: "2026-05-29",
     description: "Vavelya Home çeyiz markası için çekilen dikey sosyal medya tanıtım videosu.",
     title: "Vavelya Home",
@@ -247,6 +279,7 @@ export const portfolioData: PortfolioItem[] = [
   },
   {
     id: "umay",
+    sector: "klinik",
     uploadDate: "2026-05-29",
     description: "Ayzıt Umay için çekilen dikey sosyal medya marka videosu.",
     title: "Dt. Ayzıt Umay",
@@ -258,6 +291,7 @@ export const portfolioData: PortfolioItem[] = [
   },
   {
     id: "boogold",
+    sector: "butik",
     uploadDate: "2026-05-29",
     description: "Boogold Kuyumculuk için çekilen dikey sosyal medya tanıtım videosu.",
     title: "Boogold Kuyumculuk",
@@ -269,6 +303,7 @@ export const portfolioData: PortfolioItem[] = [
   },
   {
     id: "melis",
+    sector: "diger",
     uploadDate: "2026-05-29",
     description: "Melis Ulaş Wellness için çekilen dikey sosyal medya içerik videosu.",
     title: "Melis Ulaş",
@@ -280,6 +315,7 @@ export const portfolioData: PortfolioItem[] = [
   },
   {
     id: "vethouse",
+    sector: "klinik",
     uploadDate: "2026-05-29",
     description: "Vet House veteriner kliniği için çekilen dikey sosyal medya videosu.",
     title: "Vet House",
@@ -291,6 +327,7 @@ export const portfolioData: PortfolioItem[] = [
   },
   {
     id: "buzdagi",
+    sector: "diger",
     uploadDate: "2026-05-29",
     description: "Buzdağı Suları için çekilen dikey sosyal medya tanıtım videosu.",
     title: "Buzdağı Suları",
@@ -302,6 +339,7 @@ export const portfolioData: PortfolioItem[] = [
   },
   {
     id: "afife",
+    sector: "tiyatro",
     uploadDate: "2026-05-29",
     description: "Afife Turne için çekilen dikey sosyal medya etkinlik videosu.",
     title: "Afife",
@@ -313,6 +351,7 @@ export const portfolioData: PortfolioItem[] = [
   },
   {
     id: "petadress",
+    sector: "klinik",
     uploadDate: "2026-05-29",
     description: "Petadress için çekilen yatay formatta kurumsal tanıtım filmi.",
     title: "Petadress",

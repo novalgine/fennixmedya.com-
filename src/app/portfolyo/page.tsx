@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import WizardCta from "@/components/WizardCta";
-import { portfolioData } from "@/data/portfolio";
-import PortfolioVideoCard from "@/components/PortfolioVideoCard";
+import PortfolioGrid from "@/components/PortfolioGrid";
 
 export const metadata: Metadata = {
   title: "Portfolyo: Video Prodüksiyon İşlerimiz",
@@ -36,15 +36,9 @@ export default function PortfolioPage() {
           </p>
         </div>
 
-        {/* CSS Masonry / Grid for mixed aspect ratios */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-start">
-          {portfolioData.map((project, i) => {
-            const isVertical = project.format === "Dikey";
-            return (
-              <PortfolioVideoCard key={i} project={project} isVertical={isVertical} />
-            );
-          })}
-        </div>
+        <Suspense fallback={null}>
+          <PortfolioGrid />
+        </Suspense>
       </section>
 
       <section className="section-spacing bg-surface border-t border-border/40">
