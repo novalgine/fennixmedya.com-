@@ -5,8 +5,18 @@ import { readFileSync, writeFileSync } from "node:fs";
 const SITE = "https://fennixmedya.com";
 const src = readFileSync(new URL("../src/data/portfolio.ts", import.meta.url), "utf8");
 const arrayStart = src.indexOf("export const portfolioData");
-const items = [...src.slice(arrayStart).matchAll(/\{\s*id: "([^"]+)",[\s\S]*?uploadDate: "([^"]+)",\s*description: "([^"]+)",\s*title: "([^"]+)",[\s\S]*?videoSrc: "([^"]+)",\s*thumbnailSrc: "([^"]+)",/g)]
-  .map(([, id, uploadDate, description, title, videoSrc, thumb]) => ({ id, uploadDate, description, title, videoSrc, thumb }));
+// Her { … } bloğunu ayrı ayrı oku; alan sırası girdiden girdiye değişebiliyor
+const field = (block, name) => (block.match(new RegExp(`\\b${name}: "([^"]+)"`)) || [])[1];
+const items = [...src.slice(arrayStart).matchAll(/\{\s*id: "[^"]+"[\s\S]*?\n  \}/g)]
+  .map(([block]) => ({
+    id: field(block, "id"),
+    uploadDate: field(block, "uploadDate"),
+    description: field(block, "description"),
+    title: field(block, "title"),
+    videoSrc: field(block, "videoSrc"),
+    thumb: field(block, "thumbnailSrc"),
+  }))
+  .filter((v) => v.id && v.videoSrc && v.thumb && v.title && v.description && v.uploadDate);
 
 if (items.length === 0) throw new Error("portfolio.ts'ten video okunamadı");
 const esc = (s) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");

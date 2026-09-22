@@ -102,6 +102,69 @@
       <video:live>no</video:live>
     </video:video>
     <video:video>
+      <video:thumbnail_loc>https://fennixmedya.com/videos/portfolyo/sistemler.jpg</video:thumbnail_loc>
+      <video:title>Berke Derelioğlu</video:title>
+      <video:description>Sistemler.io kurucusu Berke Derelioğlu için çekilen dikey içerik videosu.</video:description>
+      <video:content_loc>https://fennixmedya.com/videos/portfolyo/sistemler.mp4</video:content_loc>
+      <video:publication_date>2026-07-22</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+      <video:live>no</video:live>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://fennixmedya.com/videos/portfolyo/zuhal.jpg</video:thumbnail_loc>
+      <video:title>Zuhal</video:title>
+      <video:description>Edinburgh Festivali'ne katılmaya hak kazanan Zuhal oyunu için çekilen teaser — Öykü Su Okur.</video:description>
+      <video:content_loc>https://fennixmedya.com/videos/portfolyo/zuhal.mp4</video:content_loc>
+      <video:publication_date>2026-07-20</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+      <video:live>no</video:live>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://fennixmedya.com/videos/portfolyo/afife-turne.jpg</video:thumbnail_loc>
+      <video:title>Afife</video:title>
+      <video:description>Afife tiyatro oyununun turne tanıtımı için çekilen dikey video.</video:description>
+      <video:content_loc>https://fennixmedya.com/videos/portfolyo/afife-turne.mp4</video:content_loc>
+      <video:publication_date>2026-06-15</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+      <video:live>no</video:live>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://fennixmedya.com/videos/portfolyo/afife-harbiye.jpg</video:thumbnail_loc>
+      <video:title>Afife</video:title>
+      <video:description>Afife oyununun Harbiye sahnesi için çekilen tanıtım videosu.</video:description>
+      <video:content_loc>https://fennixmedya.com/videos/portfolyo/afife-harbiye.mp4</video:content_loc>
+      <video:publication_date>2026-05-10</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+      <video:live>no</video:live>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://fennixmedya.com/videos/portfolyo/vavelya-karpuz.jpg</video:thumbnail_loc>
+      <video:title>Vavelya Home</video:title>
+      <video:description>Vavelya Home karpuz desenli masa örtüsü koleksiyonu için ürün videosu.</video:description>
+      <video:content_loc>https://fennixmedya.com/videos/portfolyo/vavelya-karpuz.mp4</video:content_loc>
+      <video:publication_date>2026-07-05</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+      <video:live>no</video:live>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://fennixmedya.com/videos/portfolyo/vavelya-cilek.jpg</video:thumbnail_loc>
+      <video:title>Vavelya Home</video:title>
+      <video:description>Vavelya Home çilek desenli masa örtüsü koleksiyonu için ürün videosu.</video:description>
+      <video:content_loc>https://fennixmedya.com/videos/portfolyo/vavelya-cilek.mp4</video:content_loc>
+      <video:publication_date>2026-07-05</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+      <video:live>no</video:live>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://fennixmedya.com/videos/portfolyo/vavelya-limon.jpg</video:thumbnail_loc>
+      <video:title>Vavelya Home</video:title>
+      <video:description>Vavelya Home limon desenli masa örtüsü koleksiyonu için ürün videosu.</video:description>
+      <video:content_loc>https://fennixmedya.com/videos/portfolyo/vavelya-limon.mp4</video:content_loc>
+      <video:publication_date>2026-07-05</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+      <video:live>no</video:live>
+    </video:video>
+    <video:video>
       <video:thumbnail_loc>https://fennixmedya.com/videos/portfolyo/vaveyla.jpg</video:thumbnail_loc>
       <video:title>Vavelya Home</video:title>
       <video:description>Vavelya Home çeyiz markası için çekilen dikey sosyal medya tanıtım videosu.</video:description>
