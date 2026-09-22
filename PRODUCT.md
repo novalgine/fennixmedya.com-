@@ -120,7 +120,7 @@ Hepsi gerçek ve elde mevcut:
   listenin kendisi kanıt olarak kullanılıyor.
 - **4 referans, isim ve unvanla** (`src/data/testimonials.ts`): Esranur Umurbeyli, Orhan Yardım
   (Boogold), Mukaddes Doman, Berke Derelioğlu (Sistemler.io). Sözler birebir; tona uydurulmaz.
-- **25 set fotoğrafı** kontakt föy olarak (`public/foto/set-01…25`) + portre (`semih-portre-4x5.jpg`).
+- **32 set fotoğrafı** kontakt föy olarak (`public/foto/set-01…32`, sıra `SetWall.tsx`'te) + portre (`semih-portre-4x5-v2.jpg`, Eylül 2026).
 - **Telefon/sinematik karşılaştırma karesi** — aynı kişi, aynı gün (`src/assets/ornek-*.jpg`).
 - **Hero videosu** — Semih'in kendi hesabından, sesli (`public/videos/hero-semih.mp4`).
 - **18 blog yazısı** (`src/data/blog-posts.json`).

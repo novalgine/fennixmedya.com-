@@ -7,9 +7,9 @@ import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
  * Setten kareler — kontakt föy duvarı.
  * Küçük thumbnail'lar (next/image ile boyutlandırılır), tıklayınca büyür.
  */
-export default function PhotoWall({ count }: { count: number }) {
+export default function PhotoWall({ photos }: { photos: string[] }) {
   const [open, setOpen] = useState<number | null>(null);
-  const photos = Array.from({ length: count }, (_, i) => `set-${String(i + 1).padStart(2, "0")}`);
+  const count = photos.length;
 
   return (
     <>

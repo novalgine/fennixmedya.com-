@@ -36,7 +36,7 @@ export default function HakkimdaPage() {
           name: "Semih Hasanoğlu",
           jobTitle: "Yönetmen ve video prodüktörü",
           description: OZET,
-          image: "https://fennixmedya.com/foto/semih-portre-4x5.jpg",
+          image: "https://fennixmedya.com/foto/semih-portre-4x5-v2.jpg",
           worksFor: { "@id": "https://fennixmedya.com/#organization" },
           sameAs: [
             "https://www.instagram.com/fennixmedya",
@@ -82,7 +82,7 @@ export default function HakkimdaPage() {
             <figure>
               <div className="relative aspect-[4/5] overflow-hidden border border-white/10">
                 <Image
-                  src="/foto/semih-portre-4x5.jpg"
+                  src="/foto/semih-portre-4x5-v2.jpg"
                   alt="Semih Hasanoğlu, İstanbul'da gün batımında Boğaz manzarası önünde"
                   fill
                   priority
