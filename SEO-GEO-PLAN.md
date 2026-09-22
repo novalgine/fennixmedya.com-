@@ -19,6 +19,9 @@ Search Console, son 12 ay (dışa aktarım 22 Eylül 2026):
 - **Dış bağlantı:** 57 (kaynak kalitesi bilinmiyor). **Google İşletme Profili: yok.** **Bing Webmaster:** 22 Eylül'de açıldı, henüz veri yok.
 - **Hız:** telefonda 85/100; darboğaz 190 KB font. Gerçek kullanıcı verisi oluşacak trafik yok → Google bu siteyi hızdan değerlendirmiyor. Öncelik değil.
 
+### 23 Eylül ek yapılanlar
+Vercel Analytics + GA4 + tek izleme noktası · randevu akışı testi (temiz) · sihirbaz metinleri ürün gerçeğiyle hizalandı · LinkedIn tek adres (şirket sayfası yok) · portfolyo sektör filtresi (`?sektor=`), blog kategori filtresi (`?kategori=`) · erişilebilirlik (ana içeriğe atla, odak halkası) · `sitemap-video.xml` (26 video) · her yayında otomatik IndexNow (GitHub Action) · Google/Bing'e dizine ekleme istekleri gönderildi.
+
 ### 22 Eylül'de yapılanlar (21 yayın)
 Sosyal medya video sayfası asıl hizmet olarak güçlendi (işler, fiyat, referanslar, sorular) · Klinikler için sektör sayfası açıldı · YouTube hizmeti kaldırıldı (yönlendirmeyle) · `llms.txt` · robots bot adları · site haritası tarihleri · blog yazar şeması Hakkımda'ya bağlandı · 3 yazının Google başlığı/açıklaması yenilendi · IndexNow bildirimi · 11 yeni video, 7 set karesi, yeni portre · referanslar videodan birebir · ödeme/teslim/süre cümleleri gerçekle hizalandı.
 
@@ -96,9 +99,9 @@ Ocak 2027'de "(2026)" başlıklı yazılar gözden geçirilir (adresler değişm
 
 ### Faz 4 — Düşük öncelik · Teknik bakım
 
-- **IndexNow otomasyonu:** `/api/indexnow` rotası var; Vercel'de `INDEXNOW_TRIGGER_SECRET` tanımlanıp her yayında otomatik tetiklenirse elle bildirim biter.
+- ~~IndexNow otomasyonu~~ — 23 Eylül'de GitHub Action ile kuruldu (`.github/workflows/indexnow.yml`), gizli anahtar gerekmedi.
 - **Hız:** ancak gerçek kullanıcı verisi oluşunca (Search Console → Önemli Web Verileri) ele alınır. O gün tek konu: Inter fontunu sistem fontuyla değiştirmek (tasarım kararı).
-- **Video sitemap:** 26 portfolyo videosu için ayrı video site haritası — Google Video sonuçları için. Küçük iş, orta fayda.
+- ~~Video sitemap~~ — 23 Eylül'de `araclar/video-sitemap.mjs` ile kuruldu; `sitemap-video.xml` robots'ta ve Search Console/Bing'e gönderildi.
 - **Lint borcu (739):** SEO'yu etkilemiyor; ayrı bir bakım turu.
 
 ---

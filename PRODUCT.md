@@ -45,7 +45,8 @@ budur — "tek kişi" bir eksiklik değil, ürünün kendisi.
 - **Teslim:** Kurgu ertesi gün başlar, videolar bittikçe sırayla teslim edilir — ay sonu
   toplu teslim yok.
 - **Ödeme:** İlk çekim gününün sonunda, ayın tamamı için alınır.
-- **Randevu:** Cal.com gömülü widget (`WizardShell`). Form gönderimleri Web3Forms üzerinden.
+- **Randevu:** Cal.com gömülü widget (`WizardShell`). Form gönderimleri Web3Forms üzerinden. Akış 22-23 Eylül 2026'da uçtan uca test edildi: sihirbaz → form → takvim çalışıyor.
+- **Ölçüm:** Vercel Analytics (çerezsiz) + GA4 `G-VY99XYWRS0` + Meta Pixel (ikisi çerez onaylı); tek giriş `src/lib/track.ts`. Olaylar: wizard_open, booking_success, form_submit, pdf_download, video_play, telefon/WhatsApp/e-posta tıklamaları.
 - **Sette kullanılan ekipman:** Sony FX30, Tamron 17–70mm, DJI RS4 Gimbal, tripod,
   Rode Wireless GO II.
 
@@ -115,7 +116,7 @@ otomatik deploy. `vercel.json` silinemez (proje eski "Vite" preset'iyle kurulu, 
 
 Hepsi gerçek ve elde mevcut:
 
-- **15 portfolyo işi** video + poster karesiyle (`src/data/portfolio.ts`, `public/videos/portfolyo/`).
+- **26 portfolyo işi** video + poster karesiyle (`src/data/portfolio.ts`, `public/videos/portfolyo/`); sektör alanıyla filtrelenir (`?sektor=`), `sitemap-video.xml`'de listelenir.
 - **16 isimli müşteri, 5 sektör grubunda** (`src/data/clients.ts`) — sayı iddiası yerine
   listenin kendisi kanıt olarak kullanılıyor.
 - **4 referans, isim ve unvanla** (`src/data/testimonials.ts`): Esranur Umurbeyli, Orhan Yardım
@@ -123,7 +124,7 @@ Hepsi gerçek ve elde mevcut:
 - **32 set fotoğrafı** kontakt föy olarak (`public/foto/set-01…32`, sıra `SetWall.tsx`'te) + portre (`semih-portre-4x5-v2.jpg`, Eylül 2026).
 - **Telefon/sinematik karşılaştırma karesi** — aynı kişi, aynı gün (`src/assets/ornek-*.jpg`).
 - **Hero videosu** — Semih'in kendi hesabından, sesli (`public/videos/hero-semih.mp4`).
-- **18 blog yazısı** (`src/data/blog-posts.json`).
+- **18 blog yazısı** (`src/data/blog-posts.json`), 5 kategori (`?kategori=` filtresi).
 - **Stüdyo kurulum rehberi PDF'i** (`public/studyo-kurulum-rehberi.pdf`), e-posta karşılığı.
 - **Sayaçlar: 500+ üretilen video, 10M+ toplam erişim, 9 sektör** — Semih'in kendi kayıtlarıyla
   doğrulanmış (onay: 2026-08-17; 9. sektör kafe/ZaKofi ile, onay: 2026-09-22). Korunur; büyütülmez, yuvarlanmaz.
