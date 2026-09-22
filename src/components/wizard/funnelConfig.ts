@@ -21,9 +21,9 @@ export const funnelConfig: WizardConfig<FunnelAnswers> = {
           description: "Reels, TikTok, Shorts için özel kurgulanmış",
         },
         {
-          value: "Yatay (YouTube, TV)",
-          title: "Yatay (YouTube, TV)",
-          description: "Tanıtım filmleri, YouTube serileri, Klipler",
+          value: "Yatay (Tanıtım filmi, etkinlik)",
+          title: "Yatay (Tanıtım filmi, etkinlik)",
+          description: "Tanıtım filmi, etkinlik ve düğün çekimi, klip",
         },
       ],
     },
@@ -35,7 +35,7 @@ export const funnelConfig: WizardConfig<FunnelAnswers> = {
         {
           value: "Uzun Soluklu / Aylık",
           title: "Aylık Düzenli Üretim",
-          description: "Ayda sadece birkaç saat ayırarak 30 günlük içerik",
+          description: "Ayda iki çekim günü, sekiz video",
           badge: "ÖNERİLEN",
         },
         {
@@ -54,9 +54,9 @@ export const funnelConfig: WizardConfig<FunnelAnswers> = {
         a.format.includes("Dikey")
           ? [
               {
-                value: "Anahtar Teslim (Fennix Medya)",
-                title: "Anahtar Teslim (A'dan Z'ye)",
-                description: "Konsept, metin, çekim ve kurguyu ben halledeyim",
+                value: "Metinden kurguya bende",
+                title: "Metinden kurguya bende",
+                description: "Konuyu birlikte kurarız; metni, çekimi ve kurguyu ben yaparım",
               },
               {
                 value: "Sadece Çekim ve Kurgu",
@@ -64,7 +64,7 @@ export const funnelConfig: WizardConfig<FunnelAnswers> = {
                 description: "Fikir ve metin bende, siz profesyonelce çekin",
               },
             ]
-          : ["Tanıtım Filmi", "YouTube Serisi", "Müzik Klibi / Etkinlik", "Diğer"].map((v) => ({
+          : ["Tanıtım Filmi", "Etkinlik / Düğün", "Müzik Klibi", "Diğer"].map((v) => ({
               value: v,
               title: v,
             })),
@@ -73,12 +73,12 @@ export const funnelConfig: WizardConfig<FunnelAnswers> = {
   contact: {
     title: "Harika! Son bir adım...",
     subtitle:
-      "Size özel stratejimizi oluşturabilmemiz için iletişim bilgilerinizi girin ve takvime geçin.",
+      "Görüşmeye hazırlanabilmem için iletişim bilgilerinizi bırakın, sonra takvimden saat seçin.",
     submitLabel: "Randevu Oluştur →",
   },
   submit: {
     subject: (a) => `Yeni Form Başvurusu (Sihirbaz): ${a.name}`,
-    fromName: "Fennix Medya Wizard",
+    fromName: "fennixmedya.com formu",
     mapPayload: (a) => ({
       "Ad Soyad": a.name,
       "E-posta": a.email,

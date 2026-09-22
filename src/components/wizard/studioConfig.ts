@@ -85,7 +85,7 @@ export const studioConfig: WizardConfig<StudioAnswers> = {
         {
           value: "Hayır, sıfırdan başlayacağım",
           title: "Hayır, sıfırdan başlayacağım",
-          description: "Sizi A'dan Z'ye hazırlayalım",
+          description: "Kurulumdan provaya kadar bende",
         },
       ],
     },
@@ -116,7 +116,7 @@ export const studioConfig: WizardConfig<StudioAnswers> = {
   },
   submit: {
     subject: (a) => `Yeni Stüdyo Kurulum Talebi: ${a.name}`,
-    fromName: "Fennix Medya Stüdyo Wizard",
+    fromName: "fennixmedya.com stüdyo formu",
     mapPayload: (a) => ({
       "Ad Soyad": a.name,
       "E-posta": a.email,
