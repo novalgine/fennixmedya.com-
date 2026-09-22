@@ -1,4 +1,5 @@
 "use client";
+import { track } from "@/lib/track";
 import React, { createContext, useContext, useState } from "react";
 import dynamic from "next/dynamic";
 
@@ -24,7 +25,13 @@ export function WizardProvider({ children }: { children: React.ReactNode }) {
 
   return (
     <WizardContext.Provider
-      value={{ openWizard: (kind = "funnel") => setActive(kind), closeWizard: close }}
+      value={{
+        openWizard: (kind = "funnel") => {
+          track("wizard_open", { kind, page: window.location.pathname });
+          setActive(kind);
+        },
+        closeWizard: close,
+      }}
     >
       {children}
       {active === "funnel" && <FunnelWizardModal isOpen onClose={close} />}

@@ -68,7 +68,7 @@ export const metadata: Metadata = {
 
 import CookieBanner from "@/components/CookieBanner";
 import JsonLd from "@/components/JsonLd";
-import FacebookPixel from "@/components/FacebookPixel";
+import SiteAnalytics from "@/components/SiteAnalytics";
 import Footer from "@/components/Footer";
 import SmoothScroll from "@/components/SmoothScroll";
 
@@ -123,7 +123,7 @@ export default function RootLayout({
               <main className="flex-1 w-full">{children}</main>
               <Footer />
               <CookieBanner />
-              <FacebookPixel />
+              <SiteAnalytics />
 
             </div>
             </SmoothScroll>

@@ -1,4 +1,5 @@
 "use client";
+import { track } from "@/lib/track";
 import { useState, useCallback } from "react";
 import Image from "next/image";
 import VideoLightbox from "@/components/VideoLightbox";
@@ -13,6 +14,7 @@ const TestimonialsStrip = () => {
     const [activeVideo, setActiveVideo] = useState<{ src: string; name: string } | null>(null);
 
     const openModal = useCallback((src: string, name: string) => {
+        track("video_play", { kind: "referans", name });
         setActiveVideo({ src, name });
     }, []);
 

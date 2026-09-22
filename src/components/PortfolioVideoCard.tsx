@@ -1,4 +1,5 @@
 "use client";
+import { track } from "@/lib/track";
 
 import { useRef, useState } from "react";
 import { Play } from "lucide-react";
@@ -17,6 +18,7 @@ export default function PortfolioVideoCard({ project, isVertical }: { project: P
     // yoksa Safari sesli oynatmayı engeller
     v.src = project.videoSrc;
     v.play().catch(() => {});
+    track("video_play", { kind: "portfolyo", id: project.id });
     setPlaying(true);
   };
 

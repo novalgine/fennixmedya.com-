@@ -16,13 +16,8 @@ export default function FacebookPixel() {
   const [consented, setConsented] = useState(false);
 
   useEffect(() => {
-    // Sitedeki tüm CTA'lar window.trackEvent çağırır; fbq yalnızca onaydan sonra
-    // var olduğundan onay öncesi event'ler sessizce düşer (KVKK).
-    window.trackEvent = (eventName, params) => {
-      if (typeof (window as any).fbq === "function") {
-        (window as any).fbq("trackCustom", eventName, params);
-      }
-    };
+    // window.trackEvent köprüsü SiteAnalytics'te (lib/track.ts) — Pixel, GA4 ve
+    // Vercel Analytics'e birlikte gider; fbq onay öncesi yoksa o dal sessizce düşer.
 
     setConsented(localStorage.getItem(CONSENT_STORAGE_KEY) === "accepted");
 

@@ -1,4 +1,5 @@
 "use client";
+import { track } from "@/lib/track";
 
 import { useState } from "react";
 import { BookOpen, Download, CheckCircle, Loader2 } from "lucide-react";
@@ -176,6 +177,7 @@ export default function PdfLeadModal({ isOpen, onClose }: PdfLeadModalProps) {
               <a
                 href="/studyo-kurulum-rehberi.pdf"
                 download="Studyo_Kurulum_Rehberi.pdf"
+                onClick={() => track("pdf_download", { file: "studyo-kurulum-rehberi" })}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 bg-gradient-gold text-black font-heading font-bold text-base px-8 py-3.5 rounded-xl hover:opacity-90 transition-all duration-300"

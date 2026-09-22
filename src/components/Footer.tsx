@@ -1,4 +1,5 @@
 "use client";
+import { track } from "@/lib/track";
 import { Mail, MapPin } from "lucide-react";
 import Link from "next/link";
 import CtaButton from "@/components/CtaButton";
@@ -48,7 +49,7 @@ const Footer = () => {
           {/* Contact */}
           <div className="space-y-3">
             <h4 className="font-heading text-sm font-bold uppercase tracking-widest text-foreground/50 mb-1">İletişim</h4>
-            <a href="mailto:info@fennixmedya.com" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors text-sm font-medium">
+            <a href="mailto:info@fennixmedya.com" onClick={() => track("email_click", { source: "footer" })} className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors text-sm font-medium">
               <Mail className="w-4 h-4 text-primary shrink-0" />
               info@fennixmedya.com
             </a>

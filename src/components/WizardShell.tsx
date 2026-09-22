@@ -1,4 +1,5 @@
 "use client";
+import { track } from "@/lib/track";
 import React, { useEffect, useRef, useState } from "react";
 import { ArrowLeft, ChevronRight } from "lucide-react";
 import dynamic from "next/dynamic";
@@ -56,6 +57,10 @@ export default function WizardShell<A extends ContactFields>({
     import("@calcom/embed-react").then((mod) => {
       mod.getCalApi({}).then((cal) => {
         cal("ui", CAL_BRAND);
+        cal("on", {
+          action: "bookingSuccessful",
+          callback: () => track("booking_success", { kind: config.id ?? "funnel" }),
+        });
       });
     });
   }, [stepIdx, calIdx]);
