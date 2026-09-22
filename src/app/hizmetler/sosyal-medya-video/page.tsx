@@ -146,6 +146,43 @@ export default function SosyalMedyaVideoPage() {
         sub="Diş hekimi, veteriner kliniği, beslenme uzmanı, kuyumcu, ev tekstili ve içecek markaları, tiyatro oyunları. Hepsini ben çektim, ben kurguladım."
         ids={["umay", "vethouse", "melis", "boogold", "vavelya-karpuz", "buzdagi", "afife", "zuhal"]}
       />
+      <section className="section-spacing bg-surface">
+        <div className="container-page">
+          <p className="font-heading font-semibold text-sm uppercase tracking-[0.25em] text-primary mb-3">
+            Sektöre göre
+          </p>
+          <h2 className="text-display-2 text-foreground mb-8">Sizin İşiniz İçin</h2>
+          <div className="grid gap-6 md:grid-cols-2">
+            <Link
+              href="/hizmetler/sosyal-medya-video/klinikler"
+              className="card-surface p-6 md:p-8 hover:border-primary/40 transition-colors group"
+            >
+              <p className="font-mono text-[10px] uppercase tracking-[0.25em] text-primary mb-3">
+                Klinikler ve hekimler
+              </p>
+              <h3 className="font-heading text-2xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
+                Diş hekimi ve veteriner klinikleri için →
+              </h3>
+              <p className="text-muted-foreground">
+                Konular hasta sorularından çıkar, metin sağlık tanıtımının sınırında kalır, çekim
+                klinikte olur. Bir diş hekimi ve iki veteriner kliniğiyle yaptığım işler orada.
+              </p>
+            </Link>
+            <div className="card-surface p-6 md:p-8 border-dashed">
+              <p className="font-mono text-[10px] uppercase tracking-[0.25em] text-muted-foreground mb-3">
+                Diğer sektörler
+              </p>
+              <h3 className="font-heading text-2xl font-bold text-foreground mb-2">
+                Koç, eğitmen, butik marka, tiyatro
+              </h3>
+              <p className="text-muted-foreground">
+                Bunlar için ayrı sayfa henüz yok; işler yukarıda ve portfolyoda. Görüşmede
+                sektörünüze göre konuşuruz.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
       <ServiceSteps
         eyebrow="Bir çekim günü"
         heading="Nasıl İşliyor"
