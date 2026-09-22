@@ -45,8 +45,8 @@ const STEPS = [
     body: "Donduğunuz yerde devreye girerim. Oyunculuk ve yönetmenlik geçmişim tam da bunun için: kendi tonunuzu bulana kadar birlikte çalışırız. Konuşmalar bitince mekânın atmosferini toplayan detay çekimlerini yaparım.",
   },
   {
-    title: "Akşam kurguya başlarım",
-    body: "Eve döndüğüm akşam kurgu başlar. Videoları ay sonunu bekletip toplu atmam — bittikçe sırayla teslim ederim, böylece paylaşım takviminiz boş kalmaz.",
+    title: "Ertesi gün kurguya başlarım",
+    body: "Kurguya ertesi gün başlarım. Videoları ay sonunu bekletip toplu atmam — bittikçe sırayla teslim ederim, böylece paylaşım takviminiz boş kalmaz.",
   },
 ];
 
@@ -81,7 +81,7 @@ const FAQS: Faq[] = [
   },
   {
     q: "Videolar ne zaman elime geçiyor?",
-    a: "Çekim akşamı kurguya başlıyorum ve videoları bittikçe sırayla gönderiyorum. Toplu teslimat için ay sonunu beklemenize gerek kalmıyor.",
+    a: "Kurguya ertesi gün başlıyorum ve videoları bittikçe sırayla gönderiyorum. Toplu teslimat için ay sonunu beklemenize gerek kalmıyor.",
   },
   {
     q: "Hangi ekipmanla çekiyorsunuz?",
@@ -126,8 +126,7 @@ export default function SosyalMedyaVideoPage() {
               belirlediğimiz gün ve saatte sette olmak.
             </p>
             <p>
-              Metni önceden yazarız, çekimde kamera karşısında sizi yalnız bırakmam, akşam kurguya
-              başlarım. Aradaki her adım bende.
+              Metni önceden yazarız, çekimde kamera karşısında sizi yalnız bırakmam, ertesi gün kurguya başlarım. Aradaki her adım bende.
             </p>
           </>
         }

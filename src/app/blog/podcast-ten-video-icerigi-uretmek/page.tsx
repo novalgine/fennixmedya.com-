@@ -34,7 +34,7 @@ export default function BlogPost() {
             "Tek bir 45-60 dakikalık podcast veya röportaj çekiminden, 30+ ayrı içerik parçası üretilebilir: kısa videolar, blog yazıları, sosyal medya görselleri ve podcast bölümleri.",
             "Bu stratejinin adı 'Content Repurposing' (içerik yeniden kullanımı) ve 2026'da en verimli içerik üretim modelidir — birim içerik maliyetini %80'e kadar düşürür.",
             "İş akışı: Uzun form çekim → Ana video (YouTube) → 5-8 kısa klip (Reels/TikTok/Shorts) → Ses dosyası (Podcast) → Blog yazısı (SEO) → Alıntı görselleri (LinkedIn/Twitter).",
-            "Ben de benzer bir düzenle çalışıyorum: ayda iki çekim günü, aylık 8 video — kurguya çekim akşamı başlarım, videoları bittikçe teslim ederim."
+            "Ben de benzer bir düzenle çalışıyorum: ayda iki çekim günü, aylık 8 video — kurguya ertesi gün başlarım, videoları bittikçe teslim ederim."
           ]}
         />
 
@@ -105,7 +105,7 @@ export default function BlogPost() {
           <ul className="space-y-3">
             <li><strong>Önce metin:</strong> Sete asla &quot;bugün ne çeksek&quot; diye gitmem. Konuları önceden netleştiririz — metinleri ben yazarım, kendi sektörünüzü benden iyi bildiğiniz için isterseniz siz yazarsınız, ya da birlikte kurarız.</li>
             <li><strong>Ayda iki çekim günü:</strong> Çekimler genelde öğleden sonra olur. Bir günde 3-5 video çekerim; aylık 8 videoyu iki sete sığdırırız.</li>
-            <li><strong>Kurgu çekim akşamı başlar:</strong> Videoları ay sonunu bekletip toplu atmam — bittikçe sırayla teslim ederim. İçeriğinizin ne zaman geleceğini bilirsiniz.</li>
+            <li><strong>Kurgu ertesi gün başlar:</strong> Videoları ay sonunu bekletip toplu atmam — bittikçe sırayla teslim ederim. İçeriğinizin ne zaman geleceğini bilirsiniz.</li>
           </ul>
           <p>
             <strong>Sonuç:</strong> Siz ayda iki yarım gününüzü ayırıyorsunuz; metin, çekim ve kurgu bende. Grafik tasarım ve statik görsel benim alanım değil — ihtiyacınız olursa güvendiğim isimlere yönlendiririm.

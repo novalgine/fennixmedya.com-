@@ -42,7 +42,7 @@ budur — "tek kişi" bir eksiklik değil, ürünün kendisi.
 - **Çekim günü:** Genelde öğleden sonra. Müşteriden tek beklenen, belirlenen saatte sette olmak.
 - **Metin:** Sete gitmeden önce net. Semih yazar; müşteri isterse kendi yazar; ya da ana
   konulardan birlikte kurulur.
-- **Teslim:** Çekim akşamı kurgu başlar, videolar bittikçe sırayla teslim edilir — ay sonu
+- **Teslim:** Kurgu ertesi gün başlar, videolar bittikçe sırayla teslim edilir — ay sonu
   toplu teslim yok.
 - **Ödeme:** İlk çekim gününün sonunda, ayın tamamı için alınır.
 - **Randevu:** Cal.com gömülü widget (`WizardShell`). Form gönderimleri Web3Forms üzerinden.

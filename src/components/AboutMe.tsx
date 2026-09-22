@@ -19,7 +19,7 @@ export default function AboutMe() {
                 <p>
                   Sinema-TV mezunuyum. İçerik stratejisinden metin yazımına, çekimden kurguya kadar
                   video üretiminin tüm süreçlerini üstleniyorum. Bunun yanında dört yıl tiyatro
-                  oyunculuğu yaptım ve yaratıcı drama lideriyim.
+                  oyunculuğu yaptım ve sertifikalı yaratıcı drama lideriyim.
                 </p>
                 <p>
                   Oyunculuk ve drama geçmişim, çekim anında doğrudan işe yarıyor: Kamera

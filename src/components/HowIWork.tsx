@@ -15,8 +15,8 @@ const STEPS = [
     body: "Donduğunuz yerde devreye girerim. Oyunculuk ve yönetmenlik geçmişim tam da bunun için: kendi tonunuzu bulana kadar birlikte çalışırız. Konuşmalar bitince mekânın atmosferini toplayan detay çekimlerini yaparım.",
   },
   {
-    title: "Akşam kurguya başlarım",
-    body: "Eve döndüğüm akşam kurgu başlar. Videoları ay sonunu bekletip toplu atmam — bittikçe sırayla teslim ederim. İçeriğinizin ne zaman geleceğini bilirsiniz.",
+    title: "Ertesi gün kurguya başlarım",
+    body: "Kurguya ertesi gün başlarım. Videoları ay sonunu bekletip toplu atmam — bittikçe sırayla teslim ederim. İçeriğinizin ne zaman geleceğini bilirsiniz.",
   },
 ];
 

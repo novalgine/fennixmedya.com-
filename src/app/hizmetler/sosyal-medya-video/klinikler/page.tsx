@@ -44,8 +44,8 @@ const STEPS = [
     body: "Randevu aralarına sıkışmayız; ayda iki öğleden sonrayı çekime ayırırız. Işığı ve mikrofonu ben getiririm, ayrı stüdyo gerekmez. Donduğunuz yerde devreye girerim.",
   },
   {
-    title: "Akşam kurguya başlarım",
-    body: "Eve döndüğüm akşam kurgu başlar. Videoları ay sonunu bekletip toplu atmam — bittikçe sırayla teslim ederim.",
+    title: "Ertesi gün kurguya başlarım",
+    body: "Kurguya ertesi gün başlarım. Videoları ay sonunu bekletip toplu atmam — bittikçe sırayla teslim ederim.",
   },
 ];
 
