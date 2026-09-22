@@ -12,7 +12,7 @@ const HONEST = [
   },
   {
     t: "Ödeme belirsizliği",
-    d: "Ödemeyi çekim gününün sonunda alıyorum. Sürekli ertelenen ödemeler üretim ritmini bozuyor, bu yüzden bu konuda baştan net olmayı tercih ediyorum.",
+    d: "Ödemeyi ilk çekim gününün sonunda, ayın tamamı için alıyorum. Sürekli ertelenen ödemeler üretim ritmini bozuyor, bu yüzden bu konuda baştan net olmayı tercih ediyorum.",
   },
   {
     t: "Grafik tasarım ve statik görsel",
