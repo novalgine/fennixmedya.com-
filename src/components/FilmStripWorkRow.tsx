@@ -3,7 +3,7 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Play, ArrowRight } from "lucide-react";
-import { portfolioData } from "@/data/portfolio";
+import { portfolioData, filmStripOrder } from "@/data/portfolio";
 import VideoLightbox from "@/components/VideoLightbox";
 import Reveal from "@/components/Reveal";
 import SectionHeading from "@/components/SectionHeading";
@@ -34,7 +34,10 @@ export default function FilmStripWorkRow() {
             className="flex gap-4 overflow-x-auto snap-x snap-mandatory pb-2 px-5 md:px-[max(2rem,calc((100vw-72rem)/2+2rem))]"
             style={{ scrollbarWidth: "thin" }}
           >
-            {portfolioData.map((item) => (
+            {filmStripOrder
+              .map((id) => portfolioData.find((p) => p.id === id))
+              .filter((p): p is (typeof portfolioData)[number] => Boolean(p))
+              .map((item) => (
               <button
                 key={item.id}
                 onClick={() => setActive({ src: item.videoSrc, title: item.title, format: item.format })}

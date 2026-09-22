@@ -5,7 +5,7 @@ import { useCountUp } from "@/hooks/useCountUp";
 const stats = [
     { value: 500, suffix: "+", label: "Üretilen Video", duration: 2000 },
     { value: 10, suffix: "M+", label: "Toplam Erişim", duration: 1800 },
-    { value: 8, suffix: "", label: "Sektör", duration: 1400 },
+    { value: 9, suffix: "", label: "Sektör", duration: 1400 },
 ];
 
 // Extracted to avoid calling hooks inside a .map loop (React Rules of Hooks)

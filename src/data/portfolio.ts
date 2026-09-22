@@ -13,6 +13,27 @@ export interface PortfolioItem {
   /** Ana sayfa vaka bölümünde gösterilecekse doldurulur */
 }
 
+/**
+ * Ana sayfadaki film şeridinin sırası (Semih, 2026-09-22): Afife → Zuhal → Vavelya →
+ * ZaKofi → Ayzıt Umay → Boogold → Melis → Vet House → Petadress → Buzdağı →
+ * Herwish, Uyaran → Berke en sonda. Listede olmayan iş şeride girmez.
+ */
+export const filmStripOrder: string[] = [
+  "afife-3sezon", "afife-turne", "afife-harbiye", "afife",
+  "zuhal",
+  "vavelya-2", "vavelya-karpuz", "vavelya-cilek", "vavelya-limon", "vaveyla",
+  "zakofi-1", "zakofi-3", "zakofi-6",
+  "umay",
+  "boogold",
+  "melis",
+  "vethouse-eylul", "vethouse-koray", "vethouse",
+  "petadress",
+  "buzdagi",
+  "herwish-1", "herwish-birkin",
+  "uyaran-yuzme", "uyaran-tanitim",
+  "sistemler",
+];
+
 export const portfolioData: PortfolioItem[] = [
   // 2026-09 çekimleri — en yeniler üstte
   {

@@ -125,8 +125,8 @@ Hepsi gerçek ve elde mevcut:
 - **Hero videosu** — Semih'in kendi hesabından, sesli (`public/videos/hero-semih.mp4`).
 - **18 blog yazısı** (`src/data/blog-posts.json`).
 - **Stüdyo kurulum rehberi PDF'i** (`public/studyo-kurulum-rehberi.pdf`), e-posta karşılığı.
-- **Sayaçlar: 500+ üretilen video, 10M+ toplam erişim, 8 sektör** — Semih'in kendi kayıtlarıyla
-  doğrulanmış (onay: 2026-08-17). Korunur; büyütülmez, yuvarlanmaz.
+- **Sayaçlar: 500+ üretilen video, 10M+ toplam erişim, 9 sektör** — Semih'in kendi kayıtlarıyla
+  doğrulanmış (onay: 2026-08-17; 9. sektör kafe/ZaKofi ile, onay: 2026-09-22). Korunur; büyütülmez, yuvarlanmaz.
 
 **Elde olmayan ve uydurulmaması gerekenler:** vaka çalışması / ölçülmüş müşteri sonucu
 (dönüşüm, satış, takipçi artışı) yok. Basın, ödül, sertifika görseli yok. Yukarıda sayılmayan
