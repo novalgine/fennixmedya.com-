@@ -6,7 +6,8 @@ import Script from "next/script";
 import { CONSENT_STORAGE_KEY, CONSENT_CHANGED_EVENT } from "@/components/FacebookPixel";
 
 // Vercel ortam değişkeni; tanımlı değilse GA4 hiç yüklenmez.
-const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
+// Vercel ortam değişkeni önce gelir; yoksa sitenin GA4 mülkü (Semih, 22 Eylül 2026)
+const GA_ID = process.env.NEXT_PUBLIC_GA_ID ?? "G-VY99XYWRS0";
 
 /** GA4 — FacebookPixel ile aynı kural: yalnızca açık çerez onayından sonra yüklenir. */
 export default function GoogleAnalytics() {
