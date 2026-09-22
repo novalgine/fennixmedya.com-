@@ -21,7 +21,7 @@ export const clientGroups: ClientGroup[] = [
   {
     sector: "Sağlık & Medikal",
     clients: [
-      { name: "Vethouse Pet Sağlık Merkezi", note: "5 aydır sürüyor" },
+      { name: "Vethouse Pet Sağlık Merkezi", note: "6 aydır sürüyor" },
       { name: "Petadress Veteriner Kliniği", note: "Tanıtım filmi" },
       { name: "Dt. Ayzıt Umay", note: "Klinik ve ressamlık sayfası" },
     ],
@@ -43,6 +43,10 @@ export const clientGroups: ClientGroup[] = [
       { name: "Boogold Kuyumculuk", note: "Altın takı tasarımı" },
       { name: "Doğal Köpükler", note: "Doğal sabun — Esranur Umurbeyli" },
     ],
+  },
+  {
+    sector: "Kafe & Yeme-İçme",
+    clients: [{ name: "ZaKofi", note: "Fatih'te kafe" }],
   },
   {
     sector: "Spor & Etkinlik",

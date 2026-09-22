@@ -143,8 +143,8 @@ export default function SosyalMedyaVideoPage() {
       <ServiceWorks
         eyebrow="Teslim edilen işler"
         heading="Kimlerle Çalıştım"
-        sub="Diş hekimi, veteriner kliniği, beslenme uzmanı, kuyumcu, ev tekstili ve içecek markaları, tiyatro oyunları. Hepsini ben çektim, ben kurguladım."
-        ids={["umay", "vethouse", "melis", "boogold", "vavelya-karpuz", "buzdagi", "afife", "zuhal"]}
+        sub="Kafe, veteriner kliniği, spor kulübü, çanta markası, diş hekimi, beslenme uzmanı, kuyumcu, ev tekstili, içecek markası, tiyatro. Hepsini ben çektim, ben kurguladım."
+        ids={["zakofi-1", "vethouse-eylul", "uyaran-yuzme", "herwish-1", "umay", "melis", "boogold", "vavelya-2", "buzdagi", "afife-3sezon", "zuhal", "vethouse-koray"]}
       />
       <section className="section-spacing bg-surface">
         <div className="container-page">

@@ -132,8 +132,8 @@ export default function KliniklerPage() {
       <ServiceWorks
         eyebrow="Teslim edilen işler"
         heading="Klinik İşleri"
-        sub="Bir diş hekimi, iki veteriner kliniği — biriyle altı aydır düzenli çalışıyorum. Hepsini ben çektim, ben kurguladım."
-        ids={["umay", "vethouse", "petadress"]}
+        sub="Bir diş hekimi, iki veteriner kliniği — Vet House ile altı aydır düzenli çalışıyorum, en yeni videoları başta. Hepsini ben çektim, ben kurguladım."
+        ids={["vethouse-eylul", "vethouse-koray", "umay", "vethouse", "petadress"]}
       />
       <ServiceSteps
         eyebrow="Bir çekim günü"

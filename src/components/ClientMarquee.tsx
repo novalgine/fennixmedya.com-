@@ -18,6 +18,7 @@ const CLIENTS = [
   "Boogold Kuyumculuk",
   "Doğal Köpükler",
   "Uyaran Spor Kulübü",
+  "ZaKofi",
 ];
 
 function Row({ hidden = false }: { hidden?: boolean }) {
