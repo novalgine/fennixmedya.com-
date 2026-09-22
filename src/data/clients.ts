@@ -30,7 +30,7 @@ export const clientGroups: ClientGroup[] = [
     sector: "Eğitim & Danışmanlık",
     clients: [
       { name: "Derya Kayaalp", note: "Şan eğitmeni" },
-      { name: "Mukaddes Doman", note: "Storytelling eğitmeni" },
+      { name: "Mukaddes Gün", note: "Storytelling eğitmeni" },
       { name: "Bilal Şendir", note: "Matematik öğretmeni & koç" },
       { name: "Melis Ulaş Wellness", note: "Wellness eğitmeni" },
     ],

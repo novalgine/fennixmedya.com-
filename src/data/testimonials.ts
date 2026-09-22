@@ -27,7 +27,7 @@ export const testimonialsData: Testimonial[] = [
   },
   {
     id: "mukaddes",
-    name: "Mukaddes Doman",
+    name: "Mukaddes Gün",
     title: "Mukaddes Storytelling",
     quote: "Bütün yüksek bütçeli müşterilerimi Semih'le video çekmeye başladıktan sonra bulduk. … Çekimlerde asla kasılmadım, asla prompter okumadım. Yeri geldi karşıma bir dinleyici gibi geçti, yeri geldi bir müşteri gibi geçti.",
     videoSrc: "/videos/referans/mukaddes.mp4",

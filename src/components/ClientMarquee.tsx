@@ -10,7 +10,7 @@ const CLIENTS = [
   "Petadress",
   "Dt. Ayzıt Umay",
   "Derya Kayaalp",
-  "Mukaddes Doman",
+  "Mukaddes Gün",
   "Bilal Şendir",
   "Melis Ulaş Wellness",
   "Vavelya Home",
