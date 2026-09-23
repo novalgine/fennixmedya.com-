@@ -43,9 +43,23 @@ Next.js 16 (App Router), React 19, TypeScript, Tailwind CSS 3. Veritabanı yok, 
 - **IndexNow:** her push'tan 3 dakika sonra GitHub Action (`.github/workflows/indexnow.yml`) site haritasındaki adresleri Bing/Yandex'e bildirir. Gizli anahtar yok; IndexNow anahtarı zaten herkese açık bir dosya.
 - **Tasarım denetçisi:** `.claude/` altındaki impeccable kurulumu yalnızca yapay zekâ asistanı içindir; site kodunun parçası değildir, silinse site etkilenmez.
 
-## 6. Dış hesaplar (hepsi Semih'in)
+## 6. Dış hesaplar (hepsi Semih'in — şifre kimseye verilmez)
 
-Vercel (barındırma + Analytics) · GitHub `novalgine/fennixmedya.com-` · Google Search Console (`https://fennixmedya.com/`) · Bing Webmaster · Google İşletme Profili (23 Eylül 2026'da açıldı) · GA4 mülkü `G-VY99XYWRS0` · Meta Pixel · Web3Forms (anahtar Vercel ortam değişkeninde `NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY`) · Cal.com `semihhasanoglu/15min` · Alan adı ve e-posta: Güzel Hosting (DNS orada; `panel` alt alan adı eski WordPress kalıntısı, silinecek).
+Kural: hiçbir hesabın şifresi paylaşılmaz. Her hesap "kullanıcı davet et / erişim ver" sunar; yazılımcıya gereken hesapta gereken kadar yetki verilir, iş bitince kaldırılır.
+
+| Hesap | Ne için | Yazılımcıya erişim nasıl verilir |
+|---|---|---|
+| **Vercel** | Barındırma, otomatik yayın, geri alma (Instant Rollback), ortam değişkenleri, Analytics | Proje → Settings → Members |
+| **GitHub** (`novalgine/fennixmedya.com-`) | Kod; `main`'e push = yayın | Repo → Settings → Collaborators |
+| **Google hesabı** (semihhasanoglu1@gmail.com) | Search Console (`https://fennixmedya.com/`), Google İşletme Profili, GA4 (`G-VY99XYWRS0`) | Her üründe ayrı "kullanıcı ekle"; Google şifresi asla |
+| **Bing Webmaster** | Bing/Copilot/ChatGPT arama görünürlüğü, IndexNow | Google hesabıyla giriş; Kullanıcı yönetimi |
+| **Cal.com** (`semihhasanoglu/15min`) | Randevu takvimi (sihirbazın son adımı) | Gerekmez; bağlantı herkese açık |
+| **Web3Forms** | Form gönderimlerini e-postaya çevirir; anahtar Vercel'de `NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY` | Gerekmez; anahtar Vercel'den okunur |
+| **Meta (Facebook)** | Pixel (`37456966063894509`), eski Facebook sayfası | Business Suite → Kişiler |
+| **Güzel Hosting** | **Alan adı, DNS ve e-posta** — en kritik hesap. `panel` alt alan adı eski WordPress kalıntısı, silinecek | DNS değişikliği gerekirse Semih kendisi yapar |
+| **Instagram, LinkedIn** (`/company/fennix-medya` + kişisel profil) | Sosyal profiller; site şemasında `sameAs` | Gerekmez |
+
+Bu iki günlük çalışmada da yöntem buydu: Google ve Bing'e Semih kendi giriş yaptı, asistan yalnızca ekranda tıkladı; hiçbir şifre görülmedi, kaydedilmedi.
 
 ## 7. Bilinçli kararlar — "neden böyle?" sorularının cevabı
 
