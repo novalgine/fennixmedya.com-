@@ -5,7 +5,7 @@ import Image from "next/image";
 import VideoLightbox from "@/components/VideoLightbox";
 import { Quote, Play } from "lucide-react";
 import SectionHeading from "./SectionHeading";
-import { testimonialsData, Testimonial } from "@/data/testimonials";
+import { testimonialsData } from "@/data/testimonials";
 
 /* ── Video Modal ── */
 
@@ -40,7 +40,7 @@ const TestimonialsStrip = () => {
                                 <div className="flex items-start gap-3">
                                     <Quote className="w-6 h-6 text-primary/40 shrink-0 mt-1 rotate-180" />
                                     <p className="text-foreground/80 text-sm md:text-base font-medium italic leading-relaxed">
-                                        "{t.quote}"
+                                        &quot;{t.quote}&quot;
                                     </p>
                                 </div>
 

@@ -39,7 +39,7 @@ export default function BlogPost() {
 
         <div className="prose prose-invert prose-lg max-w-none prose-headings:font-body prose-headings:font-bold prose-a:text-primary hover:prose-a:text-primary/80 prose-img:rounded-2xl prose-img:border prose-img:border-white/10 prose-p:text-muted-foreground prose-li:text-muted-foreground">
           <p className="lead font-medium text-foreground">
-            Dijital pazarlama dünyası her geçen gün daha fazla görselleşirken, 2026 yılında video pazarlamanın gücü tartışılmaz bir noktaya ulaştı. Cisco'nun güncellenmiş tahminlerine göre video içerik, 2026 yılında toplam internet trafiğinin %85'ini oluşturuyor. Bu, markaların artık sadece statik görsellerle ve metin tabanlı reklamlarla rekabet edemeyeceği anlamına geliyor.
+            Dijital pazarlama dünyası her geçen gün daha fazla görselleşirken, 2026 yılında video pazarlamanın gücü tartışılmaz bir noktaya ulaştı. Cisco&apos;nun güncellenmiş tahminlerine göre video içerik, 2026 yılında toplam internet trafiğinin %85&apos;ini oluşturuyor. Bu, markaların artık sadece statik görsellerle ve metin tabanlı reklamlarla rekabet edemeyeceği anlamına geliyor.
           </p>
           <p>
             Ancak video üretmek tek başına yeterli değil. Strateji olmadan çekilen videolar, büyük bütçelerin boşa harcanmasından başka bir şey getirmez. Bu kapsamlı rehberde, <strong className="text-foreground">2026 yılında şirketlerin uygulaması gereken video pazarlama stratejilerini</strong>, platform bazlı format önerilerini ve ROI ölçümleme yöntemlerini detaylı olarak ele alıyoruz.
@@ -47,18 +47,18 @@ export default function BlogPost() {
 
           <h2 className="text-3xl mt-12 mb-6">1. Kısa Form İçeriklerin Hakimiyeti (Short-Form Video)</h2>
           <p>
-            TikTok, Instagram Reels ve YouTube Shorts gibi platformlar sayesinde kullanıcıların dikkat süresi giderek kısalıyor. <strong className="text-foreground">Ortalama dikkat süresi 2026'da 6.8 saniyeye kadar düştü.</strong> Bu, şirketlerin mesajlarını ultra-kısa ve etkili bir şekilde iletmesi gerektiği anlamına geliyor.
+            TikTok, Instagram Reels ve YouTube Shorts gibi platformlar sayesinde kullanıcıların dikkat süresi giderek kısalıyor. <strong className="text-foreground">Ortalama dikkat süresi 2026&apos;da 6.8 saniyeye kadar düştü.</strong> Bu, şirketlerin mesajlarını ultra-kısa ve etkili bir şekilde iletmesi gerektiği anlamına geliyor.
           </p>
           <p>
-            Kısa form video, özellikle <strong>farkındalık aşamasında (Top of Funnel)</strong> inanılmaz etkili. Ürününüzü veya hizmetinizi <Link href="/blog/videolarda-ilk-3-saniye-kurali-hook">ilk 3 saniye</Link>de etkileyici bir şekilde sunan dikey videolar (9:16 format), organik erişimin anahtarıdır. 2026'da en başarılı markalar, haftada en az 5-7 kısa form içerik yayınlıyor.
+            Kısa form video, özellikle <strong>farkındalık aşamasında (Top of Funnel)</strong> inanılmaz etkili. Ürününüzü veya hizmetinizi <Link href="/blog/videolarda-ilk-3-saniye-kurali-hook">ilk 3 saniye</Link>de etkileyici bir şekilde sunan dikey videolar (9:16 format), organik erişimin anahtarıdır. 2026&apos;da en başarılı markalar, haftada en az 5-7 kısa form içerik yayınlıyor.
           </p>
           <p>
-            <strong>Pratik uygulama:</strong> Her kısa form videonuzu bir &quot;mikro-hikaye&quot; olarak düşünün. Sorun → Çözüm → Sonuç formatı, 15-30 saniyelik videolarda bile güçlü bir anlatı oluşturur. Örneğin, &quot;Müşterilerimiz bize geldiğinde web sitelerinin dönüşüm oranı %1.2'ydi. 3 video sonra %4.7'ye çıktı&quot; — bu tip somut sonuçlar gösteren içerikler organik olarak yayılır.
+            <strong>Pratik uygulama:</strong> Her kısa form videonuzu bir &quot;mikro-hikaye&quot; olarak düşünün. Sorun → Çözüm → Sonuç formatı, 15-30 saniyelik videolarda bile güçlü bir anlatı oluşturur. Örneğin, &quot;Müşterilerimiz bize geldiğinde web sitelerinin dönüşüm oranı %1.2&apos;ydi. 3 video sonra %4.7&apos;ye çıktı&quot; — bu tip somut sonuçlar gösteren içerikler organik olarak yayılır.
           </p>
 
           <h2 className="text-3xl mt-12 mb-6">2. Şeffaflık ve Kamera Arkası (Behind The Scenes)</h2>
           <p>
-            Tüketiciler artık mükemmel kurgulanmış reklamlardan çok, <strong className="text-foreground">şeffaf ve samimi markalara</strong> güveniyor. Edelman'ın 2026 Güven Barometresi'ne göre tüketicilerin %71'i, kamera arkası içerik paylaşan markalara daha fazla güven duyduğunu belirtiyor.
+            Tüketiciler artık mükemmel kurgulanmış reklamlardan çok, <strong className="text-foreground">şeffaf ve samimi markalara</strong> güveniyor. Edelman&apos;ın 2026 Güven Barometresi&apos;ne göre tüketicilerin %71&apos;i, kamera arkası içerik paylaşan markalara daha fazla güven duyduğunu belirtiyor.
           </p>
           <p>
             Şirketlerin ofis içi yaşamını, üretim süreçlerini veya ekip dinamiklerini gösteren videolar, marka sadakatini artırmanın en etkili yollarından biridir. Bir ürünün fabrikada nasıl üretildiğini gösteren 60 saniyelik bir video, 10 adet reklam bannerından daha fazla güven inşa eder.
@@ -75,7 +75,7 @@ export default function BlogPost() {
 
           <h2 className="text-3xl mt-12 mb-6">3. Video Funnel (Video Hunisi) Kurulumu</h2>
           <p>
-            Sadece farkındalık yaratmak yetmez. Şirketlerin, izleyicileri müşteriye dönüştürecek <strong className="text-foreground">sistematik bir video hunisi (<Link href="/blog/high-ticket-satislar-icin-video-funnel">video funnel</Link>)</strong> kurması gerekiyor. 2026'da en başarılı şirketler, her aşama için farklı türde video içerikler üretiyor.
+            Sadece farkındalık yaratmak yetmez. Şirketlerin, izleyicileri müşteriye dönüştürecek <strong className="text-foreground">sistematik bir video hunisi (<Link href="/blog/high-ticket-satislar-icin-video-funnel">video funnel</Link>)</strong> kurması gerekiyor. 2026&apos;da en başarılı şirketler, her aşama için farklı türde video içerikler üretiyor.
           </p>
           <p>
             <strong>Aşama 1 — Farkındalık (TOFU - Top of Funnel):</strong> Soğuk kitleye yönelik, genel sorunları ele alan kısa form içerikler. Bu aşamadaki videolar satış yapmaz, dikkat çeker ve merak uyandırır. Format: TikTok, Reels, Shorts (15-60 saniye).
@@ -87,12 +87,12 @@ export default function BlogPost() {
             <strong>Aşama 3 — Karar (BOFU - Bottom of Funnel):</strong> Satın alma kararı vermek üzere olan kişilere yönelik müşteri referans (case study) videoları, demo videoları ve fiyat/paket açıklama videoları. Bu videolar genellikle e-posta ile gönderilir veya satış toplantılarında kullanılır.
           </p>
           <p>
-            <strong>Örnek senaryo:</strong> Bir B2B yazılım şirketi düşünelim. TOFU aşamasında &quot;Excel'de hâlâ stok takibi yapıyorsanız bu 3 riski göze alıyorsunuz&quot; gibi dikkat çekici bir Reels yayınlar. MOFU aşamasında &quot;Stok yönetim yazılımı nasıl çalışır? 5 dakikada tüm sistemi anlıyoruz&quot; başlıklı detaylı bir YouTube videosu sunar. BOFU aşamasında ise &quot;X Şirketi stok kayıplarını %60 azalttı — İşte nasıl&quot; başlıklı bir müşteri referans videosu gönderir.
+            <strong>Örnek senaryo:</strong> Bir B2B yazılım şirketi düşünelim. TOFU aşamasında &quot;Excel&apos;de hâlâ stok takibi yapıyorsanız bu 3 riski göze alıyorsunuz&quot; gibi dikkat çekici bir Reels yayınlar. MOFU aşamasında &quot;Stok yönetim yazılımı nasıl çalışır? 5 dakikada tüm sistemi anlıyoruz&quot; başlıklı detaylı bir YouTube videosu sunar. BOFU aşamasında ise &quot;X Şirketi stok kayıplarını %60 azalttı — İşte nasıl&quot; başlıklı bir müşteri referans videosu gönderir.
           </p>
 
           <h2 className="text-3xl mt-12 mb-6">4. Eğitici ve Bilgilendirici İçerikler (Edutainment)</h2>
           <p>
-            Sadece satış odaklı değil, aynı zamanda <strong className="text-foreground">eğiten ve eğlendiren içerikler (edutainment)</strong> 2026'ın parlayan yıldızı. HubSpot'un araştırmasına göre, tüketicilerin %68'i bir markayı &quot;sektöründe otorite&quot; olarak gördüğünde o markadan satın alma olasılığı 3 kat artıyor.
+            Sadece satış odaklı değil, aynı zamanda <strong className="text-foreground">eğiten ve eğlendiren içerikler (edutainment)</strong> 2026&apos;ın parlayan yıldızı. HubSpot&apos;un araştırmasına göre, tüketicilerin %68&apos;i bir markayı &quot;sektöründe otorite&quot; olarak gördüğünde o markadan satın alma olasılığı 3 kat artıyor.
           </p>
           <p>
             Şirketiniz, bulunduğu sektörde bir otorite olarak konumlanmalı ve kullanıcıların sorunlarına <strong>video ile ücretsiz çözümler</strong> sunmalıdır. Bu, karşı sezgisel görünebilir: &quot;Bilgimizi ücretsiz veriyorsak neden bize para ödesinler?&quot; Cevap basit: İnsanlar bilgiyi ücretsiz alır, uygulamayı profesyonellere bırakır.
@@ -112,7 +112,7 @@ export default function BlogPost() {
             Birçok şirket, video pazarlamanın ROI&apos;sini (Yatırım Getirisi) sadece <strong>izlenme sayısıyla</strong> ölçmeye çalışıyor. Bu, en büyük hatalardan biridir. 1 milyon izlenme alan bir video, hiçbir satış getirmiyorsa değersizdir. 500 izlenme alan bir video, 10 müşteri getiriyorsa altın değerindedir.
           </p>
           <p>
-            <strong>2026'da video ROI&apos;si şu metriklerle ölçülmelidir:</strong>
+            <strong>2026&apos;da video ROI&apos;si şu metriklerle ölçülmelidir:</strong>
           </p>
           <ul className="space-y-3">
             <li><strong>CPL (Cost Per Lead):</strong> Video kampanyanız başına kaç potansiyel müşteri kazandınız? Video prodüksiyon maliyetinizi toplam lead sayısına bölün.</li>
@@ -127,16 +127,16 @@ export default function BlogPost() {
 
           <h2 className="text-3xl mt-12 mb-6">6. Hangi Platformda Hangi Format? 2026 Rehberi</h2>
           <p>
-            En büyük hatalardan biri, <strong className="text-foreground">aynı videoyu tüm platformlara aynı şekilde yüklemektir</strong>. Her platformun kendine özgü kullanıcı davranışları, teknik gereksinimleri ve algoritma dinamikleri vardır. 2026'da platform bazlı format stratejisi şöyle olmalıdır:
+            En büyük hatalardan biri, <strong className="text-foreground">aynı videoyu tüm platformlara aynı şekilde yüklemektir</strong>. Her platformun kendine özgü kullanıcı davranışları, teknik gereksinimleri ve algoritma dinamikleri vardır. 2026&apos;da platform bazlı format stratejisi şöyle olmalıdır:
           </p>
           <p>
             <strong>TikTok:</strong> Dikey (9:16), 15-60 saniye, trend sesleri veya orijinal ses, hızlı kesimler, hook ilk saniyede, alt yazı zorunlu. En iyi performans gösteren formatlar: &quot;talking head&quot;, yeşil ekran yorum, stitch/duet. Kitle yaşı geniş: 18-45.
           </p>
           <p>
-            <strong>Instagram Reels:</strong> Dikey (9:16), 15-90 saniye, estetik ve görsel kalite daha önemli, orijinal ses tercih ediliyor. Grid uyumuna dikkat edin — kapak görseli feed'inize uyumlu olsun. En iyi performans gösteren formatlar: Eğitim içerikleri, öncesi/sonrası, carousel tarzı bilgi kartları.
+            <strong>Instagram Reels:</strong> Dikey (9:16), 15-90 saniye, estetik ve görsel kalite daha önemli, orijinal ses tercih ediliyor. Grid uyumuna dikkat edin — kapak görseli feed&apos;inize uyumlu olsun. En iyi performans gösteren formatlar: Eğitim içerikleri, öncesi/sonrası, carousel tarzı bilgi kartları.
           </p>
           <p>
-            <strong>YouTube Shorts:</strong> Dikey (9:16), 15-60 saniye, YouTube'un uzun form içerik ekosistemine köprü görevi görür. Shorts izleyicilerini uzun form videolarınıza yönlendirmek için &quot;Tam video kanalımızda&quot; CTA&apos;sı kullanın.
+            <strong>YouTube Shorts:</strong> Dikey (9:16), 15-60 saniye, YouTube&apos;un uzun form içerik ekosistemine köprü görevi görür. Shorts izleyicilerini uzun form videolarınıza yönlendirmek için &quot;Tam video kanalımızda&quot; CTA&apos;sı kullanın.
           </p>
           <p>
             <strong>YouTube (Uzun Form):</strong> Yatay (16:9), 5-20 dakika, SEO optimizasyonu kritik, başlık ve açıklama anahtar kelime içermeli. Bölüm işaretleri (chapters) kullanın. Eğitim, demo, podcast ve müşteri hikayesi formatları en iyi performansı gösterir.
@@ -145,16 +145,16 @@ export default function BlogPost() {
             <strong>LinkedIn:</strong> Kare (1:1) veya yatay (16:9), 30 saniye-3 dakika, profesyonel ton, alt yazı mutlaka ekleyin (ofiste sessiz izleme oranı %85). B2B şirketler için en güçlü platform. Düşünce liderliği, sektör analizi ve ekip hikayeleri en etkili formatlar.
           </p>
 
-          <h2 className="text-3xl mt-12 mb-6">7. 2026'da Dikkat Etmeniz Gereken 5 Kritik Trend</h2>
+          <h2 className="text-3xl mt-12 mb-6">7. 2026&apos;da Dikkat Etmeniz Gereken 5 Kritik Trend</h2>
           <p>
             Video pazarlama stratejinizi geleceğe hazırlamak için bu trendleri mutlaka takip edin:
           </p>
           <ul className="space-y-3">
-            <li><strong>AI-Destekli Video Kişiselleştirme:</strong> Yapay zekâ ile farklı hedef kitle segmentlerine özelleştirilmiş video varyasyonları oluşturmak, 2026'da hızla yaygınlaşıyor. Aynı ürün videosu, farklı demografik gruplara farklı mesajlarla sunulabiliyor.</li>
+            <li><strong>AI-Destekli Video Kişiselleştirme:</strong> Yapay zekâ ile farklı hedef kitle segmentlerine özelleştirilmiş video varyasyonları oluşturmak, 2026&apos;da hızla yaygınlaşıyor. Aynı ürün videosu, farklı demografik gruplara farklı mesajlarla sunulabiliyor.</li>
             <li><strong>Shoppable Video (Alışveriş Yapılabilir Video):</strong> TikTok Shop ve Instagram Shopping entegrasyonları sayesinde, izleyiciler videoyu izlerken doğrudan satın alma yapabiliyor. E-ticaret şirketleri için devrim niteliğinde.</li>
-            <li><strong>Podcast Klipleri:</strong> Uzun form podcast içeriklerinin en çarpıcı anlarını kısa video kliplere dönüştürmek, 2026'da LinkedIn ve Twitter'da ciddi organik erişim sağlıyor.</li>
-            <li><strong>Çalışan Savunuculuğu (Employee Advocacy):</strong> Şirket hesabı yerine çalışanların kendi hesaplarından paylaştığı içerikler, organik erişimde %500'e kadar daha iyi performans gösteriyor.</li>
-            <li><strong>Mikro-Influencer İş Birlikleri:</strong> 10K-50K takipçili mikro-influencer'larla yapılan video iş birlikleri, mega-influencer'lara kıyasla 3 kat daha yüksek dönüşüm oranı sağlıyor.</li>
+            <li><strong>Podcast Klipleri:</strong> Uzun form podcast içeriklerinin en çarpıcı anlarını kısa video kliplere dönüştürmek, 2026&apos;da LinkedIn ve Twitter&apos;da ciddi organik erişim sağlıyor.</li>
+            <li><strong>Çalışan Savunuculuğu (Employee Advocacy):</strong> Şirket hesabı yerine çalışanların kendi hesaplarından paylaştığı içerikler, organik erişimde %500&apos;e kadar daha iyi performans gösteriyor.</li>
+            <li><strong>Mikro-Influencer İş Birlikleri:</strong> 10K-50K takipçili mikro-influencer&apos;larla yapılan video iş birlikleri, mega-influencer&apos;lara kıyasla 3 kat daha yüksek dönüşüm oranı sağlıyor.</li>
           </ul>
 
           <div className="bg-primary/5 border border-primary/20 rounded-xl p-6 mt-12">

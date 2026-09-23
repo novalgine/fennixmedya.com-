@@ -47,7 +47,7 @@ export default function CerezPolitikasiPage() {
           <p>
             Tarayıcınızın ayarlarını değiştirerek çerezleri silebilir veya engelleyebilirsiniz. Ancak 
             zorunlu çerezleri engellemeniz durumunda sitemizin bazı bölümleri düzgün çalışmayabilir. 
-            Sitemize ilk girişinizde karşınıza çıkan "Çerez Onay" paneli üzerinden de tercihlerinizi 
+            Sitemize ilk girişinizde karşınıza çıkan &quot;Çerez Onay&quot; paneli üzerinden de tercihlerinizi 
             belirleyebilirsiniz.
           </p>
 

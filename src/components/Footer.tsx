@@ -23,7 +23,7 @@ const Footer = () => {
               İstanbul · Video çekimi ve kurgu
             </p>
             <p className="text-xs text-muted-foreground/60 mt-2 leading-relaxed max-w-xs">
-              İstanbul'da markalar için video çekiyorum. Metni birlikte kurar, çekimi ve kurguyu tek başıma yaparım.
+              İstanbul&apos;da markalar için video çekiyorum. Metni birlikte kurar, çekimi ve kurguyu tek başıma yaparım.
             </p>
             <CtaButton variant="secondary" size="md" onClick={() => openWizard()} className="mt-5 text-sm">
               Görüşme Ayarlayalım →
@@ -99,7 +99,7 @@ const Footer = () => {
                 </svg>
               </a>
               <a
-                href="https://www.linkedin.com/in/semih-hasano%C4%9Flu-abaa28137/"
+                href="https://www.linkedin.com/company/fennix-medya"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn profilimizi ziyaret edin"

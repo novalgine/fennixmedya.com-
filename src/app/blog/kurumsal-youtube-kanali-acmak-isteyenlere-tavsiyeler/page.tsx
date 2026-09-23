@@ -59,11 +59,11 @@ export default function BlogPost() {
 
         <div className="prose prose-invert prose-lg max-w-none prose-headings:font-body prose-headings:font-bold prose-a:text-primary hover:prose-a:text-primary/80 prose-img:rounded-2xl prose-img:border prose-img:border-white/10 prose-p:text-muted-foreground prose-li:text-muted-foreground">
           <p>
-            YouTube, sadece eğlence platformu değil — <strong>dünyanın en büyük ikinci arama motorudur.</strong> Her gün 1 milyardan fazla saat video izleniyor. İnsanlar sorunlarına çözüm ararken, büyük bir satın alma kararı öncesinde derinlemesine araştırma yapmak için YouTube'u kullanıyor.
+            YouTube, sadece eğlence platformu değil — <strong>dünyanın en büyük ikinci arama motorudur.</strong> Her gün 1 milyardan fazla saat video izleniyor. İnsanlar sorunlarına çözüm ararken, büyük bir satın alma kararı öncesinde derinlemesine araştırma yapmak için YouTube&apos;u kullanıyor.
           </p>
 
           <p>
-            B2B şirketler için bu, devasa bir fırsat demek. Potansiyel müşterileriniz şu anda YouTube'da "en iyi CRM yazılımı hangisi", "endüstriyel otomasyon nasıl çalışır" veya "kalite kontrol süreçleri" gibi aramalar yapıyor. <strong>Eğer siz orada değilseniz, rakibiniz orada.</strong>
+            B2B şirketler için bu, devasa bir fırsat demek. Potansiyel müşterileriniz şu anda YouTube&apos;da &quot;en iyi CRM yazılımı hangisi&quot;, &quot;endüstriyel otomasyon nasıl çalışır&quot; veya &quot;kalite kontrol süreçleri&quot; gibi aramalar yapıyor. <strong>Eğer siz orada değilseniz, rakibiniz orada.</strong>
           </p>
 
           <p>
@@ -73,37 +73,37 @@ export default function BlogPost() {
           <h2>1. Sadece Şirket Haberleri Paylaşmayın — Eğitici İçerik Üretin</h2>
 
           <p>
-            Kurumsal YouTube kanallarının en büyük hatası, sadece "yeni ofisimize taşındık" veya "CEO röportajı" gibi <strong>kimsenin aramadığı içerikler</strong> paylaşmalarıdır. Bu tür videolar, sadece mevcut çalışanlarınızı ve belki birkaç tedarikçinizi ilgilendirir.
+            Kurumsal YouTube kanallarının en büyük hatası, sadece &quot;yeni ofisimize taşındık&quot; veya &quot;CEO röportajı&quot; gibi <strong>kimsenin aramadığı içerikler</strong> paylaşmalarıdır. Bu tür videolar, sadece mevcut çalışanlarınızı ve belki birkaç tedarikçinizi ilgilendirir.
           </p>
 
           <p>
-            YouTube stratejiniz, potansiyel müşterilerinizin Google'da veya YouTube'da arattığı sorulara <strong>"nasıl yapılır", "nedir", "karşılaştırma"</strong> tarzında eğitici yanıtlar vermek üzerine kurulmalıdır. Bu yaklaşım, "inbound marketing"in video versiyonudur.
+            YouTube stratejiniz, potansiyel müşterilerinizin Google&apos;da veya YouTube&apos;da arattığı sorulara <strong>&quot;nasıl yapılır&quot;, &quot;nedir&quot;, &quot;karşılaştırma&quot;</strong> tarzında eğitici yanıtlar vermek üzerine kurulmalıdır. Bu yaklaşım, &quot;inbound marketing&quot;in video versiyonudur.
           </p>
 
           <p>
-            Örneğin bir ERP yazılım şirketiyseniz, "ERP nedir?" veya "ERP seçerken dikkat edilmesi gereken 7 kriter" gibi içerikler üretin. Bu videolar, henüz satın alma sürecinin başında olan potansiyel müşterileri çeker ve <strong>markanızı bir otorite olarak konumlandırır.</strong>
+            Örneğin bir ERP yazılım şirketiyseniz, &quot;ERP nedir?&quot; veya &quot;ERP seçerken dikkat edilmesi gereken 7 kriter&quot; gibi içerikler üretin. Bu videolar, henüz satın alma sürecinin başında olan potansiyel müşterileri çeker ve <strong>markanızı bir otorite olarak konumlandırır.</strong>
           </p>
 
           <p>
-            İçerik planlamanızda "80/20 kuralı"nı uygulayın: İçeriklerinizin %80'i eğitici ve değer veren içerikler olsun, %20'si şirket haberleri, etkinlik videoları ve tanıtım içerikleri olsun. Bu denge, hem <Link href="/blog/reels-tiktok-algoritmasi-2026">algoritma</Link>nın sizi keşfetmesini sağlar hem de izleyici kitlenizin büyümesini destekler.
+            İçerik planlamanızda &quot;80/20 kuralı&quot;nı uygulayın: İçeriklerinizin %80&apos;i eğitici ve değer veren içerikler olsun, %20&apos;si şirket haberleri, etkinlik videoları ve tanıtım içerikleri olsun. Bu denge, hem <Link href="/blog/reels-tiktok-algoritmasi-2026">algoritma</Link>nın sizi keşfetmesini sağlar hem de izleyici kitlenizin büyümesini destekler.
           </p>
 
           <h2>2. Thumbnail ve Başlık Optimizasyonu (Tıklanma Oranı - CTR)</h2>
 
           <p>
-            Videonuz dünyanın en kaliteli prodüksiyonuna sahip olsa bile, <strong>küçük resmi (thumbnail) ve başlığı ilgi çekici değilse kimse tıklamaz.</strong> YouTube'da başarı, içerik kalitesi + paketleme kalitesinin bileşimidir.
+            Videonuz dünyanın en kaliteli prodüksiyonuna sahip olsa bile, <strong>küçük resmi (thumbnail) ve başlığı ilgi çekici değilse kimse tıklamaz.</strong> YouTube&apos;da başarı, içerik kalitesi + paketleme kalitesinin bileşimidir.
           </p>
 
           <p>
-            Etkili bir thumbnail için şu unsurları birleştirin: Yüksek kontrastlı renkler, okunabilir büyük metin (en fazla 3-4 kelime), bir insan yüzü (duygu ifadesi taşıyan) ve temiz bir kompozisyon. <strong>Thumbnail'inizi telefon ekranında test edin</strong> — çoğu izleyici mobilde izliyor ve küçük ekranda okunmayan metin hiçbir işe yaramaz.
+            Etkili bir thumbnail için şu unsurları birleştirin: Yüksek kontrastlı renkler, okunabilir büyük metin (en fazla 3-4 kelime), bir insan yüzü (duygu ifadesi taşıyan) ve temiz bir kompozisyon. <strong>Thumbnail&apos;inizi telefon ekranında test edin</strong> — çoğu izleyici mobilde izliyor ve küçük ekranda okunmayan metin hiçbir işe yaramaz.
           </p>
 
           <p>
-            Başlık yazarken merak uyandırın ama clickbait yapmayın. "Bu 5 Hata Fabrikanıza Milyon TL'ye Mal Oluyor" güçlü bir başlıktır, ancak içeriğiniz bu vaadi karşılamalıdır. YouTube, <strong>tıklayıp hemen çıkan izleyicileri</strong> (yüksek bounce rate) cezalandırır.
+            Başlık yazarken merak uyandırın ama clickbait yapmayın. &quot;Bu 5 Hata Fabrikanıza Milyon TL&apos;ye Mal Oluyor&quot; güçlü bir başlıktır, ancak içeriğiniz bu vaadi karşılamalıdır. YouTube, <strong>tıklayıp hemen çıkan izleyicileri</strong> (yüksek bounce rate) cezalandırır.
           </p>
 
           <p>
-            A/B testi yapın: Aynı video için iki farklı thumbnail tasarlayın ve 48 saat sonra hangisinin daha yüksek CTR aldığını kontrol edin. YouTube Studio'nun yerleşik test özelliğini kullanabilir veya <strong>manuel olarak değiştirerek karşılaştırma</strong> yapabilirsiniz.
+            A/B testi yapın: Aynı video için iki farklı thumbnail tasarlayın ve 48 saat sonra hangisinin daha yüksek CTR aldığını kontrol edin. YouTube Studio&apos;nun yerleşik test özelliğini kullanabilir veya <strong>manuel olarak değiştirerek karşılaştırma</strong> yapabilirsiniz.
           </p>
 
           <h2>3. YouTube SEO: Anahtar Kelime Araştırması</h2>
@@ -117,29 +117,29 @@ export default function BlogPost() {
           </p>
 
           <p>
-            Hedef anahtar kelimenizi videonuzun başlığında, açıklama metninin ilk 2 satırında ve etiketlerde (tags) kullanın. Video açıklamasını en az 200-300 kelime yazın ve <strong>doğal bir şekilde ilgili anahtar kelimeleri serpiştirin.</strong> YouTube'un algoritması, video içeriğini anlamak için bu metin sinyallerini kullanır.
+            Hedef anahtar kelimenizi videonuzun başlığında, açıklama metninin ilk 2 satırında ve etiketlerde (tags) kullanın. Video açıklamasını en az 200-300 kelime yazın ve <strong>doğal bir şekilde ilgili anahtar kelimeleri serpiştirin.</strong> YouTube&apos;un algoritması, video içeriğini anlamak için bu metin sinyallerini kullanır.
           </p>
 
           <p>
-            Altyazı (CC) eklemeyi de kesinlikle ihmal etmeyin. YouTube, altyazılardan video içeriğini indexler. Otomatik altyazılar genellikle hatalı olduğundan, <strong>manuel olarak düzeltilmiş altyazılar</strong> hem SEO'nuzu güçlendirir hem de erişilebilirliği artırır.
+            Altyazı (CC) eklemeyi de kesinlikle ihmal etmeyin. YouTube, altyazılardan video içeriğini indexler. Otomatik altyazılar genellikle hatalı olduğundan, <strong>manuel olarak düzeltilmiş altyazılar</strong> hem SEO&apos;nuzu güçlendirir hem de erişilebilirliği artırır.
           </p>
 
-          <h2>4. Yüksek Kaliteli Prodüksiyon: Görsel ve İşitsel "Aura"</h2>
+          <h2>4. Yüksek Kaliteli Prodüksiyon: Görsel ve İşitsel &quot;Aura&quot;</h2>
 
           <p>
             Kötü ses kalitesi (yankılı veya cızırtılı bir mikrofon) izleyiciyi <strong>ilk 5 saniyede videodan kaçırır.</strong> İlginç bir şekilde, izleyiciler düşük video kalitesini tolere edebilir ama düşük ses kalitesini asla kabul etmez.
           </p>
 
           <p>
-            Profesyonel aydınlatma, net ve derinlikli bir görüntü ve kaliteli ses kaydı, markanızın <strong>"premium ve güvenilir" algısı</strong> için zorunludur. Bir USB mikrofon ve temel LED panel ile bile ciddi bir kalite farkı yaratabilirsiniz.
+            Profesyonel aydınlatma, net ve derinlikli bir görüntü ve kaliteli ses kaydı, markanızın <strong>&quot;premium ve güvenilir&quot; algısı</strong> için zorunludur. Bir USB mikrofon ve temel LED panel ile bile ciddi bir kalite farkı yaratabilirsiniz.
           </p>
 
           <p>
-            Ancak gerçek farkı profesyonel ekipman ve ekip yaratır. Sinema kameraları, anamorphic lensler, kablosuz yaka mikrofonları, profesyonel aydınlatma setuplari ve renk düzenlemesi (color grading) — <strong>bunlar markanızın YouTube'daki "aura"sını belirler.</strong>
+            Ancak gerçek farkı profesyonel ekipman ve ekip yaratır. Sinema kameraları, anamorphic lensler, kablosuz yaka mikrofonları, profesyonel aydınlatma setuplari ve renk düzenlemesi (color grading) — <strong>bunlar markanızın YouTube&apos;daki &quot;aura&quot;sını belirler.</strong>
           </p>
 
           <p>
-            İlk 5 saniye kuralını unutmayın: İzleyiciyi ilk 5 saniyede yakalamalısınız. Logonuzla başlamayın. Bunun yerine güçlü bir <Link href="/blog/videolarda-ilk-3-saniye-kurali-hook">hook</Link> kullanın: Bir soru, şaşırtıcı bir istatistik veya merak uyandırıcı bir görüntü. <strong>"Merhaba ben Ahmet, bugün size…" diye başlayan videoların %60'ı ilk 10 saniyede terk ediliyor.</strong>
+            İlk 5 saniye kuralını unutmayın: İzleyiciyi ilk 5 saniyede yakalamalısınız. Logonuzla başlamayın. Bunun yerine güçlü bir <Link href="/blog/videolarda-ilk-3-saniye-kurali-hook">hook</Link> kullanın: Bir soru, şaşırtıcı bir istatistik veya merak uyandırıcı bir görüntü. <strong>&quot;Merhaba ben Ahmet, bugün size…&quot; diye başlayan videoların %60&apos;ı ilk 10 saniyede terk ediliyor.</strong>
           </p>
 
           <h2>5. Playlists ve İçerik Serisi Oluşturma</h2>
@@ -149,15 +149,15 @@ export default function BlogPost() {
           </p>
 
           <p>
-            Playlist'ler (oynatma listeleri), birbiriyle ilişkili videoları gruplar ve YouTube'a "bu videolar bir bütün" sinyali gönderir. Bir izleyici playlist'teki bir videoyu izlediğinde, <strong>bir sonraki video otomatik olarak oynatılır</strong> — bu, "watch time" (izlenme süresi) metriğinizi doğrudan yükseltir.
+            Playlist&apos;ler (oynatma listeleri), birbiriyle ilişkili videoları gruplar ve YouTube&apos;a &quot;bu videolar bir bütün&quot; sinyali gönderir. Bir izleyici playlist&apos;teki bir videoyu izlediğinde, <strong>bir sonraki video otomatik olarak oynatılır</strong> — bu, &quot;watch time&quot; (izlenme süresi) metriğinizi doğrudan yükseltir.
           </p>
 
           <p>
-            Örneğin "Üretimde Verimlilik" adında bir seri oluşturun ve 5-10 bölümlük bir yol haritası çizin. Her bölüm kendi başına bağımsız olsun, ama bir bütün olarak izlendiğinde kapsamlı bir eğitim programı oluştursun. Bu yaklaşım, <strong>izleyiciyi abone olmaya teşvik eder</strong> çünkü "serinin devamını kaçırmak istemez."
+            Örneğin &quot;Üretimde Verimlilik&quot; adında bir seri oluşturun ve 5-10 bölümlük bir yol haritası çizin. Her bölüm kendi başına bağımsız olsun, ama bir bütün olarak izlendiğinde kapsamlı bir eğitim programı oluştursun. Bu yaklaşım, <strong>izleyiciyi abone olmaya teşvik eder</strong> çünkü &quot;serinin devamını kaçırmak istemez.&quot;
           </p>
 
           <p>
-            Her videonun sonunda bir sonraki videoyu teaser olarak gösterin ve end screen (bitiş ekranı) kartlarıyla yönlendirin. Bu, <strong>session duration'ı</strong> (oturum süresi) artırır ve YouTube algoritmasının kanalınızı daha fazla kişiye önermesini sağlar.
+            Her videonun sonunda bir sonraki videoyu teaser olarak gösterin ve end screen (bitiş ekranı) kartlarıyla yönlendirin. Bu, <strong>session duration&apos;ı</strong> (oturum süresi) artırır ve YouTube algoritmasının kanalınızı daha fazla kişiye önermesini sağlar.
           </p>
 
           <h2>6. Tutarlılık ve Sabır: YouTube Bir Maratondur</h2>
@@ -181,15 +181,15 @@ export default function BlogPost() {
           <h2>7. Analitik Takibi ve Optimizasyon</h2>
 
           <p>
-            "Ölçemediğiniz şeyi geliştiremezsiniz." YouTube Studio, kanalınızın performansını anlamak için <strong>inanılmaz detaylı analitik veriler</strong> sunar. Bu verileri düzenli olarak incelemek, stratejinizi sürekli iyileştirmenin temelidir.
+            &quot;Ölçemediğiniz şeyi geliştiremezsiniz.&quot; YouTube Studio, kanalınızın performansını anlamak için <strong>inanılmaz detaylı analitik veriler</strong> sunar. Bu verileri düzenli olarak incelemek, stratejinizi sürekli iyileştirmenin temelidir.
           </p>
 
           <p>
-            En kritik metrikler şunlardır: <strong>Watch Time (İzlenme Süresi)</strong> — YouTube'un en çok önemsediği metriktir, videolarınızın toplamda kaç saat izlendiğini gösterir. <strong>CTR (Tıklanma Oranı)</strong> — Thumbnail ve başlığınızın ne kadar etkili olduğunu ölçer. <strong>Audience Retention (İzleyici Tutma Oranı)</strong> — İzleyicilerin videonun hangi noktasında ayrıldığını gösterir.
+            En kritik metrikler şunlardır: <strong>Watch Time (İzlenme Süresi)</strong> — YouTube&apos;un en çok önemsediği metriktir, videolarınızın toplamda kaç saat izlendiğini gösterir. <strong>CTR (Tıklanma Oranı)</strong> — Thumbnail ve başlığınızın ne kadar etkili olduğunu ölçer. <strong>Audience Retention (İzleyici Tutma Oranı)</strong> — İzleyicilerin videonun hangi noktasında ayrıldığını gösterir.
           </p>
 
           <p>
-            Audience Retention grafiğini özellikle yakından incelemenizi öneririz. Eğer izleyicilerinizin büyük bölümü videonun ilk 30 saniyesinde ayrılıyorsa, <strong>hook'unuzda (giriş bölümü) bir sorun var demektir.</strong> Videonun ortasında ani düşüşler varsa, o bölümdeki içerik sıkıcı veya konudan sapıyor olabilir.
+            Audience Retention grafiğini özellikle yakından incelemenizi öneririz. Eğer izleyicilerinizin büyük bölümü videonun ilk 30 saniyesinde ayrılıyorsa, <strong>hook&apos;unuzda (giriş bölümü) bir sorun var demektir.</strong> Videonun ortasında ani düşüşler varsa, o bölümdeki içerik sıkıcı veya konudan sapıyor olabilir.
           </p>
 
           <p>
@@ -203,15 +203,15 @@ export default function BlogPost() {
           </p>
 
           <p>
-            Her yoruma — özellikle ilk 50 videoda — kişisel olarak yanıt verin. Bu, izleyicilerinize "biz buradayız ve sizi duyuyoruz" mesajı verir. YouTube algoritması da <strong>yorum etkileşimi yüksek videoları</strong> daha fazla kişiye önerir.
+            Her yoruma — özellikle ilk 50 videoda — kişisel olarak yanıt verin. Bu, izleyicilerinize &quot;biz buradayız ve sizi duyuyoruz&quot; mesajı verir. YouTube algoritması da <strong>yorum etkileşimi yüksek videoları</strong> daha fazla kişiye önerir.
           </p>
 
           <p>
-            Community tab'ı (topluluk sekmesi) kullanarak anketler oluşturun, gelecek video konuları için oy toplayın ve perde arkası içerikler paylaşın. Bu, izleyicilerinizi <strong>pasif tüketicilerden aktif topluluk üyelerine</strong> dönüştürür.
+            Community tab&apos;ı (topluluk sekmesi) kullanarak anketler oluşturun, gelecek video konuları için oy toplayın ve perde arkası içerikler paylaşın. Bu, izleyicilerinizi <strong>pasif tüketicilerden aktif topluluk üyelerine</strong> dönüştürür.
           </p>
 
           <p>
-            Son olarak, YouTube kanalınızı diğer dijital varlıklarınızla entegre edin. Web sitenizde blog yazılarına video ekleyin, LinkedIn'de kısa kesitler paylaşın, e-posta bültenlerinizde yeni videolarınızı duyurun. <strong>Omnichannel bir yaklaşım</strong>, her platformdaki varlığınızı güçlendirir.
+            Son olarak, YouTube kanalınızı diğer dijital varlıklarınızla entegre edin. Web sitenizde blog yazılarına video ekleyin, LinkedIn&apos;de kısa kesitler paylaşın, e-posta bültenlerinizde yeni videolarınızı duyurun. <strong>Omnichannel bir yaklaşım</strong>, her platformdaki varlığınızı güçlendirir.
           </p>
 
           <EditorNote title="Sonuç">

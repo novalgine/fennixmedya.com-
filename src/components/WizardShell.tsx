@@ -63,7 +63,7 @@ export default function WizardShell<A extends ContactFields>({
         });
       });
     });
-  }, [stepIdx, calIdx]);
+  }, [stepIdx, calIdx, config.id]);
 
   const handleSelect = (key: string, value: string) => {
     setAnswers((prev) => ({ ...prev, [key]: value }));

@@ -19,6 +19,7 @@ export default function FacebookPixel() {
     // window.trackEvent köprüsü SiteAnalytics'te (lib/track.ts) — Pixel, GA4 ve
     // Vercel Analytics'e birlikte gider; fbq onay öncesi yoksa o dal sessizce düşer.
 
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- localStorage yalnızca istemcide okunabilir
     setConsented(localStorage.getItem(CONSENT_STORAGE_KEY) === "accepted");
 
     const onConsentChange = (e: Event) => {
@@ -33,8 +34,8 @@ export default function FacebookPixel() {
   useEffect(() => {
     if (!consented || pathname === initialPathname.current) return;
     initialPathname.current = null;
-    if ((window as any).fbq) {
-      (window as any).fbq("track", "PageView");
+    if (typeof window.fbq === "function") {
+      window.fbq("track", "PageView");
     }
   }, [pathname, consented]);
 
@@ -62,6 +63,7 @@ export default function FacebookPixel() {
         }}
       />
       <noscript>
+        {/* eslint-disable-next-line @next/next/no-img-element -- Meta'nın JS'siz piksel görseli, next/image olamaz */}
         <img
           height="1"
           width="1"

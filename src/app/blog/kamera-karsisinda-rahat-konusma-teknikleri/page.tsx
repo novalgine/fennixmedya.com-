@@ -3,7 +3,6 @@ import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import RelatedPosts from "@/components/RelatedPosts";
 import { createBlogMetadata } from "@/data/blog-posts";
-import Image from "next/image";
 import WizardCta from "@/components/WizardCta";
 import TldrSummary from "@/components/TldrSummary";
 import LastUpdated from "@/components/LastUpdated";
@@ -63,7 +62,7 @@ export default function BlogPost() {
           </p>
 
           <p>
-            Bu durumu yaşıyorsanız yalnız değilsiniz. Yapılan araştırmalara göre insanların %75'i kamera karşısında ciddi bir gerginlik hissediyor. Bu, glossophobia (konuşma korkusu) ile benzer mekanizmalara sahip, evrimsel bir savunma tepkisidir.
+            Bu durumu yaşıyorsanız yalnız değilsiniz. Yapılan araştırmalara göre insanların %75&apos;i kamera karşısında ciddi bir gerginlik hissediyor. Bu, glossophobia (konuşma korkusu) ile benzer mekanizmalara sahip, evrimsel bir savunma tepkisidir.
           </p>
 
           <p>
@@ -85,17 +84,17 @@ export default function BlogPost() {
           </p>
 
           <p>
-            Bir diğer ipucu: Prompter metnini <strong>konuşma diliyle</strong> yazın, yazı diliyle değil. "Şirketimizin 2026 yılı stratejik hedefleri doğrultusunda…" yerine "Bu yıl hedefimiz çok net…" gibi doğal cümleler kullanın. Metni okurken değil, konuşurken doğal hissetmeniz gerekir.
+            Bir diğer ipucu: Prompter metnini <strong>konuşma diliyle</strong> yazın, yazı diliyle değil. &quot;Şirketimizin 2026 yılı stratejik hedefleri doğrultusunda…&quot; yerine &quot;Bu yıl hedefimiz çok net…&quot; gibi doğal cümleler kullanın. Metni okurken değil, konuşurken doğal hissetmeniz gerekir.
           </p>
 
           <h2>2. Beden Dili ve Eller</h2>
 
           <p>
-            İletişimin %55'i beden dilinden, %38'i ses tonundan, yalnızca %7'si kelimelerden oluşur — bu, UCLA'nın ünlü Mehrabian araştırmasının sonucudur. Kamera önünde <strong>ne söylediğiniz kadar, nasıl durduğunuz da önemlidir.</strong>
+            İletişimin %55&apos;i beden dilinden, %38&apos;i ses tonundan, yalnızca %7&apos;si kelimelerden oluşur — bu, UCLA&apos;nın ünlü Mehrabian araştırmasının sonucudur. Kamera önünde <strong>ne söylediğiniz kadar, nasıl durduğunuz da önemlidir.</strong>
           </p>
 
           <p>
-            Kamera önünde donuk kalmak enerjinizi düşürür. Ellerinizi kullanın (aşırıya kaçmadan), vücudunuzu hafifçe hareket ettirin. Bu, izleyiciye <strong>"rahatım ve bu konuya hakimim"</strong> mesajı verir.
+            Kamera önünde donuk kalmak enerjinizi düşürür. Ellerinizi kullanın (aşırıya kaçmadan), vücudunuzu hafifçe hareket ettirin. Bu, izleyiciye <strong>&quot;rahatım ve bu konuya hakimim&quot;</strong> mesajı verir.
           </p>
 
           <p>
@@ -113,11 +112,11 @@ export default function BlogPost() {
           </p>
 
           <p>
-            Çekim öncesinde "4-7-8 nefes tekniği"ni uygulayın: 4 saniye burundan nefes alın, 7 saniye tutun, 8 saniye ağızdan yavaşça verin. Bu teknik, <strong>parasempatik sinir sistemini aktive eder</strong> ve kalp atış hızınızı düşürür.
+            Çekim öncesinde &quot;4-7-8 nefes tekniği&quot;ni uygulayın: 4 saniye burundan nefes alın, 7 saniye tutun, 8 saniye ağızdan yavaşça verin. Bu teknik, <strong>parasempatik sinir sistemini aktive eder</strong> ve kalp atış hızınızı düşürür.
           </p>
 
           <p>
-            Ses tonunuzu bilinçli olarak yarım ton düşürmeye çalışın. Düşük ve derin bir ses, <strong>otorite ve güvenilirlik</strong> hissi uyandırır. Bunu sağlamak için konuşmadan önce birkaç kez "hmmmm" diye mırıldanarak ses tellerinizi ısıtın.
+            Ses tonunuzu bilinçli olarak yarım ton düşürmeye çalışın. Düşük ve derin bir ses, <strong>otorite ve güvenilirlik</strong> hissi uyandırır. Bunu sağlamak için konuşmadan önce birkaç kez &quot;hmmmm&quot; diye mırıldanarak ses tellerinizi ısıtın.
           </p>
 
           <p>
@@ -149,7 +148,7 @@ export default function BlogPost() {
           </p>
 
           <p>
-            Kamera için kıyafet seçerken şu kuralları aklınızda tutun: Çok ince çizgili veya kareli desenlerden kaçının çünkü kamerada "moiré" efekti yaratır. Saf beyaz ve saf siyah gibi aşırı kontrastlı renkler yerine, <strong>koyu lacivert, gri veya toprak tonları</strong> tercih edin.
+            Kamera için kıyafet seçerken şu kuralları aklınızda tutun: Çok ince çizgili veya kareli desenlerden kaçının çünkü kamerada &quot;moiré&quot; efekti yaratır. Saf beyaz ve saf siyah gibi aşırı kontrastlı renkler yerine, <strong>koyu lacivert, gri veya toprak tonları</strong> tercih edin.
           </p>
 
           <p>
@@ -163,7 +162,7 @@ export default function BlogPost() {
           <h2>6. Profesyonel Ekibin Yönlendirmesi</h2>
 
           <p>
-            İyi bir yönetmen, sadece "Kayıt!" demez. <strong>Çekim öncesinde sizinle sohbet eder,</strong> sizi rahatlatır, omuzlarınızı düşürmenizi ve gülümsemenizi sağlar. Gergin bir konuşmacıyı rahat bir performansa dönüştürmek, profesyonel bir ekibin en temel yetkinliğidir.
+            İyi bir yönetmen, sadece &quot;Kayıt!&quot; demez. <strong>Çekim öncesinde sizinle sohbet eder,</strong> sizi rahatlatır, omuzlarınızı düşürmenizi ve gülümsemenizi sağlar. Gergin bir konuşmacıyı rahat bir performansa dönüştürmek, profesyonel bir ekibin en temel yetkinliğidir.
           </p>
 
           <p>
@@ -171,7 +170,7 @@ export default function BlogPost() {
           </p>
 
           <p>
-            Çekim sırasında da yönetmenin geri bildirimi hayati önem taşır. "Biraz daha yavaş", "Şu cümleyi bir de gülümseyerek dene" veya "Harika gidiyorsun, devam et" gibi yönlendirmeler, performansı gözle görülür şekilde iyileştirir.
+            Çekim sırasında da yönetmenin geri bildirimi hayati önem taşır. &quot;Biraz daha yavaş&quot;, &quot;Şu cümleyi bir de gülümseyerek dene&quot; veya &quot;Harika gidiyorsun, devam et&quot; gibi yönlendirmeler, performansı gözle görülür şekilde iyileştirir.
           </p>
 
           <p>
@@ -181,11 +180,11 @@ export default function BlogPost() {
           <h2>7. Mükemmel Olmaya Çalışmayın</h2>
 
           <p>
-            Bu belki de en önemli tavsiyedir: <strong>Kendinize hata yapma izni verin.</strong> Ufak dil sürçmeleri, doğal esler veya nefes alışlar sizi "insan" yapar. İzleyiciler yapay mükemmellikten çok samimiyete bağlanır.
+            Bu belki de en önemli tavsiyedir: <strong>Kendinize hata yapma izni verin.</strong> Ufak dil sürçmeleri, doğal esler veya nefes alışlar sizi &quot;insan&quot; yapar. İzleyiciler yapay mükemmellikten çok samimiyete bağlanır.
           </p>
 
           <p>
-            Mükemmeliyetçilik, kamera korkusunun en büyük yakıtıdır. "Ya yanlış söylersem?", "Ya takılırsam?" düşünceleri, beyin üzerinde baskı yaratır ve ironik bir şekilde <strong>hata yapma olasılığınızı artırır.</strong>
+            Mükemmeliyetçilik, kamera korkusunun en büyük yakıtıdır. &quot;Ya yanlış söylersem?&quot;, &quot;Ya takılırsam?&quot; düşünceleri, beyin üzerinde baskı yaratır ve ironik bir şekilde <strong>hata yapma olasılığınızı artırır.</strong>
           </p>
 
           <p>
@@ -193,12 +192,12 @@ export default function BlogPost() {
           </p>
 
           <p>
-            Hatta bazen plansız anlar, en etkileyici anlar olur. Bir CEO'nun spontan olarak güldüğü, düşüncesini toplarken kısa bir duraklama yaptığı veya samimi bir itirafta bulunduğu an — <strong>bu "gerçek" anlar, izleyiciyi en çok etkileyen anlardır.</strong>
+            Hatta bazen plansız anlar, en etkileyici anlar olur. Bir CEO&apos;nun spontan olarak güldüğü, düşüncesini toplarken kısa bir duraklama yaptığı veya samimi bir itirafta bulunduğu an — <strong>bu &quot;gerçek&quot; anlar, izleyiciyi en çok etkileyen anlardır.</strong>
           </p>
 
           <EditorNote title="Sonuç">
             <p>
-              Kamera karşısında rahat olmak bir süreçtir ve her çekimle biraz daha gelişirsiniz. <strong>Doğru nefes teknikleri, bilinçli beden dili, iyi bir hazırlık ve profesyonel bir ekip</strong> — bu dört unsur bir araya geldiğinde, kameranın siyah lensi bir düşman olmaktan çıkar ve mesajınızı dünyaya iletmenin en güçlü aracına dönüşür. Kendinize güvenin ve "Kayıt!" komutunu duyduğunuzda gülümseyin — çünkü anlattığınız konuyu sizden daha iyi bilen kimse yok.
+              Kamera karşısında rahat olmak bir süreçtir ve her çekimle biraz daha gelişirsiniz. <strong>Doğru nefes teknikleri, bilinçli beden dili, iyi bir hazırlık ve profesyonel bir ekip</strong> — bu dört unsur bir araya geldiğinde, kameranın siyah lensi bir düşman olmaktan çıkar ve mesajınızı dünyaya iletmenin en güçlü aracına dönüşür. Kendinize güvenin ve &quot;Kayıt!&quot; komutunu duyduğunuzda gülümseyin — çünkü anlattığınız konuyu sizden daha iyi bilen kimse yok.
             </p>
           </EditorNote>
         </div>

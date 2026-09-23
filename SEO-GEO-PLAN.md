@@ -19,6 +19,9 @@ Search Console, son 12 ay (dışa aktarım 22 Eylül 2026):
 - **Dış bağlantı:** 57 (kaynak kalitesi bilinmiyor). **Google İşletme Profili: 23 Eylül 2026'da açıldı.** **Bing Webmaster:** 22 Eylül'de açıldı, henüz veri yok.
 - **Hız:** telefonda 85/100; darboğaz 190 KB font. Gerçek kullanıcı verisi oluşacak trafik yok → Google bu siteyi hızdan değerlendirmiyor. Öncelik değil.
 
+### 24 Eylül
+İşletme Profili bağlantısı ve Knowledge Graph kimliği şirket şemasında · LinkedIn şirket sayfası bulundu ve bağlandı · paketler güncellendi (Next 16.3.6) · 433 lint bulgusu 0'a indi · ilk ölçüm günlüğü: `OLCUM-GUNLUGU.md` (Google/Bing 1. sıra, Perplexity 0/5).
+
 ### 23 Eylül ek yapılanlar
 Vercel Analytics + GA4 + tek izleme noktası · randevu akışı testi (temiz) · sihirbaz metinleri ürün gerçeğiyle hizalandı · LinkedIn tek adres (şirket sayfası yok) · portfolyo sektör filtresi (`?sektor=`), blog kategori filtresi (`?kategori=`) · erişilebilirlik (ana içeriğe atla, odak halkası) · `sitemap-video.xml` (26 video) · her yayında otomatik IndexNow (GitHub Action) · Google/Bing'e dizine ekleme istekleri gönderildi.
 
@@ -95,7 +98,7 @@ Ocak 2027'de "(2026)" başlıklı yazılar gözden geçirilir (adresler değişm
 - **İsim ve bilgi tutarlılığı:** Fennix Medya / Semih Hasanoğlu / İstanbul / telefon — sitede, İşletme Profili'nde, Instagram'da, LinkedIn'de birebir aynı. (Yapay zekâ modelleri tutarsız kayıtları birleştiremiyor.)
 - **Şema:** her yeni sayfada Service/FAQPage; her yazıda BlogPosting → `#person`. Yeni referans videoları eklenince VideoObject.
 - **Kısa cevap blokları:** yeni yazılarda standart. Eski yazılara dokunulmaz.
-- **Aylık ölçüm (Claude yapar):** ChatGPT, Perplexity ve Copilot'a aynı 5 soru sorulur, cevaplarda site geçiyor mu kaydedilir: "İstanbul'da Reels çekimi yapan biri", "diş hekimi için sosyal medya videosu İstanbul", "kamera karşısında rahat konuşma teknikleri", "Fennix Medya kimdir", "İstanbul kliniğe video çekimi fiyat". Bing Webmaster → AI Performance sekmesi de aylık okunur.
+- **Aylık ölçüm (Claude yapar; kayıt `OLCUM-GUNLUGU.md`):** ChatGPT, Perplexity ve Copilot'a aynı 5 soru sorulur, cevaplarda site geçiyor mu kaydedilir: "İstanbul'da Reels çekimi yapan biri", "diş hekimi için sosyal medya videosu İstanbul", "kamera karşısında rahat konuşma teknikleri", "Fennix Medya kimdir", "İstanbul kliniğe video çekimi fiyat". Bing Webmaster → AI Performance sekmesi de aylık okunur.
 
 ### Faz 4 — Düşük öncelik · Teknik bakım
 

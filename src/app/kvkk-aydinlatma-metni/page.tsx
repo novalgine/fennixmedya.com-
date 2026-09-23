@@ -24,9 +24,9 @@ export default function KvkkPage() {
         <div className="prose prose-neutral dark:prose-invert max-w-none prose-headings:font-body prose-headings:font-bold prose-p:text-muted-foreground prose-p:leading-relaxed">
           <p>
             Fennix Medya olarak, kişisel verilerinizin güvenliğine ve gizliliğine büyük önem veriyoruz. 
-            6698 sayılı Kişisel Verilerin Korunması Kanunu ("KVKK") uyarınca, veri sorumlusu sıfatıyla, 
+            6698 sayılı Kişisel Verilerin Korunması Kanunu (&quot;KVKK&quot;) uyarınca, veri sorumlusu sıfatıyla, 
             kişisel verilerinizi hangi amaçlarla işleyeceğimiz, kime ve hangi amaçla aktarabileceğimiz, 
-            kişisel veri toplamanın yöntemi ve hukuki sebebi ile KVKK madde 11'de sayılan diğer haklarınız 
+            kişisel veri toplamanın yöntemi ve hukuki sebebi ile KVKK madde 11&apos;de sayılan diğer haklarınız 
             hakkında sizi bilgilendirmek isteriz.
           </p>
 
@@ -40,7 +40,7 @@ export default function KvkkPage() {
 
           <h2>2. Kişisel Verilerin İşlenme Amaçları</h2>
           <p>
-            Toplanan kişisel verileriniz, aşağıdaki amaçlarla KVKK'nın 5. ve 6. maddelerinde belirtilen şartlar 
+            Toplanan kişisel verileriniz, aşağıdaki amaçlarla KVKK&apos;nın 5. ve 6. maddelerinde belirtilen şartlar 
             dahilinde işlenecektir:
           </p>
           <ul>
@@ -58,9 +58,9 @@ export default function KvkkPage() {
             kapsamında yetkili kamu kurum ve kuruluşları ile yasal talepler doğrultusunda paylaşılabilir.
           </p>
 
-          <h2>4. Kişisel Veri Sahibinin KVKK Madde 11'de Sayılan Hakları</h2>
+          <h2>4. Kişisel Veri Sahibinin KVKK Madde 11&apos;de Sayılan Hakları</h2>
           <p>
-            Kanun'un 11. maddesi uyarınca veri sahipleri olarak;
+            Kanun&apos;un 11. maddesi uyarınca veri sahipleri olarak;
           </p>
           <ul>
             <li>Kişisel verilerinizin işlenip işlenmediğini öğrenme,</li>
@@ -68,7 +68,7 @@ export default function KvkkPage() {
             <li>İşlenme amacını ve amacına uygun kullanılıp kullanılmadığını öğrenme,</li>
             <li>Yurt içinde veya yurt dışında kişisel verilerin aktarıldığı üçüncü kişileri bilme,</li>
             <li>Eksik veya yanlış işlenmiş olması hâlinde düzeltilmesini isteme,</li>
-            <li>KVKK'nın 7. maddesinde öngörülen şartlar çerçevesinde silinmesini veya yok edilmesini isteme</li>
+            <li>KVKK&apos;nın 7. maddesinde öngörülen şartlar çerçevesinde silinmesini veya yok edilmesini isteme</li>
           </ul>
           <p>
             haklarına sahipsiniz. Taleplerinizi, sitemizdeki iletişim formları üzerinden veya doğrudan iletişim 

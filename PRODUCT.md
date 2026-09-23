@@ -125,7 +125,7 @@ Hepsi gerçek ve elde mevcut:
 - **Telefon/sinematik karşılaştırma karesi** — aynı kişi, aynı gün (`src/assets/ornek-*.jpg`).
 - **Hero videosu** — Semih'in kendi hesabından, sesli (`public/videos/hero-semih.mp4`).
 - **18 blog yazısı** (`src/data/blog-posts.json`), 5 kategori (`?kategori=` filtresi).
-- **Google İşletme Profili** — 23 Eylül 2026'da açıldı ve doğrulandı (kategori: Video Prodüksiyon Hizmeti; logo, portre kapak, 14 set karesi; rezervasyon → Cal.com). Profil bağlantısı henüz şemaya eklenmedi.
+- **Google İşletme Profili** — 23 Eylül 2026'da açıldı ve doğrulandı (kategori: Video Prodüksiyon Hizmeti; logo, portre kapak, 14 set karesi; rezervasyon → Cal.com). Profil bağlantısı (share.google/veTnGkrDVmErLOFpO, KG `/g/11zyxpr6h9`) 24 Eylül'de şemaya eklendi. LinkedIn şirket sayfası: `linkedin.com/company/fennix-medya` (açıklaması eski, yenilenecek).
 - **Stüdyo kurulum rehberi PDF'i** (`public/studyo-kurulum-rehberi.pdf`), e-posta karşılığı.
 - **Sayaçlar: 500+ üretilen video, 10M+ toplam erişim, 9 sektör** — Semih'in kendi kayıtlarıyla
   doğrulanmış (onay: 2026-08-17; 9. sektör kafe/ZaKofi ile, onay: 2026-09-22). Korunur; büyütülmez, yuvarlanmaz.

@@ -15,6 +15,7 @@ export default function GoogleAnalytics() {
   const [consented, setConsented] = useState(false);
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- localStorage yalnızca istemcide okunabilir
     setConsented(localStorage.getItem(CONSENT_STORAGE_KEY) === "accepted");
     const onChange = (e: Event) => setConsented((e as CustomEvent<string>).detail === "accepted");
     window.addEventListener(CONSENT_CHANGED_EVENT, onChange);

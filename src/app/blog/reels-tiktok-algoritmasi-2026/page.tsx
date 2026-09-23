@@ -43,15 +43,15 @@ export default function BlogPost() {
             Hatırlıyor musunuz? Bir zamanlar rastgele bir dans videosu çekip popüler bir müzik eklediğinizde yüz binlerce izlenmeye ulaşmak mümkündü. O günler artık çok geride kaldı. 2026 yılında TikTok, Instagram Reels ve YouTube Shorts algoritmaları yapay zekâ destekli derin analiz motorlarına dönüştü ve her bir videonuzu onlarca farklı metrikle değerlendiriyorlar.
           </p>
           <p>
-            Bu rehberde, <strong className="text-foreground">algoritmaların 2026'da gerçekten nasıl çalıştığını</strong>, hangi metriklere öncelik verdiklerini ve organik erişiminizi katlamanız için uygulamanız gereken somut stratejileri tek tek açıklıyoruz. İster kişisel marka oluşturun, ister şirketiniz için içerik üretin — bu yazıdaki bilgiler 2026 algoritma oyununda size ciddi bir avantaj sağlayacak.
+            Bu rehberde, <strong className="text-foreground">algoritmaların 2026&apos;da gerçekten nasıl çalıştığını</strong>, hangi metriklere öncelik verdiklerini ve organik erişiminizi katlamanız için uygulamanız gereken somut stratejileri tek tek açıklıyoruz. İster kişisel marka oluşturun, ister şirketiniz için içerik üretin — bu yazıdaki bilgiler 2026 algoritma oyununda size ciddi bir avantaj sağlayacak.
           </p>
 
           <h2 className="text-3xl mt-12 mb-6">1. Algoritma Tarihçesi: 2024 vs 2026 — Neler Değişti?</h2>
           <p>
-            2024 yılında algoritmalar ağırlıklı olarak <strong>beğeni sayısı ve yorum oranı</strong> üzerinden içerikleri sıralıyordu. Trend sesleri kullanan, popüler hashtag'lere atıfta bulunan ve görsel açıdan parlak içerikler keşfet sayfasında kolayca yer bulabiliyordu. Ancak platformlar, kullanıcıların gerçek ilgi alanlarına daha doğru ulaşmak için algoritmayı köklü bir şekilde yeniden tasarladı.
+            2024 yılında algoritmalar ağırlıklı olarak <strong>beğeni sayısı ve yorum oranı</strong> üzerinden içerikleri sıralıyordu. Trend sesleri kullanan, popüler hashtag&apos;lere atıfta bulunan ve görsel açıdan parlak içerikler keşfet sayfasında kolayca yer bulabiliyordu. Ancak platformlar, kullanıcıların gerçek ilgi alanlarına daha doğru ulaşmak için algoritmayı köklü bir şekilde yeniden tasarladı.
           </p>
           <p>
-            2026'da algoritmalar artık <strong className="text-foreground">davranışsal sinyalleri</strong> ön plana çıkarıyor. Bir kullanıcının videoyu izledikten sonra ne yaptığı (profili ziyaret etme, kaydetme, başkasına gönderme) beğenmesinden çok daha fazla anlam taşıyor. Meta'nın yayınladığı 2026 Q1 şeffaflık raporuna göre Reels algoritması artık 17 farklı etkileşim sinyalini eş zamanlı analiz ediyor.
+            2026&apos;da algoritmalar artık <strong className="text-foreground">davranışsal sinyalleri</strong> ön plana çıkarıyor. Bir kullanıcının videoyu izledikten sonra ne yaptığı (profili ziyaret etme, kaydetme, başkasına gönderme) beğenmesinden çok daha fazla anlam taşıyor. Meta&apos;nın yayınladığı 2026 Q1 şeffaflık raporuna göre Reels algoritması artık 17 farklı etkileşim sinyalini eş zamanlı analiz ediyor.
           </p>
           <p>
             TikTok tarafında ise yapay zekâ destekli <strong>içerik anlama (content understanding)</strong> sistemi, videonuzun görsel unsurlarını, konuşulan kelimeleri ve hatta yüz ifadelerini analiz ederek hangi niş kitleye sunulacağına karar veriyor. Bu, artık doğru kitleye doğru içeriği üretmenin her zamankinden daha önemli olduğu anlamına geliyor.
@@ -65,7 +65,7 @@ export default function BlogPost() {
             Algoritmalar, videonuzu ilk 200-500 kişilik bir test grubuna gösterir. Bu grupta yüksek izlenme süresi ve tamamlama oranı yakalayan videolar, bir sonraki aşamada binlerce kişiye daha gösterilir. Her aşamada performans düşerse, dağıtım durur.
           </p>
           <p>
-            <strong>Pratik uygulama:</strong> Videolarınızdaki gereksiz boşlukları (dead air) acımasızca kesin. Konuşma aralarındaki 1-2 saniyelik duraklamaları bile kurgu aşamasında çıkarın. Ritmi yüksek tutmak için her 3-5 saniyede bir görsel geçiş veya metin kartı ekleyin. 2026'da başarılı içerik üreticileri, 15 saniyelik bir videoyu bile en az 3 farklı açıyla çekiyor.
+            <strong>Pratik uygulama:</strong> Videolarınızdaki gereksiz boşlukları (dead air) acımasızca kesin. Konuşma aralarındaki 1-2 saniyelik duraklamaları bile kurgu aşamasında çıkarın. Ritmi yüksek tutmak için her 3-5 saniyede bir görsel geçiş veya metin kartı ekleyin. 2026&apos;da başarılı içerik üreticileri, 15 saniyelik bir videoyu bile en az 3 farklı açıyla çekiyor.
           </p>
           <p>
             Ayrıca <strong>döngü efekti (loop)</strong> kullanmak, tamamlama oranını yapay olarak yükseltmenin en etkili yoludur. Videonun son karesi ile ilk karesi arasında görsel bir süreklilik oluşturursanız, izleyiciler farkında olmadan videoyu ikinci kez izlemeye başlar. Algoritma bunu çift tamamlama olarak okur.
@@ -79,13 +79,13 @@ export default function BlogPost() {
             Etkili hook türleri şunlardır:
           </p>
           <ul className="space-y-3">
-            <li><strong>Şok edici istatistik:</strong> &quot;Türkiye'deki markaların %78'i video pazarlamaya bütçe ayırmıyor — ve sonra neden satış yapamıyoruz diye soruyor.&quot;</li>
-            <li><strong>Merak uyandıran soru:</strong> &quot;TikTok'ta 1 milyon izlenme alan videonun sırrı ne biliyor musunuz?&quot;</li>
-            <li><strong>Karşıt görüş (contrarian take):</strong> &quot;Herkes hashtag'in önemli olduğunu söylüyor. Yanlış.&quot;</li>
+            <li><strong>Şok edici istatistik:</strong> &quot;Türkiye&apos;deki markaların %78&apos;i video pazarlamaya bütçe ayırmıyor — ve sonra neden satış yapamıyoruz diye soruyor.&quot;</li>
+            <li><strong>Merak uyandıran soru:</strong> &quot;TikTok&apos;ta 1 milyon izlenme alan videonun sırrı ne biliyor musunuz?&quot;</li>
+            <li><strong>Karşıt görüş (contrarian take):</strong> &quot;Herkes hashtag&apos;in önemli olduğunu söylüyor. Yanlış.&quot;</li>
             <li><strong>Görsel hareket:</strong> İlk karede aniden yakınlaşma (zoom-in), ürünü havaya atma veya beklenmedik bir mekân geçişi.</li>
           </ul>
           <p>
-            Hook'unuzu asla videonun 3. saniyesinden sonrasına bırakmayın. Hatta 2026'da en başarılı içerik üreticileri, hook'u <strong>ilk 1 saniyeye</strong> sıkıştırıyor ve geri kalan 2 saniyede izleyiciye &quot;neden izlemeye devam etmesi gerektiğini&quot; söylüyor.
+            Hook&apos;unuzu asla videonun 3. saniyesinden sonrasına bırakmayın. Hatta 2026&apos;da en başarılı içerik üreticileri, hook&apos;u <strong>ilk 1 saniyeye</strong> sıkıştırıyor ve geri kalan 2 saniyede izleyiciye &quot;neden izlemeye devam etmesi gerektiğini&quot; söylüyor.
           </p>
 
           <h2 className="text-3xl mt-12 mb-6">4. Kaydetme ve Paylaşma: Yeni Altın Metrikler</h2>
@@ -104,13 +104,13 @@ export default function BlogPost() {
 
           <h2 className="text-3xl mt-12 mb-6">5. Orijinal Ses ve Konuşma — Algoritmanın Ödüllendirdiği Format</h2>
           <p>
-            2024'te herkes trend müziklerin üzerine metin yazarak içerik üretiyordu. 2026'da ise algoritmalar <strong className="text-foreground">orijinal ses (original audio)</strong> kullanan içerikleri açık ara daha fazla ödüllendiriyor. TikTok, kendi platforma özgü ses ekosistemini büyütmek istiyor ve orijinal ses üreten yaratıcıları bu nedenle kayırıyor.
+            2024&apos;te herkes trend müziklerin üzerine metin yazarak içerik üretiyordu. 2026&apos;da ise algoritmalar <strong className="text-foreground">orijinal ses (original audio)</strong> kullanan içerikleri açık ara daha fazla ödüllendiriyor. TikTok, kendi platforma özgü ses ekosistemini büyütmek istiyor ve orijinal ses üreten yaratıcıları bu nedenle kayırıyor.
           </p>
           <p>
             Kendi sesinizle bilgi vermek ve hikaye anlatmak (storytelling), hem samimi hem de otoriter bir iletişim kurmanızı sağlar. İzleyiciler, arka planda çalan bir müzikle ekrandaki yazıları okumak yerine, <strong>gerçek bir insanın yüzünü görmek ve sesini duymak</strong> istiyor.
           </p>
           <p>
-            Meta'nın 2026 içerik üretici raporuna göre, yüze konuşma (talking head) formatındaki Reels videoları, trend müzikli montaj videolarına kıyasla <strong>ortalama %40 daha yüksek tamamlama oranı</strong> ve %65 daha yüksek paylaşma oranı alıyor. Bu rakamlar, formatın gücünü açıkça ortaya koyuyor.
+            Meta&apos;nın 2026 içerik üretici raporuna göre, yüze konuşma (talking head) formatındaki Reels videoları, trend müzikli montaj videolarına kıyasla <strong>ortalama %40 daha yüksek tamamlama oranı</strong> ve %65 daha yüksek paylaşma oranı alıyor. Bu rakamlar, formatın gücünü açıkça ortaya koyuyor.
           </p>
           <p>
             <strong>Pro ipucu:</strong> Kendi orijinal sesinizi oluşturduktan sonra, başka kullanıcıların da bu sesi kullanmasını teşvik edin. Eğer sesiniz trend olursa, TikTok algoritması sizi &quot;ses yaratıcısı&quot; olarak etiketler ve profilinize organik trafik yönlendirir.
@@ -118,18 +118,18 @@ export default function BlogPost() {
 
           <h2 className="text-3xl mt-12 mb-6">6. Hashtag Stratejisi 2026: Kurallar Tamamen Değişti</h2>
           <p>
-            Bir dönem <strong>#fyp #foryou #kesfet</strong> gibi genel hashtag'ler her videoya ekleniyor ve bunun keşfet sayfasına düşmeyi garanti ettiği düşünülüyordu. 2026'da bu hashtag'lerin neredeyse hiçbir etkisi kalmadı. Algoritma artık hashtag'leri içerik kategorilendirme aracı olarak kullanıyor, keşfet sıralamasını doğrudan etkilemiyorlar.
+            Bir dönem <strong>#fyp #foryou #kesfet</strong> gibi genel hashtag&apos;ler her videoya ekleniyor ve bunun keşfet sayfasına düşmeyi garanti ettiği düşünülüyordu. 2026&apos;da bu hashtag&apos;lerin neredeyse hiçbir etkisi kalmadı. Algoritma artık hashtag&apos;leri içerik kategorilendirme aracı olarak kullanıyor, keşfet sıralamasını doğrudan etkilemiyorlar.
           </p>
           <p>
-            2026'da etkili hashtag stratejisi şöyle çalışıyor:
+            2026&apos;da etkili hashtag stratejisi şöyle çalışıyor:
           </p>
           <ul className="space-y-3">
             <li><strong>3-5 mikro-niş hashtag kullanın:</strong> Genel etiketler yerine, hedef kitlenizin gerçekten aradığı spesifik terimleri etiketleyin. Örneğin #videopazarlama yerine #B2Bvideopazarlama veya #saglikturizmivideo gibi.</li>
-            <li><strong>Topluluk hashtag&apos;leri ekleyin:</strong> Sektörünüzdeki aktif toplulukların kullandığı hashtag'lere katılın. Bu, algoritmanın videonuzu doğru niş kitleye yönlendirmesini kolaylaştırır.</li>
+            <li><strong>Topluluk hashtag&apos;leri ekleyin:</strong> Sektörünüzdeki aktif toplulukların kullandığı hashtag&apos;lere katılın. Bu, algoritmanın videonuzu doğru niş kitleye yönlendirmesini kolaylaştırır.</li>
             <li><strong>Branded hashtag oluşturun:</strong> Markanıza özel bir hashtag yaratarak tüm içeriklerinizi tek bir çatı altında toplayın. Bu, marka bilinirliği ve aranabilirlik açısından uzun vadeli değer yaratır.</li>
           </ul>
           <p>
-            Dikkat edilmesi gereken bir nokta: TikTok, 2026 itibariyle <strong>hashtag spam&apos;i tespit eden</strong> bir filtre geliştirdi. 10'dan fazla hashtag kullanan içerikler otomatik olarak düşük öncelikli olarak işaretleniyor. Az ama hedefli hashtag kullanımı, çok ama dağınık kullanımdan kat kat daha etkili.
+            Dikkat edilmesi gereken bir nokta: TikTok, 2026 itibariyle <strong>hashtag spam&apos;i tespit eden</strong> bir filtre geliştirdi. 10&apos;dan fazla hashtag kullanan içerikler otomatik olarak düşük öncelikli olarak işaretleniyor. Az ama hedefli hashtag kullanımı, çok ama dağınık kullanımdan kat kat daha etkili.
           </p>
 
           <h2 className="text-3xl mt-12 mb-6">7. En İyi Paylaşım Zamanları: Türkiye için 2026 Verileri</h2>
@@ -145,7 +145,7 @@ export default function BlogPost() {
             <li><strong>B2B hedef kitle:</strong> Salı-Perşembe arası sabah 08:00-09:30 ve öğle 12:30-13:30 saatleri en verimli dilimlerdir.</li>
           </ul>
           <p>
-            Ancak bu veriler genel ortalamadır. <strong>Kendi Analytics verilerinizi mutlaka inceleyin.</strong> TikTok Creator Tools ve Instagram Professional Dashboard'daki &quot;Takipçileriniz En Aktif Ne Zaman?&quot; grafikleri, sizin spesifik kitleniz için en doğru veriyi sağlar.
+            Ancak bu veriler genel ortalamadır. <strong>Kendi Analytics verilerinizi mutlaka inceleyin.</strong> TikTok Creator Tools ve Instagram Professional Dashboard&apos;daki &quot;Takipçileriniz En Aktif Ne Zaman?&quot; grafikleri, sizin spesifik kitleniz için en doğru veriyi sağlar.
           </p>
           <p>
             Bir diğer önemli strateji de <strong>tutarlılık</strong>tır. Algoritma, düzenli içerik üreten hesaplara öncelik verir. Haftada en az 4-5 içerik yayınlamak, hesap otoritenizi artırır ve algoritmanın sizi &quot;aktif yaratıcı&quot; olarak sınıflandırmasını sağlar. Sporadik paylaşımlar yapan hesaplar, ne kadar kaliteli içerik üretirse üretsin, tutarlı hesapların gerisinde kalır.

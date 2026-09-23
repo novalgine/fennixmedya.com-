@@ -65,7 +65,7 @@ export default function GizlilikPolitikasiPage() {
 
           <h2>5. Değişiklikler</h2>
           <p>
-            Fennix Medya, işbu Gizlilik Politikası'nı zaman zaman güncelleyebilir. Önemli değişiklikler 
+            Fennix Medya, işbu Gizlilik Politikası&apos;nı zaman zaman güncelleyebilir. Önemli değişiklikler 
             olması durumunda web sitemiz üzerinden duyuru yapılacaktır.
           </p>
 

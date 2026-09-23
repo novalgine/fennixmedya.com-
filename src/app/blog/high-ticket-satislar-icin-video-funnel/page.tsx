@@ -3,7 +3,6 @@ import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import RelatedPosts from "@/components/RelatedPosts";
 import { createBlogMetadata } from "@/data/blog-posts";
-import Image from "next/image";
 import WizardCta from "@/components/WizardCta";
 import TldrSummary from "@/components/TldrSummary";
 import LastUpdated from "@/components/LastUpdated";
@@ -43,7 +42,7 @@ export default function BlogPost() {
             Büyük bir emlak projesi, aylık 10.000 dolarlık bir kurumsal danışmanlık hizmeti veya lüks bir estetik cerrahi operasyonu... Satmaya çalıştığınız ürünün veya hizmetin fiyatı arttıkça, müşterinizin satın alma kararı alması da o derece zorlaşır. High-ticket (yüksek fiyatlı) satış dünyasında insanlar, internette gördükleri 15 saniyelik tek bir reklama tıklayarak kredi kartlarını çıkarmazlar.
           </p>
           <p>
-            Yüksek bütçeli alımlarda, karar alma sürecini yöneten şey "mantık" gibi görünse de aslında temel belirleyici <strong>"Güven ve Otorite"</strong> dir. Hedef kitleniz sizin alanınızdaki en iyi kişi veya kurum olduğunuza tamamen ikna olana dek parasını size vermeyecektir. İşte tam bu noktada, potansiyel müşterinizi yabancı birinden sadık bir müşteriye dönüştüren, psikolojik tetikleyicilerle örülmüş bir mimari devreye girer: <strong>Video Funnel (Video Satış Hunisi).</strong>
+            Yüksek bütçeli alımlarda, karar alma sürecini yöneten şey &quot;mantık&quot; gibi görünse de aslında temel belirleyici <strong>&quot;Güven ve Otorite&quot;</strong> dir. Hedef kitleniz sizin alanınızdaki en iyi kişi veya kurum olduğunuza tamamen ikna olana dek parasını size vermeyecektir. İşte tam bu noktada, potansiyel müşterinizi yabancı birinden sadık bir müşteriye dönüştüren, psikolojik tetikleyicilerle örülmüş bir mimari devreye girer: <strong>Video Funnel (Video Satış Hunisi).</strong>
           </p>
 
           <h2 className="text-3xl mt-12 mb-6">Video Funnel (Huni) Nedir? Neden Web Sitenizden Daha Önemlidir?</h2>
@@ -59,29 +58,29 @@ export default function BlogPost() {
             Bu aşamada kimse sizin hizmetinizi satın almaya hazır değildir. Hedef kitleniz sadece sosyal medyada (Instagram, TikTok, LinkedIn) gezinmektedir. Burada amacımız satış yapmak <strong>değil</strong>, hedef kitlenin başparmağını kaydırmayı bırakmasını sağlamak (Scroll-stopper) ve dikkatini çekmektir.
           </p>
           <ul className="space-y-3">
-            <li><strong>Video Formatı:</strong> 15-45 saniyelik, çok dinamik, hızlı kurgulanmış "<Link href="/blog/videolarda-ilk-3-saniye-kurali-hook">Hook</Link> (Kanca)" videoları.</li>
-            <li><strong>İçerik Stratejisi:</strong> Müşterinin gece uyurken düşündüğü o en büyük soruna doğrudan parmak basın. "Neden şirketiniz büyümüyor?", "Neden sattığınız evlerin değerini alamıyorsunuz?" gibi vurucu sorularla başlayın.</li>
-            <li><strong>Hedef (Call to Action):</strong> Tıklama almak ve kullanıcıyı "Daha Fazlasını Öğren" diyerek web sitenize / açılış sayfanıza (Landing Page) çekmek.</li>
+            <li><strong>Video Formatı:</strong> 15-45 saniyelik, çok dinamik, hızlı kurgulanmış &quot;<Link href="/blog/videolarda-ilk-3-saniye-kurali-hook">Hook</Link> (Kanca)&quot; videoları.</li>
+            <li><strong>İçerik Stratejisi:</strong> Müşterinin gece uyurken düşündüğü o en büyük soruna doğrudan parmak basın. &quot;Neden şirketiniz büyümüyor?&quot;, &quot;Neden sattığınız evlerin değerini alamıyorsunuz?&quot; gibi vurucu sorularla başlayın.</li>
+            <li><strong>Hedef (Call to Action):</strong> Tıklama almak ve kullanıcıyı &quot;Daha Fazlasını Öğren&quot; diyerek web sitenize / açılış sayfanıza (Landing Page) çekmek.</li>
           </ul>
 
           <h2 className="text-3xl mt-12 mb-6">Aşama 2: Eğiterek İkna Etme (Middle of Funnel - MOFU)</h2>
           <p>
-            Tebrikler, reklam videonuz çalıştı ve kullanıcı açılış sayfanıza geldi. Ama hala size güvenmiyor. O yüzden karşısına "Hemen Satın Al" butonu çıkarmamalısınız. Bunun yerine ona değer sunan, aydınlanma yaşamasına sebep olacak bir video sunmanız gerekir. Bu videoya <strong>VSL (Video Sales Letter / Video Satış Mektubu)</strong> diyoruz.
+            Tebrikler, reklam videonuz çalıştı ve kullanıcı açılış sayfanıza geldi. Ama hala size güvenmiyor. O yüzden karşısına &quot;Hemen Satın Al&quot; butonu çıkarmamalısınız. Bunun yerine ona değer sunan, aydınlanma yaşamasına sebep olacak bir video sunmanız gerekir. Bu videoya <strong>VSL (Video Sales Letter / Video Satış Mektubu)</strong> diyoruz.
           </p>
           <ul className="space-y-3">
             <li><strong>Video Formatı:</strong> 5 ila 15 dakika arası sürebilen, yüksek otorite hissi veren, <Link href="/hizmetler/anahtar-teslim-studyo">stüdyo</Link> ortamında veya şık bir ofiste profesyonelce çekilmiş yatay (16:9) ana tanıtım videosu.</li>
-            <li><strong>İçerik Stratejisi:</strong> Önce kullanıcının sorununu tekrar teyit edin. Sonra, bu sorunun neden eski yöntemlerle çözülemeyeceğini mantıksal argümanlarla (veriler ve grafiklerle) açıklayın. Son olarak kendi sisteminizi (ürününüzü/hizmetinizi) "yeni, mantıklı ve kesin çözüm" olarak sunun.</li>
-            <li><strong>Hedef (Call to Action):</strong> "Randevu Al", "Ücretsiz Strateji Görüşmesi Talep Et" veya "Formu Doldur".</li>
+            <li><strong>İçerik Stratejisi:</strong> Önce kullanıcının sorununu tekrar teyit edin. Sonra, bu sorunun neden eski yöntemlerle çözülemeyeceğini mantıksal argümanlarla (veriler ve grafiklerle) açıklayın. Son olarak kendi sisteminizi (ürününüzü/hizmetinizi) &quot;yeni, mantıklı ve kesin çözüm&quot; olarak sunun.</li>
+            <li><strong>Hedef (Call to Action):</strong> &quot;Randevu Al&quot;, &quot;Ücretsiz Strateji Görüşmesi Talep Et&quot; veya &quot;Formu Doldur&quot;.</li>
           </ul>
 
           <h2 className="text-3xl mt-12 mb-6">Aşama 3: Güven ve Yeniden Pazarlama (Bottom of Funnel - BOFU)</h2>
           <p>
-            MOFU aşamasında VSL videonuzu izleyenlerin bir kısmı formu dolduracaktır. Ancak büyük bir çoğunluk hala kararsızdır; fiyattan çekinirler, "Acaba bu sistem bende de işe yarar mı?" derler ve sayfayı kapatırlar. High-ticket satışların %80'i işte tam da bu sayfayı kapatan insanlara yapılan "Yeniden Pazarlama (Retargeting)" kampanyaları ile gelir.
+            MOFU aşamasında VSL videonuzu izleyenlerin bir kısmı formu dolduracaktır. Ancak büyük bir çoğunluk hala kararsızdır; fiyattan çekinirler, &quot;Acaba bu sistem bende de işe yarar mı?&quot; derler ve sayfayı kapatırlar. High-ticket satışların %80&apos;i işte tam da bu sayfayı kapatan insanlara yapılan &quot;Yeniden Pazarlama (Retargeting)&quot; kampanyaları ile gelir.
           </p>
           <ul className="space-y-3">
             <li><strong>Video Formatı:</strong> Sadece sitenize daha önce girmiş (piksel ile izlenen) kişilere gösterilen özel reklam videoları.</li>
-            <li><strong>İçerik Stratejisi:</strong> Kararsızlığı kırmanın tek yolu Sosyal Kanıttır (Social Proof). Önceki müşterilerinizin veya hastalarınızın kamera karşısına geçip, "Ben de başta korkuyordum ama bu sistem hayatımı değiştirdi" dediği yüksek prodüksiyonlu Müşteri Deneyimi (Testimonial) videoları gösterilir. Vaka analizleri (Case Studies) anlatılır.</li>
-            <li><strong>Hedef (Call to Action):</strong> "Sınırlı kontenjan", "Hemen Görüşelim" diyerek aciliyet hissi yaratıp o masaya oturtmak.</li>
+            <li><strong>İçerik Stratejisi:</strong> Kararsızlığı kırmanın tek yolu Sosyal Kanıttır (Social Proof). Önceki müşterilerinizin veya hastalarınızın kamera karşısına geçip, &quot;Ben de başta korkuyordum ama bu sistem hayatımı değiştirdi&quot; dediği yüksek prodüksiyonlu Müşteri Deneyimi (Testimonial) videoları gösterilir. Vaka analizleri (Case Studies) anlatılır.</li>
+            <li><strong>Hedef (Call to Action):</strong> &quot;Sınırlı kontenjan&quot;, &quot;Hemen Görüşelim&quot; diyerek aciliyet hissi yaratıp o masaya oturtmak.</li>
           </ul>
 
           <EditorNote title="En İyi Satış Personeliniz: Kurulum Sonrası Huni">

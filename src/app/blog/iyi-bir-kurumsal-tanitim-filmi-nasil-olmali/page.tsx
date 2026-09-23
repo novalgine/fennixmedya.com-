@@ -3,7 +3,6 @@ import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import RelatedPosts from "@/components/RelatedPosts";
 import { createBlogMetadata } from "@/data/blog-posts";
-import Image from "next/image";
 import WizardCta from "@/components/WizardCta";
 import TldrSummary from "@/components/TldrSummary";
 import LastUpdated from "@/components/LastUpdated";
@@ -59,11 +58,11 @@ export default function BlogPost() {
 
         <div className="prose prose-invert prose-lg max-w-none prose-headings:font-body prose-headings:font-bold prose-a:text-primary hover:prose-a:text-primary/80 prose-img:rounded-2xl prose-img:border prose-img:border-white/10 prose-p:text-muted-foreground prose-li:text-muted-foreground">
           <p>
-            Bir düşünün: Son izlediğiniz kurumsal tanıtım filminde neler vardı? Büyük ihtimalle drone ile çekilen fabrika görüntüleri, üzerine yapıştırılmış monoton bir dış ses ve "1987'den beri hizmetinizdeyiz" cümlesi. Sonucu tahmin edebilirsiniz — <strong>izleyicinin %80'i ilk 10 saniyede videoyu kapattı.</strong>
+            Bir düşünün: Son izlediğiniz kurumsal tanıtım filminde neler vardı? Büyük ihtimalle drone ile çekilen fabrika görüntüleri, üzerine yapıştırılmış monoton bir dış ses ve &quot;1987&apos;den beri hizmetinizdeyiz&quot; cümlesi. Sonucu tahmin edebilirsiniz — <strong>izleyicinin %80&apos;i ilk 10 saniyede videoyu kapattı.</strong>
           </p>
 
           <p>
-            Türkiye'de her yıl binlerce kurumsal film çekilir, ancak bunların büyük çoğunluğu birbirinin kopyası gibidir. Oysa doğru yapıldığında bir kurumsal tanıtım filmi, şirketinizin en güçlü satış aracına dönüşebilir. LinkedIn'de viral olur, fuarlarda dikkat çeker, yatırımcı sunumlarında güven inşa eder.
+            Türkiye&apos;de her yıl binlerce kurumsal film çekilir, ancak bunların büyük çoğunluğu birbirinin kopyası gibidir. Oysa doğru yapıldığında bir kurumsal tanıtım filmi, şirketinizin en güçlü satış aracına dönüşebilir. LinkedIn&apos;de viral olur, fuarlarda dikkat çeker, yatırımcı sunumlarında güven inşa eder.
           </p>
 
           <p>
@@ -73,21 +72,21 @@ export default function BlogPost() {
           <h2>1. Makineleri Değil, Vizyonu Anlatın</h2>
 
           <p>
-            Müşterileriniz sizin kaç metrekare kapalı alanınız olduğuyla ilgilenmez. Onlar, <strong>kendi sorunlarını nasıl çözdüğünüzü</strong> bilmek ister. "20.000 m² üretim tesisimiz var" demek yerine, "Müşterilerimizin teslimat sürelerini %40 kısalttık" demek çok daha güçlü bir mesajdır.
+            Müşterileriniz sizin kaç metrekare kapalı alanınız olduğuyla ilgilenmez. Onlar, <strong>kendi sorunlarını nasıl çözdüğünüzü</strong> bilmek ister. &quot;20.000 m² üretim tesisimiz var&quot; demek yerine, &quot;Müşterilerimizin teslimat sürelerini %40 kısalttık&quot; demek çok daha güçlü bir mesajdır.
           </p>
 
           <p>
-            Kurumsal film, ürün kataloğunuzun görsel versiyonu olmamalıdır. Şirketin <strong>vizyonunu, inovasyona bakış açısını ve kurumsal kültürünü</strong> yansıtmalıdır. Apple'ın ürün videoları neden milyonlarca kez izleniyor? Çünkü ürünün teknik özelliklerini değil, o ürünle yaşanacak deneyimi satıyorlar.
+            Kurumsal film, ürün kataloğunuzun görsel versiyonu olmamalıdır. Şirketin <strong>vizyonunu, inovasyona bakış açısını ve kurumsal kültürünü</strong> yansıtmalıdır. Apple&apos;ın ürün videoları neden milyonlarca kez izleniyor? Çünkü ürünün teknik özelliklerini değil, o ürünle yaşanacak deneyimi satıyorlar.
           </p>
 
           <p>
-            Pratik bir formül olarak şunu kullanabilirsiniz: Filminizin ilk 15 saniyesinde şirketinizin "neden var olduğunu" anlatın. Orta bölümde "nasıl fark yarattığınızı" gösterin. Son bölümde ise izleyiciye "birlikte neler başarabileceğinizi" hissettirin.
+            Pratik bir formül olarak şunu kullanabilirsiniz: Filminizin ilk 15 saniyesinde şirketinizin &quot;neden var olduğunu&quot; anlatın. Orta bölümde &quot;nasıl fark yarattığınızı&quot; gösterin. Son bölümde ise izleyiciye &quot;birlikte neler başarabileceğinizi&quot; hissettirin.
           </p>
 
           <h2>2. İnsan Odaklı (Human-Centric) Yaklaşım</h2>
 
           <p>
-            Şirketi var eden şey makineler, binalar veya logolar değil — <strong>içindeki insanlardır.</strong> Araştırmalar, B2B alıcılarının %95'inin satın alma kararında duyguların belirleyici olduğunu ortaya koyuyor. Bu nedenle, kurumsal filminizde gerçek insanları göstermek bir tercih değil, zorunluluktur.
+            Şirketi var eden şey makineler, binalar veya logolar değil — <strong>içindeki insanlardır.</strong> Araştırmalar, B2B alıcılarının %95&apos;inin satın alma kararında duyguların belirleyici olduğunu ortaya koyuyor. Bu nedenle, kurumsal filminizde gerçek insanları göstermek bir tercih değil, zorunluluktur.
           </p>
 
           <p>
@@ -95,11 +94,11 @@ export default function BlogPost() {
           </p>
 
           <p>
-            İyi bir yönetmen, çalışanlarınızı doğal anlarında yakalar. Sahte bir gülümseme yerine, bir mühendisinin prototip üzerinde çalışırken gözlerindeki parıltıyı göstermek çok daha etkilidir. Bu "gerçek anlar", izleyicide güven inşa eder ve markanızı samimi kılar.
+            İyi bir yönetmen, çalışanlarınızı doğal anlarında yakalar. Sahte bir gülümseme yerine, bir mühendisinin prototip üzerinde çalışırken gözlerindeki parıltıyı göstermek çok daha etkilidir. Bu &quot;gerçek anlar&quot;, izleyicide güven inşa eder ve markanızı samimi kılar.
           </p>
 
           <p>
-            Liderlik ekibinizin kısa, doğal röportajları da filme güç katar. CEO'nuzun "biz neden bu işi yapıyoruz" sorusuna verdiği samimi bir cevap, 50 sayfalık kurumsal rapordan daha etkili olabilir.
+            Liderlik ekibinizin kısa, doğal röportajları da filme güç katar. CEO&apos;nuzun &quot;biz neden bu işi yapıyoruz&quot; sorusuna verdiği samimi bir cevap, 50 sayfalık kurumsal rapordan daha etkili olabilir.
           </p>
 
           <h2>3. Tempo ve Müzik Kullanımı</h2>
@@ -123,7 +122,7 @@ export default function BlogPost() {
           <h2>4. Sinematografi ve Renk Düzenlemesi (Color Grading)</h2>
 
           <p>
-            Sıradan bir ofis ortamı bile doğru aydınlatma, sinema lensleri ve profesyonel renk düzeltmesi (color grading) ile <strong>bir Hollywood sahnesine dönüşebilir.</strong> Bu premium görünüm, doğrudan şirketinizin pazardaki algısını "lider" konuma taşır.
+            Sıradan bir ofis ortamı bile doğru aydınlatma, sinema lensleri ve profesyonel renk düzeltmesi (color grading) ile <strong>bir Hollywood sahnesine dönüşebilir.</strong> Bu premium görünüm, doğrudan şirketinizin pazardaki algısını &quot;lider&quot; konuma taşır.
           </p>
 
           <p>
@@ -131,7 +130,7 @@ export default function BlogPost() {
           </p>
 
           <p>
-            Color grading ise filmin duygusal tonunu belirler. Soğuk, mavi tonlar "teknoloji ve güven" hissi verirken; sıcak, altın tonlar "lüks ve premium" algısı yaratır. Markanızın renk paleti ile uyumlu bir color grading, <strong>kurumsal kimliğinizi görsel olarak pekiştirir.</strong>
+            Color grading ise filmin duygusal tonunu belirler. Soğuk, mavi tonlar &quot;teknoloji ve güven&quot; hissi verirken; sıcak, altın tonlar &quot;lüks ve premium&quot; algısı yaratır. Markanızın renk paleti ile uyumlu bir color grading, <strong>kurumsal kimliğinizi görsel olarak pekiştirir.</strong>
           </p>
 
           <p>
@@ -149,21 +148,21 @@ export default function BlogPost() {
           </p>
 
           <p>
-            Senaryo yazım sürecinde "tek mesaj kuralı"nı unutmayın: Filminizde anlatmak istediğiniz en önemli tek mesaj nedir? İzleyici filmi kapattığında aklında ne kalmalı? Bu sorunun cevabı, tüm senaryonun çıpa noktası olmalıdır. Birden fazla mesaj vermeye çalışmak, hiçbir mesajın akılda kalmamasına yol açar.
+            Senaryo yazım sürecinde &quot;tek mesaj kuralı&quot;nı unutmayın: Filminizde anlatmak istediğiniz en önemli tek mesaj nedir? İzleyici filmi kapattığında aklında ne kalmalı? Bu sorunun cevabı, tüm senaryonun çıpa noktası olmalıdır. Birden fazla mesaj vermeye çalışmak, hiçbir mesajın akılda kalmamasına yol açar.
           </p>
 
           <h2>6. Rekabette Öne Çıkan Tanıtım Filmi Örnekleri</h2>
 
           <p>
-            Başarılı kurumsal filmler, <strong>sektör kalıplarını kıran</strong> filmlerdir. Örneğin, bir lojistik firması "kaç kamyonumuz var" demek yerine, bir ailenin sipariş ettiği doğum günü hediyesinin yolculuğunu anlattığında — duygusal bir bağ kurulur ve marka akılda kalır.
+            Başarılı kurumsal filmler, <strong>sektör kalıplarını kıran</strong> filmlerdir. Örneğin, bir lojistik firması &quot;kaç kamyonumuz var&quot; demek yerine, bir ailenin sipariş ettiği doğum günü hediyesinin yolculuğunu anlattığında — duygusal bir bağ kurulur ve marka akılda kalır.
           </p>
 
           <p>
-            Dünyadan ilham verici örneklere baktığımızda, Volvo Trucks'ın Jean-Claude Van Damme ile çektiği "Epic Split" videosu 100 milyon görüntülenmeyi aştı. Neden? Çünkü bir kamyon reklamı değil, <strong>bir deneyim ve duygu satıyordu.</strong>
+            Dünyadan ilham verici örneklere baktığımızda, Volvo Trucks&apos;ın Jean-Claude Van Damme ile çektiği &quot;Epic Split&quot; videosu 100 milyon görüntülenmeyi aştı. Neden? Çünkü bir kamyon reklamı değil, <strong>bir deneyim ve duygu satıyordu.</strong>
           </p>
 
           <p>
-            Türkiye'de de fark yaratan örnekler artıyor. Özellikle sanayi ve B2B sektöründe, insan hikayelerini ön plana çıkaran filmler hem LinkedIn'de yüksek etkileşim alıyor hem de satış toplantılarında güçlü bir açılış aracı olarak kullanılıyor.
+            Türkiye&apos;de de fark yaratan örnekler artıyor. Özellikle sanayi ve B2B sektöründe, insan hikayelerini ön plana çıkaran filmler hem LinkedIn&apos;de yüksek etkileşim alıyor hem de satış toplantılarında güçlü bir açılış aracı olarak kullanılıyor.
           </p>
 
           <p>
@@ -173,7 +172,7 @@ export default function BlogPost() {
           <h2>7. Tanıtım Filmi Bütçesi Nasıl Belirlenmeli?</h2>
 
           <p>
-            "Bir kurumsal tanıtım filmi ne kadara mal olur?" sorusunu en çok duyduğumuz sorulardan biridir. Cevap, <strong>birçok değişkene</strong> bağlıdır ve "tek fiyat" vermek mümkün değildir.
+            &quot;Bir kurumsal tanıtım filmi ne kadara mal olur?&quot; sorusunu en çok duyduğumuz sorulardan biridir. Cevap, <strong>birçok değişkene</strong> bağlıdır ve &quot;tek fiyat&quot; vermek mümkün değildir.
           </p>
 
           <p>
@@ -181,7 +180,7 @@ export default function BlogPost() {
           </p>
 
           <p>
-            Genel bir kural olarak, <strong>bütçenizin %40'ını pre-prodüksiyona</strong> (senaryo, storyboard, planlama), %35'ini prodüksiyona (çekim günü) ve %25'ini post-prodüksiyona (kurgu, ses, renk) ayırmanızı öneriyoruz. Pre-prodüksiyona yeterli kaynak ayırmamak, çekim gününde pahalı hatalara yol açar.
+            Genel bir kural olarak, <strong>bütçenizin %40&apos;ını pre-prodüksiyona</strong> (senaryo, storyboard, planlama), %35&apos;ini prodüksiyona (çekim günü) ve %25&apos;ini post-prodüksiyona (kurgu, ses, renk) ayırmanızı öneriyoruz. Pre-prodüksiyona yeterli kaynak ayırmamak, çekim gününde pahalı hatalara yol açar.
           </p>
 
           <p>
@@ -191,11 +190,11 @@ export default function BlogPost() {
           <h2>8. Filminizi Yayınladıktan Sonra Ne Yapmalısınız?</h2>
 
           <p>
-            Birçok şirketin yaptığı en büyük hata, filmi çekip web sitesine yükledikten sonra "işimiz bitti" diye düşünmektir. Oysa <strong>dağıtım stratejisi</strong>, filmin kendisi kadar önemlidir.
+            Birçok şirketin yaptığı en büyük hata, filmi çekip web sitesine yükledikten sonra &quot;işimiz bitti&quot; diye düşünmektir. Oysa <strong>dağıtım stratejisi</strong>, filmin kendisi kadar önemlidir.
           </p>
 
           <p>
-            Filminizi farklı platformlara uygun formatlarda kesin: LinkedIn için 1-2 dakikalık güçlü bir versiyon, Instagram Reels ve TikTok için 15-30 saniyelik dikkat çekici kesitler, web siteniz için tam versiyon. Her platformun kendi dinamiği vardır ve <strong>"one size fits all" yaklaşımı işe yaramaz.</strong>
+            Filminizi farklı platformlara uygun formatlarda kesin: LinkedIn için 1-2 dakikalık güçlü bir versiyon, Instagram Reels ve TikTok için 15-30 saniyelik dikkat çekici kesitler, web siteniz için tam versiyon. Her platformun kendi dinamiği vardır ve <strong>&quot;one size fits all&quot; yaklaşımı işe yaramaz.</strong>
           </p>
 
           <p>

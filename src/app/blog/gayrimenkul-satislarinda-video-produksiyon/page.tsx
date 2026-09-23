@@ -3,7 +3,6 @@ import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import RelatedPosts from "@/components/RelatedPosts";
 import { createBlogMetadata } from "@/data/blog-posts";
-import Image from "next/image";
 import WizardCta from "@/components/WizardCta";
 import TldrSummary from "@/components/TldrSummary";
 import LastUpdated from "@/components/LastUpdated";
@@ -43,25 +42,25 @@ export default function BlogPost() {
             Gayrimenkul sektörü, devasa bütçelerin ve yoğun duyguların birleştiği, dünyanın en rekabetçi alanlarından biridir. İster deniz manzaralı bir yalı, ister şehir merkezinde ultra lüks bir penthouse, ister ticari bir plaza katı satıyor olun; potansiyel müşterinizi tek bir fotoğrafla ikna etme devri çoktan kapandı. 
           </p>
           <p>
-            Alıcılar artık statik görseller yerine, o mekanda yaşamayı hayal edebilecekleri dinamik bir deneyim arıyorlar. İnternetteki binlerce ilan arasında "kaydırıp geçilmeyen" ve doğrudan telefonunuzun çalmasını sağlayan tek bir silah var: <strong><Link href="/hizmetler/kurumsal-tanitim-filmi">Profesyonel Video Prodüksiyon</Link>u.</strong>
+            Alıcılar artık statik görseller yerine, o mekanda yaşamayı hayal edebilecekleri dinamik bir deneyim arıyorlar. İnternetteki binlerce ilan arasında &quot;kaydırıp geçilmeyen&quot; ve doğrudan telefonunuzun çalmasını sağlayan tek bir silah var: <strong><Link href="/hizmetler/kurumsal-tanitim-filmi">Profesyonel Video Prodüksiyon</Link>u.</strong>
           </p>
 
           <h2 className="text-3xl mt-12 mb-6">1. Mülkünüzün Değerini Video Kalitesi Belirler</h2>
           <p>
-            İnsan psikolojisi, gördüğü içeriğin üretim kalitesiyle, satılan ürünün kalitesini anında eşleştirir. Kötü ışıkta, titreyen bir cep telefonuyla çekilmiş, dağınık ve karanlık bir ev videosu, 50 Milyon TL'lik bir gayrimenkulün değerini izleyicinin gözünde anında 10 Milyon TL'ye düşürür. Fiyat ne kadar yüksekse, pazarlama materyalinin kalitesi de o kadar yüksek ve "Premium" olmak zorundadır.
+            İnsan psikolojisi, gördüğü içeriğin üretim kalitesiyle, satılan ürünün kalitesini anında eşleştirir. Kötü ışıkta, titreyen bir cep telefonuyla çekilmiş, dağınık ve karanlık bir ev videosu, 50 Milyon TL&apos;lik bir gayrimenkulün değerini izleyicinin gözünde anında 10 Milyon TL&apos;ye düşürür. Fiyat ne kadar yüksekse, pazarlama materyalinin kalitesi de o kadar yüksek ve &quot;Premium&quot; olmak zorundadır.
           </p>
           <p>
-            Sinematik aydınlatma, pürüzsüz drone çekimleri, sarsıntısız kamera hareketleri (gimbal kullanımı) ve ustaca yapılmış renk düzenlemeleri (color grading), o mülke "Lüks" damgasını vurur. İzleyici videoyu izlediğinde <em>"Bu gerçekten çok değerli bir mülk, kaçırmamalıyım"</em> hissini bilinçaltında yaşar.
+            Sinematik aydınlatma, pürüzsüz drone çekimleri, sarsıntısız kamera hareketleri (gimbal kullanımı) ve ustaca yapılmış renk düzenlemeleri (color grading), o mülke &quot;Lüks&quot; damgasını vurur. İzleyici videoyu izlediğinde <em>&quot;Bu gerçekten çok değerli bir mülk, kaçırmamalıyım&quot;</em> hissini bilinçaltında yaşar.
           </p>
 
           <h2 className="text-3xl mt-12 mb-6">2. Metrekare Değil, Lifestyle (Yaşam Tarzı) Satın Alınır</h2>
           <p>
-            Birçok emlakçı videolarda sadece boş odaları gösterir. Ancak insanlar tuğla ve beton satın almazlar; bir <strong>yaşam tarzı</strong> satın alırlar. Profesyonel gayrimenkul videolarında "Storytelling (Hikayeleştirme)" hayati önem taşır.
+            Birçok emlakçı videolarda sadece boş odaları gösterir. Ancak insanlar tuğla ve beton satın almazlar; bir <strong>yaşam tarzı</strong> satın alırlar. Profesyonel gayrimenkul videolarında &quot;Storytelling (Hikayeleştirme)&quot; hayati önem taşır.
           </p>
           <ul className="space-y-3">
             <li>Geniş salonu sadece bir oda olarak göstermek yerine, sabah güneşinin içeri süzüldüğü ve masada taze kahve dumanının tüttüğü bir sahne kurgulayın.</li>
             <li>Bahçeyi veya havuzu boş çekmek yerine, hafta sonu ailesiyle barbekü yapan, havuza giren mutlu insan detayları (modeller veya cast) ekleyin.</li>
-            <li><strong>Duygusal Bağ:</strong> İzleyici, <em>"İşte benim ailem de tam olarak burada böyle mutlu yaşayabilir"</em> dediği an satışın %80'i gerçekleşmiş demektir.</li>
+            <li><strong>Duygusal Bağ:</strong> İzleyici, <em>&quot;İşte benim ailem de tam olarak burada böyle mutlu yaşayabilir&quot;</em> dediği an satışın %80&apos;i gerçekleşmiş demektir.</li>
           </ul>
 
           <h2 className="text-3xl mt-12 mb-6">3. Drone ile Konumun Gücünü Kanıtlayın</h2>
@@ -69,12 +68,12 @@ export default function BlogPost() {
             Gayrimenkulün 3 altın kuralı vardır: Konum, Konum, Konum! İç mekan ne kadar güzel olursa olsun, çevresel faktörler satın alma kararında devasa bir rol oynar.
           </p>
           <p>
-            Özellikle yabancı yatırımcılar veya şehre yeni taşınacak yöneticiler için mülkün çevresi bir kapalı kutudur. Profesyonel havadan çekimler (drone) ile mülkün AVM'lere, denize, otoban bağlantılarına, okullara ve hastanelere olan mesafesini grafik animasyonlarla (motion graphics) harmanlayarak sunmak, müşterinin zihnindeki en büyük soru işaretlerini daha onlar sormadan silip atar.
+            Özellikle yabancı yatırımcılar veya şehre yeni taşınacak yöneticiler için mülkün çevresi bir kapalı kutudur. Profesyonel havadan çekimler (drone) ile mülkün AVM&apos;lere, denize, otoban bağlantılarına, okullara ve hastanelere olan mesafesini grafik animasyonlarla (motion graphics) harmanlayarak sunmak, müşterinin zihnindeki en büyük soru işaretlerini daha onlar sormadan silip atar.
           </p>
 
-          <h2 className="text-3xl mt-12 mb-6">4. Gayrimenkul Danışmanının "Otorite" İnşası</h2>
+          <h2 className="text-3xl mt-12 mb-6">4. Gayrimenkul Danışmanının &quot;Otorite&quot; İnşası</h2>
           <p>
-            Lüks konut satışında danışmanın duruşu her şeydir. Videoda mülkü sadece gezdirmek yerine, takım elbisesiyle kameranın karşısına geçip, diksiyonu düzgün ve kendinden emin bir şekilde o mülkün yatırım değerini (amortisman süresi, bölge gelişimi vb.) anlatan bir danışman, o bölgenin "Emlak Otoritesi" olarak konumlanır.
+            Lüks konut satışında danışmanın duruşu her şeydir. Videoda mülkü sadece gezdirmek yerine, takım elbisesiyle kameranın karşısına geçip, diksiyonu düzgün ve kendinden emin bir şekilde o mülkün yatırım değerini (amortisman süresi, bölge gelişimi vb.) anlatan bir danışman, o bölgenin &quot;Emlak Otoritesi&quot; olarak konumlanır.
           </p>
           <p>
             Bu videolar sadece elinizdeki o evi satmakla kalmaz; o evi satmak isteyen diğer potansiyel müşterilerin sizi bulmasını (seller leads) sağlar. İnsanlar, mülklerini profesyonelce, bir film yıldızı gibi pazarlayan bir danışmana portföylerini teslim etmek için can atarlar.
