@@ -102,8 +102,12 @@ export default function RootLayout({
               sameAs: [
                 "https://www.instagram.com/fennixmedya",
                 "https://www.youtube.com/@fennixmedya",
-                "https://www.linkedin.com/in/semih-hasano%C4%9Flu-abaa28137/"
-              ]
+                "https://www.linkedin.com/in/semih-hasano%C4%9Flu-abaa28137/",
+                // Google İşletme Profili (23 Eylül 2026) — paylaşım bağlantısı ve Knowledge Graph kimliği
+                "https://share.google/veTnGkrDVmErLOFpO",
+                "https://www.google.com/search?kgmid=/g/11zyxpr6h9"
+              ],
+              identifier: { "@type": "PropertyValue", propertyID: "Google Knowledge Graph", value: "/g/11zyxpr6h9" }
             },
             { "@type": "WebSite", "@id": "https://fennixmedya.com/#website", name: "Fennix Medya", url: "https://fennixmedya.com", publisher: { "@id": "https://fennixmedya.com/#organization" } },
           ],
