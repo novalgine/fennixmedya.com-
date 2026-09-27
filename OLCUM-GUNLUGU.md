@@ -67,3 +67,5 @@ Kaynak: canlı site kontrolü ve Google `site:` sorgusu. Ziyaretçi verisi (Verc
 **Vercel kullanım:** Deployment Storage 8,53 GB / 10 GB (Hobby sınırına yakın). Diğer kalemler sınırın çok altında.
 
 **Güzel Hosting (yalnızca okundu, değişiklik yapılmadı):** hizmet "WP-Mini — fennixmedya.com", 749,90 ₺/yıl, 26.02.2027'ye kadar aktif. Alan adı 22.02.2027'de doluyor. `panel` alt alan adı bu paketin içinde; e-posta da bu paketten geçiyor.
+
+**`panel.fennixmedya.com` kaldırıldı (28 Eylül 2026, Semih'in onayıyla).** Güzel Hosting → Hizmet → Alt Etki Alanları'ndan silindi. Dört ad sunucusunda ve genel DNS'te (8.8.8.8) kayıt artık yok; `www.panel` da yok. Ana site 200, MX kaydı yerinde (e-posta etkilenmedi). Sunucudaki WordPress dosyaları (`/home/fennixme/panel.fennixmedya.com`) silinmedi; adres çözülmediği için dışarıdan erişilemiyor. Google dizinindeki "My WordPress Blog" sonucu, Google adresi yeniden denediğinde kendiliğinden düşer; 20 Ekim'de kontrol edilecek.

@@ -56,7 +56,7 @@ Kural: hiçbir hesabın şifresi paylaşılmaz. Her hesap "kullanıcı davet et 
 | **Cal.com** (`semihhasanoglu/15min`) | Randevu takvimi (sihirbazın son adımı) | Gerekmez; bağlantı herkese açık |
 | **Web3Forms** | Form gönderimlerini e-postaya çevirir; anahtar Vercel'de `NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY` | Gerekmez; anahtar Vercel'den okunur |
 | **Meta (Facebook)** | Pixel (`37456966063894509`), eski Facebook sayfası | Business Suite → Kişiler |
-| **Güzel Hosting** | **Alan adı, DNS ve e-posta** — en kritik hesap. `panel` alt alan adı eski WordPress kalıntısı, silinecek | DNS değişikliği gerekirse Semih kendisi yapar |
+| **Güzel Hosting** | **Alan adı, DNS ve e-posta** — en kritik hesap. `panel` alt alan adı 28 Eylül 2026'da silindi (WordPress dosyaları sunucuda duruyor, erişilemiyor) | DNS değişikliği gerekirse Semih kendisi yapar |
 | **Instagram, LinkedIn** (`/company/fennix-medya` + kişisel profil) | Sosyal profiller; site şemasında `sameAs` | Gerekmez |
 
 Bu iki günlük çalışmada da yöntem buydu: Google ve Bing'e Semih kendi giriş yaptı, asistan yalnızca ekranda tıkladı; hiçbir şifre görülmedi, kaydedilmedi.

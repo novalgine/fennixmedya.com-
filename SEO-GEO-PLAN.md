@@ -50,7 +50,7 @@ Bunlar sitede yapılabilecek her şeyden daha çok getirir; hiçbiri kod işi de
 | 0.2 | **İlk 5 yorum iste:** Vet House, Boogold (Orhan), Mukaddes Gün, Sistemler.io (Berke), Doğal Köpükler (Esranur) — zaten video referans vermiş kişiler. | 15 dk | Kartın çalışması yoruma bağlı |
 | 0.3 | **Bing Webmaster:** Site Haritaları → `https://fennixmedya.com/sitemap.xml`; URL İnceleme → klinik sayfasını dizine ekleme isteği. | 5 dk | ChatGPT/Copilot'un kaynağına girmek |
 | 0.4 | **Search Console:** URL denetimi → `/hizmetler/sosyal-medya-video/klinikler` → dizine eklenmesini iste. Aynısını `/hizmetler/sosyal-medya-video` için. | 3 dk | Haftalar yerine günler |
-| 0.5 | **Güzel Hosting panelinde `panel.fennixmedya.com` DNS kaydını sil** (WordPress kalıntısı; "My WordPress Blog" başlığıyla dizinde). E-posta aynı firmadan geçiyor: paketi kapatma, sadece o satırı sil. | 10 dk | Marka aramasında çöp sonuç gider; güvenlik |
+| 0.5 | ~~Güzel Hosting'de `panel.fennixmedya.com` kaydını sil~~ — **28 Eylül'de silindi**, DNS'te yok. ~~ (WordPress kalıntısı; "My WordPress Blog" başlığıyla dizinde). E-posta aynı firmadan geçiyor: paketi kapatma, sadece o satırı sil. | 10 dk | Marka aramasında çöp sonuç gider; güvenlik |
 | 0.6 | **Müşterilerden bağlantı iste:** "Sitenizde/Instagram bio'nuzda 'Video: Fennix Medya' diye bir bağlantı ekler misiniz?" Adaylar: Vet House, Boogold, Sistemler.io, Mukaddes Storytelling, ZaKofi, Uyaran, Herwish, Vavelya, Afife/Zuhal oyun sayfaları. | 20 dk mesaj | Sitenin en eksik sinyali: dışarıdan güven |
 | 0.7 | **Instagram/LinkedIn bio'da site bağlantısı** doğru sayfaya gitsin (`/hizmetler/sosyal-medya-video`, ana sayfa değil). | 2 dk | Doğru sayfaya trafik |
 
