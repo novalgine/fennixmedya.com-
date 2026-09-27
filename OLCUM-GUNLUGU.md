@@ -31,3 +31,13 @@ Kaynak: canlı arama sonuçları (kişiselleştirme kapalı, Türkiye) ve Perple
 - Facebook'ta "Fennix Medya | Istanbul" sayfası var (20+ takipçi, eski slogan). Adresi alınıp şemaya eklenecek; içeriği güncellenmeli ya da kapatılmalı.
 
 **20 Ekim'de bakılacaklar** (SEO-GEO-PLAN §5): kendi adında Search Console ortalama sırası · sosyal medya sayfası gösterimi · klinik sayfasının ilk aramaları · üç yazının tıklanma oranı · Vercel/GA4: wizard_open, booking_success sayıları · bu 5 soru yeniden.
+
+## 2026-09-28 — Ara bakış (4 gün sonra; karar günü değil)
+
+Kaynak: canlı site kontrolü ve Google `site:` sorgusu. Ziyaretçi verisi (Vercel Analytics, GA4) ve Search Console okunamadı: tarayıcı oturumları kapalıydı.
+
+- **Site sağlığı:** 8 ana adres 200; eski YouTube adresi 308 ile yönleniyor; iki site haritası ve `llms.txt` yayında. Repo ile canlı aynı (son yayın 24 Eylül). Otomatik IndexNow son üç yayında başarılı.
+- **Google `site:fennixmedya.com`:** ilk sırada hâlâ `panel.fennixmedya.com` ("My Blog – My WordPress Blog"). Sosyal medya sayfası eski başlığıyla ("Sosyal Medya Video Çekimi", fiyatsız açıklama) listeleniyor: Google 22 Eylül'deki hâlini henüz yeniden taramamış. Klinik sayfası görünen sonuçlarda yok.
+- **Google "fennix medya":** ölçülemedi (Google robot doğrulaması istedi; geçilmedi).
+- **Bing:** ölçülemedi (sorgu ilgisiz sonuçlara yönlendi).
+- **`panel` DNS kaydı:** duruyor (104.247.165.35).
