@@ -16,7 +16,7 @@ Search Console, son 12 ay (dışa aktarım 22 Eylül 2026):
 - **Asıl iş görünmüyordu:** sosyal medya video sayfası yılda 3 gösterim, 31. sıra. (22 Eylül'de güçlendirildi.)
 - **En iyi oran:** anahtar teslim stüdyo, 33 gösterim / 7 tıklama (%21), 5. sıra. Karar: şimdilik dursun.
 - **1. sayfada sıkışan yazılar (7-9. sıra):** ilk 3 saniye kuralı, kamera karşısında rahat konuşma, prodüksiyon maliyetleri, kurumsal YouTube. Az tıklanıyor → başlıklar yenilendi.
-- **Dış bağlantı:** 57 (kaynak kalitesi bilinmiyor). **Google İşletme Profili: 23 Eylül 2026'da açıldı.** **Bing Webmaster:** 22 Eylül'de açıldı, henüz veri yok.
+- **Dış bağlantı: 0** (Search Console, 28 Eylül 2026; daha önce yazılan 57 iç bağlantı sayısıydı). **Google İşletme Profili: 23 Eylül 2026'da açıldı.** **Bing Webmaster:** 22 Eylül'de açıldı, henüz veri yok.
 - **Hız:** telefonda 85/100; darboğaz 190 KB font. Gerçek kullanıcı verisi oluşacak trafik yok → Google bu siteyi hızdan değerlendirmiyor. Öncelik değil.
 
 ### 24 Eylül
