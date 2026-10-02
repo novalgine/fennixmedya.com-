@@ -78,3 +78,21 @@ Kaynak: canlı site kontrolü ve Google `site:` sorgusu. Ziyaretçi verisi (Verc
 - **Bing "fennix medya":** fennixmedya.com **1. sırada**; açıklaması yenilenmiş ("Fennix Medya Yapım — İstanbul · Video çekimi ve kurgu…"). Ardından Facebook, Instagram, LinkedIn şirket sayfası (3 takipçi, eski slogan).
 - **Perplexity "Fennix Medya kimdir?":** 24 Eylül'de Fenix Media ile karışıyordu ve siteyi bulamıyordu. Şimdi **fennixmedya.com'u ve Semih Hasanoğlu'nu buluyor** ("İstanbul'da video prodüksiyon… ayrıntılar sınırlı"), 7 kaynak gösteriyor. İlk somut GEO ilerlemesi. Yanıt hâlâ "net bilgi bulunmuyor" diyor.
 - **Hâlâ eksik:** dış bağlantı (28 Eylül: 0), Google işletme kartı görünürlüğü, müşteri yorumları.
+
+### 2026-10-03 — aynı gün, oturumlar açıldıktan sonra (veriyle)
+
+**Search Console, 23–29 Eylül (bir önceki hafta 19–25 Eylül):** 91 gösterim (80), 3 tıklama (2), tıklama oranı %3,3 (%2,5), ortalama konum 7,4 (7,6). Hepsi gürültü sınırında; yön iyi, anlam yok.
+- Sorgular: "fennix" 12 gösterim / 0 tıklama (önceki hafta 18 / 1); "instagram birxmedya" 2; "uzunformat" 1 (yeni, alakasız); "birxmedya" 1. Başka sorgu yok.
+- Sayfalar: ana sayfa 47 gösterim / 1 tıklama · hakkımda 12 · sosyal medya video 9 (önceki hafta 8) · anahtar teslim stüdyo 7 / 1 tıklama · ugc yazısı 2 / 1 tıklama · kaldırılan `youtube-icerik-uretimi` 4 gösterim (Google eski adresi hâlâ gösteriyor; 308 yönlendirme yerinde).
+- Dizin: 28 dizinde, 3 dışarıda; değişmedi. Klinik sayfası hâlâ dizinde değil.
+
+**Vercel Analytics, son 7 gün:** 18 ziyaretçi (+%64), 71 sayfa görüntüleme (+%20), sıçrama oranı %17. Son 30 gün: 27 ziyaretçi, 126 görüntüleme.
+- Sayfalar (ziyaretçi): ana sayfa 14 · maliyetler yazısı 3 · blog 2 · e-ticaret yazısı 2 · iphone-vs yazısı 2 · sosyal medya planlama yazısı 2 · podcast yazısı 1.
+- Kaynak: google.com 3, facebook.com 1; gerisi doğrudan.
+- Ülke: Türkiye %72, ABD %11, Çin %6, Hong Kong %6, İsveç %6 (son dördü büyük olasılıkla bot). Cihaz: masaüstü %67, mobil %33.
+- Ziyaretçi sayısı gerçek insanlardan fazla: kendi ve test tarayıcıları dahil.
+
+**GA4 (son 7 gün):** 3 kullanıcı, 16 olay (page_view 8, session_start 4, first_visit 3, scroll 1). **wizard_open, form_submit, booking_success, video_play sıfır** — kayıtlı görüşme talebi yok. GA4 yalnızca çerezi kabul edenleri sayar.
+- Mülk yapısı: GA4 mülkü "Imagine3d" adlı (Default Account for Firebase) ve iki web akışı içeriyor: Imagine3d (imagine3dstudio.co, son 48 saatte veri yok) ve Fennix Medya (fennixmedya.com, son 48 saattir trafik alıyor). Veri doğru akışa düşüyor; raporlarda akış filtresine dikkat.
+
+**Görüşme talebi:** 0 (Vercel, GA4 ve Pixel'de kayıt yok).
