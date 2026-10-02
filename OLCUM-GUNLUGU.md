@@ -69,3 +69,12 @@ Kaynak: canlı site kontrolü ve Google `site:` sorgusu. Ziyaretçi verisi (Verc
 **Güzel Hosting (yalnızca okundu, değişiklik yapılmadı):** hizmet "WP-Mini — fennixmedya.com", 749,90 ₺/yıl, 26.02.2027'ye kadar aktif. Alan adı 22.02.2027'de doluyor. `panel` alt alan adı bu paketin içinde; e-posta da bu paketten geçiyor.
 
 **`panel.fennixmedya.com` kaldırıldı (28 Eylül 2026, Semih'in onayıyla).** Güzel Hosting → Hizmet → Alt Etki Alanları'ndan silindi. Dört ad sunucusunda ve genel DNS'te (8.8.8.8) kayıt artık yok; `www.panel` da yok. Ana site 200, MX kaydı yerinde (e-posta etkilenmedi). Sunucudaki WordPress dosyaları (`/home/fennixme/panel.fennixmedya.com`) silinmedi; adres çözülmediği için dışarıdan erişilemiyor. Google dizinindeki "My WordPress Blog" sonucu, Google adresi yeniden denediğinde kendiliğinden düşer; 20 Ekim'de kontrol edilecek.
+
+## 2026-10-03 — Ara bakış (halka açık kontroller; Search Console, GA4 ve Vercel oturumları kapalıydı, rakam okunamadı)
+
+- **Site sağlığı:** 8 ana adres 200, eski YouTube adresi 308, iki site haritası ve `llms.txt` yayında. Son yayın 28 Eylül; repo ile canlı aynı. `panel.fennixmedya.com` DNS'te yok.
+- **Google "fennix medya":** Google sorguyu **"fenix medya" olarak düzeltip** onun sonuçlarını gösteriyor (Beşiktaş'taki Fenix Medya'nın işletme kartı + fenixmedia.tr). fennixmedya.com sonuç listesinde 3. sırada. Bizim işletme kartımız görünmüyor. 28 Eylül'deki ölçümde (oturum açık, kişiselleştirme farkı olabilir) site 1. sıradaydı; iki ölçüm aynı koşulda değil, eğilim olarak okunmamalı.
+- **Google dizini:** `site:` sorgusunda sayfalar eski başlıklarıyla ("Sekiz sektörden…", "…YouTube içerikleri"); 22-23 Eylül değişiklikleri Google'a henüz yansımamış (10 gün). `panel.fennixmedya.com` ("My WordPress Blog") hâlâ listede; DNS'ten kalktığı için Google'ın kendiliğinden düşürmesi bekleniyor. Klinik sayfası görünen sonuçlarda yok.
+- **Bing "fennix medya":** fennixmedya.com **1. sırada**; açıklaması yenilenmiş ("Fennix Medya Yapım — İstanbul · Video çekimi ve kurgu…"). Ardından Facebook, Instagram, LinkedIn şirket sayfası (3 takipçi, eski slogan).
+- **Perplexity "Fennix Medya kimdir?":** 24 Eylül'de Fenix Media ile karışıyordu ve siteyi bulamıyordu. Şimdi **fennixmedya.com'u ve Semih Hasanoğlu'nu buluyor** ("İstanbul'da video prodüksiyon… ayrıntılar sınırlı"), 7 kaynak gösteriyor. İlk somut GEO ilerlemesi. Yanıt hâlâ "net bilgi bulunmuyor" diyor.
+- **Hâlâ eksik:** dış bağlantı (28 Eylül: 0), Google işletme kartı görünürlüğü, müşteri yorumları.
