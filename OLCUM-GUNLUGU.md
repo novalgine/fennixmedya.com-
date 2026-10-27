@@ -96,3 +96,26 @@ Kaynak: canlı site kontrolü ve Google `site:` sorgusu. Ziyaretçi verisi (Verc
 - Mülk yapısı: GA4 mülkü "Imagine3d" adlı (Default Account for Firebase) ve iki web akışı içeriyor: Imagine3d (imagine3dstudio.co, son 48 saatte veri yok) ve Fennix Medya (fennixmedya.com, son 48 saattir trafik alıyor). Veri doğru akışa düşüyor; raporlarda akış filtresine dikkat.
 
 **Görüşme talebi:** 0 (Vercel, GA4 ve Pixel'de kayıt yok).
+
+## 2026-10-27 — Ay sonu ölçümü (20 Ekim planlanan tarihti; yapılamadı, bugün yapıldı; tüm oturumlar açıktı)
+
+Kıyas: 3 Ekim ölçümü (haftalık) ve 22 Eylül başlangıcı. Sitede 3 Ekim'den beri değişiklik yok; artış site dışı kaynaklı.
+
+**Vercel Analytics**
+- Son 30 gün: **89 ziyaretçi (+%536), 213 sayfa görüntüleme (+%124)**, sıçrama oranı %33. Son 7 gün: **37 ziyaretçi (+%106)**, 66 görüntüleme.
+- **Kaynak: l.instagram.com 18 ziyaretçi** (3 Ekim'de 0–1), google.com 13, facebook.com 4+1; kalan doğrudan. Instagram'dan gelen ziyaret, bio bağlantısının çalıştığını gösteriyor.
+- Sayfalar (ziyaretçi): ana sayfa 47 · maliyetler yazısı 6 · anahtar teslim stüdyo 6 · portfolyo 6 · sosyal medya video 4 · blog 3 · ilk 3 saniye yazısı 3.
+- Ülke: Türkiye %53, ABD %15, Çin %11, Singapur %8, Hong Kong %4 → bot payı yüksek; gerçek insan sayısı bundan düşük.
+
+**Search Console (28 Eylül–25 Ekim, 28 gün):** **294 gösterim, 9 tıklama**, TO %3,1, ortalama konum 8,4. (Bir önceki 7 günlük: 91 / 3.)
+- Sorgular: "fennix" 30 gösterim / 1 tıklama · "phoenix medya mecidiyeköy" 17 (başka işletme) · "birxmedya" 6 · **"fuar tanıtım filmi çekimi" 4** (ilk hizmet aramasıyla görünme) · "fenix medya" 3 · kalanlar tek gösterimlik.
+- Sayfalar: **anahtar teslim stüdyo 41 gösterim / 4 tıklama (en iyi sayfa)** · ana sayfa 120 / 2 · kamera karşısında yazısı 30 / 1 · hakkımda 17 / 1 · ugc yazısı 7 / 1 · iphone-vs 36 / 0 · sosyal medya video 17 / 0.
+- Dizin: 28 dizinde, **6 dışarıda** (3 Eylül'de 3). Yeni satır "Bulunamadı (404)": eski bir derlemeden kalma yazı tipi dosyası (`/_next/static/media/55cb…woff2`) — sayfa değil, zararsız. **Klinik sayfası: "URL Google tarafından bilinmiyor"** (28 Eylül'de "keşfedildi" idi). Sitemizde engel yok (site haritasında, menüden bağlı, `index, follow`, canonical doğru); 27 Ekim'de dizine ekleme isteği yeniden gönderildi.
+- Site haritaları: `sitemap.xml` ve `sitemap-video.xml` gönderilmiş; son okuma 23 Ekim.
+- **Dış bağlantı: 0** (28 Eylül'de de 0). İç bağlantı 235.
+
+**GA4 (4 Ekim–27 Ekim):** 4 kullanıcı, 38 olay (page_view 21, session_start 8, first_visit 3, user_engagement 3, scroll 2, **video_play 1**). İlk kez özel olay: biri portfolyo videosunu oynattı. **wizard_open, form_submit, booking_success sıfır.** Görüşme talebi yok.
+
+**Halka açık (27 Ekim):** Google'da `site:` sonuçlarında sosyal medya sayfası yeni başlığıyla ("Reels ve Sosyal Medya Video Çekimi · İstanbul") görünüyor. `panel.fennixmedya.com` ("My WordPress Blog") DNS'ten 4 hafta önce kalkmasına rağmen hâlâ listede. "fennix medya" aramasında Fenix Media haberleri ve Beşiktaş'taki Fenix Medya kartı öne çıkıyor; bizim işletme kartımız görünmüyor.
+
+**Okuma:** Trafik 3 haftada 4-5 kat arttı, ağırlıkla Instagram'dan (organik bir kaynak değil, doğrudan bio bağlantısı). Google'dan gelen küçük ama gerçek: 13 ziyaretçi, ilk hizmet sorgusu, anahtar teslim stüdyoda 4 tıklama. Görüşme talebi hâlâ sıfır; ziyaret görüşmeye dönmüyor. Sonraki ölçüm: 24 Kasım.
